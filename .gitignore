@@ -1,0 +1,11 @@
+Assets/
+Build-Dev/
+Library
+Logs/
+Temp/
+UserSettings/Layouts/
+opti/
+tet/
+.plastic/
+*.kate-swp
+mono_crash*.blob
