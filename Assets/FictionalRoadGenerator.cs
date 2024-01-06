@@ -9,6 +9,10 @@ public class FictionalRoadGenerator : MonoBehaviour
     public GameObject backColliderPrefab;
     public GameObject motorObject;
 
+    // TODO: obstacle generator should be its own class
+    public GameObject obstaclePrefab;
+    public int maxObstaclesPerRoad;
+
     // number of roads before and after current vehicle position which are loaded
     // e.g. a value of 3 means 3 road units on front and back of the vehicle
     public int bufferRoadCount;
@@ -73,6 +77,8 @@ public class FictionalRoadGenerator : MonoBehaviour
         else
             roadQueue.AddFirst(newRoad);
 
+        generateObstacles(newRoad);
+
         return newRoad;
     }
 
@@ -97,5 +103,13 @@ public class FictionalRoadGenerator : MonoBehaviour
             Destroy(roadQueue.PopLast());
 
         return newRoad;
+    }
+
+    private void generateObstacles(GameObject road)
+    {
+        // int numObstacles =
+        Vector3 roadDimenions = road.GetComponent<Renderer>().bounds.size;
+        GameObject obstacle = Instantiate(obstaclePrefab, road.transform.position, Quaternion.identity);
+        obstacle.transform.SetParent(road.transform, true);
     }
 }

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/BycicleSystem/BicycleVehicle.cs" />
+    <Compile Include="Assets/ObstacleCollide.cs" />
     <Compile Include="Assets/Move.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/UturnStart.cs" />
