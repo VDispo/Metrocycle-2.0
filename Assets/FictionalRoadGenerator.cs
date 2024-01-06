@@ -15,8 +15,6 @@ public class FictionalRoadGenerator : MonoBehaviour
     public Vector3 frontColliderOffset;
     public Vector3 backColliderOffset;
 
-    public Vector3 offset;
-
     private GameObject floor1;
     private GameObject frontCollider;
     private GameObject backCollider;
@@ -33,26 +31,26 @@ public class FictionalRoadGenerator : MonoBehaviour
             createBackwardRoad();
         }
 
-        offset = floor1.transform.position + frontColliderOffset;
+        Vector3 offset = floor1.transform.position + frontColliderOffset;
         frontCollider = Instantiate(frontColliderPrefab, offset, frontColliderPrefab.transform.rotation);
 
         offset = floor1.transform.position + backColliderOffset;
         backCollider = Instantiate(backColliderPrefab, offset, backColliderPrefab.transform.rotation);
 
         foreach (GameObject collider in new [] {frontCollider, backCollider}) {
-            RoadMover roadMover = collider.GetComponent<RoadMover>();
-            roadMover.objectToMove = floor1;
-            roadMover.motorObject = motorObject;
+            FictionalRoadDetect collideDetect = collider.GetComponent<FictionalRoadDetect>();
+            collideDetect.fictionalRoadObject = this.gameObject;
+            collideDetect.motorObject = motorObject;
 
-            roadMover.pairCollider = collider == frontCollider ? backCollider : frontCollider;
+            collideDetect.pairCollider = collider == frontCollider ? backCollider : frontCollider;
         }
     }
 
-    GameObject createForwardRoad() {
+    private GameObject createForwardRoad() {
         return createRoad(1);
     }
 
-    GameObject createBackwardRoad() {
+    private GameObject createBackwardRoad() {
         return createRoad(-1);
     }
 
@@ -74,6 +72,29 @@ public class FictionalRoadGenerator : MonoBehaviour
             roadQueue.AddLast(newRoad);
         else
             roadQueue.AddFirst(newRoad);
+
+        return newRoad;
+    }
+
+    public GameObject nextRoad(int direction) {
+        Debug.Log("nextRoad " + direction);
+        // ASSUMPTION: direction 1 = Forward, -1 = Backward (no checking done for now)
+        // Note: index starts at 0, so bufferRoadCount was the middle (=current) road segment
+        // Since we just passed a collider, the adjacent road is NOW the current road segment
+        GameObject curRoad = roadQueue[bufferRoadCount+direction];
+
+        // move colliders
+        Vector3 curRoadHalfLength = new Vector3(0, 0, curRoad.GetComponent<Renderer>().bounds.size.z);
+        frontCollider.transform.position = curRoad.transform.position + curRoadHalfLength + frontColliderOffset;
+        backCollider.transform.position = curRoad.transform.position - curRoadHalfLength - backColliderOffset;
+
+        GameObject newRoad = createRoad(direction);
+
+        // Remove road not in buffer zone
+        if (direction == 1)
+            Destroy(roadQueue.PopFirst());
+        else
+            Destroy(roadQueue.PopLast());
 
         return newRoad;
     }

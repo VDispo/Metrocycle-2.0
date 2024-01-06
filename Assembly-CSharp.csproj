@@ -65,11 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets/BycicleSystem/BicycleVehicle.cs" />
     <Compile Include="Assets/Move.cs" />
-    <Compile Include="Assets/RoadMover.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/UturnStart.cs" />
     <Compile Include="Assets/CameraFollow.cs" />
     <Compile Include="Assets/Deque.cs" />
+    <Compile Include="Assets/FictionalRoadDetect.cs" />
     <Compile Include="Assets/FictionalRoadGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
