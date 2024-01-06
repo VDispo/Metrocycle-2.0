@@ -174,10 +174,12 @@ MonoBehaviour:
   backColliderPrefab: {fileID: 5360617042657613654, guid: 0cc5276630ad40b28a656a925143eb9e,
     type: 3}
   motorObject: {fileID: 725401844}
+  obstaclePrefab: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+    type: 3}
+  maxObstaclesPerRoad: 7
   bufferRoadCount: 3
-  frontColliderOffset: {x: 0, y: 0, z: 7.6}
-  backColliderOffset: {x: 0, y: 0, z: -8.6}
-  offset: {x: 0, y: 0, z: 0}
+  frontColliderOffset: {x: 0, y: 0, z: 2}
+  backColliderOffset: {x: 0, y: 0, z: 2}
 --- !u!4 &35780881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9205844434439539567, guid: b9f42de6425d7a64492e24f3f8462954,
@@ -1257,6 +1259,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1289980562747270202, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: motorforce
@@ -1753,6 +1760,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1922755829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3380280808980443916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.876
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686342817885339961, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1763,3 +1843,4 @@ SceneRoots:
   - {fileID: 1922755829}
   - {fileID: 25978946}
   - {fileID: 1783872584}
+  - {fileID: 3380280808980443916}

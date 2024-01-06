@@ -107,9 +107,22 @@ public class FictionalRoadGenerator : MonoBehaviour
 
     private void generateObstacles(GameObject road)
     {
-        // int numObstacles =
         Vector3 roadDimenions = road.GetComponent<Renderer>().bounds.size;
-        GameObject obstacle = Instantiate(obstaclePrefab, road.transform.position, Quaternion.identity);
-        obstacle.transform.SetParent(road.transform, true);
+
+        int numObstacles = Random.Range(0, maxObstaclesPerRoad);
+        // NOTE: 1 unit offset in y axis to ensure obstacle is above floor
+        Vector3 offset = new Vector3(0, 1, 0);
+        GameObject obstacle;
+        for (int i = 0; i < numObstacles; ++i) {
+            // Randomize position in road segment
+            // TODO: add more randomization (e.g. length, rotation)
+            // TODO: ensure that obstacles leave at least one path open
+            // TODO: (not too high priority) ensure that obstacles don't overlap
+            offset.x = Random.Range(-roadDimenions.x/2, roadDimenions.x/2);
+            offset.z = Random.Range(-roadDimenions.z/2, roadDimenions.z/2);
+
+            obstacle = Instantiate(obstaclePrefab, road.transform.position + offset, Quaternion.identity);
+            obstacle.transform.SetParent(road.transform, true);
+        }
     }
 }
