@@ -69,6 +69,7 @@
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/UturnStart.cs" />
     <Compile Include="Assets/CameraFollow.cs" />
+    <Compile Include="Assets/FictionalRoadGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Glass_Global.shader" />
