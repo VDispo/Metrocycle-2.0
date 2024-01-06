@@ -20,15 +20,17 @@ public class FictionalRoadGenerator : MonoBehaviour
     private GameObject floor1;
     private GameObject frontCollider;
     private GameObject backCollider;
+
+    private Deque<GameObject> roadQueue;
     // Start is called before the first frame update
     void Start()
     {
-        floor1 = Instantiate(floorPrefab, new Vector3(0,0,0), Quaternion.identity);
+        roadQueue = new Deque<GameObject>(bufferRoadCount*2 + 1);
+        floor1 = createForwardRoad();
 
-        float floorZLength = floor1.GetComponent<Renderer>().bounds.size.z;
         for (int i = 0; i < bufferRoadCount; ++i) {
-            Instantiate(floorPrefab, new Vector3(0,0,floorZLength*(i+1)), Quaternion.identity);
-            Instantiate(floorPrefab, new Vector3(0,0,-floorZLength*(i+1)), Quaternion.identity);
+            createForwardRoad();
+            createBackwardRoad();
         }
 
         offset = floor1.transform.position + frontColliderOffset;
@@ -44,5 +46,39 @@ public class FictionalRoadGenerator : MonoBehaviour
 
             roadMover.pairCollider = collider == frontCollider ? backCollider : frontCollider;
         }
+    }
+
+    GameObject createForwardRoad() {
+        Vector3 position = new Vector3(0, 0, 0);
+        GameObject newRoad = Instantiate(floorPrefab, position, Quaternion.identity);
+
+        if (roadQueue.Count != 0) {
+            GameObject lastRoad = roadQueue.PeekLast();
+            float lastRoadLength = lastRoad.GetComponent<Renderer>().bounds.size.z;
+            float newRoadStart = lastRoad.transform.position.z + lastRoadLength/2;
+
+            position.z = newRoadStart + newRoad.GetComponent<Renderer>().bounds.size.z/2;
+            newRoad.transform.position = position;
+        }
+
+        roadQueue.AddLast(newRoad);
+        return newRoad;
+    }
+
+    GameObject createBackwardRoad() {
+        Vector3 position = new Vector3(0, 0, 0);
+        GameObject newRoad = Instantiate(floorPrefab, position, Quaternion.identity);
+
+        if (!roadQueue.IsEmpty) {
+            GameObject lastRoad = roadQueue.PeekFirst();
+            float lastRoadLength = lastRoad.GetComponent<Renderer>().bounds.size.z;
+            float newRoadStart = lastRoad.transform.position.z - lastRoadLength/2;
+
+            position.z = newRoadStart - newRoad.GetComponent<Renderer>().bounds.size.z/2;
+            newRoad.transform.position = position;
+        }
+
+        roadQueue.AddFirst(newRoad);
+        return newRoad;
     }
 }
