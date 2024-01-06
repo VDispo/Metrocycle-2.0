@@ -177,7 +177,7 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
     type: 3}
   maxObstaclesPerRoad: 7
-  bufferRoadCount: 3
+  bufferRoadCount: 4
   frontColliderOffset: {x: 0, y: 0, z: 2}
   backColliderOffset: {x: 0, y: 0, z: 2}
 --- !u!4 &35780881 stripped
