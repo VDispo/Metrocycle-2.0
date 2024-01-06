@@ -49,36 +49,32 @@ public class FictionalRoadGenerator : MonoBehaviour
     }
 
     GameObject createForwardRoad() {
-        Vector3 position = new Vector3(0, 0, 0);
-        GameObject newRoad = Instantiate(floorPrefab, position, Quaternion.identity);
-
-        if (roadQueue.Count != 0) {
-            GameObject lastRoad = roadQueue.PeekLast();
-            float lastRoadLength = lastRoad.GetComponent<Renderer>().bounds.size.z;
-            float newRoadStart = lastRoad.transform.position.z + lastRoadLength/2;
-
-            position.z = newRoadStart + newRoad.GetComponent<Renderer>().bounds.size.z/2;
-            newRoad.transform.position = position;
-        }
-
-        roadQueue.AddLast(newRoad);
-        return newRoad;
+        return createRoad(1);
     }
 
     GameObject createBackwardRoad() {
+        return createRoad(-1);
+    }
+
+    private GameObject createRoad(int direction) {
+        // ASSUMPTION: direction 1 = Forward, -1 = Backward (no checking done for now)
         Vector3 position = new Vector3(0, 0, 0);
         GameObject newRoad = Instantiate(floorPrefab, position, Quaternion.identity);
 
         if (!roadQueue.IsEmpty) {
-            GameObject lastRoad = roadQueue.PeekFirst();
+            GameObject lastRoad = (direction == 1) ? roadQueue.PeekLast() : roadQueue.PeekFirst();
             float lastRoadLength = lastRoad.GetComponent<Renderer>().bounds.size.z;
-            float newRoadStart = lastRoad.transform.position.z - lastRoadLength/2;
+            float newRoadStart = lastRoad.transform.position.z + direction*(lastRoadLength/2);
 
-            position.z = newRoadStart - newRoad.GetComponent<Renderer>().bounds.size.z/2;
+            position.z = newRoadStart + direction*(newRoad.GetComponent<Renderer>().bounds.size.z/2);
             newRoad.transform.position = position;
         }
 
-        roadQueue.AddFirst(newRoad);
+        if (direction == 1)
+            roadQueue.AddLast(newRoad);
+        else
+            roadQueue.AddFirst(newRoad);
+
         return newRoad;
     }
 }
