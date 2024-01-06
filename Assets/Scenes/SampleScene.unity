@@ -174,8 +174,9 @@ MonoBehaviour:
   backColliderPrefab: {fileID: 5360617042657613654, guid: 0cc5276630ad40b28a656a925143eb9e,
     type: 3}
   motorObject: {fileID: 725401844}
-  frontColliderOffset: {x: 0, y: 0, z: 7.1}
-  backColliderOffset: {x: 0, y: 0, z: -7.6}
+  bufferRoadCount: 3
+  frontColliderOffset: {x: 0, y: 0, z: 7.6}
+  backColliderOffset: {x: 0, y: 0, z: -8.6}
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &35780881 stripped
 Transform:
