@@ -8,6 +8,7 @@ public class FictionalRoadGenerator : MonoBehaviour
     public GameObject frontColliderPrefab;
     public GameObject backColliderPrefab;
     public GameObject motorObject;
+    public GameObject gameoverPopup;
 
     // TODO: obstacle generator should be its own class
     public GameObject obstaclePrefab;
@@ -76,7 +77,6 @@ public class FictionalRoadGenerator : MonoBehaviour
             roadQueue.AddLast(newRoad);
         else
             roadQueue.AddFirst(newRoad);
-
         generateObstacles(newRoad);
 
         return newRoad;
@@ -122,6 +122,7 @@ public class FictionalRoadGenerator : MonoBehaviour
             offset.z = Random.Range(-roadDimenions.z/2, roadDimenions.z/2);
 
             obstacle = Instantiate(obstaclePrefab, road.transform.position + offset, Quaternion.identity);
+            obstacle.GetComponent<ObstacleCollide>().gameoverPopup = gameoverPopup;
             obstacle.transform.SetParent(road.transform, true);
         }
     }
