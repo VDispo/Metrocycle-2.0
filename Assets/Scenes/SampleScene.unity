@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,7 +173,7 @@ MonoBehaviour:
     type: 3}
   backColliderPrefab: {fileID: 5360617042657613654, guid: 0cc5276630ad40b28a656a925143eb9e,
     type: 3}
-  motorObject: {fileID: 725401844}
+  motorObject: {fileID: 2078361555}
   obstaclePrefab: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
     type: 3}
   maxObstaclesPerRoad: 7
@@ -5292,7 +5292,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6316404, y: 1.5708497, z: -3.5930712}
+  m_LocalPosition: {x: 2.6316404, y: 1.5700003, z: -17.58}
   m_LocalScale: {x: 1, y: 1, z: 1.2774}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10702,12 +10702,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeController: {fileID: 0}
---- !u!1 &725401844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4664322994268695230, guid: b9f42de6425d7a64492e24f3f8462954,
-    type: 3}
-  m_PrefabInstance: {fileID: 1783872584}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730663292
 GameObject:
   m_ObjectHideFlags: 0
@@ -11470,7 +11464,7 @@ Transform:
   m_GameObject: {fileID: 1562353212}
   serializedVersion: 2
   m_LocalRotation: {x: -0.09316641, y: -0.012846415, z: 0.0012019828, w: -0.99556696}
-  m_LocalPosition: {x: 2.6316404, y: 1.5708497, z: -3.5930712}
+  m_LocalPosition: {x: 2.6316404, y: 1.5700003, z: -17.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11713,6 +11707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalBike
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664322994268695230, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664322994268695231, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
@@ -12688,7 +12687,7 @@ Transform:
   m_GameObject: {fileID: 2078361555}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6316404, y: 0.5708493, z: -1.0930712}
+  m_LocalPosition: {x: 2.6316404, y: 0.57, z: -15.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
