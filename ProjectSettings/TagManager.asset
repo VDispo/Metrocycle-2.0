@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Fictional Road Collider
+  - 
   - Water
   - UI
-  - Obstacles
-  - 
-  - 
+  - bikebody
+  - wheels
+  - drivable
   - 
   - 
   - 
