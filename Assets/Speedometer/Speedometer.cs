@@ -44,9 +44,9 @@ public class Speedometer : MonoBehaviour {
 
     private void Update() {
         Vector3 vel = rb.velocity;
-        Debug.Log(vel);
+        Debug.Log(vel.magnitude);
 
-        speed += 30f * Time.deltaTime;
+        speed = vel.magnitude*3;
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
