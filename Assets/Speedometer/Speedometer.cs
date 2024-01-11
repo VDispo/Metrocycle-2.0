@@ -37,7 +37,7 @@ public class Speedometer : MonoBehaviour {
         speedLabelTemplateTransform.gameObject.SetActive(false);
 
         speed = 0f;
-        speedMax = 200f;
+        speedMax = 120f;
         
         CreateSpeedLabels();
     }
@@ -53,7 +53,7 @@ public class Speedometer : MonoBehaviour {
     }
 
     private void CreateSpeedLabels() {
-        int labelAmount=10;
+        int labelAmount=6;
         float totalAngleSize = ZERO_SPEED_ANGLE - MAX_SPEED_ANGLE;
 
         for (int i=0;i <= labelAmount; i++){

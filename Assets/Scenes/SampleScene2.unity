@@ -12946,8 +12946,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   MaxSpeed: 100
-  accelaration: 8
-  turn: 12
+  accelaration: 4
+  turn: 7
   rb: {fileID: 1240750422}
   carBody: {fileID: 1374794476}
   frictionCurve:
@@ -13574,7 +13574,6 @@ GameObject:
   - component: {fileID: 1602474750}
   - component: {fileID: 1602474749}
   - component: {fileID: 1602474748}
-  - component: {fileID: 1602474747}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13582,19 +13581,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1602474747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602474746}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e0ac09522204b83901bfd49c78af4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bike: {fileID: 1374794474}
 --- !u!114 &1602474748
 MonoBehaviour:
   m_ObjectHideFlags: 0
