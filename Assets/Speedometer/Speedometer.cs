@@ -29,6 +29,9 @@ public class Speedometer : MonoBehaviour {
     private float speedMax;
     private float speed;
 
+    private double speedTotal;
+    private int numSpeedSamples;
+
     private void Awake() {
         rb = bike.GetComponent<Rigidbody>();
 
@@ -44,12 +47,15 @@ public class Speedometer : MonoBehaviour {
 
     private void Update() {
         Vector3 vel = rb.velocity;
-        Debug.Log(vel.magnitude);
+        // Debug.Log(vel.magnitude);
 
         speed = vel.magnitude*3;
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
+
+        speedTotal += speed;
+        ++numSpeedSamples;
     }
 
     private void CreateSpeedLabels() {
@@ -74,6 +80,11 @@ public class Speedometer : MonoBehaviour {
         float speedNormalized = speed / speedMax;
 
         return ZERO_SPEED_ANGLE - speedNormalized * totalAngleSize;
+    }
+
+    public double GetAvgSpeed()
+    {
+        return speedTotal / ((double) numSpeedSamples);
     }
 }
 
