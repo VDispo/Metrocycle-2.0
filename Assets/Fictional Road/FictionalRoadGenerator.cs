@@ -74,11 +74,12 @@ public class FictionalRoadGenerator : MonoBehaviour
             newRoad.transform.position = position;
         }
 
-        if (direction == 1)
+        if (direction == 1) {
             roadQueue.AddLast(newRoad);
-        else
+            generateObstacles(newRoad);
+        } else {
             roadQueue.AddFirst(newRoad);
-        generateObstacles(newRoad);
+        }
 
         return newRoad;
     }
