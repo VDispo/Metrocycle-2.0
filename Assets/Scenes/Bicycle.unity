@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,7 +174,7 @@ MonoBehaviour:
     type: 3}
   backColliderPrefab: {fileID: 5360617042657613654, guid: 0cc5276630ad40b28a656a925143eb9e,
     type: 3}
-  motorObject: {fileID: 2078361555}
+  motorObject: {fileID: 417976315}
   gameoverPopup: {fileID: 4071609615014595534}
   finishLine: {fileID: 1671582578}
   obstaclePrefab: {fileID: 6413132968234968683, guid: 59d8eaa0ea01d3ea9a05d28b9e77037c,
@@ -5294,8 +5294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000081460335, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6316404, y: 1.5700003, z: -15.78}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.3, z: -0.70000005}
   m_LocalScale: {x: 1, y: 1, z: 1.2774}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5520,6 +5520,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &417976315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4664322994268695230, guid: b9f42de6425d7a64492e24f3f8462954,
+    type: 3}
+  m_PrefabInstance: {fileID: 1783872584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &417976318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
+    type: 3}
+  m_PrefabInstance: {fileID: 1783872584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421923705
 GameObject:
   m_ObjectHideFlags: 0
@@ -11277,7 +11289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bike
       value: 
-      objectReference: {fileID: 2078361555}
+      objectReference: {fileID: 417976315}
     - target: {fileID: 8342961299756740341, guid: 2abc11f3956adb176a178a2cd4aa243e,
         type: 3}
       propertyPath: m_Name
@@ -11655,7 +11667,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.322, z: -0.19999689}
+  m_ConnectedAnchor: {x: 0, y: -0.27244008, z: -0.20590492}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -11754,7 +11766,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 2078361562}
+  m_Follow: {fileID: 417976318}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -11783,7 +11795,7 @@ Transform:
   m_GameObject: {fileID: 1562353212}
   serializedVersion: 2
   m_LocalRotation: {x: -0.09316641, y: -0.012846415, z: 0.0012019828, w: -0.99556696}
-  m_LocalPosition: {x: 2.6316404, y: 1.5700003, z: -15.78}
+  m_LocalPosition: {x: 0, y: 2.3, z: -0.70000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12199,7 +12211,7 @@ PrefabInstance:
     - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
@@ -12229,7 +12241,7 @@ PrefabInstance:
     - target: {fileID: 4664322994268695230, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4664322994268695231, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
@@ -12792,7 +12804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &2078361556
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13055,7 +13067,7 @@ MonoBehaviour:
   GroundCheck: 1
   drivableSurface:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4294967295
   MaxSpeed: 40
   accelaration: 5
   turn: 12
@@ -13259,7 +13271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0.1, z: 0}
-  ShoulderOffset: {x: 0, y: 1, z: 1.3}
+  ShoulderOffset: {x: 0, y: 1.3, z: 1.3}
   VerticalArmLength: 0
   CameraSide: 1
   CameraDistance: 2
