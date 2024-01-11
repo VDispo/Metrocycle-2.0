@@ -9,6 +9,7 @@ public class FictionalRoadGenerator : MonoBehaviour
     public GameObject backColliderPrefab;
     public GameObject motorObject;
     public GameObject gameoverPopup;
+    public GameObject finishLine;
 
     // TODO: obstacle generator should be its own class
     public GameObject obstaclePrefab;
@@ -101,6 +102,14 @@ public class FictionalRoadGenerator : MonoBehaviour
             Destroy(roadQueue.PopFirst());
         else
             Destroy(roadQueue.PopLast());
+
+        // add finish line
+        float chance = Random.Range(0f, 1f);
+        Debug.Log("chance: " + chance);
+        if (direction == 1 && (!finishLine.activeSelf) && chance <= 0.04) {
+            finishLine.transform.SetParent(newRoad.transform, false);
+            finishLine.SetActive(true);
+        }
 
         return newRoad;
     }
