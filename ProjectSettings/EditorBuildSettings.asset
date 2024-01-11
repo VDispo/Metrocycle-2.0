@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Motorcycle.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Bicycle.unity
+    guid: 074ad5ba218214ebc9b0fa093bc16782
+  - enabled: 1
+    path: Assets/Scenes/SampleScene2.unity
+    guid: c1e3727025df6468ab7ad0bd2c114dff
   m_configObjects: {}
