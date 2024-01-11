@@ -15656,6 +15656,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8052540323442874990}
+        m_TargetAssemblyTypeName: StartPopup, Assembly-CSharp
+        m_MethodName: startGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7515634870359727270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15787,6 +15799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6423319793020469145}
+  - component: {fileID: 8052540323442874990}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -15794,6 +15807,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8052540323442874990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8052540323442874989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f4a5aa1774b1d2b9f41121edb3fa44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8089701357772846941
 Transform:
   m_ObjectHideFlags: 0
