@@ -9,8 +9,8 @@ public class ObstacleCollide : MonoBehaviour
     void OnTriggerEnter (Collider other)
     {
         Debug.Log("Obstacle hit by" + other.gameObject.name);
-        gameoverPopup.GetComponent<GameoverPopup>().popupShown();
         gameoverPopup.SetActive(true);
+        gameoverPopup.SendMessage("popupShown", null, SendMessageOptions.DontRequireReceiver);
         Time.timeScale = 0;
     }
 
