@@ -65,25 +65,49 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/UturnStart.cs" />
     <Compile Include="Assets/BycicleSystem/BicycleVehicle.cs" />
-    <Compile Include="Assets/ObstacleCollide.cs" />
-    <Compile Include="Assets/Scripts/Deque.cs" />
+    <Compile Include="Assets/Fictional Road/FictionalRoadGenerator.cs" />
+    <Compile Include="Assets/Scripts/StartPopup.cs" />
     <Compile Include="Assets/Scripts/Speed.cs" />
-    <Compile Include="Assets/Scripts/FictionalRoadGenerator.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/BikerAnimation.cs" />
+    <Compile Include="Assets/Fictional Road/FictionalRoadDetect.cs" />
     <Compile Include="Assets/Scripts/CameraFollow.cs" />
+    <Compile Include="Assets/Fictional Road/Deque.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/BikeReferences.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/ArcadeBikeController.cs" />
-    <Compile Include="Assets/Scripts/FictionalRoadDetect.cs" />
+    <Compile Include="Assets/Scripts/GameoverPopup.cs" />
     <Compile Include="Assets/Scripts/Move.cs" />
+    <Compile Include="Assets/Fictional Road/ObstacleCollide.cs" />
     <Compile Include="Assets/Speedometer/Speedometer.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/SkidMarks.cs" />
+    <Compile Include="Assets/Timer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Glass_Global.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Object.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Global.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Glass_Object.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
