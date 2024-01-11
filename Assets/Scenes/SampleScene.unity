@@ -5396,6 +5396,12 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &385435846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5890253166093533772, guid: 2abc11f3956adb176a178a2cd4aa243e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1328088158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -13425,6 +13431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7169948845547277717}
+  - component: {fileID: 7169948845547277718}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -15536,6 +15543,20 @@ Transform:
   - {fileID: 6269682967783193739}
   m_Father: {fileID: 6601880374664099611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7169948845547277718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810104104980047529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58193cc7d7e5e2999a6e061bc1f4b201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedometer: {fileID: 385435846}
+  textElement: {fileID: 5156729071619656853}
 --- !u!33 &7215463065636951626
 MeshFilter:
   m_ObjectHideFlags: 0
