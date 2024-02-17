@@ -134,6 +134,7 @@ public class FictionalRoadGenerator : MonoBehaviour
             obstacle = Instantiate(obstaclePrefab, road.transform.position + offset, Quaternion.identity);
             obstacle.GetComponent<ObstacleCollide>().gameoverPopup = gameoverPopup;
             obstacle.transform.SetParent(road.transform, true);
+            obstacle.layer = 8;
         }
     }
 }
