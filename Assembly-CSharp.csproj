@@ -78,6 +78,7 @@
     <Compile Include="Assets/Scripts/GameoverPopup.cs" />
     <Compile Include="Assets/Scripts/Move.cs" />
     <Compile Include="Assets/Fictional Road/ObstacleCollide.cs" />
+    <Compile Include="Assets/Scripts/blinkers.cs" />
     <Compile Include="Assets/Speedometer/Speedometer.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/SkidMarks.cs" />
     <Compile Include="Assets/Timer.cs" />
