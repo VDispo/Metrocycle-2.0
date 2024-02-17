@@ -68,6 +68,7 @@
     <Compile Include="Assets/Fictional Road/FictionalRoadGenerator.cs" />
     <Compile Include="Assets/Scripts/StartPopup.cs" />
     <Compile Include="Assets/Scripts/Speed.cs" />
+    <Compile Include="Assets/Scripts/NextScene.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Ash Assets/Arcade Bike Physics/Scripts/BikerAnimation.cs" />
     <Compile Include="Assets/Fictional Road/FictionalRoadDetect.cs" />
