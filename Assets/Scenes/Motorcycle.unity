@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13139,7 +13139,7 @@ MonoBehaviour:
   GroundCheck: 1
   drivableSurface:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   MaxSpeed: 40
   accelaration: 5
   turn: 12
@@ -15100,7 +15100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &4115038936289591128
 CanvasRenderer:
   m_ObjectHideFlags: 0
