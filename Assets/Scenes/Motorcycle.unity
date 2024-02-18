@@ -215,7 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27ebee5d985db791927c9305cd19f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishCollider: {fileID: 1813235236}
+  hasPairCollider: 1
+  pairCollider: {fileID: 1813235236}
+  deactivateAfterCollision: 1
+  activatePopup: 0
+  popup: {fileID: 0}
 --- !u!64 &153371508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2264,7 +2268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27ebee5d985db791927c9305cd19f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishCollider: {fileID: 153371506}
+  hasPairCollider: 1
+  pairCollider: {fileID: 153371506}
+  deactivateAfterCollision: 1
+  activatePopup: 0
+  popup: {fileID: 0}
 --- !u!1 &1922755828
 GameObject:
   m_ObjectHideFlags: 0
