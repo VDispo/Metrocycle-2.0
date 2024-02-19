@@ -12,6 +12,9 @@ public class blinkers : MonoBehaviour
     private int leftStatus;
     private int rightStatus;
 
+    private float timerLeft;
+    private float timerRight;
+
     void Start()
     {
         GameObject blinkerLeft = blinkerGroup.transform.GetChild(0).gameObject;
@@ -22,6 +25,9 @@ public class blinkers : MonoBehaviour
 
         leftStatus = 0;
         rightStatus = 0;
+
+        timerLeft = 0f;
+        timerRight = 0f;
     }
 
 
@@ -49,6 +55,27 @@ public class blinkers : MonoBehaviour
                 rightStatus = 1;
                 leftStatus = 0;
             }
+        }
+
+        if (Input.GetKey("a") != true && timerLeft >= 1){
+            leftStatus = 0;
+        }
+        if (Input.GetKey("d") != true && timerRight >= 1){
+            rightStatus = 0;
+        }
+
+        if (Input.GetKey("a")){
+            timerLeft += Time.deltaTime;
+        }
+        else{
+            timerLeft = 0f;
+        }
+
+        if (Input.GetKey("d")){
+            timerRight += Time.deltaTime;
+        }
+        else{
+            timerRight = 0f;
         }
 
         if (leftStatus == 1)
