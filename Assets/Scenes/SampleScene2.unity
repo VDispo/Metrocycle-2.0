@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028483, g: 0.2257148, b: 0.3069223, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802849, g: 0.22571468, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2936,8 +2936,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015304850}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.4444401e-15, y: -0.5820579, z: 1.0339426e-15, w: 0.81314737}
-  m_LocalPosition: {x: 2.3931954, y: 1.5038509, z: 24.225166}
+  m_LocalRotation: {x: 0, y: 0.9999956, z: 0, w: 0.0029719616}
+  m_LocalPosition: {x: 0.4881122, y: 1.5038509, z: 26.869965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3161,10 +3161,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347143571590664755, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296470466566709414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5979533320120663939, guid: ced65b9d7d99acd8185978e9824969b5,
         type: 3}
       propertyPath: m_Name
       value: Motorbike
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674008020840532439, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6674008020840532439, guid: ced65b9d7d99acd8185978e9824969b5,
         type: 3}
@@ -3215,6 +3260,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080519494577271661, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.011887789
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080519494577271661, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1899642
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080519494577271661, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0029719616
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080519494577271661, guid: ced65b9d7d99acd8185978e9824969b5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -2.4209698e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

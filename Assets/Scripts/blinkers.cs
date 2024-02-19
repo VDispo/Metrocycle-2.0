@@ -15,6 +15,8 @@ public class blinkers : MonoBehaviour
     private float timerLeft;
     private float timerRight;
 
+    private float blinkTimer;
+
     void Start()
     {
         GameObject blinkerLeft = blinkerGroup.transform.GetChild(0).gameObject;
@@ -28,40 +30,55 @@ public class blinkers : MonoBehaviour
 
         timerLeft = 0f;
         timerRight = 0f;
+
+        blinkTimer = 0f;
+
+        left.alpha = 0.1f;
+        right.alpha = 0.1f;
     }
 
 
     // Update is called once per frame
     void Update()
-    {
-        left.alpha = 0.1f;
-        right.alpha = 0.1f;
+    {   
+        // TURNING ON BLINKER
         if (Input.GetKeyDown("q"))
         {
             if (leftStatus == 1){
                 leftStatus = 0;
+                left.alpha = 0.1f;
             }
             else {
                 leftStatus = 1;
+                left.alpha = 1f;
+                blinkTimer = 0;
                 rightStatus = 0;
+                right.alpha = 0.1f;
             }
         }
         if (Input.GetKeyDown("e"))
         {
             if (rightStatus == 1){
                 rightStatus = 0;
+                right.alpha = 0.1f;
             }
             else {
                 rightStatus = 1;
+                right.alpha = 1f;
+                blinkTimer = 0;
                 leftStatus = 0;
+                left.alpha = 0.1f;
             }
         }
 
+        // TURNING INTO BLINKER OFF
         if (Input.GetKey("a") != true && timerLeft >= 1){
             leftStatus = 0;
+            left.alpha = 0.1f;
         }
         if (Input.GetKey("d") != true && timerRight >= 1){
             rightStatus = 0;
+            right.alpha = 0.1f;
         }
 
         if (Input.GetKey("a")){
@@ -77,14 +94,32 @@ public class blinkers : MonoBehaviour
         else{
             timerRight = 0f;
         }
-
+        
+        // BLINKER LOGIC
+        blinkTimer += Time.deltaTime;
         if (leftStatus == 1)
         {
-            left.alpha = 1f;
+            if (blinkTimer >=1){
+                if (left.alpha == 1f){
+                    left.alpha = 0.1f;
+                }
+                else{
+                    left.alpha = 1f;
+                }
+                blinkTimer = 0f;
+            }
         }
         if (rightStatus == 1)
         {
-            right.alpha = 1f;
+            if (blinkTimer >=1){
+                if (right.alpha == 1f){
+                    right.alpha = 0.1f;
+                }
+                else{
+                    right.alpha = 1f;
+                }
+                blinkTimer = 0f;
+            }
         }
     }
 }
