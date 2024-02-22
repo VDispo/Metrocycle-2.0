@@ -2,9 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum Blinker {
+    LEFT,
+    RIGHT
+};
+
+enum BlinkerStatus {
+    OFF = 0,
+    ON = 1
+};
+
 public class blinkers : MonoBehaviour
 {
     public GameObject blinkerGroup;
+    public Vector3 initialRotation;
 
     private CanvasGroup left;
     private CanvasGroup right;
@@ -37,64 +48,40 @@ public class blinkers : MonoBehaviour
         right.alpha = 0.1f;
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {   
-        // TURNING ON BLINKER
-        if (Input.GetKeyDown("q"))
-        {
-            if (leftStatus == 1){
-                leftStatus = 0;
-                left.alpha = 0.1f;
-            }
-            else {
-                leftStatus = 1;
-                left.alpha = 1f;
-                blinkTimer = 0;
-                rightStatus = 0;
-                right.alpha = 0.1f;
-            }
+    void setBlinker(Blinker which, BlinkerStatus status) {
+        int own_status, other_status;
+        float own_alpha, other_alpha;
+        if (status == BlinkerStatus.ON) {
+            own_status = 1;
+            own_alpha = 1f;
+            other_status = 0;
+            other_alpha = 0.1f;
         }
-        if (Input.GetKeyDown("e"))
-        {
-            if (rightStatus == 1){
-                rightStatus = 0;
-                right.alpha = 0.1f;
-            }
-            else {
-                rightStatus = 1;
-                right.alpha = 1f;
-                blinkTimer = 0;
-                leftStatus = 0;
-                left.alpha = 0.1f;
-            }
+        else {
+            own_status = 0;
+            own_alpha = 0.1f;
+            other_status = 1;
+            other_alpha = 1f;
         }
 
-        // TURNING INTO BLINKER OFF
-        if (Input.GetKey("a") != true && timerLeft >= 1){
-            leftStatus = 0;
-            left.alpha = 0.1f;
+        if (which == Blinker.LEFT) {
+            leftStatus = own_status;
+            left.alpha = own_alpha;
+            if (status == BlinkerStatus.ON) {
+                rightStatus = other_status;
+                right.alpha = other_alpha;
+            }
+        } else {
+            rightStatus = own_status;
+            right.alpha = own_alpha;
+            if (status == BlinkerStatus.ON) {
+                leftStatus = other_status;
+                left.alpha = other_alpha;
+            }
         }
-        if (Input.GetKey("d") != true && timerRight >= 1){
-            rightStatus = 0;
-            right.alpha = 0.1f;
-        }
+    }
 
-        if (Input.GetKey("a")){
-            timerLeft += Time.deltaTime;
-        }
-        else{
-            timerLeft = 0f;
-        }
-
-        if (Input.GetKey("d")){
-            timerRight += Time.deltaTime;
-        }
-        else{
-            timerRight = 0f;
-        }
-        
+    void animateBlinker() {
         // BLINKER LOGIC
         blinkTimer += Time.deltaTime;
         if (leftStatus == 1)
@@ -121,5 +108,57 @@ public class blinkers : MonoBehaviour
                 blinkTimer = 0f;
             }
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {   
+        // TURNING ON BLINKER
+        if (Input.GetKeyDown("q"))
+        {
+            if (leftStatus == 1){
+                setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
+            }
+            else {
+                setBlinker(Blinker.LEFT, BlinkerStatus.ON);
+                blinkTimer = 0;
+            }
+        }
+        if (Input.GetKeyDown("e"))
+        {
+            if (rightStatus == 1){
+                setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+            }
+            else {
+                setBlinker(Blinker.RIGHT, BlinkerStatus.ON);
+                blinkTimer = 0;
+            }
+        }
+
+        // TURNING INTO BLINKER OFF
+        if (Input.GetKey("a") != true && timerLeft >= 1){
+            leftStatus = 0;
+            left.alpha = 0.1f;
+        }
+        if (Input.GetKey("d") != true && timerRight >= 1){
+            rightStatus = 0;
+            right.alpha = 0.1f;
+        }
+
+        if (Input.GetKey("a")){
+            timerLeft += Time.deltaTime;
+        }
+        else{
+            timerLeft = 0f;
+        }
+
+        if (Input.GetKey("d")){
+            timerRight += Time.deltaTime;
+        }
+        else{
+            timerRight = 0f;
+        }
+
+        animateBlinker();
     }
 }
