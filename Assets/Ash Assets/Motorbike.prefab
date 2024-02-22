@@ -6106,6 +6106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkerGroup: {fileID: 6208870910163689826}
+  motorbike: {fileID: 5979533320120663939}
+  initialRotation: {x: 0, y: 0, z: 0}
+  blinkerAutoOffAngle: 60
 --- !u!1 &6316654713260011480
 GameObject:
   m_ObjectHideFlags: 0

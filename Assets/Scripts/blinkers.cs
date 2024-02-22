@@ -15,16 +15,15 @@ enum BlinkerStatus {
 public class blinkers : MonoBehaviour
 {
     public GameObject blinkerGroup;
+    public GameObject motorbike;
     public Vector3 initialRotation;
+    public int blinkerAutoOffAngle;
 
     private CanvasGroup left;
     private CanvasGroup right;
 
     private int leftStatus;
     private int rightStatus;
-
-    private float timerLeft;
-    private float timerRight;
 
     private float blinkTimer;
 
@@ -38,9 +37,6 @@ public class blinkers : MonoBehaviour
 
         leftStatus = 0;
         rightStatus = 0;
-
-        timerLeft = 0f;
-        timerRight = 0f;
 
         blinkTimer = 0f;
 
@@ -56,6 +52,8 @@ public class blinkers : MonoBehaviour
             own_alpha = 1f;
             other_status = 0;
             other_alpha = 0.1f;
+
+            initialRotation = motorbike.transform.eulerAngles;
         }
         else {
             own_status = 0;
@@ -110,6 +108,15 @@ public class blinkers : MonoBehaviour
         }
     }
 
+    void checkAutoBlinkerOff() {
+        if (Mathf.Abs(motorbike.transform.eulerAngles.y - initialRotation.y) > blinkerAutoOffAngle) {
+            if (leftStatus == 1)
+                setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
+            if (rightStatus == 1)
+                setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {   
@@ -135,29 +142,7 @@ public class blinkers : MonoBehaviour
             }
         }
 
-        // TURNING INTO BLINKER OFF
-        if (Input.GetKey("a") != true && timerLeft >= 1){
-            leftStatus = 0;
-            left.alpha = 0.1f;
-        }
-        if (Input.GetKey("d") != true && timerRight >= 1){
-            rightStatus = 0;
-            right.alpha = 0.1f;
-        }
-
-        if (Input.GetKey("a")){
-            timerLeft += Time.deltaTime;
-        }
-        else{
-            timerLeft = 0f;
-        }
-
-        if (Input.GetKey("d")){
-            timerRight += Time.deltaTime;
-        }
-        else{
-            timerRight = 0f;
-        }
+        checkAutoBlinkerOff();
 
         animateBlinker();
     }
