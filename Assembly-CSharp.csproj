@@ -63,10 +63,12 @@
     <Analyzer Include="/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/UturnStart.cs" />
     <Compile Include="Assets/BycicleSystem/BicycleVehicle.cs" />
     <Compile Include="Assets/Fictional Road/FictionalRoadGenerator.cs" />
+    <Compile Include="Assets/EasyRoads3D/Scripts/ERVegetationStudio.cs" />
+    <Compile Include="Assets/EasyRoads3D/Scripts/runtimeScript.cs" />
     <Compile Include="Assets/Scripts/StartPopup.cs" />
+    <Compile Include="Assets/Scripts/CollideDetectorActivated.cs" />
     <Compile Include="Assets/Scripts/Speed.cs" />
     <Compile Include="Assets/Scripts/NextScene.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
@@ -86,35 +88,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
-    <None Include="Assets/EasyRoads3D/lib/DelaunayER.dll" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Glass_Global.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets/EasyRoads3D/SRP Support Packages/_Readme.txt" />
+    <None Include="Assets/EasyRoads3D/shaders/ER Road Detail.shader" />
     <None Include="Assets/EasyRoads3D/shaders/ER Road.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/EasyRoads3D/Resources/custom prefabs/_custom prefabs.txt" />
     <None Include="Assets/EasyRoads3D/prefab meshes/_custom prefabs.txt" />
     <None Include="Assets/EasyRoads3D/shaders/ER Road Transparency.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Object.shader" />
+    <None Include="Assets/EasyRoads3D/SRP Support Packages/_Readme.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/EasyRoads3D/Release - Install Notes.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-    <None Include="Assets/EasyRoads3D/Quick Start.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll" />
-    <None Include="Assets/EasyRoads3D/_readme .txt" />
     <None Include="Assets/EasyRoads3D/shaders/ER Surface.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Global.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/EasyRoads3D/lib/DelaunayER.dll" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-    <None Include="Assets/EasyRoads3D/SRP Package Notes.txt" />
+    <None Include="Assets/EasyRoads3D/_URP &amp; HDRP Readme.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/EasyRoads3D/shaders/ER Road Mask Blend.shader" />
+    <None Include="Assets/EasyRoads3D/shaders/ER I Connector Blend.shader" />
+    <None Include="Assets/EasyRoads3D/_Readme.txt" />
+    <None Include="Assets/EasyRoads3D/shaders/ER Road Decal.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-    <None Include="Assets/EasyRoads3D/Resources/dynamic prefabs/dynamic prefabs.txt" />
+    <None Include="Assets/EasyRoads3D/shaders/Legacy/EasyRoads3D - Unity 2018 Standard.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/SyntyStudios/PolygonStarter/PolygonPrototype/Shaders/Prototype_Glass_Object.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
@@ -123,7 +129,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/EasyRoads3D/prefab sources/_custom prefabs.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
-    <None Include="Assets/EasyRoads3D/_Release Notes.txt" />
+    <None Include="Assets/EasyRoads3D/lib/DelaunayER.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -156,6 +162,14 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ContentLoadModule">
@@ -374,6 +388,10 @@
       <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <Private>False</Private>
+     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>/home/jp/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
       <Private>False</Private>
