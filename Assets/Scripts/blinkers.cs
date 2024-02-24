@@ -16,8 +16,11 @@ public class blinkers : MonoBehaviour
 {
     public GameObject blinkerGroup;
     public GameObject motorbike;
-    public Vector3 initialRotation;
     public int blinkerAutoOffAngle;
+    // NOTE: made public for easier debugging
+    // TODO: change to private
+    public Vector3 prevRotation;
+    public double turnAngle;
 
     private CanvasGroup left;
     private CanvasGroup right;
@@ -42,6 +45,9 @@ public class blinkers : MonoBehaviour
 
         left.alpha = 0.1f;
         right.alpha = 0.1f;
+
+        prevRotation = new Vector3(0, 0, 0);
+        turnAngle = 0f;
     }
 
     void setBlinker(Blinker which, BlinkerStatus status) {
@@ -53,7 +59,8 @@ public class blinkers : MonoBehaviour
             other_status = 0;
             other_alpha = 0.1f;
 
-            initialRotation = motorbike.transform.eulerAngles;
+            prevRotation = motorbike.transform.eulerAngles;
+            turnAngle = 0f;
         }
         else {
             own_status = 0;
@@ -109,10 +116,10 @@ public class blinkers : MonoBehaviour
     }
 
     void checkAutoBlinkerOff(Blinker which) {
-        float turnAngle = motorbike.transform.eulerAngles.y - initialRotation.y;
         if ( (which == Blinker.RIGHT && turnAngle > blinkerAutoOffAngle)
             || (which == Blinker.LEFT && -turnAngle > blinkerAutoOffAngle)
         ) {
+            Debug.Log("Blinker OFF.");
             if (leftStatus == 1)
                 setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
             if (rightStatus == 1)
@@ -145,9 +152,16 @@ public class blinkers : MonoBehaviour
             }
         }
 
+        // Update turnAngle
+        if (leftStatus == 1 || rightStatus == 1) {
+            Vector3 curRotation = motorbike.transform.eulerAngles;
+            turnAngle += Mathf.DeltaAngle(prevRotation.y, curRotation.y);
+            prevRotation = curRotation;
+        }
+
         // only turn blinker off automatically when
         // turn buttons are not pressed
-        if (Input.GetAxis("Horizontal") == 0) {
+        if (Input.GetAxis("Horizontal") != 1) {
             Blinker which = leftStatus == 1 ? Blinker.LEFT : Blinker.RIGHT;
             checkAutoBlinkerOff(which);
         }
