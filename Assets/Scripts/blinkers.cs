@@ -108,8 +108,11 @@ public class blinkers : MonoBehaviour
         }
     }
 
-    void checkAutoBlinkerOff() {
-        if (Mathf.Abs(motorbike.transform.eulerAngles.y - initialRotation.y) > blinkerAutoOffAngle) {
+    void checkAutoBlinkerOff(Blinker which) {
+        float turnAngle = motorbike.transform.eulerAngles.y - initialRotation.y;
+        if ( (which == Blinker.RIGHT && turnAngle > blinkerAutoOffAngle)
+            || (which == Blinker.LEFT && -turnAngle > blinkerAutoOffAngle)
+        ) {
             if (leftStatus == 1)
                 setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
             if (rightStatus == 1)
@@ -142,7 +145,12 @@ public class blinkers : MonoBehaviour
             }
         }
 
-        checkAutoBlinkerOff();
+        // only turn blinker off automatically when
+        // turn buttons are not pressed
+        if (Input.GetAxis("Horizontal") == 0) {
+            Blinker which = leftStatus == 1 ? Blinker.LEFT : Blinker.RIGHT;
+            checkAutoBlinkerOff(which);
+        }
 
         animateBlinker();
     }
