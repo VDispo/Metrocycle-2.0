@@ -21,12 +21,11 @@ public class blinkers : MonoBehaviour
     // TODO: change to private
     public Vector3 prevRotation;
     public double turnAngle;
+    public int leftStatus;
+    public int rightStatus;
 
     private CanvasGroup left;
     private CanvasGroup right;
-
-    private int leftStatus;
-    private int rightStatus;
 
     private float blinkTimer;
 
