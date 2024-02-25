@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class BlinkerCheck : MonoBehaviour
 {
-    public bool hasPairCollider;
-    public GameObject pairCollider; // activated after collision
-
-    public bool deactivateAfterCollision;
-
     public bool activatePopup;
     public GameObject popup; // activated after collision
 
     public bool rightTurn; //false if left, true if right
-    private int blinkerStatus;
-
+    public GameObject blinkers;
+    private blinkers blinkerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +17,12 @@ public class BlinkerCheck : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider other) {
-        Debug.Log("Entered collision with " + other.gameObject.name);
-        if (hasPairCollider) {
-            pairCollider.SetActive(true);
-        }
 
-        if (deactivateAfterCollision) {
-            gameObject.SetActive(false);
+        blinkerScript = blinkers.GetComponent<blinkers>();
+        if (rightTurn && blinkerScript.rightStatus == 0) {
+            popup.SetActive(true);
         }
-
-        //Transform childTransform = parentObject.transform.Find("Dashboard Canvas/Blinkers");
-        //blinkerStatus = childTransform.rightStatus;
-        if (rightTurn && blinkerStatus == 0) {
+        if (!rightTurn && blinkerScript.leftStatus == 0) {
             popup.SetActive(true);
         }
     }
