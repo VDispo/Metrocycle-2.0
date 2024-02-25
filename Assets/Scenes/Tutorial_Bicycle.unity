@@ -24523,7 +24523,7 @@ PrefabInstance:
     - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: motorforce
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
@@ -24549,6 +24549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664322994268695231, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
