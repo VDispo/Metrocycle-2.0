@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour
 {
-    public void PlayTutorial()
+    public void PlayMotorcycleTutorial()
     {
         SceneManager.LoadSceneAsync(0);
+    }
+        public void PlayBicycleTutorial()
+    {
+        SceneManager.LoadSceneAsync(1);
     }
 }
