@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 
 enum PopupType {
     ERROR,
@@ -11,6 +12,9 @@ enum PopupType {
 
 public class IntersectionChecker : MonoBehaviour
 {
+    public GameObject errorPopup;
+    public GameObject errorText;
+
     [Header("IMPORTANT: Add Lane Detect Objects in Counter Clockwise direction, left lane detects in even positions.")]
     public GameObject[] laneDetects;
     [TextArea(3, 10)] public string wrongWayText;
@@ -93,6 +97,7 @@ public class IntersectionChecker : MonoBehaviour
         PopupType type = PopupType.INFO;
         string popupText = "";
 
+        // TODO: use PopupType.WARNING for bad
         if (invalid_WrongWayIdx.Contains(idx)) {
             Debug.Log("Invalid Wrong Way " + idx);
             type = PopupType.ERROR;
@@ -129,9 +134,20 @@ public class IntersectionChecker : MonoBehaviour
             }
         }
 
-        // TODO: make + summon popups
         Debug.Log(popupText);
-        // reset EntryIdx
+
+        switch (type) {
+        case PopupType.ERROR:
+            TextMeshProUGUI text = errorText.GetComponent<TextMeshProUGUI>();
+            text.text = popupText;
+
+            errorPopup.SetActive(true);
+            break;
+        default:
+            break;
+        }
+
+        // reset entryIdx
         entryIdx = -1;
     }
 }
