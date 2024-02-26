@@ -113,6 +113,9 @@ public class IntersectionChecker : MonoBehaviour
             }
         }
         else {
+            // Normalize entryIdx to either Idx 0 or 1
+            entryIdx = entryIdx % 2;
+
             // TODO: use PopupType.WARNING for bad
             if (invalid_WrongWayIdx.Contains(idx)) {
                 Debug.Log("Invalid Wrong Way " + idx);
