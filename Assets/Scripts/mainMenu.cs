@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class mainMenu : MonoBehaviour
+public class nextScene : MonoBehaviour
 {
-    public void PlayMotorcycleTutorial()
+     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene(sceneName);
     }
-        public void PlayBicycleTutorial()
-    {
-        SceneManager.LoadSceneAsync(1);
-    }
+    
 }
