@@ -5049,7 +5049,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3204737585893811719
 CanvasRenderer:
@@ -6107,8 +6107,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blinkerGroup: {fileID: 6208870910163689826}
   motorbike: {fileID: 5979533320120663939}
-  initialRotation: {x: 0, y: 0, z: 0}
   blinkerAutoOffAngle: 60
+  prevRotation: {x: 0, y: 0, z: 0}
+  turnAngle: 0
+  leftStatus: 0
+  rightStatus: 0
 --- !u!1 &6316654713260011480
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,7 +11142,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5770046718182730568
 CanvasRenderer:

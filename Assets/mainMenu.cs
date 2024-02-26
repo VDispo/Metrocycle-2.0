@@ -7,10 +7,10 @@ public class mainMenu : MonoBehaviour
 {
     public void PlayMotorcycleTutorial()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
     }
         public void PlayBicycleTutorial()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 }

@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Main Menu.unity
+    guid: 71adf8fd63dfd4d1598911d02c1ce9f9
+  - enabled: 1
     path: Assets/Scenes/Tutorial_Motorcycle.unity
     guid: 9d0ecb0aaacab8ba4b77274aaf1578eb
   - enabled: 1
     path: Assets/Scenes/Tutorial_Bicycle.unity
     guid: 90c13bda261274d49b4368c971232454
-  - enabled: 1
-    path: Assets/Main Menu.unity
-    guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   - enabled: 1
     path: Assets/Scenes/Tutorial_Intersection.unity
     guid: e3ecb79a5e7887be9a6660c330c702b4
