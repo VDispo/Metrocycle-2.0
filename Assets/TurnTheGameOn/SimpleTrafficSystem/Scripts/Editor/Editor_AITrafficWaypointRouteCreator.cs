@@ -115,7 +115,7 @@
                 routeCreator.routeSettings.Clear();
                 for (int i = 0; i < (int)routeCreator.routes; i++)
                 {
-                    GameObject objectToSpawn = Instantiate(Resources.Load("AITrafficWaypointRoute")) as GameObject;
+                    GameObject objectToSpawn = Instantiate(Resources.Load("AITrafficWaypointRoute"), routeCreator.transform, true) as GameObject;
                     objectToSpawn.name = "AITrafficWaypointRoute";
 
                     AITrafficWaypointRouteCreator.RouteSettings _routeSettings = new AITrafficWaypointRouteCreator.RouteSettings();
