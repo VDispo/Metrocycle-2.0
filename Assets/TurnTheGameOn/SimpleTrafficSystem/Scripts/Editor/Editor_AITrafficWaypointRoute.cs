@@ -89,6 +89,15 @@
             if (EditorGUI.EndChangeCheck())
                 serializedObject.ApplyModifiedProperties();
 
+            // MODIFIED For Metrocycle
+            // TODO: Connect to AITrafficController's layer property
+            SerializedProperty layer = serializedObject.FindProperty("layer");
+            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.PropertyField(layer, true);
+            if (EditorGUI.EndChangeCheck())
+                serializedObject.ApplyModifiedProperties();
+            //
+
             EditorGUILayout.EndVertical();
 
             if (GUILayout.Button("Reverse Waypoints"))

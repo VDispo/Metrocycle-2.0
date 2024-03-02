@@ -18,6 +18,10 @@
         public Transform centerPoint;
         public bool usePooling;
         public bool useRouteLimit;
+        // MODIFIED For Metrocycle
+        [SerializeField, Layer]
+        public int layer;
+        //
         private bool isInitialized;
         [Header("Detection Sensor")]
         public LayerMask layerMask;
@@ -1175,6 +1179,9 @@
                     spawnedTrafficVehicle.GetComponent<AITrafficCar>().RegisterCar(availableSpawnPoints[randomSpawnPointIndex].waypoint.onReachWaypointSettings.parentRoute);
                     spawnedTrafficVehicle.transform.LookAt(availableSpawnPoints[randomSpawnPointIndex].waypoint.onReachWaypointSettings.parentRoute.waypointDataList[availableSpawnPoints[randomSpawnPointIndex].waypoint.onReachWaypointSettings.waypointIndexnumber]._transform);
                     availableSpawnPoints.RemoveAt(randomSpawnPointIndex);
+
+                    // MODIFIED For Metrocycle
+                    spawnedTrafficVehicle.layer = layer;
                 }
             }
 
@@ -1187,6 +1194,9 @@
                     GameObject spawnedTrafficVehicle = Instantiate(_AITrafficPool.trafficPrefabs[j], Vector3.zero, Quaternion.identity);
                     spawnedTrafficVehicle.GetComponent<AITrafficCar>().RegisterCar(waypointRouteList[0]);
                     MoveCarToPool(spawnedTrafficVehicle.GetComponent<AITrafficCar>().assignedIndex);
+
+                    // MODIFIED For Metrocycle
+                    spawnedTrafficVehicle.layer = layer;
                 }
             }
 

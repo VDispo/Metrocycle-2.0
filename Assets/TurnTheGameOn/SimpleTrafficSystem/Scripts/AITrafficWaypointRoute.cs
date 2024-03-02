@@ -12,12 +12,16 @@
         public List<CarAIWaypointInfo> waypointDataList;
         public bool stopForTrafficLight { get; private set; }
         public bool useSpawnPoints;
+        // MODIFIED For Metrocycle
+        [SerializeField, Layer]
+        public int layer;
+        //
+
         public GameObject[] spawnTrafficVehicles;
         public AITrafficWaypointRouteInfo routeInfo;
         public int maxDensity = 10;
         public int currentDensity; // unreliable if checked outside of AITrafficController update loop
         public int previousDensity; // more reliable if checked outside of AITrafficController update loop
-
         [ContextMenu("SetMaxToChildSpawnPointCount")]
         public void SetMaxToChildSpawnPointCount()
         {
@@ -68,6 +72,9 @@
                         spawnedTrafficVehicle.GetComponent<AITrafficCar>().RegisterCar(this);
                         spawnedTrafficVehicle.transform.LookAt(spawnpoints[randomSpawnPointIndex].waypoint.onReachWaypointSettings.parentRoute.waypointDataList[spawnpoints[randomSpawnPointIndex].waypoint.onReachWaypointSettings.waypointIndexnumber]._transform);
                         spawnpoints.RemoveAt(randomSpawnPointIndex);
+
+                        // MODIFIED For Metrocycle
+                        spawnedTrafficVehicle.layer = layer;
                     }
                 }
             }
@@ -81,6 +88,9 @@
                     spawnedTrafficVehicle.GetComponent<AITrafficCar>().RegisterCar(this);
                     spawnedTrafficVehicle.transform.LookAt(waypointDataList[j + 1]._transform);
                     j += 1; // increase j again tospawn vehicles with more space between
+
+                    // MODIFIED For Metrocycle
+                    spawnedTrafficVehicle.layer = layer;
                 }
             }
         }
