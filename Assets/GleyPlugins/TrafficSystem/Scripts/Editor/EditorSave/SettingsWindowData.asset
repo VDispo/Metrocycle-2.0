@@ -81,7 +81,7 @@ MonoBehaviour:
       viewWaypoints: 1
       viewLaneChanges: 1
     moveTool: 1
-    maxSpeed: 100
+    maxSpeed: 50
     globalCarList: 00000000
   speedEditedWaypointsSettings:
     showConnections: 0
