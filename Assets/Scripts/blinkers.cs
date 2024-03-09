@@ -26,8 +26,11 @@ public class blinkers : MonoBehaviour
 
     private CanvasGroup left;
     private CanvasGroup right;
-
     private float blinkTimer;
+
+    public float blinkerActivationTime;
+    public float blinkerOffTime;
+    public Blinker lastActiveBlinker;
 
     void Start()
     {
@@ -47,11 +50,16 @@ public class blinkers : MonoBehaviour
 
         prevRotation = new Vector3(0, 0, 0);
         turnAngle = 0f;
+
+        blinkerActivationTime = -1;
+        blinkerOffTime = -1;
     }
 
     void setBlinker(Blinker which, BlinkerStatus status) {
         int own_status, other_status;
         float own_alpha, other_alpha;
+        lastActiveBlinker = which;
+
         if (status == BlinkerStatus.ON) {
             own_status = 1;
             own_alpha = 1f;
@@ -60,12 +68,16 @@ public class blinkers : MonoBehaviour
 
             prevRotation = motorbike.transform.eulerAngles;
             turnAngle = 0f;
+
+            blinkerActivationTime = Time.time;
+            blinkerOffTime = -1;
         }
         else {
             own_status = 0;
             own_alpha = 0.1f;
             other_status = 1;
             other_alpha = 1f;
+            blinkerOffTime = Time.time;
         }
 
         if (which == Blinker.LEFT) {
