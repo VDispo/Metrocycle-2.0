@@ -532,9 +532,9 @@ MonoBehaviour:
     continueOnConnections: 0
     ignoreOffsetsOnConnections: 0
   - version: 2.0.0
-    name: Side Object 1
+    name: SideHedge
     id: 1708761651.6665618
-    timestamp: 1709990902.788256
+    timestamp: 1709992513.2201836
     objectType: 0
     gameobjectGUID: 
     textureGUID: 
