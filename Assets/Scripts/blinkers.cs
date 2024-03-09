@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Blinker {
+public enum Blinker {
     LEFT,
     RIGHT
 };
 
-enum BlinkerStatus {
+public enum BlinkerStatus {
     OFF = 0,
     ON = 1
 };
