@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UturnStart : MonoBehaviour
 {
@@ -12,10 +14,15 @@ public class UturnStart : MonoBehaviour
     public bool activatePopup;
     public GameObject popup; // activated after collision
 
+    public bool changePopupText;
+    public string popupText;
+
+    private TextMeshProUGUI textElement;
 
     // Start is called before the first frame update
     void Start()
     {
+        textElement = popup.transform.Find("Instructions").GetComponent<TextMeshProUGUI>();
     }
 
     void OnTriggerEnter (Collider other) {
@@ -29,6 +36,10 @@ public class UturnStart : MonoBehaviour
         }
 
         if (activatePopup) {
+            if (changePopupText) {
+                textElement.text = popupText;
+            }
+
             popup.SetActive(true);
         }
     }
