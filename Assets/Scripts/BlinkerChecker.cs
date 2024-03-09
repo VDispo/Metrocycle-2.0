@@ -7,7 +7,7 @@ public class BlinkerCheck : MonoBehaviour
     public bool activatePopup;
     public GameObject popup; // activated after collision
 
-    public bool rightTurn; //false if left, true if right
+    public Blinker whichBlinker; //false if left, true if right
     public GameObject blinkers;
     private blinkers blinkerScript;
 
@@ -19,10 +19,10 @@ public class BlinkerCheck : MonoBehaviour
     void OnTriggerEnter (Collider other) {
 
         blinkerScript = blinkers.GetComponent<blinkers>();
-        if (rightTurn && blinkerScript.rightStatus == 0) {
+        if (whichBlinker == Blinker.RIGHT && blinkerScript.rightStatus == 0) {
             popup.SetActive(true);
         }
-        if (!rightTurn && blinkerScript.leftStatus == 0) {
+        if (whichBlinker == Blinker.LEFT && blinkerScript.leftStatus == 0) {
             popup.SetActive(true);
         }
     }

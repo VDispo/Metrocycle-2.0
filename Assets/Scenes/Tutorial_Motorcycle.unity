@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2382,6 +2382,8 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   activatePopup: 0
   popup: {fileID: 0}
+  changePopupText: 0
+  popupText: 
 --- !u!64 &153371508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5803,6 +5805,8 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   activatePopup: 1
   popup: {fileID: 178417173}
+  changePopupText: 0
+  popupText: 
 --- !u!64 &423867879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7784,7 +7788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatePopup: 0
   popup: {fileID: 1330844220}
-  rightTurn: 1
+  whichBlinker: 1
   blinkers: {fileID: 2131946677}
 --- !u!1 &622902870
 GameObject:
@@ -9078,7 +9082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f062c751cc84bb5a2bfb3c918c8db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTimeText: {fileID: 1645646923}
 --- !u!114 &748417752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17629,36 +17632,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694484801800155414, guid: ced65b9d7d99acd8185978e9824969b5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5979533320120663939, guid: ced65b9d7d99acd8185978e9824969b5,
         type: 3}
       propertyPath: m_Name
@@ -18520,6 +18493,8 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   activatePopup: 1
   popup: {fileID: 754833011}
+  changePopupText: 0
+  popupText: 
 --- !u!64 &1121348448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19416,6 +19391,8 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   activatePopup: 1
   popup: {fileID: 1486819096}
+  changePopupText: 0
+  popupText: 
 --- !u!64 &1182756704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22005,7 +21982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatePopup: 0
   popup: {fileID: 75193889}
-  rightTurn: 0
+  whichBlinker: 0
   blinkers: {fileID: 2131946677}
 --- !u!114 &1420200610
 MonoBehaviour:
@@ -26576,6 +26553,8 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   activatePopup: 0
   popup: {fileID: 0}
+  changePopupText: 0
+  popupText: 
 --- !u!1 &1846565681
 GameObject:
   m_ObjectHideFlags: 0

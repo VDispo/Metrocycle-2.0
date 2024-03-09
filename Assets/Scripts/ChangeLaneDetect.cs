@@ -8,6 +8,8 @@ using System.Linq;
  * - Add Colliders to Waypoint objects, configure size
  * - add ALL lanes of this road to allLaneHolders
  * - add adjacent lanes of this road to adjacentLaneHolders
+ * - add the ChangeLaneChecker Script to an Object
+ * - Set changeLaneMsgReceiver to the ChangeLaneChecker Object
  */
 
 public class ChangeLaneDetect : MonoBehaviour
@@ -16,7 +18,11 @@ public class ChangeLaneDetect : MonoBehaviour
     public GameObject[] allLaneHolders;
     [SerializeField]
     public GameObject[] adjacentLaneHolders;
+
+    public GameObject changeLaneMsgReceiver;
     private GameObject currentLaneHolder;
+
+    private const string laneNamePrefix = "Lane_";
 
     void Start() {
         currentLaneHolder = transform.parent.gameObject;
@@ -50,5 +56,8 @@ public class ChangeLaneDetect : MonoBehaviour
         foreach (GameObject laneHolder in adjacentLaneHolders) {
             laneHolder.SetActive(true);
         }
+
+        int curLaneNumber = int.Parse(currentLaneHolder.name.Substring(laneNamePrefix.Length));
+        changeLaneMsgReceiver.SendMessage("checkBlinkerForLaneChange", curLaneNumber);
     }
 }
