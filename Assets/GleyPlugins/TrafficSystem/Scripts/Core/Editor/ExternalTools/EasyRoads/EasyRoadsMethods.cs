@@ -525,4 +525,85 @@ namespace GleyTrafficSystem
         }
     }
 }
+
+// HACK: Implement missing ER3D funcs (only present in v3.3 beta)
+public static class ERRoadExtensions{
+    // HACK: encode the number of lanes in the road name
+    //       of the format ".* [L,R]-Lane .*"
+    //       where L, R are integers, and
+    //          L = number of left lanes
+    //          R = number of right lanes
+    public static int[] GetLaneCountRaw(this ERRoad road) {
+        const string KEYWORD = "-Lane";
+
+        string roadName = road.GetName();
+        Debug.Assert(roadName.Contains(KEYWORD));
+        string lanePart = road.GetName().Split(KEYWORD)[0];
+
+        int lanePartEnd = lanePart.LastIndexOf(']');
+        int lanePartStart = lanePart.LastIndexOf('[', lanePartEnd);
+        Debug.Assert(lanePartStart > -1);
+        Debug.Assert(lanePartEnd > lanePartStart);
+
+        string[] numLanes = lanePart.Substring(lanePartStart+1, (lanePartEnd-lanePartStart)-1).Split(',');
+
+        return new int[] {int.Parse(numLanes[0]), int.Parse(numLanes[1])};
+    }
+
+    public static int GetLaneCount(this ERRoad road) {
+        int[] numLanes = road.GetLaneCountRaw();
+        return numLanes[0] + numLanes[1];
+    }
+    public static int GetLeftLaneCount(this ERRoad road) {
+        int[] numLanes = road.GetLaneCountRaw();
+        return numLanes[0];
+    }
+    public static int GetRightLaneCount(this ERRoad road) {
+        int[] numLanes = road.GetLaneCountRaw();
+        return numLanes[1];
+    }
+
+    // HACK: encode the speed limit (max) in the road name
+    //       of the format ".* X-SpeedLimit .*"
+    //       where X is an int
+    public static int GetSpeedLimit(this ERRoad road) {
+        const int DEFAULT_SPEED_LIMIT = 40;
+        const string KEYWORD = "-SpeedLimit";
+
+        string roadName = road.GetName();
+        if (!roadName.Contains(KEYWORD)) {
+            return DEFAULT_SPEED_LIMIT;
+        }
+
+        string speedPart = road.GetName().Split(KEYWORD)[0];
+        int speedPartStart = speedPart.LastIndexOf(' ', KEYWORD.Length);
+        Debug.Assert(speedPartStart > -1);
+
+        int speedLimit = int.Parse(speedPart.Substring(speedPartStart+1, speedPart.Length-(KEYWORD.Length)));
+
+        return speedLimit;
+    }
+
+    // HACK: encode the speed limit (max) in the road name
+    //       of the format ".* X-SpeedLimit .*"
+    //       where X is an int
+    public static Vector3[] GetLanePoints(this ERRoad road, int laneIdx, ERLaneDirection dir) {
+        Vector3[] markersCenter = road.GetSplinePointsCenter();
+        Vector3[] markersSide;
+        if (dir == ERLaneDirection.Left) {
+            markersSide = road.GetSplinePointsLeftSide();
+        } else {
+            markersSide = road.GetSplinePointsRightSide();
+        }
+
+        Debug.Assert(markersSide.Length == markersCenter.Length);
+        float roadWidth = road.GetWidth() / road.GetLaneCount();
+        Vector3[] lanePoints = new Vector3[markersSide.Length];
+        for (int i = 0; i < markersSide.Length; ++i) {
+            lanePoints[i] = Vector3.MoveTowards(markersSide[i], markersCenter[i], (laneIdx + 0.5f)*roadWidth);
+        }
+
+        return lanePoints;
+    }
+}
 #endif
