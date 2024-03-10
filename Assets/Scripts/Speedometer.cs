@@ -1,16 +1,4 @@
-﻿/* 
-    ------------------- Code Monkey -------------------
-
-    Thank you for downloading this package
-    I hope you find it useful in your projects
-    If you have any questions let me know
-    Cheers!
-
-               unitycodemonkey.com
-    --------------------------------------------------
- */
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +15,7 @@ public class Speedometer : MonoBehaviour {
     private Transform speedLabelTemplateTransform;
 
     private float speedMax;
-    public float speed;
+    private float speed;
 
     private double speedTotal;
     private int numSpeedSamples;
@@ -45,7 +33,7 @@ public class Speedometer : MonoBehaviour {
         CreateSpeedLabels();
     }
 
-    public float Update() {
+    private void Update() {
         Vector3 vel = rb.velocity;
         // Debug.Log(vel.magnitude);
 
@@ -56,8 +44,6 @@ public class Speedometer : MonoBehaviour {
 
         speedTotal += speed;
         ++numSpeedSamples;
-
-        return speed;
     }
 
     private void CreateSpeedLabels() {
@@ -89,4 +75,3 @@ public class Speedometer : MonoBehaviour {
         return speedTotal / ((double) numSpeedSamples);
     }
 }
-
