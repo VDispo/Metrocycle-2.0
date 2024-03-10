@@ -1,26 +1,21 @@
-﻿<Project ToolsVersion="Current">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
   <PropertyGroup>
-    <BaseIntermediateOutputPath>Temp\obj\$(Configuration)\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-  </PropertyGroup>
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
-  <ItemGroup>
-    <ProjectCapability Include="Unity" />
-  </ItemGroup>
-  <PropertyGroup>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <EnableDefaultItems>false</EnableDefaultItems>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <LangVersion>9.0</LangVersion>
-    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+    <ProjectGuid>{2455511E-FEF5-81FE-C8B5-2DA8BA6F6339}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -44,52 +39,137 @@
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <NoStandardLibraries>true</NoStandardLibraries>
-    <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
-    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2022.3.15f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\59cha\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.15f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.15f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Events\WaypointEvents.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Waypoint\IntersectionStopWaypointsIndex.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\SpecialDriveActionTypes.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Events\VehicleEvents.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Example\UI\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\IntersectionLaneDetect.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Waypoint\SpawnWaypoint.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Grid\GridManager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Other\Wheel.cs" />
+    <Compile Include="Assets\Fictional Road\MoveFinishLineToNextEvent.cs" />
+    <Compile Include="Assets\Scripts\Speedometer.cs" />
     <Compile Include="Assets\Scripts\IntersectionChecker.cs" />
     <Compile Include="Assets\BycicleSystem\BicycleVehicle.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Base\WaypointManagerBase.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\ScriptableObjects\VehiclePool.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\WaypointSettingsBase.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\ScriptableObjects\LayerSetup.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\DefaultVehicleTypes.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Events\AIEvents.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Constants.cs" />
     <Compile Include="Assets\Fictional Road\FictionalRoadGenerator.cs" />
     <Compile Include="Assets\Scripts\BlinkerChecker.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Grid\GridCell.cs" />
     <Compile Include="Assets\EasyRoads3D\Scripts\ERVegetationStudio.cs" />
     <Compile Include="Assets\EasyRoads3D\Scripts\runtimeScript.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Grid\CurrentSceneData.cs" />
+    <Compile Include="Assets\Scripts\CollisionWithOtherCar.cs" />
     <Compile Include="Assets\Scripts\StartPopup.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Jobs\DriveJob.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\BlinkType.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Jobs\UpdateTriggerJob.cs" />
     <Compile Include="Assets\Scripts\CollideDetectorActivated.cs" />
     <Compile Include="Assets\Scripts\Speed.cs" />
     <Compile Include="Assets\Scripts\NextScene.cs" />
+    <Compile Include="Assets\Scripts\SpeedChecker.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\IntersectionManager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Resources\VehicleTypes.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\Manager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\ScriptableObjects\DebugSettings.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Other\PositionValidator.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\TrafficManager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\DelegateImplementation\GetBestNeighbor.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Example\UI\UIInput.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Intersection\GenericIntersection.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\BlinkReasons.cs" />
+    <Compile Include="Assets\Scripts\ChangeLaneDetect.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Intersection\TrafficLightsIntersection.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\DelegateImplementation\AvailableDelegates.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Jobs\WheelJob.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Grid\IntersectionData.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Events\IntersectionEvents.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\CollidingObjects.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Ash Assets\Arcade Bike Physics\Scripts\BikerAnimation.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\EngineSoundComponent.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\ConnectionPool.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\VehicleLightsComponent.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Waypoint\Waypoint.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Grid\TrafficGridManager.cs" />
     <Compile Include="Assets\Fictional Road\FictionalRoadDetect.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Intersection\IntersectionStopWaypoints.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Jobs\UpdateWheelJob.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\Path.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Intersection\IntersectionStopWaypointsSettings.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\RoadBase.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Example\PlayerCar\PlayerCar.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Grid\CurrentSceneData.cs" />
     <Compile Include="Assets\Fictional Road\Deque.cs" />
+    <Compile Include="Assets\Scripts\ChangeLaneChecker.cs" />
     <Compile Include="Assets\Ash Assets\Arcade Bike Physics\Scripts\BikeReferences.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\VehicleComponent.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Intersection\GenericIntersectionSettings.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Intersection\PriorityIntersection.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\DensityManager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Routes\WaypointExtensionMethods.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\TrafficLightsColor.cs" />
     <Compile Include="Assets\Ash Assets\Arcade Bike Physics\Scripts\ArcadeBikeController.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\DebugOptions.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Intersection\TrafficLightsIntersectionSettings.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\TrafficComponentMultiplayer.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\ConnectionCurve.cs" />
     <Compile Include="Assets\Scripts\GameoverPopup.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Intersection\PriorityIntersectionSettings.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\ToUse\TrafficComponent.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\DelegateImplementation\TrafficLightsBehaviours.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Fictional Road\ObstacleCollide.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Events\DensityEvents.cs" />
     <Compile Include="Assets\Scripts\blinkers.cs" />
-    <Compile Include="Assets\Speedometer\Speedometer.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Managers\UrbanManager.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Example\UI\UIButton.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Routes\Road.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\IntersectionType.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\TrafficVehicles.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\DrivingAI.cs" />
     <Compile Include="Assets\Scripts\GoToNextScene.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Intersection\IntersectionExtensionMethods.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Constants.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Other\VehiclePositioningSystem.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Routes\WaypointSettings.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Waypoint\WaypointBase.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\WaypointManager.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\VisibilityScript.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\DelegateImplementation\AvailableInteractions.cs" />
+    <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Other\DriveActions.cs" />
     <Compile Include="Assets\Ash Assets\Arcade Bike Physics\Scripts\SkidMarks.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\EditorOnlyMonoBehaviours\Lane.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Grid\GridRow.cs" />
+    <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Interfaces\IIntersection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -140,6 +220,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\GleyPlugins\TrafficSystem\Scripts\Version.txt" />
     <None Include="Assets\EasyRoads3D\prefab sources\_custom prefabs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\EasyRoads3D\lib\DelaunayER.txt" />
@@ -1152,16 +1233,13 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-  <ItemGroup>
-    <ProjectCapability Remove="LaunchProfiles" />
-    <ProjectCapability Remove="SharedProjectReferences" />
-    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
-    <ProjectCapability Remove="ProjectReferences" />
-    <ProjectCapability Remove="ReferenceManagerProjects" />
-    <ProjectCapability Remove="COMReferences" />
-    <ProjectCapability Remove="ReferenceManagerCOM" />
-    <ProjectCapability Remove="AssemblyReferences" />
-    <ProjectCapability Remove="ReferenceManagerAssemblies" />
-  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
