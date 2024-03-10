@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1289980562747270206}
   - component: {fileID: 1289980562747270207}
   - component: {fileID: 1289980562747270204}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 1289980563145600266}
   - component: {fileID: 1289980563145600267}
   - component: {fileID: 1289980563145600264}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 6627595500494369706}
   - component: {fileID: 4576581725534827895}
   - component: {fileID: 8970277981873175564}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Plate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 9205844434439539567}
   - component: {fileID: 477979342257207978}
   - component: {fileID: 2790885867986711632}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ReaRTyreShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3052604779560145185}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: TyreTransforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3052604780477020903}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Handlepivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1632,7 +1632,7 @@ GameObject:
   - component: {fileID: 5086599356649320344}
   - component: {fileID: 6465741694936210527}
   - component: {fileID: 8096577453213907468}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ChainExtender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1715,7 @@ GameObject:
   - component: {fileID: 1125797767960417296}
   - component: {fileID: 7430596519012158009}
   - component: {fileID: 7483095472885089716}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BikeFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 4738838216433748151}
   - component: {fileID: 5101726804371034723}
   - component: {fileID: 5410958062727725123}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Pedalier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 1347249707528095493}
   - component: {fileID: 4739063405747969857}
   - component: {fileID: 7324814414795531322}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FrontTyreShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2140,7 +2140,7 @@ GameObject:
   - component: {fileID: 2201149435940888313}
   - component: {fileID: 2885595562812020329}
   - component: {fileID: 2434558661652952523}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PEdalLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2223,7 +2223,7 @@ GameObject:
   - component: {fileID: 4978436628063571530}
   - component: {fileID: 4617272747938283079}
   - component: {fileID: 3495339819885789356}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Plate2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2306,7 +2306,7 @@ GameObject:
   - component: {fileID: 1808859595555553354}
   - component: {fileID: 2284700124695011773}
   - component: {fileID: 3130676480177642789}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BackGearing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,7 +2391,7 @@ GameObject:
   - component: {fileID: 7805701662830336928}
   - component: {fileID: 7667930748224303021}
   - component: {fileID: 170969366814854360}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PEdalLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
