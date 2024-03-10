@@ -534,7 +534,7 @@ MonoBehaviour:
   - version: 2.0.0
     name: SideHedge
     id: 1708761651.6665618
-    timestamp: 1709992513.2201836
+    timestamp: 1710078136.9756079
     objectType: 0
     gameobjectGUID: 
     textureGUID: 
@@ -633,7 +633,7 @@ MonoBehaviour:
     bridgeObject: 0
     tunnelObject: 0
     snapToTerrain: 1
-    layer: 0
+    layer: 10
     deformationObject: 0
     isStatic: 1
     castShadows: 1
@@ -1698,7 +1698,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 2-Lane
     id: 1708760731.257212
-    timestamp: 1708763192.2149198
+    timestamp: 1710078329.090179
     roadWidth: 10
     totalLanes: 2
     laneWidth: 3.5
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     soDataExt: []
     soDataLog:
     - id: 1708761651.6665618
-      active: 0
+      active: 1
     layer: 8
     isStatic: 1
     tag: Untagged
@@ -1847,7 +1847,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 4-Lane two way
     id: 1708771633.757933
-    timestamp: 1709959297.456521
+    timestamp: 1710078345.2676358
     roadWidth: 30
     totalLanes: 2
     laneWidth: 3.5
@@ -1933,7 +1933,7 @@ MonoBehaviour:
     soDataExt: []
     soDataLog:
     - id: 1708761651.6665618
-      active: 0
+      active: 1
     layer: 8
     isStatic: 1
     tag: Untagged
