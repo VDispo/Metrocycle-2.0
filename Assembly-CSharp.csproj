@@ -153,6 +153,7 @@
     <Compile Include="Assets\GleyPlugins\SharedUrbanAssets\Scripts\Runtime\Managers\UrbanManager.cs" />
     <Compile Include="Assets\GleyPlugins\TrafficSystem\Example\UI\UIButton.cs" />
     <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\EditorOnlyMonoBehaviours\Routes\Road.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Enums\IntersectionType.cs" />
     <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\TrafficVehicles.cs" />
     <Compile Include="Assets\GleyPlugins\TrafficSystem\Scripts\Core\Traffic\Managers\DrivingAI.cs" />
