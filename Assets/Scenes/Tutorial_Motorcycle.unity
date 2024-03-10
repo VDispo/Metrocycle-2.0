@@ -1672,6 +1672,7 @@ GameObject:
   - component: {fileID: 134110743}
   - component: {fileID: 134110742}
   - component: {fileID: 134110741}
+  - component: {fileID: 134110744}
   m_Layer: 5
   m_Name: Restart_Button
   m_TagString: Untagged
@@ -1743,10 +1744,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 178417173}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 134110744}
+        m_TargetAssemblyTypeName: Restart, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1805,6 +1806,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134110739}
   m_CullTransparentMesh: 1
+--- !u!114 &134110744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134110739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b3945ae84d06a41a0fd0f51be2140a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &157170147
 PrefabInstance:
   m_ObjectHideFlags: 0
