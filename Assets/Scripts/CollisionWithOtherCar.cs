@@ -9,10 +9,13 @@ public class CollisionWithOtherCar : MonoBehaviour
 
     void OnCollisionEnter (Collision other)
     {
-        // HACK: hardcode collision to only AI cars for now
+        // HACK: hardcode collision to only AI cars and obstacles for now
         //       may be use a layer mask parameter?
         const int layer_AITraffic = 9;
-        if (other.gameObject.layer != layer_AITraffic) {
+        const int layer_obstacles = 10;
+        if (!(other.gameObject.layer == layer_AITraffic
+            || other.gameObject.layer == layer_obstacles)
+        ) {
             return;
         }
 

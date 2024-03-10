@@ -534,7 +534,7 @@ MonoBehaviour:
   - version: 2.0.0
     name: SideHedge
     id: 1708761651.6665618
-    timestamp: 1709992513.2201836
+    timestamp: 1710078136.9756079
     objectType: 0
     gameobjectGUID: 
     textureGUID: 
@@ -633,7 +633,7 @@ MonoBehaviour:
     bridgeObject: 0
     tunnelObject: 0
     snapToTerrain: 1
-    layer: 0
+    layer: 10
     deformationObject: 0
     isStatic: 1
     castShadows: 1
