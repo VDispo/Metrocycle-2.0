@@ -11,16 +11,26 @@ public class ChangeLaneChecker : MonoBehaviour
     public float minBlinkerTime;
     // blinker can turn off early, within reasonable max
     public float maxBlinkerOffTime;
+    public GameObject bikeLane;
 
     private blinkers blinkerScript;
     private TextMeshProUGUI textElement;
 
     private int previousLane;
+
+    private const string laneNamePrefix = "Lane_";
+
     void Start(){
         blinkerScript = motorbike.transform.Find("Dashboard Canvas/Blinkers").GetComponent<blinkers>();
         textElement = popup.transform.Find("Instructions").GetComponent<TextMeshProUGUI>();
 
         previousLane = -1;
+    }
+
+    public void enteredLane(GameObject lane) {
+        int newLane = int.Parse(lane.name.Substring(laneNamePrefix.Length));
+        checkBlinkerForLaneChange(newLane);
+        checkEnteredBikeLane(lane);
     }
 
     public void checkBlinkerForLaneChange(int newLane) {
@@ -73,5 +83,14 @@ public class ChangeLaneChecker : MonoBehaviour
             // HACK: modify property directly. Should use func/message
             blinkerScript.blinkerActivationTime = Time.time;
         }
+    }
+
+    public void checkEnteredBikeLane(GameObject lane) {
+        if (lane != bikeLane) {
+            return;
+        }
+
+        textElement.text = "Motorcycles are not allowed on the Bike Lane!";
+        popup.SetActive(true);
     }
 }

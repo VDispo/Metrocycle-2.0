@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -22,8 +22,6 @@ public class ChangeLaneDetect : MonoBehaviour
     public GameObject changeLaneMsgReceiver;
     private GameObject currentLaneHolder;
 
-    private const string laneNamePrefix = "Lane_";
-
     void Start() {
         currentLaneHolder = transform.parent.gameObject;
 
@@ -43,6 +41,7 @@ public class ChangeLaneDetect : MonoBehaviour
     void OnTriggerEnter (Collider other) {
         GameObject currentLaneHolder = transform.parent.gameObject;
         Debug.Log("Entered Lane " + currentLaneHolder);
+
         // Disable all colliders in this lane since we don't
         //   need to check that we are in the same lane
         currentLaneHolder.SetActive(false);
@@ -57,7 +56,6 @@ public class ChangeLaneDetect : MonoBehaviour
             laneHolder.SetActive(true);
         }
 
-        int curLaneNumber = int.Parse(currentLaneHolder.name.Substring(laneNamePrefix.Length));
-        changeLaneMsgReceiver.SendMessage("checkBlinkerForLaneChange", curLaneNumber);
+        changeLaneMsgReceiver.SendMessage("enteredLane", currentLaneHolder);
     }
 }
