@@ -52,6 +52,7 @@ namespace GleyTrafficSystem
             {
                 if (!roads[i].roadScript.isSideObject)
                 {
+                    Debug.Log("MTS-ER3D: Processing road " + roads[i].gameObject);
                     GameObject road = new GameObject("Road_" + i);
                     road.transform.SetParent(waypointsHolder);
                     GameObject lanesHolder = new GameObject("Lanes");
@@ -537,13 +538,14 @@ public static class ERRoadExtensions{
         const string KEYWORD = "-Lane";
 
         string roadName = road.GetName();
-        Debug.Assert(roadName.Contains(KEYWORD));
+        Debug.Assert(roadName.Contains(KEYWORD), "ER3D road name must contain [L,R]-Lane");
         string lanePart = road.GetName().Split(KEYWORD)[0];
 
+        Debug.Assert(lanePart.Contains(']'), "ER3D road name [L,R] lane part must have closing ]");
         int lanePartEnd = lanePart.LastIndexOf(']');
         int lanePartStart = lanePart.LastIndexOf('[', lanePartEnd);
-        Debug.Assert(lanePartStart > -1);
-        Debug.Assert(lanePartEnd > lanePartStart);
+        Debug.Assert(lanePartStart > -1, "ER3D road name [L,R] lane part must have opening [");
+        Debug.Assert(lanePartEnd > lanePartStart, "ER3D road name [L,R] lane part [ must appear after ]");
 
         string[] numLanes = lanePart.Substring(lanePartStart+1, (lanePartEnd-lanePartStart)-1).Split(',');
 
@@ -597,7 +599,7 @@ public static class ERRoadExtensions{
             markersSide = road.GetSplinePointsRightSide();
         }
 
-        Debug.Assert(markersSide.Length == markersCenter.Length);
+        Debug.Assert(markersSide.Length == markersCenter.Length, "ER3D road must have same number of side and center spline points");
         float roadWidth = road.GetWidth() / road.GetLaneCount();
         Vector3[] lanePoints = new Vector3[markersSide.Length];
         for (int i = 0; i < markersSide.Length; ++i) {
