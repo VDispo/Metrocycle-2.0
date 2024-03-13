@@ -608,18 +608,24 @@ public static class ERRoadExtensions{
         const string KEYWORD = "-Lane";
 
         string roadName = road.GetName();
-        Debug.Assert(roadName.Contains(KEYWORD), "ER3D road name must contain [L,R]-Lane");
+        Debug.Assert(roadName.Contains(KEYWORD), "ER3D road name must contain [L,R]-Lane or R-Lane");
         string lanePart = road.GetName().Split(KEYWORD)[0];
 
-        Debug.Assert(lanePart.Contains(']'), "ER3D road name [L,R] lane part must have closing ]");
-        int lanePartEnd = lanePart.LastIndexOf(']');
-        int lanePartStart = lanePart.LastIndexOf('[', lanePartEnd);
-        Debug.Assert(lanePartStart > -1, "ER3D road name [L,R] lane part must have opening [");
-        Debug.Assert(lanePartEnd > lanePartStart, "ER3D road name [L,R] lane part [ must appear after ]");
+        if (lanePart.Contains(']')) {
+            int lanePartEnd = lanePart.LastIndexOf(']');
+            int lanePartStart = lanePart.LastIndexOf('[', lanePartEnd);
+            Debug.Assert(lanePartStart > -1, "ER3D road name [L,R] lane part must have opening [");
+            Debug.Assert(lanePartEnd > lanePartStart, "ER3D road name [L,R] lane part [ must appear after ]");
 
-        string[] numLanes = lanePart.Substring(lanePartStart+1, (lanePartEnd-lanePartStart)-1).Split(',');
+            string[] numLanes = lanePart.Substring(lanePartStart+1, (lanePartEnd-lanePartStart)-1).Split(',');
+            return new int[] {int.Parse(numLanes[0]), int.Parse(numLanes[1])};
+        } else {
+            int lanePartStart = lanePart.LastIndexOf(' ', lanePart.Length-1);
+            Debug.Assert(lanePartStart > -1, "ER3D road name R-Lane part must be preced by space");
 
-        return new int[] {int.Parse(numLanes[0]), int.Parse(numLanes[1])};
+            int rightLanes = int.Parse(lanePart.Substring(lanePartStart+1));
+            return new int[] {0, rightLanes};
+        }
     }
 
     public static int GetLaneCount(this ERRoad road) {
