@@ -17,20 +17,20 @@ public class blinkers : MonoBehaviour
     public GameObject blinkerGroup;
     public GameObject motorbike;
     public int blinkerAutoOffAngle;
-    // NOTE: made public for easier debugging
-    // TODO: change to private
-    public Vector3 prevRotation;
-    public double turnAngle;
+    public float blinkDuration = 0.5f;
+
     public int leftStatus;
     public int rightStatus;
-
-    private CanvasGroup left;
-    private CanvasGroup right;
-    private float blinkTimer;
 
     public float blinkerActivationTime;
     public float blinkerOffTime;
     public Blinker lastActiveBlinker;
+
+    private CanvasGroup left;
+    private CanvasGroup right;
+    private float blinkTimer;
+    private Vector3 prevRotation;
+    private double turnAngle;
 
     void Start()
     {
@@ -102,7 +102,7 @@ public class blinkers : MonoBehaviour
         blinkTimer += Time.deltaTime;
         if (leftStatus == 1)
         {
-            if (blinkTimer >=1){
+            if (blinkTimer >= blinkDuration){
                 if (left.alpha == 1f){
                     left.alpha = 0.1f;
                 }
@@ -114,7 +114,7 @@ public class blinkers : MonoBehaviour
         }
         if (rightStatus == 1)
         {
-            if (blinkTimer >=1){
+            if (blinkTimer >= blinkDuration){
                 if (right.alpha == 1f){
                     right.alpha = 0.1f;
                 }
