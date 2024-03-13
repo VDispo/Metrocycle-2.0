@@ -73,15 +73,22 @@ namespace GleyTrafficSystem
 
                         // Add Road Script so that we can interact with this road via Gley Window
                         Road roadScript = road.gameObject.AddComponent<Road>();
+                        Debug.Log("script added??? " + roadScript);
                         roadScript.SetRoadProperties((int)roads[i].GetSpeedLimit(), NUMBER_OF_CARS);
                         roadScript.SetDefaults(roads[i].GetLaneCount(), roads[i].GetLaneWidth(), waypointDistance);
+
                         // Add Paths just to make it easier to modify
-                        // TODO: reduce markers
                         // TODO: make sure modified path is not overridden when regenerating ?
                         Vector3[] markers = roads[i].GetSplinePointsCenter();
-                        for (int j = 0; j < markers.Length-1; ++j) {
-                            roadScript.CreatePath(markers[j], markers[j+1]);
+                        // roadScript.CreatePath(markers[0], markers[markers.Length-2]);    // Only add ends of path
+
+                        // HACK: only use every Nth marker to reduce their number
+                        roadScript.CreatePath(markers[0], markers[1]);
+                        const int N = 4;
+                        for (int j = 2; j < markers.Length-1; j += 8) {
+                            roadScript.path.AddSegment(markers[j]);
                         }
+                        roadScript.path.AddSegment(markers[markers.Length-1]);
 
                         ExtractLaneWaypoints(roads[i].GetLeftLaneCount(), lanesHolder, roads[i], ERLaneDirection.Left, i,
                                              inWaypoints, outWaypoints, laneIdxs);
