@@ -13,6 +13,7 @@ public class Speedometer : MonoBehaviour {
 
     private Transform needleTranform;
     private Transform speedLabelTemplateTransform;
+    public float speedLabelDistance;
 
     private float speedMax;
     private float speed;
@@ -26,6 +27,9 @@ public class Speedometer : MonoBehaviour {
         needleTranform = transform.Find("needle");
         speedLabelTemplateTransform = transform.Find("speedLabelTemplate2");
         speedLabelTemplateTransform.gameObject.SetActive(false);
+
+        speedLabelDistance = (speedLabelTemplateTransform.Find("speedText").transform.position
+                              - speedLabelTemplateTransform.Find("dashImage").transform.position).magnitude;
 
         speed = 0f;
         speedMax = 120f;
@@ -54,10 +58,15 @@ public class Speedometer : MonoBehaviour {
             Transform speedLabelTransform = Instantiate(speedLabelTemplateTransform, transform);
             float labelSpeedNormalized = (float)i / labelAmount;
             float speedLabelAngle = ZERO_SPEED_ANGLE - labelSpeedNormalized * totalAngleSize;
+
+            Transform speedText = speedLabelTransform.Find("speedText");
+
             speedLabelTransform.eulerAngles = new Vector3(0,0,speedLabelAngle);
-            speedLabelTransform.Find("speedText").GetComponent<Text>().text = Mathf.RoundToInt(labelSpeedNormalized * speedMax).ToString();
-            speedLabelTransform.Find("speedText").eulerAngles = Vector3.zero;
+            speedText.GetComponent<Text>().text = Mathf.RoundToInt(labelSpeedNormalized * speedMax).ToString();
+            speedText.eulerAngles = Vector3.zero;
             speedLabelTransform.gameObject.SetActive(true);
+
+            speedText.transform.position = Vector3.MoveTowards(speedText.transform.position, needleTranform.position, speedLabelDistance);
         }   
         needleTranform.SetAsLastSibling();
     }
