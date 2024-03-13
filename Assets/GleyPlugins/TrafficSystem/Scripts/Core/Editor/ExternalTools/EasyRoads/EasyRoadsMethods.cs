@@ -85,7 +85,7 @@ namespace GleyTrafficSystem
                         // HACK: only use every Nth marker to reduce their number
                         roadScript.CreatePath(markers[0], markers[1]);
                         const int N = 4;
-                        for (int j = 2; j < markers.Length-1; j += 8) {
+                        for (int j = 2; j < markers.Length-1; j += N) {
                             roadScript.path.AddSegment(markers[j]);
                         }
                         roadScript.path.AddSegment(markers[markers.Length-1]);
