@@ -658,8 +658,16 @@ public static class ERRoadExtensions{
         Vector3[] markersSide;
         if (dir == ERLaneDirection.Left) {
             markersSide = road.GetSplinePointsLeftSide();
+            // If we ONLY have left lanes, use whole width instead of just from center
+            if (road.GetRightLaneCount() == 0) {
+                markersCenter = road.GetSplinePointsRightSide();
+            }
         } else {
             markersSide = road.GetSplinePointsRightSide();
+            // If we ONLY have right lanes, use whole width instead of just from center
+            if (road.GetLeftLaneCount() == 0) {
+                markersCenter = road.GetSplinePointsLeftSide();
+            }
         }
 
         Debug.Assert(markersSide.Length == markersCenter.Length, "ER3D road must have same number of side and center spline points");
