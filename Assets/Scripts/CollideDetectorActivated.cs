@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UturnStart : MonoBehaviour
+public class CollisionDetection : MonoBehaviour
 {
     public bool hasPairCollider;
     public GameObject pairCollider; // activated after collision
