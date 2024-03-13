@@ -15,7 +15,7 @@ public class CollisionDetection : MonoBehaviour
     public GameObject popup; // activated after collision
 
     public bool changePopupText;
-    public string popupText;
+    [TextArea(3, 10)] public string popupText;
 
     private TextMeshProUGUI textElement;
 
