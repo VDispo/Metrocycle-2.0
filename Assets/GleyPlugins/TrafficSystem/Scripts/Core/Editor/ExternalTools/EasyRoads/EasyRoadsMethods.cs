@@ -435,7 +435,7 @@ namespace GleyTrafficSystem
         {
             if (lanes > 0)
             {
-                Road roadScript = road.gameObject.GetComponent<Road>();
+                Road roadScript = lanesHolder.transform.parent.gameObject.GetComponent<Road>();
                 for (int i = 0; i < lanes; i++)
                 {
                     Vector3[] positions = road.GetLanePoints(i, side);
