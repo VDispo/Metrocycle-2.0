@@ -572,14 +572,15 @@ public static class ERRoadExtensions{
 
         string roadName = road.GetName();
         if (!roadName.Contains(KEYWORD)) {
+            Debug.Log("ER3D road nome does not contain " + KEYWORD + ". Defaulting Speed limit to " + DEFAULT_SPEED_LIMIT);
             return DEFAULT_SPEED_LIMIT;
         }
 
-        string speedPart = road.GetName().Split(KEYWORD)[0];
-        int speedPartStart = speedPart.LastIndexOf(' ', KEYWORD.Length);
-        Debug.Assert(speedPartStart > -1);
+        string speedPart = roadName.Split(KEYWORD)[0];
+        int speedPartStart = speedPart.LastIndexOf(' ', speedPart.Length-1);
+        Debug.Assert(speedPartStart > -1, "ER3D road name Speed limit part must be preced by space");
 
-        int speedLimit = int.Parse(speedPart.Substring(speedPartStart+1, speedPart.Length-(KEYWORD.Length)));
+        int speedLimit = int.Parse(speedPart.Substring(speedPartStart+1));
 
         return speedLimit;
     }
