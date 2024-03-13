@@ -47,6 +47,12 @@ namespace GleyTrafficSystem
 
             AddIntersections(intersectionHolder, intersectionType, greenLightTime, yellowLightTime);
 
+            // NOTE: we can only set lane edges AFTER the call to CreateTrafficWaypoints() below
+            //       so we first save the INDEX of in/out waypoints per lane
+            List<int> inWaypoints = new List<int>();
+            List<int> outWaypoints = new List<int>();
+            List<int> laneIdxs = new List<int>();
+
             //extract information from EasyRoads
             for (int i = 0; i < roads.Length; i++)
             {
@@ -62,8 +68,25 @@ namespace GleyTrafficSystem
 
                     if (roads[i].GetLaneCount() > 0)
                     {
-                        ExtractLaneWaypoints(roads[i].GetLeftLaneCount(), lanesHolder, roads[i], ERLaneDirection.Left, i);
-                        ExtractLaneWaypoints(roads[i].GetRightLaneCount(), lanesHolder, roads[i], ERLaneDirection.Right, i);
+                        // TODO: make these configurable
+                        const int NUMBER_OF_CARS = 10;
+
+                        // Add Road Script so that we can interact with this road via Gley Window
+                        Road roadScript = road.gameObject.AddComponent<Road>();
+                        roadScript.SetRoadProperties((int)roads[i].GetSpeedLimit(), NUMBER_OF_CARS);
+                        roadScript.SetDefaults(roads[i].GetLaneCount(), roads[i].GetLaneWidth(), waypointDistance);
+                        // Add Paths just to make it easier to modify
+                        // TODO: reduce markers
+                        // TODO: make sure modified path is not overridden when regenerating ?
+                        Vector3[] markers = roads[i].GetSplinePointsCenter();
+                        for (int j = 0; j < markers.Length-1; ++j) {
+                            roadScript.CreatePath(markers[j], markers[j+1]);
+                        }
+
+                        ExtractLaneWaypoints(roads[i].GetLeftLaneCount(), lanesHolder, roads[i], ERLaneDirection.Left, i,
+                                             inWaypoints, outWaypoints, laneIdxs);
+                        ExtractLaneWaypoints(roads[i].GetRightLaneCount(), lanesHolder, roads[i], ERLaneDirection.Right, i,
+                                             inWaypoints, outWaypoints, laneIdxs);
                         ExtractConnectors(roads[i].GetLaneCount(), roads[i], connectorsHolder, i);
                     }
                     else
@@ -90,6 +113,20 @@ namespace GleyTrafficSystem
             LinkConnectorsToRoadWaypoints();
 
             AssignIntersections(intersectionType);
+
+            // Add Lane information into Road Script for MTS interactability
+            int numLanes = inWaypoints.Count;
+            Debug.Assert(numLanes == outWaypoints.Count, "MTS-ER3D: Unbalanced number of in and out waypoints.");
+            for (int i = 0; i < numLanes; ++i) {
+                GameObject lane = waypointParents[inWaypoints[i]].gameObject;
+                Debug.Assert(lane == waypointParents[outWaypoints[i]].gameObject, "MTS-ER3D: Mismatched in and out waypoints.");
+                Road roadScript = lane.transform.parent.parent.gameObject.GetComponent<Road>();
+
+                WaypointSettings inConnector = allWaypoints[inWaypoints[i]].GetComponent<WaypointSettings>();
+                WaypointSettings outConnector = allWaypoints[outWaypoints[i]].GetComponent<WaypointSettings>();
+
+                roadScript.AddLaneConnector(inConnector, outConnector, laneIdxs[i]);
+            }
 
             RemoveNonRequiredWaypoints();
 
@@ -393,30 +430,49 @@ namespace GleyTrafficSystem
         }
 
 
-        static void ExtractLaneWaypoints(int lanes, GameObject lanesHolder, ERRoad road, ERLaneDirection side, int r)
+        static void ExtractLaneWaypoints(int lanes, GameObject lanesHolder, ERRoad road, ERLaneDirection side, int r,
+                                         List<int> inWaypoints, List<int> outWaypoints, List<int> laneIdxs)
         {
             if (lanes > 0)
             {
+                Road roadScript = road.gameObject.GetComponent<Road>();
                 for (int i = 0; i < lanes; i++)
                 {
                     Vector3[] positions = road.GetLanePoints(i, side);
                     if (positions != null)
                     {
-                        GameObject lane = new GameObject("Lane" + i);
+                        int laneNum = 2*i;
+                        int laneIdx = i;
+                        bool laneDirection = false;
+                        // HACK: Hardcode right lanes to odd numbers
+                        //       For the list of Lane Connectors, all Left Lanes come first
+                        if (side == ERLaneDirection.Right) {
+                            laneNum += 1;
+                            laneIdx += road.GetLeftLaneCount();
+                            laneDirection = true;
+                        }
+
+                        GameObject lane = new GameObject("Lane" + laneNum);
                         lane.name = "Lane_" + lanesHolder.transform.childCount + "_" + side;
                         lane.transform.SetParent(lanesHolder.transform);
-
+                        roadScript.lanes[laneIdx].laneDirection = laneDirection;
 
                         for (int j = 0; j < positions.Length; j++)
                         {
+                            Waypoint waypoint = new Waypoint();
                             string prefix = "";
                             if (j == 0) {
                                 prefix = (side == ERLaneDirection.Right ? "IN " : "OUT ");
+                                // found inConnector, save INDEX for later
+                                inWaypoints.Add(points.Count);
                             } else if (j == (positions.Length-2)) {
                                 prefix = (side == ERLaneDirection.Right ? "OUT " : "IN ");
+
+                                // found outConnector, save INDEX for later
+                                outWaypoints.Add(points.Count);
+                                laneIdxs.Add(laneIdx);
                             }
 
-                            Waypoint waypoint = new Waypoint();
                             waypoint.name = prefix + "Road_" + r + "-" + GleyUrbanAssets.Constants.laneNamePrefix + i + "-" + GleyUrbanAssets.Constants.waypointNamePrefix + j;
                             waypoint.position = positions[j];
                             waypoint.maxSpeed = (int)road.GetSpeedLimit();
@@ -607,13 +663,18 @@ public static class ERRoadExtensions{
         }
 
         Debug.Assert(markersSide.Length == markersCenter.Length, "ER3D road must have same number of side and center spline points");
-        float roadWidth = road.GetWidth() / road.GetLaneCount();
+        float laneWidth = road.GetLaneWidth();
         Vector3[] lanePoints = new Vector3[markersSide.Length];
         for (int i = 0; i < markersSide.Length; ++i) {
-            lanePoints[i] = Vector3.MoveTowards(markersSide[i], markersCenter[i], (laneIdx + 0.5f)*roadWidth);
+            lanePoints[i] = Vector3.MoveTowards(markersSide[i], markersCenter[i], (laneIdx + 0.5f)*laneWidth);
         }
 
         return lanePoints;
+    }
+
+    // Extra convenience function
+    public static float GetLaneWidth(this ERRoad road) {
+        return road.GetWidth() / road.GetLaneCount();
     }
 }
 #endif
