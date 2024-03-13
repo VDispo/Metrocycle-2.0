@@ -66,7 +66,7 @@ namespace GleyTrafficSystem
 
             if (GUILayout.Button("External Tools"))
             {
-                window.SetActiveWindow(typeof(ExternalToolsWindow), true);
+                window.SetActiveWindow(typeof(EasyRoadsSetup), true);
             }
             EditorGUILayout.Space();
 
