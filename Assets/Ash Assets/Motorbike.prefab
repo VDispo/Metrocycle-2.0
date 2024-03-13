@@ -11862,6 +11862,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8795056132278474452}
     m_Modifications:
+    - target: {fileID: 3368806245179951530, guid: b774a7911727e9a2891e1109af8531c3,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: dd89ec853d74f0351aeaf1c537cc6e42, type: 2}
     - target: {fileID: 5356257887837071757, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11945,32 +11950,27 @@ PrefabInstance:
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5524082
+      value: 0.6566519
       objectReference: {fileID: 0}
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.53503966
+      value: -0.6698915
       objectReference: {fileID: 0}
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4591545
+      value: 0.2815258
       objectReference: {fileID: 0}
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.44469652
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.53
+      value: -0.20198254
       objectReference: {fileID: 0}
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 89.661
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
@@ -11996,6 +11996,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6157162145473259848}
     m_Modifications:
+    - target: {fileID: 5210250996487289576, guid: b774a7911727e9a2891e1109af8531c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9b4e1d4b14d5899088ab9db8b302eb5, type: 2}
     - target: {fileID: 5356257887837071757, guid: b774a7911727e9a2891e1109af8531c3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12060,41 +12065,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mirror
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.59426
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.57555515
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.40352505
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.39084372
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -21.631
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -89.272
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989056906872142642, guid: b774a7911727e9a2891e1109af8531c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 88.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
