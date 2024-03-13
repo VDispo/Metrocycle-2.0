@@ -409,8 +409,15 @@ namespace GleyTrafficSystem
 
                         for (int j = 0; j < positions.Length; j++)
                         {
+                            string prefix = "";
+                            if (j == 0) {
+                                prefix = (side == ERLaneDirection.Right ? "IN " : "OUT ");
+                            } else if (j == (positions.Length-2)) {
+                                prefix = (side == ERLaneDirection.Right ? "OUT " : "IN ");
+                            }
+
                             Waypoint waypoint = new Waypoint();
-                            waypoint.name = "Road_" + r + "-" + GleyUrbanAssets.Constants.laneNamePrefix + i + "-" + GleyUrbanAssets.Constants.waypointNamePrefix + j;
+                            waypoint.name = prefix + "Road_" + r + "-" + GleyUrbanAssets.Constants.laneNamePrefix + i + "-" + GleyUrbanAssets.Constants.waypointNamePrefix + j;
                             waypoint.position = positions[j];
                             waypoint.maxSpeed = (int)road.GetSpeedLimit();
                             points.Add(waypoint);
