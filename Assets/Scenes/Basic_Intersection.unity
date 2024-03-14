@@ -380,7 +380,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -905,7 +905,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1216,7 +1216,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1378,7 +1378,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -1922,25 +1922,25 @@ MonoBehaviour:
       outConnector: {fileID: 1471303536}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 737519783}
       outConnector: {fileID: 202109118}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 529448716}
       outConnector: {fileID: 2095481591}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 1203512741}
       outConnector: {fileID: 871578470}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   path:
     points:
     - {x: 49.64442, y: -0.0038479706, z: 11.204536}
@@ -2153,7 +2153,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2224,7 +2224,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2295,7 +2295,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2367,7 +2367,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2541,7 +2541,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2628,7 +2628,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2698,7 +2698,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3041,7 +3041,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3112,7 +3112,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3183,7 +3183,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3360,7 +3360,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3431,7 +3431,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3608,7 +3608,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3679,7 +3679,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3750,7 +3750,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -3821,7 +3821,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4223,7 +4223,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4294,7 +4294,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4523,7 +4523,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4579,7 +4579,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4650,7 +4650,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4737,7 +4737,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -4899,7 +4899,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -5174,7 +5174,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -5245,7 +5245,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -5317,7 +5317,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -5718,7 +5718,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6053,7 +6053,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6124,7 +6124,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6194,7 +6194,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6265,7 +6265,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6336,7 +6336,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6407,7 +6407,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6584,7 +6584,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6688,7 +6688,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6760,7 +6760,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -6831,7 +6831,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7008,7 +7008,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7079,7 +7079,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7150,7 +7150,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7607,7 +7607,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7679,7 +7679,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7750,7 +7750,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -7821,7 +7821,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8009,7 +8009,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8065,7 +8065,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8136,7 +8136,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8309,7 +8309,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8394,7 +8394,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8799,7 +8799,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8870,7 +8870,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -8941,7 +8941,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9118,7 +9118,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9189,7 +9189,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9367,7 +9367,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9658,7 +9658,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9729,7 +9729,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9800,7 +9800,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -9935,7 +9935,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10006,7 +10006,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10077,7 +10077,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10148,7 +10148,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10427,7 +10427,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10498,7 +10498,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10569,7 +10569,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10640,7 +10640,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10711,7 +10711,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10884,7 +10884,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -10955,7 +10955,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -11336,7 +11336,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -11407,7 +11407,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -11478,7 +11478,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -11867,7 +11867,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -11938,7 +11938,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -12292,7 +12292,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -12367,7 +12367,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -12438,7 +12438,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -12721,7 +12721,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -12792,7 +12792,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13071,7 +13071,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13181,7 +13181,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13442,7 +13442,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13513,7 +13513,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13584,7 +13584,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13655,7 +13655,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13785,7 +13785,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13856,7 +13856,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -13927,7 +13927,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14002,7 +14002,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14087,7 +14087,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14245,7 +14245,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14320,7 +14320,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14391,7 +14391,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14462,7 +14462,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14533,7 +14533,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14604,7 +14604,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14675,7 +14675,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14848,7 +14848,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -14919,7 +14919,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15096,7 +15096,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15167,7 +15167,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15238,7 +15238,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15309,7 +15309,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15384,7 +15384,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15565,7 +15565,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15636,7 +15636,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -15842,7 +15842,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16015,7 +16015,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16072,25 +16072,25 @@ MonoBehaviour:
       outConnector: {fileID: 1738484198}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 73872337}
       outConnector: {fileID: 75033294}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 352787815}
       outConnector: {fileID: 674290883}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 925501919}
       outConnector: {fileID: 1644981853}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   path:
     points:
     - {x: 14.152811, y: -0.0019426228, z: 9.8099375}
@@ -16346,7 +16346,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16417,7 +16417,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16507,7 +16507,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16681,7 +16681,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16752,7 +16752,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16823,7 +16823,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -16996,7 +16996,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17403,7 +17403,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17474,7 +17474,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17545,7 +17545,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17616,7 +17616,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17687,7 +17687,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17758,7 +17758,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -17935,7 +17935,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -18148,7 +18148,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -18219,7 +18219,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -18424,7 +18424,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -18736,7 +18736,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -18913,7 +18913,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -19128,7 +19128,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -19309,7 +19309,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -19380,7 +19380,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -19693,7 +19693,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20116,7 +20116,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20187,7 +20187,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20258,7 +20258,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20781,7 +20781,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20887,7 +20887,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -20958,7 +20958,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21263,7 +21263,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21334,7 +21334,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21424,7 +21424,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21480,7 +21480,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21551,7 +21551,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21742,7 +21742,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21813,7 +21813,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21884,7 +21884,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -21955,7 +21955,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22101,7 +22101,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22186,7 +22186,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22242,7 +22242,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22419,7 +22419,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22610,7 +22610,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22681,7 +22681,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22791,7 +22791,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -22862,7 +22862,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23033,7 +23033,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23104,7 +23104,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23296,7 +23296,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23352,7 +23352,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23423,7 +23423,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23542,7 +23542,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -23613,7 +23613,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -24046,7 +24046,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -24715,7 +24715,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -24786,7 +24786,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -24872,7 +24872,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -24928,7 +24928,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -25101,7 +25101,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -25172,7 +25172,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -25243,7 +25243,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -25314,7 +25314,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -25970,7 +25970,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26041,7 +26041,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26112,7 +26112,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26285,7 +26285,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26431,7 +26431,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26704,7 +26704,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26779,7 +26779,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26850,7 +26850,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -26998,7 +26998,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27069,7 +27069,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27140,7 +27140,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27211,7 +27211,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27388,7 +27388,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27459,7 +27459,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27530,7 +27530,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27640,7 +27640,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27711,7 +27711,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27782,7 +27782,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27868,7 +27868,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27924,7 +27924,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -27995,7 +27995,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -28168,7 +28168,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -28239,7 +28239,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -28310,7 +28310,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -28381,7 +28381,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -28671,7 +28671,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -28727,7 +28727,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29058,7 +29058,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29114,7 +29114,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29287,7 +29287,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29362,7 +29362,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29433,7 +29433,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29712,7 +29712,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29783,7 +29783,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29854,7 +29854,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -29939,7 +29939,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -30097,7 +30097,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -30517,7 +30517,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -30855,7 +30855,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -30941,7 +30941,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -30997,7 +30997,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31272,7 +31272,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31347,7 +31347,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31422,7 +31422,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31509,7 +31509,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31565,7 +31565,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31636,7 +31636,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31707,7 +31707,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31794,7 +31794,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -31952,7 +31952,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -32023,7 +32023,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -32194,7 +32194,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -32477,7 +32477,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -32584,7 +32584,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -33279,7 +33279,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -33493,7 +33493,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -33580,7 +33580,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -33671,7 +33671,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -33742,7 +33742,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -34123,7 +34123,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -34753,7 +34753,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -34824,7 +34824,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -35037,7 +35037,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -35108,7 +35108,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -35285,7 +35285,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -35664,7 +35664,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -35735,7 +35735,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -36352,7 +36352,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -36568,7 +36568,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -36957,7 +36957,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37028,7 +37028,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37148,7 +37148,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37219,7 +37219,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37290,7 +37290,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37361,7 +37361,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37432,7 +37432,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37632,7 +37632,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37705,25 +37705,25 @@ MonoBehaviour:
       outConnector: {fileID: 1696425607}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 1660266190}
       outConnector: {fileID: 1829050682}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 130935311}
       outConnector: {fileID: 163940130}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 1233427077}
       outConnector: {fileID: 2013987067}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   path:
     points:
     - {x: 37.10411, y: -0.038837343, z: -159.12604}
@@ -37898,7 +37898,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -37969,7 +37969,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38159,7 +38159,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38230,7 +38230,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38302,7 +38302,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38373,7 +38373,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38652,7 +38652,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38723,7 +38723,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38794,7 +38794,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -38864,7 +38864,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39037,7 +39037,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39214,7 +39214,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39285,7 +39285,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39356,7 +39356,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39427,7 +39427,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39498,7 +39498,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39688,7 +39688,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39759,7 +39759,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39831,7 +39831,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39902,7 +39902,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -39988,7 +39988,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -40044,7 +40044,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -40260,7 +40260,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -40331,7 +40331,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -40402,7 +40402,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -41292,7 +41292,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -41378,7 +41378,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -41495,7 +41495,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -41566,7 +41566,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -41841,7 +41841,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42204,7 +42204,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42377,7 +42377,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42448,7 +42448,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42621,7 +42621,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42798,7 +42798,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42869,7 +42869,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -42940,7 +42940,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43011,7 +43011,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43083,7 +43083,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43271,7 +43271,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43327,7 +43327,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43430,7 +43430,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43501,7 +43501,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43572,7 +43572,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43643,7 +43643,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43714,7 +43714,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -43969,7 +43969,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44142,7 +44142,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44232,7 +44232,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44500,7 +44500,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44610,7 +44610,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44681,7 +44681,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44827,7 +44827,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -44898,7 +44898,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45075,7 +45075,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45248,7 +45248,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45319,7 +45319,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45390,7 +45390,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45494,7 +45494,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45565,7 +45565,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45650,7 +45650,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45710,7 +45710,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45785,7 +45785,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45856,7 +45856,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -45927,7 +45927,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46002,7 +46002,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46073,7 +46073,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46144,7 +46144,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46215,7 +46215,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46286,7 +46286,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46498,7 +46498,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46569,7 +46569,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46640,7 +46640,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -46711,7 +46711,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47005,7 +47005,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47061,7 +47061,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47150,7 +47150,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47326,7 +47326,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47397,7 +47397,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47468,7 +47468,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47539,7 +47539,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47712,7 +47712,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47889,7 +47889,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -47960,7 +47960,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48073,7 +48073,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48348,7 +48348,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48419,7 +48419,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48494,7 +48494,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48565,7 +48565,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48636,7 +48636,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48707,7 +48707,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -48778,7 +48778,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49159,7 +49159,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49301,7 +49301,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49493,7 +49493,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49722,7 +49722,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49782,7 +49782,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -49955,7 +49955,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -50026,7 +50026,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -50101,7 +50101,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -50408,7 +50408,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -50479,7 +50479,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -50904,7 +50904,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -51289,7 +51289,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -51374,7 +51374,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -51536,7 +51536,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -51607,7 +51607,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -51678,7 +51678,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -54690,7 +54690,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -54845,7 +54845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2078361562}
   nrOfVehicles: 10
-  vehiclePool: {fileID: 11400000, guid: 4af10e1813945394ca103ca811b3beb2, type: 2}
+  vehiclePool: {fileID: 11400000, guid: 241115afa46f7a34ca9f78cd2b9e4d62, type: 2}
   minDistanceToAdd: 30
   distanceToRemove: 50
   yellowLightTime: -1
@@ -54918,7 +54918,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -54989,7 +54989,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55064,7 +55064,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55152,7 +55152,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55208,7 +55208,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55279,7 +55279,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55354,7 +55354,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55429,7 +55429,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55519,7 +55519,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -55885,7 +55885,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56073,7 +56073,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56235,7 +56235,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56306,7 +56306,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56483,7 +56483,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56554,7 +56554,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -56917,7 +56917,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57094,7 +57094,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57165,7 +57165,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57236,7 +57236,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57573,7 +57573,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57659,7 +57659,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -57715,7 +57715,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58359,7 +58359,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58430,7 +58430,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58501,7 +58501,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58572,7 +58572,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58659,7 +58659,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58715,7 +58715,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58857,7 +58857,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -58928,7 +58928,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59111,7 +59111,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59182,7 +59182,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59393,7 +59393,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59539,7 +59539,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59712,7 +59712,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59783,7 +59783,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59853,7 +59853,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59924,7 +59924,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -59995,7 +59995,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60066,7 +60066,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60358,7 +60358,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60531,7 +60531,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60602,7 +60602,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60673,7 +60673,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60744,7 +60744,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60815,7 +60815,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -60886,7 +60886,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -61371,7 +61371,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -61446,7 +61446,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -61965,7 +61965,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62111,7 +62111,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62301,7 +62301,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62491,7 +62491,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62562,7 +62562,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62739,7 +62739,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -62915,7 +62915,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -63176,7 +63176,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -63353,7 +63353,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -67698,7 +67698,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -67973,7 +67973,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68044,7 +68044,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68115,7 +68115,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68292,7 +68292,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68363,7 +68363,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68555,7 +68555,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68630,7 +68630,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68923,7 +68923,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -68994,7 +68994,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -69175,7 +69175,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -69250,7 +69250,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -69321,7 +69321,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -69431,9 +69431,9 @@ MonoBehaviour:
       - waypointIndex: 5
         allowedVehicles: 00000000
       - waypointIndex: 24
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 44
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 46
         allowedVehicles: 00000000
       - waypointIndex: 56
@@ -69443,7 +69443,7 @@ MonoBehaviour:
       - waypointIndex: 92
         allowedVehicles: 00000000
       - waypointIndex: 115
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 128
         allowedVehicles: 00000000
       - waypointIndex: 182
@@ -69461,7 +69461,7 @@ MonoBehaviour:
       - waypointIndex: 367
         allowedVehicles: 00000000
       - waypointIndex: 369
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 395
         allowedVehicles: 00000000
       - waypointIndex: 399
@@ -69473,27 +69473,27 @@ MonoBehaviour:
       - waypointIndex: 449
         allowedVehicles: 00000000
       - waypointIndex: 458
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 471
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 477
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 498
         allowedVehicles: 00000000
       - waypointIndex: 510
         allowedVehicles: 00000000
       - waypointIndex: 541
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 563
         allowedVehicles: 00000000
       - waypointIndex: 575
         allowedVehicles: 00000000
       - waypointIndex: 582
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 610
         allowedVehicles: 00000000
       - waypointIndex: 631
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 633
         allowedVehicles: 00000000
       - waypointIndex: 637
@@ -69603,9 +69603,9 @@ MonoBehaviour:
       - waypointIndex: 9
         allowedVehicles: 00000000
       - waypointIndex: 10
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 27
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 35
         allowedVehicles: 00000000
       - waypointIndex: 70
@@ -69615,19 +69615,19 @@ MonoBehaviour:
       - waypointIndex: 96
         allowedVehicles: 00000000
       - waypointIndex: 104
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 149
         allowedVehicles: 00000000
       - waypointIndex: 195
         allowedVehicles: 00000000
       - waypointIndex: 208
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 256
         allowedVehicles: 00000000
       - waypointIndex: 260
         allowedVehicles: 00000000
       - waypointIndex: 270
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 309
         allowedVehicles: 00000000
       - waypointIndex: 312
@@ -69637,7 +69637,7 @@ MonoBehaviour:
       - waypointIndex: 356
         allowedVehicles: 00000000
       - waypointIndex: 362
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 377
         allowedVehicles: 00000000
       - waypointIndex: 396
@@ -69657,11 +69657,11 @@ MonoBehaviour:
       - waypointIndex: 572
         allowedVehicles: 00000000
       - waypointIndex: 577
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 620
         allowedVehicles: 00000000
       - waypointIndex: 645
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 648
         allowedVehicles: 00000000
       - waypointIndex: 651
@@ -69773,9 +69773,9 @@ MonoBehaviour:
       - waypointIndex: 57
         allowedVehicles: 00000000
       - waypointIndex: 72
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 73
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 77
         allowedVehicles: 00000000
       - waypointIndex: 113
@@ -69785,15 +69785,15 @@ MonoBehaviour:
       - waypointIndex: 160
         allowedVehicles: 00000000
       - waypointIndex: 177
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 178
         allowedVehicles: 00000000
       - waypointIndex: 184
         allowedVehicles: 00000000
       - waypointIndex: 205
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 228
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 254
         allowedVehicles: 00000000
       - waypointIndex: 255
@@ -69809,9 +69809,9 @@ MonoBehaviour:
       - waypointIndex: 333
         allowedVehicles: 00000000
       - waypointIndex: 342
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 365
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 386
         allowedVehicles: 00000000
       - waypointIndex: 403
@@ -69827,11 +69827,11 @@ MonoBehaviour:
       - waypointIndex: 447
         allowedVehicles: 00000000
       - waypointIndex: 457
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 494
         allowedVehicles: 00000000
       - waypointIndex: 526
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 568
         allowedVehicles: 00000000
       - waypointIndex: 584
@@ -70321,7 +70321,7 @@ MonoBehaviour:
       - waypointIndex: 380
         allowedVehicles: 00000000
       - waypointIndex: 432
-        allowedVehicles: 00000000
+        allowedVehicles: 0000000002000000
       - waypointIndex: 460
         allowedVehicles: 00000000
       - waypointIndex: 614
@@ -71343,8 +71343,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_30
     listIndex: 10
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -71539,8 +71539,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_8
     listIndex: 24
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -71581,8 +71581,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_32
     listIndex: 27
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -71819,8 +71819,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_6
     listIndex: 44
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -72211,8 +72211,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_44
     listIndex: 72
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -72225,8 +72225,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_46
     listIndex: 73
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -72659,8 +72659,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_20
     listIndex: 104
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -72813,8 +72813,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Out
     listIndex: 115
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 1
     enter: 0
@@ -73681,8 +73681,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_57
     listIndex: 177
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -74073,8 +74073,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_38
     listIndex: 205
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -74115,8 +74115,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_22
     listIndex: 208
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -74395,8 +74395,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_51
     listIndex: 228
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -74983,8 +74983,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_24
     listIndex: 270
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -75123,8 +75123,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-In
     listIndex: 280
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -75991,8 +75991,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_36
     listIndex: 342
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -76271,8 +76271,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_28
     listIndex: 362
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -76313,8 +76313,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_40
     listIndex: 365
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -76369,8 +76369,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_2
     listIndex: 369
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -77251,8 +77251,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_59
     listIndex: 432
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -77601,8 +77601,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_49
     listIndex: 457
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -77615,8 +77615,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_4
     listIndex: 458
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -77797,8 +77797,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_14
     listIndex: 471
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -77881,8 +77881,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_16
     listIndex: 477
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -78567,8 +78567,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_42
     listIndex: 526
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -78777,8 +78777,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_12
     listIndex: 541
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -79281,8 +79281,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_34
     listIndex: 577
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -79351,8 +79351,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_18
     listIndex: 582
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -80037,8 +80037,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_10
     listIndex: 631
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -80233,8 +80233,8 @@ MonoBehaviour:
     name: Road_0-Lane_0-Waypoint_26
     listIndex: 645
     temporaryDisabled: 0
-    allowedAgents: 00000000
-    allowedCars: 00000000
+    allowedAgents: 0000000002000000
+    allowedCars: 0000000002000000
     maxSpeed: 50
     giveWay: 0
     enter: 0
@@ -80490,7 +80490,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -80663,7 +80663,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -80836,7 +80836,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -80907,7 +80907,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -80978,7 +80978,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81049,7 +81049,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81324,7 +81324,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81672,7 +81672,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81744,7 +81744,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81815,7 +81815,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -81886,7 +81886,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82057,7 +82057,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82128,7 +82128,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82199,7 +82199,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82482,7 +82482,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82655,7 +82655,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82864,7 +82864,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -82974,7 +82974,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83064,7 +83064,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83450,7 +83450,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -83506,7 +83506,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83581,7 +83581,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83754,7 +83754,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83844,7 +83844,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83900,7 +83900,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -83971,7 +83971,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84046,7 +84046,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84509,7 +84509,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84580,7 +84580,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84651,7 +84651,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84824,7 +84824,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -84914,7 +84914,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85080,7 +85080,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85539,7 +85539,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85670,7 +85670,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85741,7 +85741,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85812,7 +85812,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -85989,7 +85989,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86093,7 +86093,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86406,7 +86406,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86477,7 +86477,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86548,7 +86548,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86619,7 +86619,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86690,7 +86690,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86867,7 +86867,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -86986,7 +86986,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87163,7 +87163,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87336,7 +87336,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87407,7 +87407,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87478,7 +87478,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87776,7 +87776,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87832,7 +87832,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -87903,7 +87903,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -88504,7 +88504,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -88575,7 +88575,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -88646,7 +88646,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -88717,7 +88717,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -88844,7 +88844,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89021,7 +89021,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89092,7 +89092,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89163,7 +89163,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89442,7 +89442,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89641,7 +89641,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89712,7 +89712,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89802,7 +89802,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -89859,7 +89859,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90032,7 +90032,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90103,7 +90103,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90291,7 +90291,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90657,7 +90657,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90728,7 +90728,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90799,7 +90799,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -90995,7 +90995,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91051,7 +91051,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91137,7 +91137,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91197,7 +91197,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91272,7 +91272,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91477,7 +91477,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91757,7 +91757,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -91934,7 +91934,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92005,7 +92005,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92080,7 +92080,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92150,7 +92150,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92221,7 +92221,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92291,7 +92291,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92362,7 +92362,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92433,7 +92433,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92504,7 +92504,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92575,7 +92575,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -92974,7 +92974,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93147,7 +93147,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93218,7 +93218,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93289,7 +93289,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93364,7 +93364,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93506,7 +93506,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93577,7 +93577,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93648,7 +93648,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93820,7 +93820,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -93891,7 +93891,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -94308,7 +94308,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -94481,7 +94481,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -94658,7 +94658,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -94935,7 +94935,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -95022,7 +95022,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -95282,7 +95282,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -95353,7 +95353,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -95428,7 +95428,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -95692,7 +95692,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -95748,7 +95748,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -100342,7 +100342,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -100398,7 +100398,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -101530,7 +101530,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -101781,7 +101781,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -101852,7 +101852,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -102302,7 +102302,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -102373,7 +102373,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -102681,7 +102681,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -102752,7 +102752,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103032,7 +103032,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103103,7 +103103,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103174,7 +103174,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103245,7 +103245,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103442,7 +103442,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103513,7 +103513,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103584,7 +103584,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103761,7 +103761,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -103934,7 +103934,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104021,7 +104021,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104077,7 +104077,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104165,7 +104165,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -104531,7 +104531,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104602,7 +104602,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104839,7 +104839,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104910,7 +104910,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -104981,7 +104981,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105052,7 +105052,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105123,7 +105123,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105512,7 +105512,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105583,7 +105583,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105654,7 +105654,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -105993,7 +105993,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106064,7 +106064,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106135,7 +106135,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106316,7 +106316,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106387,7 +106387,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106560,7 +106560,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -106852,7 +106852,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -107025,7 +107025,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -107512,7 +107512,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -107602,7 +107602,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -107764,7 +107764,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -107941,7 +107941,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108220,7 +108220,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108397,7 +108397,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108508,7 +108508,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108579,7 +108579,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108689,7 +108689,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -108879,7 +108879,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109010,7 +109010,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109085,7 +109085,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109262,7 +109262,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109334,7 +109334,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109409,7 +109409,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109480,7 +109480,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109551,7 +109551,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109622,7 +109622,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109693,7 +109693,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -109870,7 +109870,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -110281,7 +110281,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -110454,7 +110454,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -112286,7 +112286,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -112396,7 +112396,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -112467,7 +112467,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -112757,7 +112757,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -112876,7 +112876,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113076,7 +113076,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -113465,7 +113465,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113670,7 +113670,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113741,7 +113741,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113816,7 +113816,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113887,7 +113887,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -113962,7 +113962,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -114168,7 +114168,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -114432,7 +114432,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -114503,7 +114503,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -114574,7 +114574,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -117593,7 +117593,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -117783,7 +117783,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -117854,7 +117854,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118193,7 +118193,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118264,7 +118264,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118335,7 +118335,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118618,7 +118618,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118689,7 +118689,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -118862,7 +118862,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -119432,25 +119432,25 @@ MonoBehaviour:
       outConnector: {fileID: 753685872}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 1063339009}
       outConnector: {fileID: 1019463012}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 653969726}
       outConnector: {fileID: 1991090395}
     laneDirection: 1
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   - laneEdges:
       inConnector: {fileID: 62921855}
       outConnector: {fileID: 123009142}
     laneDirection: 0
     laneSpeed: 50
-    allowedCars: 01
+    allowedCars: 010001
   path:
     points:
     - {x: 31.376465, y: -0.00929699, z: 28.91972}
@@ -119516,7 +119516,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -119587,7 +119587,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -124217,7 +124217,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -124303,7 +124303,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 0
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 1
@@ -124461,7 +124461,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -124532,7 +124532,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -124917,7 +124917,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125319,7 +125319,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125390,7 +125390,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125461,7 +125461,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125532,7 +125532,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125705,7 +125705,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125776,7 +125776,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -125847,7 +125847,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -126186,7 +126186,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -126293,7 +126293,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -126364,7 +126364,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
@@ -126606,7 +126606,7 @@ MonoBehaviour:
     drawWaypoints: 0
   stop: 0
   draw: 1
-  allowedCars: 00000000
+  allowedCars: 0000000002000000
   maxSpeed: 50
   giveWay: 0
   enter: 0
