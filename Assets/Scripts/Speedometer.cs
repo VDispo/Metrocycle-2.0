@@ -13,7 +13,9 @@ public class Speedometer : MonoBehaviour {
 
     private Transform needleTranform;
     private Transform speedLabelTemplateTransform;
-    public float speedLabelDistance;
+    public float speedLabelDistance = -1;
+
+    private Text digitalSpeedometerText;
 
     private float speedMax;
     private float speed;
@@ -28,8 +30,12 @@ public class Speedometer : MonoBehaviour {
         speedLabelTemplateTransform = transform.Find("speedLabelTemplate2");
         speedLabelTemplateTransform.gameObject.SetActive(false);
 
-        speedLabelDistance = (speedLabelTemplateTransform.Find("speedText").transform.position
-                              - speedLabelTemplateTransform.Find("dashImage").transform.position).magnitude;
+        if (speedLabelDistance == -1) {
+            speedLabelDistance = (speedLabelTemplateTransform.Find("speedText").transform.position
+                                - speedLabelTemplateTransform.Find("dashImage").transform.position).magnitude;
+        }
+
+        digitalSpeedometerText = transform.Find("digital Speedometer").GetComponent<Text>();
 
         speed = 0f;
         speedMax = 120f;
@@ -48,6 +54,9 @@ public class Speedometer : MonoBehaviour {
 
         speedTotal += speed;
         ++numSpeedSamples;
+
+        // Update digital Speedometer display
+        digitalSpeedometerText.text = Mathf.RoundToInt(speed) + "kph";
     }
 
     private void CreateSpeedLabels() {
