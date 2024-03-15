@@ -30,7 +30,7 @@ public class CollisionWithObstacles : MonoBehaviour
         }
 
         Debug.Log("Obstacle hit by Layer: " + other.gameObject.layer + other.gameObject.name);
-        objectName.text = "You collided with a " + other.gameObject.name + ". Remember to control your speed and direction.";
+        objectName.text = "You collided with a " + other.gameObject.name.ToLower() + ". Remember to control your speed and direction.";
         gameoverPopup.SetActive(true);
         gameoverPopup.SendMessage("popupShown", null, SendMessageOptions.DontRequireReceiver);
         Time.timeScale = 0;
