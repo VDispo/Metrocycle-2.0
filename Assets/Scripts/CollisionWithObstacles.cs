@@ -23,14 +23,24 @@ public class CollisionWithObstacles : MonoBehaviour
         //       may be use a layer mask parameter?
         const int layer_AITraffic = 9;
         const int layer_obstacles = 10;
-        if (!(other.gameObject.layer == layer_AITraffic
-            || other.gameObject.layer == layer_obstacles)
+
+        int otherLayer = other.gameObject.layer;
+        if (!(otherLayer == layer_AITraffic
+            || otherLayer == layer_obstacles)
         ) {
             return;
         }
 
         Debug.Log("Obstacle hit by Layer: " + other.gameObject.layer + other.gameObject.name);
-        objectName.text = "You collided with a " + other.gameObject.name.ToLower() + ". Remember to control your speed and direction.";
+
+        string otherDescription = "";
+        switch (otherLayer) {
+            case layer_AITraffic:   otherDescription = "another vehicle"; break;
+            case layer_obstacles:   otherDescription = "the side of the road"; break;
+            default:                break;
+        }
+
+        objectName.text = "You collided with " + otherDescription + ". Remember to control your speed and direction.";
         gameoverPopup.SetActive(true);
         gameoverPopup.SendMessage("popupShown", null, SendMessageOptions.DontRequireReceiver);
         Time.timeScale = 0;
