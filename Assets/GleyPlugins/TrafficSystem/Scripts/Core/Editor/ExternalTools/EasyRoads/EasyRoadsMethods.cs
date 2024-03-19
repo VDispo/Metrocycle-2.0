@@ -59,7 +59,7 @@ namespace GleyTrafficSystem
                 if (!roads[i].roadScript.isSideObject)
                 {
                     Debug.Log("MTS-ER3D: Processing road " + roads[i].gameObject);
-                    GameObject road = new GameObject("Road_" + i);
+                    GameObject road = new GameObject("ER3DRoad_" + i);
                     road.transform.SetParent(waypointsHolder);
                     GameObject lanesHolder = new GameObject("Lanes");
                     Transform connectorsHolder = new GameObject("Connectors").transform;
@@ -688,7 +688,7 @@ public static class ERRoadExtensions{
         float laneWidth = road.GetLaneWidth();
         Vector3[] lanePoints = new Vector3[markersSide.Length];
         for (int i = 0; i < markersSide.Length; ++i) {
-            lanePoints[i] = Vector3.MoveTowards(markersSide[i], markersCenter[i], (laneIdx + 0.5f)*laneWidth);
+            lanePoints[i] = Vector3.MoveTowards(markersCenter[i], markersSide[i], (laneIdx + 0.5f)*laneWidth);
         }
 
         return lanePoints;
