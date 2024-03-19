@@ -52,6 +52,7 @@ namespace GleyTrafficSystem
             List<int> inWaypoints = new List<int>();
             List<int> outWaypoints = new List<int>();
             List<int> laneIdxs = new List<int>();
+            List<GameObject> roadHolders = new List<GameObject>();
 
             //extract information from EasyRoads
             for (int i = 0; i < roads.Length; i++)
@@ -66,6 +67,7 @@ namespace GleyTrafficSystem
                     lanesHolder.transform.SetParent(road.transform);
                     connectorsHolder.SetParent(road.transform);
 
+                    roadHolders.Add(road);
                     if (roads[i].GetLaneCount() > 0)
                     {
                         // TODO: make these configurable
@@ -121,6 +123,7 @@ namespace GleyTrafficSystem
 
             AssignIntersections(intersectionType);
 
+            {
             // Add Lane information into Road Script for MTS interactability
             int numLanes = inWaypoints.Count;
             Debug.Assert(numLanes == outWaypoints.Count, "MTS-ER3D: Unbalanced number of in and out waypoints.");
@@ -134,6 +137,57 @@ namespace GleyTrafficSystem
 
                 roadScript.AddLaneConnector(inConnector, outConnector, laneIdxs[i]);
             }
+            }
+
+            // For each road, Setup change lane detects
+            foreach (GameObject road in roadHolders) {
+                Transform lanesHolder = road.transform.GetChild(0);
+                int numLanes = lanesHolder.childCount;
+                GameObject[] lanes = new GameObject[numLanes];
+                Road roadScript = road.GetComponent<Road>();
+
+                // Add ChangeLaneChecker
+                road.AddComponent<ChangeLaneChecker>();
+
+                float LANESPACING = 0.5f;
+                for (int i = 0; i < numLanes; ++i) {
+                    Transform curLane = lanesHolder.GetChild(i);
+                    lanes[i] = curLane.gameObject;
+
+                    GameObject[] adjacentLanes;
+
+                    if (numLanes == 1) {
+                        adjacentLanes = new GameObject[0];
+                    } else if (i == 0) {
+                        adjacentLanes = new GameObject[] {lanesHolder.GetChild(i+1).gameObject};
+                    } else if (i == numLanes-1) {
+                        adjacentLanes = new GameObject[] {lanesHolder.GetChild(i-1).gameObject};
+                    } else {
+                        adjacentLanes = new GameObject[] {lanesHolder.GetChild(i-1).gameObject, lanesHolder.GetChild(i+1).gameObject};
+                    }
+
+                    for (int j = 0; j < curLane.childCount; ++j) {
+                        GameObject waypoint = curLane.GetChild(j).gameObject;
+
+                        // Add change lane detect script
+                        ChangeLaneDetect detectScript = waypoint.AddComponent<ChangeLaneDetect>();
+                        detectScript.changeLaneMsgReceiver = road;
+                        detectScript.allLaneHolders = lanes;
+                        detectScript.adjacentLaneHolders = adjacentLanes;
+
+                        // add collider for triggering change lane detect
+                        BoxCollider collider = waypoint.AddComponent<BoxCollider>();
+                        collider.isTrigger = true;
+
+                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2,
+                                                    1,
+                                                    (j > 0) ? (waypoint.transform.position.z - curLane.GetChild(j-1).position.z): 2
+                                                   );
+                        collider.center += new Vector3(0, 0, collider.size.z/2);
+                    }
+                }
+            }
+
 
             RemoveNonRequiredWaypoints();
 
