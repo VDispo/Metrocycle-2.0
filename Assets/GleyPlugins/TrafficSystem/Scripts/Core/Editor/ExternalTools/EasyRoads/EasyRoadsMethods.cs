@@ -763,9 +763,18 @@ public static class ERRoadExtensions{
 
         Debug.Assert(markersSide.Length == markersCenter.Length, "ER3D road must have same number of side and center spline points");
         float laneWidth = road.GetLaneWidth();
-        Vector3[] lanePoints = new Vector3[markersSide.Length];
-        for (int i = 0; i < markersSide.Length; ++i) {
-            lanePoints[i] = Vector3.MoveTowards(markersCenter[i], markersSide[i], (laneIdx + 0.5f)*laneWidth);
+
+        // HACK: only use every Nth marker to reduce their number
+        const int EVERY_NTH_SEGMENT = 2;
+        bool needAppend = ((markersSide.Length-1) % EVERY_NTH_SEGMENT) != 0;
+        int numSegments = 1 + ((markersSide.Length-1) / EVERY_NTH_SEGMENT) + (needAppend ? 1 : 0);
+        Vector3[] lanePoints = new Vector3[numSegments];
+        int pointIdx = 0;
+        for (int i = 0; i < markersSide.Length; i += EVERY_NTH_SEGMENT) {
+            lanePoints[pointIdx++] = Vector3.MoveTowards(markersCenter[i], markersSide[i], (laneIdx + 0.5f)*laneWidth);
+        }
+        if (needAppend) {
+            lanePoints[numSegments-1] = Vector3.MoveTowards(markersCenter[markersSide.Length-1], markersSide[markersSide.Length-1], (laneIdx + 0.5f)*laneWidth);
         }
 
         return lanePoints;
