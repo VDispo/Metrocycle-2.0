@@ -179,14 +179,14 @@ namespace GleyTrafficSystem
                         BoxCollider collider = waypoint.AddComponent<BoxCollider>();
                         collider.isTrigger = true;
 
-                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2,
-                                                    1,
-                                                    (j > 0) ? (waypoint.transform.position.z - curLane.GetChild(j-1).position.z): 2
-                                                   );
-                        collider.center += new Vector3(0, 0, collider.size.z/2);
                         if (j < curLane.childCount-1) {
                             waypoint.transform.LookAt(curLane.GetChild(j+1));
                         }
+                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2,
+                                                    1,
+                                                    (j > 0) ? Vector3.Distance(waypoint.transform.position, curLane.GetChild(j-1).position): 2
+                                                   );
+                        collider.center += new Vector3(0, 0, collider.size.z/2);
                     }
                 }
             }
