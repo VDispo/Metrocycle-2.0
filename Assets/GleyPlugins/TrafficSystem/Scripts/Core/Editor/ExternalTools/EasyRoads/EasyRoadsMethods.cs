@@ -178,6 +178,8 @@ namespace GleyTrafficSystem
                         // add collider for triggering change lane detect
                         BoxCollider collider = waypoint.AddComponent<BoxCollider>();
                         collider.isTrigger = true;
+                        const int layer_Detect = 3;
+                        waypoint.layer = layer_Detect;
 
                         if (j < curLane.childCount-1) {
                             waypoint.transform.LookAt(curLane.GetChild(j+1));
@@ -520,7 +522,7 @@ namespace GleyTrafficSystem
                         }
 
                         GameObject lane = new GameObject("Lane" + laneNum);
-                        lane.name = "Lane_" + laneNum + "_" + side;
+                        lane.name = side + "_Lane_" + laneNum;
                         lane.transform.SetParent(lanesHolder.transform);
                         roadScript.lanes[laneIdx].laneDirection = laneDirection;
 
