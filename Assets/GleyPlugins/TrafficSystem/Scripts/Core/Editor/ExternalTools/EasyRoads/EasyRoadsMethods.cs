@@ -184,6 +184,9 @@ namespace GleyTrafficSystem
                                                     (j > 0) ? (waypoint.transform.position.z - curLane.GetChild(j-1).position.z): 2
                                                    );
                         collider.center += new Vector3(0, 0, collider.size.z/2);
+                        if (j < curLane.childCount-1) {
+                            waypoint.transform.LookAt(curLane.GetChild(j+1));
+                        }
                     }
                 }
             }
@@ -199,7 +202,9 @@ namespace GleyTrafficSystem
 
         private static void RemoveNonRequiredWaypoints()
         {
-            for (int j = allWaypoints.Count - 1; j >= 0; j--)
+            // HACK: Modified for MetroCycle
+            // for (int j = allWaypoints.Count - 1; j >= 0; j--)
+            for (int j = allWaypoints.Count - 2; j >= 0; j--)
             {
                 if (allWaypoints[j].GetComponent<WaypointSettings>().neighbors.Count == 0)
                 {
@@ -519,16 +524,34 @@ namespace GleyTrafficSystem
                         lane.transform.SetParent(lanesHolder.transform);
                         roadScript.lanes[laneIdx].laneDirection = laneDirection;
 
-                        for (int j = 0; j < positions.Length; j++)
+                        int startIdx, endIdx, loopDir;
+                        switch (side) {
+                            case ERLaneDirection.Left:
+                                startIdx = positions.Length-1;
+                                endIdx = 0;
+                                loopDir = -1;
+                                break;
+                            case ERLaneDirection.Right:
+                                startIdx = 0;
+                                endIdx = positions.Length-1;
+                                loopDir = 1;
+                                break;
+                            default:
+                                Debug.LogError("ExtractLaneWaypoints: Invalid side argument");
+                                startIdx = endIdx = loopDir = -1;
+                                break;
+                        }
+
+                        for (int j = startIdx; j != endIdx+loopDir; j += loopDir)
                         {
                             Waypoint waypoint = new Waypoint();
                             string prefix = "";
-                            if (j == 0) {
-                                prefix = (side == ERLaneDirection.Right ? "IN " : "OUT ");
+                            if (j == startIdx) {
+                                prefix = "IN ";
                                 // found inConnector, save INDEX for later
                                 inWaypoints.Add(points.Count);
-                            } else if (j == (positions.Length-2)) {
-                                prefix = (side == ERLaneDirection.Right ? "OUT " : "IN ");
+                            } else if (j == endIdx) {
+                                prefix = "OUT ";
 
                                 // found outConnector, save INDEX for later
                                 outWaypoints.Add(points.Count);
