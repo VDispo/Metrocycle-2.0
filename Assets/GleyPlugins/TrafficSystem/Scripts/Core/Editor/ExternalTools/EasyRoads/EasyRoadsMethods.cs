@@ -74,8 +74,8 @@ namespace GleyTrafficSystem
                         // Add Road Script so that we can interact with this road via Gley Window
                         Road roadScript = road.gameObject.AddComponent<Road>();
                         Debug.Log("script added??? " + roadScript);
-                        roadScript.SetRoadProperties((int)roads[i].GetSpeedLimit(), NUMBER_OF_CARS);
                         roadScript.SetDefaults(roads[i].GetLaneCount(), roads[i].GetLaneWidth(), waypointDistance);
+                        roadScript.SetRoadProperties((int)roads[i].GetSpeedLimit(), NUMBER_OF_CARS);
 
                         // Add Paths just to make it easier to modify
                         // TODO: make sure modified path is not overridden when regenerating ?
@@ -443,6 +443,7 @@ namespace GleyTrafficSystem
             if (lanes > 0)
             {
                 Road roadScript = lanesHolder.transform.parent.gameObject.GetComponent<Road>();
+                int leftLaneCount = road.GetLeftLaneCount();
                 for (int i = 0; i < lanes; i++)
                 {
                     Vector3[] positions = road.GetLanePoints(i, side);
@@ -455,12 +456,12 @@ namespace GleyTrafficSystem
                         //       For the list of Lane Connectors, all Left Lanes come first
                         if (side == ERLaneDirection.Right) {
                             laneNum += 1;
-                            laneIdx += road.GetLeftLaneCount();
+                            laneIdx += leftLaneCount;
                             laneDirection = true;
                         }
 
                         GameObject lane = new GameObject("Lane" + laneNum);
-                        lane.name = "Lane_" + lanesHolder.transform.childCount + "_" + side;
+                        lane.name = "Lane_" + laneNum + "_" + side;
                         lane.transform.SetParent(lanesHolder.transform);
                         roadScript.lanes[laneIdx].laneDirection = laneDirection;
 
