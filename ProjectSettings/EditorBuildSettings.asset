@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   - enabled: 1
-    path: Assets/Scenes/Tutorial_Intersection.unity
-    guid: e3ecb79a5e7887be9a6660c330c702b4
+    path: Assets/Scenes/Basic_Straight.unity
+    guid: 54f8fce3d765c6f4b8f92e7e6f53d2fa
+  - enabled: 1
+    path: Assets/Scenes/Basic_Uturn.unity
+    guid: f48a6c9dafcbadf47b0c2b9136e4fa7c
+  - enabled: 1
+    path: Assets/Scenes/Basic_Intersection.unity
+    guid: b35dae173e8809855893712ff2e52e4f
+  - enabled: 1
+    path: Assets/Scenes/Basic_Multilane.unity
+    guid: d515d7d18b774823795b52994b330e35
   m_configObjects: {}
