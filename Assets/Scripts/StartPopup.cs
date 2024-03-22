@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartPopup : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         // pause game at start
         Time.timeScale = 0;
