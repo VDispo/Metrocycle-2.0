@@ -12,7 +12,7 @@ namespace ArcadeBP
         public groundCheck GroundCheck;
         public LayerMask drivableSurface;
 
-        public float MaxSpeed, accelaration, turn;
+        public float MaxSpeed, MaxReverseSpeed, accelaration, turn;
         public Rigidbody rb, carBody;
 
         [HideInInspector]
@@ -74,9 +74,11 @@ namespace ArcadeBP
             }
         }
 
-        public Vector3 getVelocity()
+        public float getSpeed()
         {
-            return carVelocity;
+            float speed = carVelocity.magnitude*3;    // HACK: *3 is just based on "feel" for now
+            Debug.Log("RB: " + rb.velocity.magnitude*3 + " carVelocity: " + speed);
+            return speed;
         }
 
 
@@ -126,9 +128,16 @@ namespace ArcadeBP
                 }
                 else if (movementMode == MovementMode.Velocity)
                 {
+                    float accel = accelaration;
+                    if (verticalInput < 0.1f && getSpeed() >= MaxReverseSpeed) {
+                        // don't accelerate anymore to keep reverse slow
+                        accel = 0f;
+
+                    }
+
                     if (Mathf.Abs(verticalInput) > 0.1f && Input.GetAxis("Jump") < 0.1f)
                     {
-                        rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * MaxSpeed, accelaration / 10 * Time.deltaTime);
+                        rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * MaxSpeed, accel / 10 * Time.deltaTime);
                     }
                 }
 

@@ -5670,6 +5670,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   MaxSpeed: 100
+  MaxReverseSpeed: 4
   accelaration: 4
   turn: 7
   rb: {fileID: 4556059933521815468}

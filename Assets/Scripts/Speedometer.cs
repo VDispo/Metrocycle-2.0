@@ -44,10 +44,7 @@ public class Speedometer : MonoBehaviour {
     }
 
     private void Update() {
-        Vector3 vel = controller.getVelocity();
-        // Debug.Log(vel.magnitude + " "+ bike.GetComponent<Rigidbody>().velocity.magnitude);
-
-        speed = vel.magnitude*3;    // HACK: *3 is just based on "feel" for now
+        speed = controller.getSpeed();
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
