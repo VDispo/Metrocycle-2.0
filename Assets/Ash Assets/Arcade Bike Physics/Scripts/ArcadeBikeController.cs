@@ -74,6 +74,11 @@ namespace ArcadeBP
             }
         }
 
+        public Vector3 getVelocity()
+        {
+            return carVelocity;
+        }
+
 
         void FixedUpdate()
         {
