@@ -23760,31 +23760,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4664322994268695231, guid: b9f42de6425d7a64492e24f3f8462954,
-        type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4664322994268695231, guid: b9f42de6425d7a64492e24f3f8462954,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5472104034219470852, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: m_LocalPosition.x
