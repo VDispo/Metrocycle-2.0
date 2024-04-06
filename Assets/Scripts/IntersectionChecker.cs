@@ -12,6 +12,7 @@ enum PopupType {
 
 public class IntersectionChecker : MonoBehaviour
 {
+    public GameObject bike;
     public GameObject errorPopup;
     public GameObject errorText;
 

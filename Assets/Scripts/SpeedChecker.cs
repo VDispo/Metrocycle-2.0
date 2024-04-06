@@ -12,6 +12,10 @@ public class SpeedChecker : MonoBehaviour
     private float speedMax;
     Rigidbody rb;
 
+    // amount of allowable extra in speed
+    // e.g. limit = 20 and leeway = 3 => warn at speed 23
+    private speedLeeway = 3;
+
     void OnTriggerStay (Collider other) {
         rb = bike.GetComponent<Rigidbody>();
         speed = 0f;
