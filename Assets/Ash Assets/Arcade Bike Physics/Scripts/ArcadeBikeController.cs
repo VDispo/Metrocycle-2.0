@@ -77,7 +77,7 @@ namespace ArcadeBP
         public float getSpeed()
         {
             float speed = carVelocity.magnitude*3;    // HACK: *3 is just based on "feel" for now
-            Debug.Log("RB: " + rb.velocity.magnitude*3 + " carVelocity: " + speed);
+            // Debug.Log("RB: " + rb.velocity.magnitude*3 + " carVelocity: " + speed);
             return speed;
         }
 
