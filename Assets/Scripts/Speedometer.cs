@@ -47,13 +47,15 @@ public class Speedometer : MonoBehaviour {
         Vector3 vel = controller.getVelocity();
         // Debug.Log(vel.magnitude + " "+ bike.GetComponent<Rigidbody>().velocity.magnitude);
 
-        speed = vel.magnitude*3;
+        speed = vel.magnitude*3;    // HACK: *3 is just based on "feel" for now
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
 
-        speedTotal += speed;
-        ++numSpeedSamples;
+        if (speed > 0.1f) {
+            speedTotal += speed;
+            ++numSpeedSamples;
+        }
 
         // Update digital Speedometer display
         digitalSpeedometerText.text = Mathf.RoundToInt(speed) + "kph";
