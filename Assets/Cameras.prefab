@@ -533,6 +533,7 @@ MonoBehaviour:
   normal: {fileID: 7336374719459004984}
   right: {fileID: 1155043554112211233}
   left: {fileID: 8138568303991613292}
+  headCheckSpeed: 0.5
 --- !u!1 &4515003856583963539
 GameObject:
   m_ObjectHideFlags: 0
