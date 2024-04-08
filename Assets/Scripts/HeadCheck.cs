@@ -10,6 +10,10 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera left;
     [SerializeField] public float headCheckSpeed;
 
+
+    [HideInInspector] public float leftCheckTime;
+    [HideInInspector] public float rightCheckTime;
+
     private CinemachineBrain brain;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,9 @@ public class HeadCheck : MonoBehaviour
         normal.Priority = 20;
 
         brain.m_DefaultBlend.m_Time = headCheckSpeed;
+
+        leftCheckTime = -1;
+        rightCheckTime = -1;
     }
 
     void resetPriorities()
@@ -37,10 +44,12 @@ public class HeadCheck : MonoBehaviour
             {
                 resetPriorities();
                 left.Priority = 20;
+                leftCheckTime = Time.time;
             } else if (Input.GetKeyDown("3") && normal.Priority == 20)
             {
                 resetPriorities();
                 right.Priority = 20;
+                rightCheckTime = Time.time;
             } else if (Input.GetKeyDown("2")) {
                 resetPriorities();
                 normal.Priority = 20;

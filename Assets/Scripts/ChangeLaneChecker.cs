@@ -8,17 +8,19 @@ public class ChangeLaneChecker : MonoBehaviour
 {
     public GameObject motorbike;
     public GameObject popup;
-    public float minBlinkerTime;
+    public float minBlinkerTime = 3f;
     // blinker can turn off early, within reasonable max
     public float maxBlinkerOffTime;
     public GameObject bikeLane;
+
+    public HeadCheck headCheckScript;
+    // Turn must be made within reasonable time after head check
+    public float maxHeadCheckDelay = 2f;
 
     private blinkers blinkerScript;
     private TextMeshProUGUI textElement;
 
     private int previousLane;
-
-    private const string laneNamePrefix = "Lane_";
 
     void Start(){
         blinkerScript = motorbike.transform.Find("Dashboard Canvas/Blinkers").GetComponent<blinkers>();
@@ -28,7 +30,8 @@ public class ChangeLaneChecker : MonoBehaviour
     }
 
     public void enteredLane(GameObject lane) {
-        int newLane = int.Parse(lane.name.Substring(laneNamePrefix.Length));
+        int newLane = int.Parse(lane.name.Substring(Metrocycle.Constants.laneNamePrefix.Length));
+
         checkBlinkerForLaneChange(newLane);
         checkEnteredBikeLane(lane);
     }
@@ -74,6 +77,8 @@ public class ChangeLaneChecker : MonoBehaviour
             hasError = true;
         }
 
+        hasError = verifyHeadCheck(which) || hasError;
+
         previousLane = newLane;
         if (hasError) {
             popup.SetActive(true);
@@ -83,6 +88,32 @@ public class ChangeLaneChecker : MonoBehaviour
             // HACK: modify property directly. Should use func/message
             blinkerScript.blinkerActivationTime = Time.time;
         }
+    }
+
+    public bool verifyHeadCheck(Blinker direction) {
+        float turnTime = Time.time;
+        float headCheckTime;
+        if (direction == Blinker.LEFT) {
+            headCheckTime = headCheckScript.leftCheckTime;
+        } else {
+            headCheckTime = headCheckScript.rightCheckTime;
+        }
+
+        float turnDelay = Time.time - headCheckTime;
+
+        if (turnDelay > maxHeadCheckDelay) {
+            textElement.text = "Make sure to perform a head check right before changing lanes.";
+            popup.SetActive(true);
+            return true;
+        }
+
+        if (headCheckTime < blinkerScript.blinkerActivationTime) {
+            textElement.text = "Make sure to perform a head check even after you turn your blinker on.";
+            popup.SetActive(true);
+            return true;
+        }
+
+        return false;
     }
 
     public void checkEnteredBikeLane(GameObject lane) {
