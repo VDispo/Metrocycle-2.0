@@ -56,10 +56,4 @@ public class popUp : MonoBehaviour
         finishSet.gameObject.SetActive(true);
         popUpBox.gameObject.SetActive(true);
     }
-
-
-    void Start()
-    {
-        popPrompt("hello","hi");
-    }
 }
