@@ -8,6 +8,7 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera normal;
     [SerializeField] public CinemachineVirtualCamera right;
     [SerializeField] public CinemachineVirtualCamera left;
+    [SerializeField] public float headCheckSpeed;
 
     private CinemachineBrain brain;
     // Start is called before the first frame update
@@ -16,6 +17,9 @@ public class HeadCheck : MonoBehaviour
         brain = gameObject.GetComponent<CinemachineBrain>();
 
         resetPriorities();
+        normal.Priority = 20;
+
+        brain.m_DefaultBlend.m_Time = headCheckSpeed;
     }
 
     void resetPriorities()
