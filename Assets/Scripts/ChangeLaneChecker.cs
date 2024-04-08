@@ -15,7 +15,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
     public HeadCheck headCheckScript;
     // Turn must be made within reasonable time after head check
-    public float maxHeadCheckDelay = 2f;
+    public float maxHeadCheckDelay = 3f;
 
     private blinkers blinkerScript;
     private TextMeshProUGUI textElement;
@@ -93,24 +93,30 @@ public class ChangeLaneChecker : MonoBehaviour
     public bool verifyHeadCheck(Blinker direction) {
         float turnTime = Time.time;
         float headCheckTime;
+        bool isDuringHeadCheck = false;
         if (direction == Blinker.LEFT) {
             headCheckTime = headCheckScript.leftCheckTime;
+            isDuringHeadCheck = headCheckScript.isLookingLeft();
         } else {
             headCheckTime = headCheckScript.rightCheckTime;
+            isDuringHeadCheck = headCheckScript.isLookingRight();
         }
+        Debug.Log("Check" + headCheckScript.leftCheckTime + " " + headCheckScript.rightCheckTime  + " " + turnTime + " " + isDuringHeadCheck);
 
         float turnDelay = Time.time - headCheckTime;
 
-        if (turnDelay > maxHeadCheckDelay) {
-            textElement.text = "Make sure to perform a head check right before changing lanes.";
-            popup.SetActive(true);
-            return true;
-        }
+        if (!isDuringHeadCheck) {
+            if (turnDelay > maxHeadCheckDelay) {
+                textElement.text = "Make sure to perform a head check right before changing lanes.";
+                popup.SetActive(true);
+                return true;
+            }
 
-        if (headCheckTime < blinkerScript.blinkerActivationTime) {
-            textElement.text = "Make sure to perform a head check even after you turn your blinker on.";
-            popup.SetActive(true);
-            return true;
+            if (headCheckTime < blinkerScript.blinkerActivationTime) {
+                textElement.text = "Make sure to perform a head check even after you turn your blinker on.";
+                popup.SetActive(true);
+                return true;
+            }
         }
 
         return false;

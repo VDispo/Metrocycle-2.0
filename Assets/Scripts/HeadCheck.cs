@@ -36,16 +36,26 @@ public class HeadCheck : MonoBehaviour
         left.Priority = 10;
     }
 
+    public bool isLookingRight() {
+        return left.Priority == 20;
+    }
+    public bool isLookingLeft() {
+        return left.Priority == 20;
+    }
+    public bool isLookingForward() {
+        return normal.Priority == 20;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (!brain.IsBlending) {
-            if (Input.GetKeyDown("1") && normal.Priority == 20)
+            if (Input.GetKeyDown("1") && isLookingForward())
             {
                 resetPriorities();
                 left.Priority = 20;
                 leftCheckTime = Time.time;
-            } else if (Input.GetKeyDown("3") && normal.Priority == 20)
+            } else if (Input.GetKeyDown("3") && isLookingForward())
             {
                 resetPriorities();
                 right.Priority = 20;
