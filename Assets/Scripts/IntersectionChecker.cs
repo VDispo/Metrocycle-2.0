@@ -6,10 +6,6 @@ using TMPro;
 
 public class IntersectionChecker : MonoBehaviour
 {
-    public GameObject bike;
-    public GameObject errorPopup;
-    public GameObject errorText;
-
     [Header("IMPORTANT: Add Lane Detect Objects in Counter Clockwise direction, left lane detects in even positions.")]
     public GameObject[] laneDetects;
     [Header("IMPORTANT: Add Green light objects in same order (and number) as lane detects.")]
@@ -166,10 +162,9 @@ public class IntersectionChecker : MonoBehaviour
 
         switch (type) {
         case PopupType.ERROR:
-            TextMeshProUGUI text = errorText.GetComponent<TextMeshProUGUI>();
-            text.text = popupText;
-
-            errorPopup.SetActive(true);
+            GameManager.Instance.PopupSystem.popError(
+                "You used the intersection incorrectly", popupText
+            );
             break;
         default:
             break;
