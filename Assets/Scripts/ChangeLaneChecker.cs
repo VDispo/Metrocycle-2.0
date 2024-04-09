@@ -6,8 +6,6 @@ using TMPro;
 
 public class ChangeLaneChecker : MonoBehaviour
 {
-    public GameObject motorbike;
-    public GameObject popup;
     public float minBlinkerTime = 3f;
     // blinker can turn off early, within reasonable max
     public float maxBlinkerOffTime;
@@ -15,16 +13,16 @@ public class ChangeLaneChecker : MonoBehaviour
 
     public HeadCheck headCheckScript;
     // Turn must be made within reasonable time after head check
-    public float maxHeadCheckDelay = 3f;
+    public float maxHeadCheckDelay = 5f;
 
     private blinkers blinkerScript;
-    private TextMeshProUGUI textElement;
 
     private int previousLane;
+    private string errorText = "";
+
 
     void Start(){
-        blinkerScript = motorbike.transform.Find("Dashboard Canvas/Blinkers").GetComponent<blinkers>();
-        textElement = popup.transform.Find("Instructions").GetComponent<TextMeshProUGUI>();
+        blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
 
         previousLane = -1;
     }
@@ -66,14 +64,14 @@ public class ChangeLaneChecker : MonoBehaviour
 
         if (!isBlinkerOn) {
             if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
-                textElement.text = "You used the blinker signalling the opposite direction!";
+                errorText = "You used the blinker signalling the opposite direction!";
             } else {
-                textElement.text = "You did not use your blinker lights before changing lanes.";
+                errorText = "You did not use your blinker lights before changing lanes.";
             }
 
             hasError = true;
         } else if (Time.time - blinkerScript.blinkerActivationTime < minBlinkerTime) {
-            textElement.text = "You did not give ample time for other road users to react to your blinker signal.";
+            errorText = "You did not give ample time for other road users to react to your blinker signal.";
             hasError = true;
         }
 
@@ -81,7 +79,9 @@ public class ChangeLaneChecker : MonoBehaviour
 
         previousLane = newLane;
         if (hasError) {
-            popup.SetActive(true);
+            GameManager.Instance.PopupSystem.popError(
+                "You changed lanes incorrectly", errorText
+            );
         } else {
             // Successful lane change, reset blinkerActivationTime
             // this is to prevent changing multiple lanes at once
@@ -107,14 +107,18 @@ public class ChangeLaneChecker : MonoBehaviour
 
         if (!isDuringHeadCheck) {
             if (turnDelay > maxHeadCheckDelay) {
-                textElement.text = "Make sure to perform a head check right before changing lanes.";
-                popup.SetActive(true);
+                errorText = "Make sure to perform a head check right before changing lanes.";
+                GameManager.Instance.PopupSystem.popError(
+                    "Uh oh!", errorText
+                );
                 return true;
             }
 
             if (headCheckTime < blinkerScript.blinkerActivationTime) {
-                textElement.text = "Make sure to perform a head check even after you turn your blinker on.";
-                popup.SetActive(true);
+                errorText = "Make sure to perform a head check even after you turn your blinker on.";
+                GameManager.Instance.PopupSystem.popError(
+                    "Uh oh!", errorText
+                );
                 return true;
             }
         }
@@ -127,7 +131,9 @@ public class ChangeLaneChecker : MonoBehaviour
             return;
         }
 
-        textElement.text = "Motorcycles are not allowed on the Bike Lane!";
-        popup.SetActive(true);
+        errorText = "Motorcycles are not allowed on the Bike Lane!";
+        GameManager.Instance.PopupSystem.popError(
+            "Uh oh!", errorText
+        );
     }
 }
