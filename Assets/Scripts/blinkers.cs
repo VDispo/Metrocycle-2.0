@@ -15,7 +15,7 @@ public enum BlinkerStatus {
 public class blinkers : MonoBehaviour
 {
     public GameObject blinkerGroup;
-    public GameObject motorbike;
+    public GameObject bike;
     public int blinkerAutoOffAngle;
     public float blinkDuration = 0.5f;
 
@@ -71,7 +71,7 @@ public class blinkers : MonoBehaviour
             other_status = 0;
             other_alpha = 0.1f;
 
-            prevRotation = motorbike.transform.eulerAngles;
+            prevRotation = bike.transform.eulerAngles;
             turnAngle = 0f;
 
             blinkerActivationTime = Time.time;
@@ -176,7 +176,7 @@ public class blinkers : MonoBehaviour
 
         // Update turnAngle
         if (leftStatus == 1 || rightStatus == 1) {
-            Vector3 curRotation = motorbike.transform.eulerAngles;
+            Vector3 curRotation = bike.transform.eulerAngles;
             turnAngle += Mathf.DeltaAngle(prevRotation.y, curRotation.y);
             prevRotation = curRotation;
 
