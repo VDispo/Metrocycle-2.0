@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class BlinkerCheck : MonoBehaviour
 {
-    public bool activatePopup;
-    public GameObject popup; // activated after collision
-
-    public Blinker whichBlinker; //false if left, true if right
-    public GameObject blinkers;
+    public Blinker whichBlinker;
     private blinkers blinkerScript;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    public PopupType popupType = PopupType.PROMPT;
+    [TextArea(3, 10)] public string popupTitle;
+    [TextArea(3, 10)] public string popupText;
+
+    void Start() {
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
     }
 
     void OnTriggerEnter (Collider other) {
-        if (whichBlinker == Blinker.RIGHT && blinkerScript.rightStatus == 0) {
-            popup.SetActive(true);
-        }
-        if (whichBlinker == Blinker.LEFT && blinkerScript.leftStatus == 0) {
-            popup.SetActive(true);
+        if ((whichBlinker == Blinker.RIGHT && blinkerScript.rightStatus == 0)
+            || (whichBlinker == Blinker.LEFT && blinkerScript.leftStatus == 0)
+        ) {
+            GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
         }
     }
 }
