@@ -6,28 +6,17 @@ using TMPro;
 
 public class CheckpointDetection : MonoBehaviour
 {
-    public bool hasPairCollider;
-    public GameObject pairCollider; // activated after collision
+    public GameObject pairCollider = null; // activated after collision
 
     public bool deactivateAfterCollision;
 
-    public bool activatePopup;
-    public GameObject popup; // activated after collision
-
-    public bool changePopupText;
+    public bool showPopup = true;
+    [TextArea(3, 10)] public string popupTitle;
     [TextArea(3, 10)] public string popupText;
-
-    private TextMeshProUGUI textElement;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        textElement = popup.transform.Find("Instructions").GetComponent<TextMeshProUGUI>();
-    }
 
     void OnTriggerEnter (Collider other) {
         Debug.Log("Entered collision with " + other.gameObject.name);
-        if (hasPairCollider) {
+        if (pairCollider != null) {
             pairCollider.SetActive(true);
         }
 
@@ -35,12 +24,8 @@ public class CheckpointDetection : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (activatePopup) {
-            if (changePopupText) {
-                textElement.text = popupText;
-            }
-
-            popup.SetActive(true);
+        if (showPopup) {
+            GameManager.Instance.PopupSystem.popPrompt(popupTitle, popupText);
         }
     }
 }

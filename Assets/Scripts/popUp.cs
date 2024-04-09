@@ -9,13 +9,11 @@ public class popUp : MonoBehaviour
 {
     public GameObject popUpSystem;
 
-    private Transform lastActiveSet;
+    private Transform lastActiveSet = null;
     private Transform popUpBox;
-    void Start()
+    void Awake()
     {
-        lastActiveSet = null;
         popUpBox = popUpSystem.transform.Find("popUpBox");
-
         for (int i = 0; i < transform.childCount; ++i) {
             Transform popupSet = transform.GetChild(i);
             // Assume all buttons are direct children of a set
@@ -50,13 +48,8 @@ public class popUp : MonoBehaviour
     {
         Transform startSet = popUpSystem.transform.Find("startSet");
 
-        GameObject headerTextObject = startSet.Find("headerText").gameObject;
-        GameObject bodyTextObject = startSet.Find("bodyText").gameObject;
-        TextMeshProUGUI headerText = headerTextObject.GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI bodyText = bodyTextObject.GetComponent<TextMeshProUGUI>();
-
-        headerText.text = headerMessage;
-        bodyText.text = bodyMessage;
+        setHeaderText(startSet, headerMessage);
+        setBodyText(startSet, bodyMessage);
 
         showPopup(startSet);
     }
@@ -71,15 +64,20 @@ public class popUp : MonoBehaviour
     {
         Transform promptSet = popUpSystem.transform.Find("promptSet");
 
-        GameObject headerTextObject = promptSet.Find("headerText").gameObject;
-        GameObject bodyTextObject = promptSet.Find("bodyText").gameObject;
-        TextMeshProUGUI headerText = headerTextObject.GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI bodyText = bodyTextObject.GetComponent<TextMeshProUGUI>();
-
-        headerText.text = headerMessage;
-        bodyText.text = bodyMessage;
+        setHeaderText(promptSet, headerMessage);
+        setBodyText(promptSet, bodyMessage);
 
         showPopup(promptSet);
+    }
+
+    public void popError(string headerMessage, string bodyMessage)
+    {
+        Transform errorSet = popUpSystem.transform.Find("errorSet");
+
+        setHeaderText(errorSet, headerMessage);
+        setBodyText(errorSet, bodyMessage);
+
+        showPopup(errorSet);
     }
 
     public void popFinish()
@@ -110,5 +108,19 @@ public class popUp : MonoBehaviour
         popUpBox.gameObject.SetActive(false);
 
         GameManager.Instance.resumeGame();
+    }
+
+    void setHeaderText(Transform set, string headerMessage)
+    {
+        GameObject headerTextObject = set.Find("headerText").gameObject;
+        TextMeshProUGUI headerText = headerTextObject.GetComponent<TextMeshProUGUI>();
+        headerText.text = headerMessage;
+    }
+    void setBodyText(Transform set, string bodyMessage)
+    {
+        GameObject bodyTextObject = set.Find("bodyText").gameObject;
+        TextMeshProUGUI bodyText = bodyTextObject.GetComponent<TextMeshProUGUI>();
+
+        bodyText.text = bodyMessage;
     }
 }

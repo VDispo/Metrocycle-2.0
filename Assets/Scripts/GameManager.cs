@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
         bikeRB = bike.GetComponent<Rigidbody>();
 
+        bike.AddComponent<CollisionWithObstacles>();
+
         bike.SetActive(true);
         return bike;
     }

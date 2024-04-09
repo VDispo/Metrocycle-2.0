@@ -8,15 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class CollisionWithObstacles : MonoBehaviour
 {
-    public GameObject gameoverPopup;
-    private TextMeshProUGUI objectName;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        objectName = gameoverPopup.transform.Find("Instructions").GetComponent<TextMeshProUGUI>();
-    }
-
     void OnCollisionEnter (Collision other)
     {
         // HACK: hardcode collision to only AI cars and obstacles for now
@@ -40,14 +31,8 @@ public class CollisionWithObstacles : MonoBehaviour
             default:                break;
         }
 
-        objectName.text = "You collided with " + otherDescription + ". Remember to control your speed and direction.";
-        gameoverPopup.SetActive(true);
-        gameoverPopup.SendMessage("popupShown", null, SendMessageOptions.DontRequireReceiver);
-        Time.timeScale = 0;
-    }
-
-    public void restartGame() {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.PopupSystem.popError(
+            "Uh oh!", "You collided with " + otherDescription + ". Remember to control your speed and direction."
+        );
     }
 }
