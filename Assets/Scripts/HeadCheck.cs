@@ -15,7 +15,7 @@ public class HeadCheck : MonoBehaviour
     [HideInInspector] public float rightCheckTime;
 
     private CinemachineBrain brain;
-    // Start is called before the first frame update
+
     void Start()
     {
         brain = gameObject.GetComponent<CinemachineBrain>();
@@ -49,21 +49,20 @@ public class HeadCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!brain.IsBlending) {
-            if (Input.GetKeyDown("1") && isLookingForward())
-            {
-                resetPriorities();
-                left.Priority = 20;
-                leftCheckTime = Time.time;
-            } else if (Input.GetKeyDown("3") && isLookingForward())
-            {
-                resetPriorities();
-                right.Priority = 20;
-                rightCheckTime = Time.time;
-            } else if (Input.GetKeyDown("2")) {
-                resetPriorities();
-                normal.Priority = 20;
-            }
+        if (Input.GetKeyUp("1") || Input.GetKeyUp("3")) {
+            resetPriorities();
+            normal.Priority = 20;
+        }
+
+        if (Input.GetKey("1") && !isLookingRight())
+        {
+            left.Priority = 20;
+            leftCheckTime = Time.time;
+
+        } else if (Input.GetKey("3") && !isLookingLeft())
+        {
+            right.Priority = 20;
+            rightCheckTime = Time.time;
         }
     }
 }
