@@ -69,23 +69,31 @@ public class GameManager : MonoBehaviour
         return bikeRB.velocity.magnitude * 3;     // HACK: *3 is just based on "feel" for now
     }
 
-    public GameObject getBlinkers()
+    public GameObject getDashboard()
     {
         GameObject dashboardCanvas = gameObject.transform.GetChild(3).gameObject;
         Debug.Assert(dashboardCanvas.name == "Dashboard Canvas");
-        GameObject blinkers = dashboardCanvas.transform.GetChild(1).gameObject;
+
+        return dashboardCanvas;
+    }
+    public GameObject getBlinkers()
+    {
+        GameObject blinkers = getDashboard().transform.GetChild(1).gameObject;
         Debug.Assert(blinkers.name == "Blinkers");
 
         return blinkers;
     }
 
     public void pauseGame() {
+        getDashboard().SetActive(false);
         Time.timeScale = 0;
     }
     public void resumeGame() {
+        getDashboard().SetActive(true);
         Time.timeScale = 1;
     }
     public void restartGame() {
+        getDashboard().SetActive(true);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
