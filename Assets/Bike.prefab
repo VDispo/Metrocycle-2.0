@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkerGroup: {fileID: 3265439439249520361}
-  motorbike: {fileID: 6420471963936407584}
+  bike: {fileID: 8377237790866383779}
   blinkerAutoOffAngle: 60
   blinkDuration: 0.5
   leftStatus: 0
