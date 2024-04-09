@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SpeedChecker : MonoBehaviour
 {
-    public GameObject bike = null;
-    public bool activatePopup;
-    public GameObject popup; // activated after collision
     public int speedLimit;
     private float speed;
     private float speedMax;
@@ -16,9 +13,6 @@ public class SpeedChecker : MonoBehaviour
     public float speedLeeway = 3f;
 
     void Awake() {
-        if (bike == null) {
-            bike = GameManager.Instance.bike;
-        }
         speed = 0f;
     }
 
@@ -30,7 +24,10 @@ public class SpeedChecker : MonoBehaviour
         
         if (speed > speedLimit+speedLeeway){
             Debug.Log("Exceeded speed limit!");
-            popup.SetActive(true);
+            GameManager.Instance.PopupSystem.popError(
+                $"You have exceeded the {speedLimit} kph speed limit!",
+                "Make sure to keep an eye on your speedometer."
+            );
         }
     }
 }
