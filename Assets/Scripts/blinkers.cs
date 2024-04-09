@@ -26,11 +26,14 @@ public class blinkers : MonoBehaviour
     public float blinkerOffTime;
     public Blinker lastActiveBlinker;
 
+    public float maxUncancelledBlinkerTime = 5f;
+
     private CanvasGroup left;
     private CanvasGroup right;
     private float blinkTimer;
     private Vector3 prevRotation;
     private double turnAngle;
+    private float shouldCancelAtTime;
 
     void Start()
     {
@@ -53,6 +56,8 @@ public class blinkers : MonoBehaviour
 
         blinkerActivationTime = -1;
         blinkerOffTime = -1;
+
+        shouldCancelAtTime = -1;
     }
 
     void setBlinker(Blinker which, BlinkerStatus status) {
@@ -126,16 +131,19 @@ public class blinkers : MonoBehaviour
         }
     }
 
-    void checkAutoBlinkerOff(Blinker which) {
+    bool checkAutoBlinkerOff(Blinker which) {
         if ( (which == Blinker.RIGHT && turnAngle > blinkerAutoOffAngle)
             || (which == Blinker.LEFT && -turnAngle > blinkerAutoOffAngle)
         ) {
-            Debug.Log("Blinker OFF.");
-            if (leftStatus == 1)
-                setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
-            if (rightStatus == 1)
-                setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+            // Debug.Log("Blinker OFF.");
+            // if (leftStatus == 1)
+            //     setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
+            // if (rightStatus == 1)
+            //     setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+            return true;
         }
+
+        return false;
     }
 
     // Update is called once per frame
@@ -163,18 +171,41 @@ public class blinkers : MonoBehaviour
             }
         }
 
+
+        bool hasHorizontalInput = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
+
         // Update turnAngle
         if (leftStatus == 1 || rightStatus == 1) {
             Vector3 curRotation = motorbike.transform.eulerAngles;
             turnAngle += Mathf.DeltaAngle(prevRotation.y, curRotation.y);
             prevRotation = curRotation;
 
-            // only turn blinker off automatically when
-            // turn buttons are not pressed
-            if (Input.GetAxis("Horizontal") != 1) {
+            // Detect when blinker should be off only when turn buttons are not pressed
+            if (hasHorizontalInput) {
                 Blinker which = leftStatus == 1 ? Blinker.LEFT : Blinker.RIGHT;
-                checkAutoBlinkerOff(which);
+                if (shouldCancelAtTime == -1 && checkAutoBlinkerOff(which)) {
+                    shouldCancelAtTime = Time.time;
+                    Debug.Log("Should autooff now " + shouldCancelAtTime);
+                }
+
             }
+
+            if (shouldCancelAtTime != -1) {
+                if (hasHorizontalInput) {
+                    // reset timer when turn button is pressed
+                    shouldCancelAtTime = Time.time;
+                } else {
+                    if (Time.time - shouldCancelAtTime > maxUncancelledBlinkerTime) {
+                        if (GameManager.Instance.PopupSystem != null) {
+                            GameManager.Instance.PopupSystem.popPrompt("You forgot to cancel your blinker",
+                                                                    "Make sure to cancel your blinker after performing a turn.");
+                        }
+
+                        shouldCancelAtTime = -1;
+                    }
+                }
+            }
+
         }
 
         animateBlinker();
