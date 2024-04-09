@@ -7,4 +7,9 @@ namespace Metrocycle {
     {
         public const string laneNamePrefix = "Lane_";
     }
+
+    public enum BikeType {
+        Motorcycle,
+        Bicycle
+    }
 }

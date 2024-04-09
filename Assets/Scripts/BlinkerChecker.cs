@@ -14,11 +14,10 @@ public class BlinkerCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
     }
 
     void OnTriggerEnter (Collider other) {
-
-        blinkerScript = blinkers.GetComponent<blinkers>();
         if (whichBlinker == Blinker.RIGHT && blinkerScript.rightStatus == 0) {
             popup.SetActive(true);
         }

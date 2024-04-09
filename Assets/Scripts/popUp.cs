@@ -22,6 +22,8 @@ public class popUp : MonoBehaviour
 
         startSet.gameObject.SetActive(true);
         popUpBox.gameObject.SetActive(true);
+
+        GameManager.Instance.pauseGame();
     }
 
     public void popPause()
@@ -30,6 +32,8 @@ public class popUp : MonoBehaviour
         Transform pauseSet = popUpSystem.transform.Find("pauseSet");
         pauseSet.gameObject.SetActive(true);
         popUpBox.gameObject.SetActive(true);
+
+        GameManager.Instance.pauseGame();
     }
 
     public void popPrompt(string headerMessage, string bodyMessage)
@@ -47,6 +51,8 @@ public class popUp : MonoBehaviour
 
         promptSet.gameObject.SetActive(true);
         popUpBox.gameObject.SetActive(true);
+
+        GameManager.Instance.pauseGame();
     }
 
     public void popFinish()
@@ -55,5 +61,7 @@ public class popUp : MonoBehaviour
         Transform finishSet = popUpSystem.transform.Find("finishSet");
         finishSet.gameObject.SetActive(true);
         popUpBox.gameObject.SetActive(true);
+
+        GameManager.Instance.pauseGame();
     }
 }

@@ -81,7 +81,6 @@ namespace ArcadeBP
             return speed;
         }
 
-
         void FixedUpdate()
         {
             carVelocity = carBody.transform.InverseTransformDirection(carBody.velocity);

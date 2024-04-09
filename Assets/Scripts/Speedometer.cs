@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Speedometer : MonoBehaviour {
-
-    public GameObject bike;
-    private ArcadeBP.ArcadeBikeController controller;
-
     private const float MAX_SPEED_ANGLE = -20;
     private const float ZERO_SPEED_ANGLE = 230;
 
@@ -24,8 +20,6 @@ public class Speedometer : MonoBehaviour {
     private int numSpeedSamples;
 
     private void Awake() {
-        controller = bike.GetComponent<ArcadeBP.ArcadeBikeController>();
-
         needleTranform = transform.Find("needle");
         speedLabelTemplateTransform = transform.Find("speedLabelTemplate2");
         speedLabelTemplateTransform.gameObject.SetActive(false);
@@ -39,12 +33,13 @@ public class Speedometer : MonoBehaviour {
 
         speed = 0f;
         speedMax = 120f;
+        speedTotal = 0f;
         
         CreateSpeedLabels();
     }
 
     private void Update() {
-        speed = controller.getSpeed();
+        speed = GameManager.Instance.getBikeSpeed();
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
