@@ -42,10 +42,6 @@ public class ChangeLaneDetect : MonoBehaviour
         GameObject currentLaneHolder = transform.parent.gameObject;
         Debug.Log("Entered Lane " + currentLaneHolder);
 
-        // Disable all colliders in this lane since we don't
-        //   need to check that we are in the same lane
-        currentLaneHolder.SetActive(false);
-
         // Disable all lane colliders
         foreach (GameObject laneHolder in allLaneHolders) {
             laneHolder.SetActive(false);
@@ -57,5 +53,14 @@ public class ChangeLaneDetect : MonoBehaviour
         }
 
         changeLaneMsgReceiver.SendMessage("enteredLane", currentLaneHolder);
+
+        // NOTE: optimally, we should disable the detects for the current lane
+        //       BUT these are also used for other functions (e.g. speed check)
+        //       so we keep them active for now
+        currentLaneHolder.SetActive(true);
+
+        // // Disable all colliders in this lane since we don't
+        // //   need to check that we are in the same lane
+        // currentLaneHolder.SetActive(false);
     }
 }

@@ -10,21 +10,26 @@ public class SpeedChecker : MonoBehaviour
     public int speedLimit;
     private float speed;
     private float speedMax;
-    Rigidbody rb;
+
+    private ArcadeBP.ArcadeBikeController bikeScript;
 
     // amount of allowable extra in speed
     // e.g. limit = 20 and leeway = 3 => warn at speed 23
-    private float speedLeeway = 3f;
+    public float speedLeeway = 3f;
+
+    void Awake() {
+        bikeScript = bike.GetComponent<ArcadeBP.ArcadeBikeController>();
+        speed = 0f;
+    }
 
     void OnTriggerStay (Collider other) {
-        speed = 0f;
         speedMax = 120f;
-        Vector3 vel = rb.velocity;
 
-        speed = vel.magnitude*3;
+        speed = bikeScript.getSpeed();
         if (speed > speedMax) speed = speedMax;
         
         if (speed > speedLimit+speedLeeway){
+            Debug.Log("Exceeded speed limit!");
             popup.SetActive(true);
         }
     }
