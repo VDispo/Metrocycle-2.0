@@ -11,6 +11,7 @@ public class CheckpointDetection : MonoBehaviour
     public bool deactivateAfterCollision;
 
     public bool showPopup = true;
+    public PopupType popupType = PopupType.PROMPT;
     [TextArea(3, 10)] public string popupTitle;
     [TextArea(3, 10)] public string popupText;
 
@@ -25,7 +26,7 @@ public class CheckpointDetection : MonoBehaviour
         }
 
         if (showPopup) {
-            GameManager.Instance.PopupSystem.popPrompt(popupTitle, popupText);
+            GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
         }
     }
 }

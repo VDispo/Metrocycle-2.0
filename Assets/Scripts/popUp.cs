@@ -5,12 +5,28 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+public enum PopupType {
+    START,
+    PROMPT,
+    ERROR,
+    // NOTE: These types don't take title/text args
+    PAUSE,
+    FINISH,
+    // NOTE: these are from IntersectionChecker.cs
+    // TODO: should be properly consolidated
+    WARNING,    // weaker error (not forced to restart)
+    INFO        // just pure information; synonym for prompt
+};
+
+
 public class popUp : MonoBehaviour
 {
     public GameObject popUpSystem;
 
     private Transform lastActiveSet = null;
     private Transform popUpBox;
+
+    delegate void PopDelegate(string header, string body);
     void Awake()
     {
         popUpBox = popUpSystem.transform.Find("popUpBox");
@@ -41,6 +57,40 @@ public class popUp : MonoBehaviour
                     });
                 }
             }
+        }
+    }
+
+    public void popWithType(PopupType type, string headerMessage, string bodyMessage)
+    {
+        switch(type) {
+            case PopupType.PAUSE:
+                popPause();
+                return;
+            case PopupType.FINISH:
+                popFinish();
+                return;
+        }
+
+        PopDelegate popFunc = null;
+        switch(type) {
+            case PopupType.START:
+                popFunc = popStart;
+                break;
+            case PopupType.ERROR:
+                popFunc = popError;
+                break;
+            case PopupType.PROMPT:
+                popFunc = popPrompt;
+                break;
+            default:
+                Debug.LogError("popUp: Only START, ERROR, PROMPT supported for now");
+                return;
+        }
+
+        if (popFunc != null) {
+            popFunc(headerMessage, bodyMessage);
+        } else {
+
         }
     }
 

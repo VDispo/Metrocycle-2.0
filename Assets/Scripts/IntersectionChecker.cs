@@ -4,12 +4,6 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 
-enum PopupType {
-    ERROR,
-    WARNING,
-    INFO
-};
-
 public class IntersectionChecker : MonoBehaviour
 {
     public GameObject bike;

@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionWithObstacles : MonoBehaviour
 {
+    public PopupType popupType = PopupType.ERROR;
+
     void OnCollisionEnter (Collision other)
     {
         // HACK: hardcode collision to only AI cars and obstacles for now
@@ -31,7 +33,7 @@ public class CollisionWithObstacles : MonoBehaviour
             default:                break;
         }
 
-        GameManager.Instance.PopupSystem.popError(
+        GameManager.Instance.PopupSystem.popWithType(popupType,
             "Uh oh!", "You collided with " + otherDescription + ". Remember to control your speed and direction."
         );
     }
