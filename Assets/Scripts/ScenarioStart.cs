@@ -15,4 +15,9 @@ public class ScenarioStart : MonoBehaviour
         GameManager.Instance.PopupSystem.popStart(scenarioTitle, scenarioText);
         GameManager.Instance.setBikeType(bikeType);
     }
+
+    public void pauseGame()
+    {
+        GameManager.Instance.PopupSystem.popPause();
+    }
 }
