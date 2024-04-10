@@ -198,7 +198,7 @@ public class blinkers : MonoBehaviour
                     if (Time.time - shouldCancelAtTime > maxUncancelledBlinkerTime) {
                         if (GameManager.Instance.PopupSystem != null) {
                             GameManager.Instance.PopupSystem.popPrompt("You forgot to cancel your blinker",
-                                                                    "Make sure to cancel your blinker after performing a turn.");
+                                "Make sure to cancel your " + GameManager.Instance.blinkerName() + " after performing a turn.");
                         }
 
                         shouldCancelAtTime = -1;

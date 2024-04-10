@@ -105,6 +105,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public string blinkerName()
+    {
+        if (bikeType == Metrocycle.BikeType.Motorcycle) {
+            return "blinker";
+        } else {
+            return "hand signals";
+        }
+    }
+
     void Update() {
         if (bike == null) {
             return;

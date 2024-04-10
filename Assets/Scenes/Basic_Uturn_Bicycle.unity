@@ -22595,8 +22595,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "By this point, you should already have your left blinker on. \n\nPress
-    Q to turn on your left blinker."
+  m_text: "By this point, you should already be using the hand signal for going left. \n\nPress
+    Q to use the left hand signal."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -32382,9 +32382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your left blinker on. \n\nPress
-    Q to turn on your left blinker."
+  popupTitle: You forgot to use hand signals!
+  popupText: "By this point, you should already be using the hand signal for going left. \n\nPress
+    Q to use the left hand signal."
 --- !u!64 &1478587387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60382,7 +60382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You forgot to turn on your blinker!
+  m_text: You forgot to use hand signals!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}

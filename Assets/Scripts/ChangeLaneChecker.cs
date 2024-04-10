@@ -19,12 +19,14 @@ public class ChangeLaneChecker : MonoBehaviour
 
     private int previousLane;
     private string errorText = "";
+    private string blinkerName;
 
 
     void Start(){
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
 
         previousLane = -1;
+        blinkerName = GameManager.Instance.blinkerName();
     }
 
     public void enteredLane(GameObject lane) {
@@ -64,14 +66,14 @@ public class ChangeLaneChecker : MonoBehaviour
 
         if (!isBlinkerOn) {
             if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
-                errorText = "You used the blinker signalling the opposite direction!";
+                errorText = "You used the " + blinkerName + " for the opposite direction!";
             } else {
-                errorText = "You did not use your blinker lights before changing lanes.";
+                errorText = "You did not use your" + blinkerName + " before changing lanes.";
             }
 
             hasError = true;
         } else if (Time.time - blinkerScript.blinkerActivationTime < minBlinkerTime) {
-            errorText = "You did not give ample time for other road users to react to your blinker signal.";
+            errorText = "You did not give ample time for other road users to react to your " + blinkerName;
             hasError = true;
         }
 
@@ -115,7 +117,7 @@ public class ChangeLaneChecker : MonoBehaviour
             }
 
             if (headCheckTime < blinkerScript.blinkerActivationTime) {
-                errorText = "Make sure to perform a head check even after you turn your blinker on.";
+                errorText = "Make sure to perform a head check even after you use your " + blinkerName;
                 GameManager.Instance.PopupSystem.popError(
                     "Uh oh!", errorText
                 );
