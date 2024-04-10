@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic_Straight_Motorcycle.unity
     guid: 54f8fce3d765c6f4b8f92e7e6f53d2fa
   - enabled: 1
-    path: Assets/Scenes/Basic_Uturn.unity
+    path: Assets/Scenes/Basic_Uturn_Motorcycle.unity
     guid: f48a6c9dafcbadf47b0c2b9136e4fa7c
   - enabled: 1
-    path: Assets/Scenes/Basic_Intersection.unity
+    path: Assets/Scenes/Basic_Intersection_Motorcycle.unity
     guid: b35dae173e8809855893712ff2e52e4f
   - enabled: 1
-    path: Assets/Scenes/Basic_Multilane.unity
+    path: Assets/Scenes/Basic_Multilane_Motorcycle.unity
     guid: d515d7d18b774823795b52994b330e35
   m_configObjects: {}

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public popUp PopupSystem = null;
 
     public GameObject bike;
+    private Metrocycle.BikeType bikeType;
     private Rigidbody bikeRB;
 
     private GameObject bikeTransform;
@@ -60,8 +61,14 @@ public class GameManager : MonoBehaviour
 
         bike.AddComponent<CollisionWithObstacles>();
 
+        bikeType = type;
         bike.SetActive(true);
         return bike;
+    }
+
+    public Metrocycle.BikeType getBikeType()
+    {
+        return bikeType;
     }
 
     public float getBikeSpeed()

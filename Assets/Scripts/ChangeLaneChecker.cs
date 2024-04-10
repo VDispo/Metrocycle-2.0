@@ -127,6 +127,10 @@ public class ChangeLaneChecker : MonoBehaviour
     }
 
     public void checkEnteredBikeLane(GameObject lane) {
+        if (GameManager.Instance.getBikeType() == Metrocycle.BikeType.Bicycle) {
+            return;
+        }
+
         if (lane != bikeLane) {
             return;
         }
