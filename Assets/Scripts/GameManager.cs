@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("PopupSystem Force Initialized " + PopupSystem);
         }
 
-        setBikeType(Metrocycle.BikeType.Motorcycle);    // TODO: move this call to selection of motorcycle or bicycle
+        // setBikeType(Metrocycle.BikeType.Motorcycle);    // TODO: move this call to selection of motorcycle or bicycle
         bikeTransform = gameObject.transform.GetChild(2).gameObject;
     }
 

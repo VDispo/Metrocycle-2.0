@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   - enabled: 1
-    path: Assets/Scenes/Basic_Straight.unity
+    path: Assets/Scenes/Basic_Straight_Motorcycle.unity
     guid: 54f8fce3d765c6f4b8f92e7e6f53d2fa
   - enabled: 1
     path: Assets/Scenes/Basic_Uturn.unity
