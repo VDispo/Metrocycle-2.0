@@ -1464,7 +1464,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Basic_Multilane
+          m_StringArgument: Basic_Multilane_Motorcycle
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &599821889
@@ -3510,7 +3510,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Basic_Uturn
+          m_StringArgument: Basic_Uturn_Motorcycle
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1561126170
@@ -3764,7 +3764,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Basic_Intersection
+          m_StringArgument: Basic_Intersection_Motorcycle
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1630102105
