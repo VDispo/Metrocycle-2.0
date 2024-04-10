@@ -21,5 +21,7 @@ public class BlinkerCheck : MonoBehaviour
         ) {
             GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
         }
+
+        gameObject.SetActive(false);
     }
 }

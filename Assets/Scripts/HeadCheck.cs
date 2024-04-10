@@ -37,7 +37,7 @@ public class HeadCheck : MonoBehaviour
     }
 
     public bool isLookingRight() {
-        return left.Priority == 20;
+        return right.Priority == 20;
     }
     public bool isLookingLeft() {
         return left.Priority == 20;
@@ -56,11 +56,15 @@ public class HeadCheck : MonoBehaviour
 
         if (Input.GetKey("1") && !isLookingRight())
         {
+            normal.Priority = 10;
+            right.Priority = 10;
             left.Priority = 20;
             leftCheckTime = Time.time;
 
         } else if (Input.GetKey("3") && !isLookingLeft())
         {
+            left.Priority = 10;
+            normal.Priority = 10;
             right.Priority = 20;
             rightCheckTime = Time.time;
         }
