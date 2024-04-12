@@ -5798,7 +5798,7 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   popupTitle: Great! Next, look forward on the road again
-  popupText: "To finish your left head check, let go of the 1 button to look ahead
+  popupText: "To finish your left head check, let go of the J key  to look ahead
     again.\r"
 --- !u!64 &423867879
 MeshCollider:
@@ -23655,7 +23655,7 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   popupTitle: Great! Next, perform a right head check
-  popupText: Press and hold the 3 button to check your right blindspot
+  popupText: Press and hold the K key to check your right blindspot
 --- !u!64 &866309663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31540,7 +31540,7 @@ MonoBehaviour:
   popupType: 2
   popupTitle: Oops! You are not performing a left head check
   popupText: Hold the head check position until the next checkpoint by holding the
-    1 button.
+    J key.
 --- !u!64 &1368907039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36152,7 +36152,7 @@ MonoBehaviour:
   popupType: 1
   popupTitle: Oops! You are not performing a right head check
   popupText: Hold the head check position until the next checkpoint by holding the
-    3 button.
+    K key.
 --- !u!64 &1580180293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41692,7 +41692,7 @@ MonoBehaviour:
     your blindspots.
 
 
-    Press and hold the 1 key to perform a lefft head check.'
+    Press and hold the J key to perform a left head check.'
 --- !u!64 &1912685026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -45552,7 +45552,7 @@ MonoBehaviour:
   popupType: 2
   popupTitle: Oops! You are not performing a right head check
   popupText: Hold the head check position until the next checkpoint by holding the
-    3 button.
+    K key.
 --- !u!64 &2048835608
 MeshCollider:
   m_ObjectHideFlags: 0

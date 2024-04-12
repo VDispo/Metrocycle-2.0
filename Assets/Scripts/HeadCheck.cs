@@ -49,19 +49,19 @@ public class HeadCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("1") || Input.GetKeyUp("3")) {
+        if (Input.GetKeyUp("j") || Input.GetKeyUp("k")) {
             resetPriorities();
             normal.Priority = 20;
         }
 
-        if (Input.GetKey("1") && !isLookingRight())
+        if (Input.GetKey("j") && !isLookingRight())
         {
             normal.Priority = 10;
             right.Priority = 10;
             left.Priority = 20;
             leftCheckTime = Time.time;
 
-        } else if (Input.GetKey("3") && !isLookingLeft())
+        } else if (Input.GetKey("k") && !isLookingLeft())
         {
             left.Priority = 10;
             normal.Priority = 10;
