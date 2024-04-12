@@ -15,6 +15,7 @@ public class HeadCheck : MonoBehaviour
     [HideInInspector] public float rightCheckTime;
 
     private CinemachineBrain brain;
+    private CinemachineVirtualCamera lastView;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class HeadCheck : MonoBehaviour
 
         resetPriorities();
         normal.Priority = 20;
+        lastView = normal;
 
         brain.m_DefaultBlend.m_Time = headCheckSpeed;
 
@@ -52,21 +54,31 @@ public class HeadCheck : MonoBehaviour
         if (Input.GetKeyUp("j") || Input.GetKeyUp("k")) {
             resetPriorities();
             normal.Priority = 20;
+        } else if (isLookingForward() && !brain.IsBlending
+                    && ((lastView == left && Time.time - leftCheckTime > headCheckSpeed)
+                        ||(lastView == right && Time.time - rightCheckTime > headCheckSpeed)
+                    )
+        ) {
+            lastView = normal;
         }
 
-        if (Input.GetKey("j") && !isLookingRight())
+        if (Input.GetKey("j") && lastView != right)
         {
             normal.Priority = 10;
             right.Priority = 10;
             left.Priority = 20;
             leftCheckTime = Time.time;
 
-        } else if (Input.GetKey("k") && !isLookingLeft())
+            lastView = left;
+
+        } else if (Input.GetKey("k") && lastView != left)
         {
             left.Priority = 10;
             normal.Priority = 10;
             right.Priority = 20;
             rightCheckTime = Time.time;
+
+            lastView = right;
         }
     }
 }
