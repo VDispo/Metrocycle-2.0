@@ -47784,11 +47784,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 398133132196896254, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 491119583230674834, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: PopupSystem
       value: 
       objectReference: {fileID: 1142387557}
+    - target: {fileID: 1664345169483333614, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2969384988200066483, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47838,6 +47848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: bikeType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420471963936407584, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
