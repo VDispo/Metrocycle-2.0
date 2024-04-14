@@ -5775,7 +5775,7 @@ Transform:
   m_GameObject: {fileID: 423867876}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0004208175, y: -0.050645404, z: -0.0024150326, w: 0.99871373}
-  m_LocalPosition: {x: 142.3, y: 0.1, z: 202}
+  m_LocalPosition: {x: 142.89, y: 0.1, z: 202.02}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22488,6 +22488,8 @@ Transform:
   - {fileID: 866309661}
   - {fileID: 1580180291}
   - {fileID: 1728133393}
+  - {fileID: 2143044055}
+  - {fileID: 2021479493}
   - {fileID: 1426056420}
   m_Father: {fileID: 622902871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23631,7 +23633,7 @@ Transform:
   m_GameObject: {fileID: 866309660}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0004208175, y: -0.050645404, z: -0.0024150326, w: 0.99871373}
-  m_LocalPosition: {x: 136.3, y: 0.2, z: 260.7}
+  m_LocalPosition: {x: 138.12, y: 0.1, z: 246.42}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31499,7 +31501,7 @@ Transform:
   m_GameObject: {fileID: 1368907036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.06444971, z: -0, w: 0.99792093}
-  m_LocalPosition: {x: 144.5, y: 0.1, z: 189.1}
+  m_LocalPosition: {x: 144.31, y: 0.1, z: 189.1}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35427,7 +35429,7 @@ Transform:
   m_GameObject: {fileID: 1560649921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.06444971, z: -0, w: 0.99792093}
-  m_LocalPosition: {x: 138.5, y: 0.2, z: 247.8}
+  m_LocalPosition: {x: 139.91, y: 0.1, z: 231.64}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36110,13 +36112,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580180290}
   serializedVersion: 2
-  m_LocalRotation: {x: 8.737518e-11, y: -0.1029553, z: -7.5336165e-10, w: 0.994686}
-  m_LocalPosition: {x: 120.3, y: 0.2, z: 350.1}
+  m_LocalRotation: {x: 0, y: -0.078459024, z: 0, w: 0.99691737}
+  m_LocalPosition: {x: 132.02, y: 0.1, z: 286.91}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 755585892}
-  m_LocalEulerAnglesHint: {x: 0, y: -11.819, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9, z: 0}
 --- !u!114 &1580180292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39075,13 +39077,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728133392}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0011110557, y: -0.10996614, z: -0.011036792, w: 0.9938735}
-  m_LocalPosition: {x: 108.81, y: 0.11, z: 409.4}
+  m_LocalRotation: {x: -0.0013668465, y: -0.0871755, z: -0.011007997, w: 0.99613124}
+  m_LocalPosition: {x: 128.86, y: 0.1, z: 304.87}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 755585892}
-  m_LocalEulerAnglesHint: {x: -0.266, y: -12.625, z: -1.243}
+  m_LocalEulerAnglesHint: {x: -0.266, y: -10, z: -1.243}
 --- !u!114 &1728133394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39097,9 +39099,10 @@ MonoBehaviour:
   pairCollider: {fileID: 0}
   deactivateAfterCollision: 1
   showPopup: 1
-  popupType: 4
-  popupTitle: Congratulations! You have finished the tutorial.
-  popupText: "That's it for the basic controls! \r"
+  popupType: 1
+  popupTitle: Great! Now look back forward again.
+  popupText: "To finish your left head check, let go of the K key  to look ahead
+    again.\r"
 --- !u!64 &1728133395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41664,13 +41667,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912685023}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.07216305, z: -0, w: 0.9973929}
-  m_LocalPosition: {x: 147.7, y: 0.1, z: 148}
+  m_LocalRotation: {x: 0, y: -0.061048605, z: 0, w: 0.99813485}
+  m_LocalPosition: {x: 147.41, y: 0.1, z: 147.9}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 755585892}
-  m_LocalEulerAnglesHint: {x: 0, y: -8.276, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -7, z: 0}
 --- !u!114 &1912685025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45146,6 +45149,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011541480}
   m_CullTransparentMesh: 1
+--- !u!1 &2021479492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021479493}
+  - component: {fileID: 2021479497}
+  - component: {fileID: 2021479496}
+  - component: {fileID: 2021479495}
+  - component: {fileID: 2021479494}
+  m_Layer: 3
+  m_Name: LookForwardEnd (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2021479493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021479492}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0003305224, y: -0.08715682, z: -0.0024290879, w: 0.9961916}
+  m_LocalPosition: {x: 111.05, y: 0.1, z: 398.16}
+  m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 755585892}
+  m_LocalEulerAnglesHint: {x: -0.062, y: -10, z: -0.274}
+--- !u!114 &2021479494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021479492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082502c912441ac47be73a6c68c422c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairCollider: {fileID: 0}
+  deactivateAfterCollision: 1
+  showPopup: 1
+  popupType: 4
+  popupTitle: Congratulations! You have finished the tutorial.
+  popupText: That's it for the basic controls!
+--- !u!64 &2021479495
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021479492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1919
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2021479496
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021479492}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 125a4a0a7f041684cbfbd3bbd03bbf11, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2021479497
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021479492}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2031120145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47447,6 +47575,136 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &2143044054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143044055}
+  - component: {fileID: 2143044059}
+  - component: {fileID: 2143044058}
+  - component: {fileID: 2143044057}
+  - component: {fileID: 2143044056}
+  m_Layer: 3
+  m_Name: Forward Head Check (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143044055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143044054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.08715578, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 122.16, y: 0.1, z: 340.61}
+  m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 755585892}
+  m_LocalEulerAnglesHint: {x: 0, y: -10, z: 0}
+--- !u!114 &2143044056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143044054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e895e63de0085f34a789e4aaf3e6d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 1
+  checkLookingForward: 1
+  headCheckScript: {fileID: 1891683445}
+  popupType: 1
+  popupTitle: Oops! You have to keep your eyes on the road!
+  popupText: 'Looking at your blindspots for too long can be dangerous since you
+    can''t see what''s in front of you.
+
+
+    To look forward on the road again,
+    don''t press the J or K button.'
+--- !u!64 &2143044057
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143044054}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1919
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2143044058
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143044054}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6316a0b85a0b3b041a4629512796a81a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2143044059
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143044054}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &232324896979300611
 MonoBehaviour:
   m_ObjectHideFlags: 0
