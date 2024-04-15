@@ -3269,6 +3269,18 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!114 &144484474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1851980631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ade20b8bfbb7ca779e12470375e9fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &149244509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22209,6 +22221,55 @@ Texture2D:
     offset: 0
     size: 0
     path: 
+--- !u!1 &886895091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886895093}
+  - component: {fileID: 886895092}
+  m_Layer: 0
+  m_Name: ChangeLaneChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &886895092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886895091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e13ebe6ffc4c53bae38a9e42074f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBlinkerTime: 3
+  maxBlinkerOffTime: 0
+  bikeLane: {fileID: 0}
+  headCheckScript: {fileID: 144484474}
+  maxHeadCheckDelay: 5
+--- !u!4 &886895093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886895091}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.6796, y: -107.53917, z: -43.60559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &892548378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65044,3 +65105,4 @@ SceneRoots:
   - {fileID: 1958783165}
   - {fileID: 1520827889}
   - {fileID: 303485980}
+  - {fileID: 886895093}
