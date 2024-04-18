@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 9d0ecb0aaacab8ba4b77274aaf1578eb
   - enabled: 1
     path: Assets/Scenes/Tutorial_Bicycle.unity
-    guid: 90c13bda261274d49b4368c971232454
+    guid: 02c4542dcbbc20a408745dd5f6942973
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 71adf8fd63dfd4d1598911d02c1ce9f9
@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Basic_Multilane_Motorcycle.unity
     guid: d515d7d18b774823795b52994b330e35
+  - enabled: 1
+    path: Assets/Scenes/Basic_Straight_Bicycle.unity
+    guid: ecf3e3cb4c51c35aaa453d81bc083d43
+  - enabled: 1
+    path: Assets/Scenes/Basic_Uturn_Bicycle.unity
+    guid: e104539fb8faa1c6a992c306d4434684
+  - enabled: 1
+    path: Assets/Scenes/Basic_Intersection_Bicycle.unity
+    guid: 55a24c4d4e0fda254ace80f6bb0a07ea
+  - enabled: 1
+    path: Assets/Scenes/Basic_Multilane_Bicycle.unity
+    guid: 653deab41ef70db1fbfc1136c11654a1
   m_configObjects: {}
