@@ -483,8 +483,8 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 2-Lane
     id: 1708760731.257212
-    timestamp: 1710078329.090179
-    roadWidth: 10
+    timestamp: 1713623869.59984
+    roadWidth: 9
     totalLanes: 2
     laneWidth: 3.5
     medianWidth: 0
@@ -502,8 +502,8 @@ MonoBehaviour:
     roadShapeDataActive: 0
     roadShapeData:
       nodes:
-      - {x: -5, y: 0}
-      - {x: 5, y: 0}
+      - {x: -4.5, y: 0}
+      - {x: 4.5, y: 0}
       hardEdge: 0000
       priorityNodeIndexLeft: -1
       priorityNodeIndexRight: -1
@@ -529,12 +529,12 @@ MonoBehaviour:
     speedLimit: 50
     speedLimitConnections: 50
     roadShape:
-    - {x: -5, y: 0}
-    - {x: 5, y: 0}
+    - {x: -4.5, y: 0}
+    - {x: 4.5, y: 0}
     roadShapeExt: []
     roadShapeExt2:
-    - {x: -5, y: 0}
-    - {x: 5, y: 0}
+    - {x: -4.5, y: 0}
+    - {x: 4.5, y: 0}
     doConnectionTri: 0101
     doConnectionTriExt: 
     roadShapeUVs:
@@ -562,7 +562,8 @@ MonoBehaviour:
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 0}
+    connectionMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c,
+      type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
@@ -632,7 +633,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 4-Lane two way
     id: 1708771633.757933
-    timestamp: 1710078345.2676358
+    timestamp: 1713623492.46429
     roadWidth: 30
     totalLanes: 2
     laneWidth: 3.5
@@ -705,7 +706,7 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 16305c462a6ee40c1b4079b41f052292, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
