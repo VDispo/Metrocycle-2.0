@@ -34769,7 +34769,7 @@ MonoBehaviour:
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 2100000, guid: 16305c462a6ee40c1b4079b41f052292,
+    connectionMaterial: {fileID: 2100000, guid: 88fc5c77a8debd41dba032cded14bd39,
       type: 2}
     isSideObject: 0
     isCustomRoad: 0
