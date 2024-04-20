@@ -6,12 +6,12 @@ using TMPro;
 
 public class CheckpointDetection : MonoBehaviour
 {
-    public GameObject pairCollider = null; // activated after collision
+    public GameObject pairCollider; // activated after collision
 
     public bool deactivateAfterCollision;
 
-    public bool showPopup = true;
-    public PopupType popupType = PopupType.PROMPT;
+    public bool showPopup;
+    public PopupType popupType;
     [TextArea(3, 10)] public string popupTitle;
     [TextArea(3, 10)] public string popupText;
 
