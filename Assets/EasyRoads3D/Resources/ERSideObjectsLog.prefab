@@ -1605,7 +1605,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 4-Lane two way
     id: 1708771633.757933
-    timestamp: 1713640120.1727998
+    timestamp: 1713642611.016325
     roadWidth: 30
     totalLanes: 2
     laneWidth: 3.5
@@ -1678,11 +1678,11 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: 16305c462a6ee40c1b4079b41f052292, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 88fc5c77a8debd41dba032cded14bd39, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 2100000, guid: 16305c462a6ee40c1b4079b41f052292,
+    connectionMaterial: {fileID: 2100000, guid: 88fc5c77a8debd41dba032cded14bd39,
       type: 2}
     isSideObject: 0
     isCustomRoad: 0
@@ -2050,9 +2050,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: EDSA 3.5-Lane 1-way Road with Bike lane
+  - roadTypeName: EDSA 2.5-Lane 1-way Road with Bike lane
     id: 1713436464.7772598
-    timestamp: 1713635853.718639
+    timestamp: 1713642674.9028418
     roadWidth: 13.5
     totalLanes: 2
     laneWidth: 3.5
@@ -2125,17 +2125,20 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: 74dd752f343e11805b6f39421f708f3f, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 683f6e876a6696ec6b819e744eb9777c, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 0}
+    connectionMaterial: {fileID: 2100000, guid: 683f6e876a6696ec6b819e744eb9777c,
+      type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
     soData: []
     soDataExt: []
     soDataLog:
+    - id: 1713637109.783382
+      active: 0
     - id: 1708761651.6665618
       active: 0
     - id: 1713635763.343755
@@ -2201,7 +2204,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: EDSA Maharlika 3-Lane with bus lane
     id: 1713437849.983599
-    timestamp: 1713637308.8151999
+    timestamp: 1713642690.991873
     roadWidth: 13.5
     totalLanes: 2
     laneWidth: 3.5
@@ -2274,23 +2277,24 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 9fb26c227027edef688175666fcf4010, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 0}
+    connectionMaterial: {fileID: 2100000, guid: 9fb26c227027edef688175666fcf4010,
+      type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
     soData: []
     soDataExt: []
     soDataLog:
+    - id: 1713637109.783382
+      active: 1
     - id: 1708761651.6665618
       active: 0
     - id: 1713635763.343755
       active: 0
-    - id: 1713637109.783382
-      active: 1
     layer: 8
     isStatic: 1
     tag: Untagged
