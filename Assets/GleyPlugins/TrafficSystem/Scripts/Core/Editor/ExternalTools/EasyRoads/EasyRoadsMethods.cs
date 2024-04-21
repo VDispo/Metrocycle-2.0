@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System;
+using System.Linq;
 
 namespace GleyTrafficSystem
 {
@@ -100,7 +101,7 @@ namespace GleyTrafficSystem
                     }
                     else
                     {
-                        Debug.LogError("No lane data found for " + roads[i].gameObject+". Make sure this road hat at least one lane inside Lane Info tab.", roads[i].gameObject);
+                        Debug.LogError("No lane data found for " + roads[i].gameObject+". Make sure this road has at least one lane inside Lane Info tab.", roads[i].gameObject);
                     }
                 }
             }
@@ -709,9 +710,9 @@ public static class ERRoadExtensions{
             return new int[] {int.Parse(numLanes[0]), int.Parse(numLanes[1])};
         } else {
             int lanePartStart = lanePart.LastIndexOf(' ', lanePart.Length-1);
-            if (lanePartStart > -1) {
+            if (lanePartStart <= -1) {
                 // GUESS: R-Lane is start of the name
-                lanePartStart = 0;
+                lanePartStart = -1;
             }
 
             int rightLanes = -1;
@@ -753,7 +754,7 @@ public static class ERRoadExtensions{
         }
 
         if (speedPart == null) {
-            Debug.Log("ER3D road nome does not contain " + KEYWORD + ". Defaulting Speed limit to " + DEFAULT_SPEED_LIMIT);
+            // Debug.Log("ER3D road nome does not contain " + KEYWORD + ". Defaulting Speed limit to " + DEFAULT_SPEED_LIMIT);
             return DEFAULT_SPEED_LIMIT;
         }
 
@@ -811,10 +812,12 @@ public static class ERRoadExtensions{
 
     public static string[] GetNamesWithConfig(this ERRoad road) {
         string roadMaterialName = "";
-        if (road.GetRoadType().roadMaterial != null) {
-            roadMaterialName = road.GetRoadType().roadMaterial.name;
+        ERRoadType roadType = road.GetRoadType();
+        if (roadType.roadMaterial != null) {
+            roadMaterialName = roadType.roadMaterial.name;
         }
-        return new string [] {road.GetName().ToLower(), roadMaterialName.ToLower()};
+        return new string [] {road.GetName(), roadType.roadTypeName, roadMaterialName}
+            .Select((name, index) => name.ToLower()).ToArray();
     }
 }
 #endif
