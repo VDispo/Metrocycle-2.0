@@ -699,7 +699,10 @@ public static class ERRoadExtensions{
                 break;
             }
         }
-        Debug.Assert(lanePart != null, "ER3D road name must contain [L,R]-Lane or R-Lane");
+        if (lanePart == null) {
+            Debug.Log("ER3D road name must contain [L,R]-Lane or R-Lane. Defaulting to [0, 2].");
+            return new int[] {0, 2};
+        }
 
         if (lanePart.Contains(']')) {
             int lanePartEnd = lanePart.LastIndexOf(']');
