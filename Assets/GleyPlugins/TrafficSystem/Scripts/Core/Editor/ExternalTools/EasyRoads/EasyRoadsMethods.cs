@@ -61,7 +61,7 @@ namespace GleyTrafficSystem
                 if (!roads[i].roadScript.isSideObject)
                 {
                     Debug.Log("MTS-ER3D: Processing road " + roads[i].gameObject);
-                    GameObject road = new GameObject("ER3DRoad_" + i);
+                    GameObject road = new GameObject(roads[i].GetName() + "(ER3DRoad_)");
                     road.transform.SetParent(waypointsHolder);
                     GameObject lanesHolder = new GameObject("Lanes");
                     Transform connectorsHolder = new GameObject("Connectors").transform;
@@ -152,6 +152,7 @@ namespace GleyTrafficSystem
 
                 const float LANESPACING = 0.5f;
                 const float BIKELENGTH = 3f;
+                const float SIDESPACE = LANESPACING + BIKELENGTH/2;
                 for (int i = 0; i < numLanes; ++i) {
                     Transform curLane = lanesHolder.GetChild(i);
                     lanes[i] = curLane.gameObject;
@@ -186,7 +187,7 @@ namespace GleyTrafficSystem
                         if (j < curLane.childCount-1) {
                             waypoint.transform.LookAt(curLane.GetChild(j+1));
                         }
-                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2 - BIKELENGTH/2,
+                        collider.size = new Vector3(roadScript.laneWidth - SIDESPACE,
                                                     1,
                                                     (j > 0) ? Vector3.Distance(waypoint.transform.position, curLane.GetChild(j-1).position): 2
                                                    );
