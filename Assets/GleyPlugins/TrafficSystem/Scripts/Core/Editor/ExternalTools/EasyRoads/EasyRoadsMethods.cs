@@ -814,10 +814,10 @@ public static class ERRoadExtensions{
     public static string[] GetNamesWithConfig(this ERRoad road) {
         string roadMaterialName = "";
         ERRoadType roadType = road.GetRoadType();
-        if (roadType.roadMaterial != null) {
+        if (roadType?.roadMaterial != null) {
             roadMaterialName = roadType.roadMaterial.name;
         }
-        return new string [] {road.GetName(), roadType.roadTypeName, roadMaterialName}
+        return new string [] {road.GetName(), roadType?.roadTypeName ?? "", roadMaterialName}
             .Select((name, index) => name.ToLower()).ToArray();
     }
 }
