@@ -149,7 +149,8 @@ namespace GleyTrafficSystem
                 // Add ChangeLaneChecker
                 road.AddComponent<ChangeLaneChecker>();
 
-                float LANESPACING = 0.5f;
+                const float LANESPACING = 0.5f;
+                const float BIKELENGTH = 3f;
                 for (int i = 0; i < numLanes; ++i) {
                     Transform curLane = lanesHolder.GetChild(i);
                     lanes[i] = curLane.gameObject;
@@ -184,7 +185,7 @@ namespace GleyTrafficSystem
                         if (j < curLane.childCount-1) {
                             waypoint.transform.LookAt(curLane.GetChild(j+1));
                         }
-                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2,
+                        collider.size = new Vector3(roadScript.laneWidth - LANESPACING*2 - BIKELENGTH/2,
                                                     1,
                                                     (j > 0) ? Vector3.Distance(waypoint.transform.position, curLane.GetChild(j-1).position): 2
                                                    );
