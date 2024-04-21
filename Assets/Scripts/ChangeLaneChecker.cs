@@ -30,7 +30,9 @@ public class ChangeLaneChecker : MonoBehaviour
     }
 
     public void enteredLane(GameObject lane) {
-        int newLane = int.Parse(lane.name.Substring(Metrocycle.Constants.laneNamePrefix.Length));
+        string lanePrefix = Metrocycle.Constants.laneNamePrefix;
+        int lanePartStart = lane.name.LastIndexOf(lanePrefix) + lanePrefix.Length;
+        int newLane = int.Parse(lane.name.Substring(lanePartStart));
 
         checkBlinkerForLaneChange(newLane);
         checkEnteredBikeLane(lane);
