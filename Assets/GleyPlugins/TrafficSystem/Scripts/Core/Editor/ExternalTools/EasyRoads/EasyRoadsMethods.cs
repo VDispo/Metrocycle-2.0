@@ -679,17 +679,24 @@ namespace GleyTrafficSystem
 
 // HACK: Implement missing ER3D funcs (only present in v3.3 beta)
 public static class ERRoadExtensions{
-    // HACK: encode the number of lanes in the road name
+    // HACK: encode the number of lanes in the road/material name
     //       of the format ".* [L,R]-Lane .*"
     //       where L, R are integers, and
     //          L = number of left lanes
     //          R = number of right lanes
     public static int[] GetLaneCountRaw(this ERRoad road) {
-        const string KEYWORD = "-Lane";
+        // const string KEYWORD = "-Lane";
+        const string KEYWORD = "-lane";
 
-        string roadName = road.GetName();
-        Debug.Assert(roadName.Contains(KEYWORD), "ER3D road name must contain [L,R]-Lane or R-Lane");
-        string lanePart = road.GetName().Split(KEYWORD)[0];
+        string lanePart = null;
+        foreach (string name in road.GetNamesWithConfig()) {
+            Debug.Log("NAME " + name);
+            if (name.Contains(KEYWORD)) {
+                lanePart = name.Split(KEYWORD)[0];
+                break;
+            }
+        }
+        Debug.Assert(lanePart != null, "ER3D road name must contain [L,R]-Lane or R-Lane");
 
         if (lanePart.Contains(']')) {
             int lanePartEnd = lanePart.LastIndexOf(']');
@@ -701,9 +708,16 @@ public static class ERRoadExtensions{
             return new int[] {int.Parse(numLanes[0]), int.Parse(numLanes[1])};
         } else {
             int lanePartStart = lanePart.LastIndexOf(' ', lanePart.Length-1);
-            Debug.Assert(lanePartStart > -1, "ER3D road name R-Lane part must be preced by space");
+            if (lanePartStart > -1) {
+                // GUESS: R-Lane is start of the name
+                lanePartStart = 0;
+            }
 
-            int rightLanes = int.Parse(lanePart.Substring(lanePartStart+1));
+            int rightLanes = -1;
+            if (! (int.TryParse(lanePart.Substring(lanePartStart+1), out rightLanes)) ) {
+                Debug.LogError("ER3D road name R-Lane part must be preceded by space or the first part of name");
+            }
+
             return new int[] {0, rightLanes};
         }
     }
@@ -721,20 +735,27 @@ public static class ERRoadExtensions{
         return numLanes[1];
     }
 
-    // HACK: encode the speed limit (max) in the road name
+    // HACK: encode the speed limit (max) in the road/material name
     //       of the format ".* X-SpeedLimit .*"
     //       where X is an int
     public static int GetSpeedLimit(this ERRoad road) {
         const int DEFAULT_SPEED_LIMIT = 40;
-        const string KEYWORD = "-SpeedLimit";
+        // const string KEYWORD = "-SpeedLimit";
+        const string KEYWORD = "-speedlimit";
 
-        string roadName = road.GetName();
-        if (!roadName.Contains(KEYWORD)) {
+        string speedPart = null;
+        foreach (string name in road.GetNamesWithConfig()) {
+            if (name.Contains(KEYWORD)) {
+                speedPart = name.Split(KEYWORD)[0];
+                break;
+            }
+        }
+
+        if (speedPart == null) {
             Debug.Log("ER3D road nome does not contain " + KEYWORD + ". Defaulting Speed limit to " + DEFAULT_SPEED_LIMIT);
             return DEFAULT_SPEED_LIMIT;
         }
 
-        string speedPart = roadName.Split(KEYWORD)[0];
         int speedPartStart = speedPart.LastIndexOf(' ', speedPart.Length-1);
         Debug.Assert(speedPartStart > -1, "ER3D road name Speed limit part must be preced by space");
 
@@ -782,9 +803,17 @@ public static class ERRoadExtensions{
         return lanePoints;
     }
 
-    // Extra convenience function
+    // Extra convenience functions
     public static float GetLaneWidth(this ERRoad road) {
         return road.GetWidth() / road.GetLaneCount();
+    }
+
+    public static string[] GetNamesWithConfig(this ERRoad road) {
+        string roadMaterialName = "";
+        if (road.GetRoadType().roadMaterial != null) {
+            roadMaterialName = road.GetRoadType().roadMaterial.name;
+        }
+        return new string [] {road.GetName().ToLower(), roadMaterialName.ToLower()};
     }
 }
 #endif
