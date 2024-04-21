@@ -2050,9 +2050,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: EDSA 2.5-Lane 1-way Road with Bike lane
+  - roadTypeName: EDSA (2.5) 3-Lane 1-way Road with Bike lane
     id: 1713436464.7772598
-    timestamp: 1713642674.9028418
+    timestamp: 1713717779.277045
     roadWidth: 13.5
     totalLanes: 2
     laneWidth: 3.5
