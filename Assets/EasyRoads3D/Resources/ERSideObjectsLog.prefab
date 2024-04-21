@@ -2356,7 +2356,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: EDSA 6-Lane with Bus and Bike lane
     id: 1713438953.219893
-    timestamp: 1713639791.540236
+    timestamp: 1713706059.940491
     roadWidth: 25
     totalLanes: 2
     laneWidth: 3.5
@@ -2429,11 +2429,11 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: 88fc5c77a8debd41dba032cded14bd39, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 83864f32a947f726595dfe7f7eedb2db, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 2100000, guid: 88fc5c77a8debd41dba032cded14bd39,
+    connectionMaterial: {fileID: 2100000, guid: 83864f32a947f726595dfe7f7eedb2db,
       type: 2}
     isSideObject: 0
     isCustomRoad: 0
@@ -2441,12 +2441,12 @@ MonoBehaviour:
     soData: []
     soDataExt: []
     soDataLog:
+    - id: 1713637109.783382
+      active: 0
     - id: 1708761651.6665618
       active: 0
     - id: 1713635763.343755
       active: 1
-    - id: 1713637109.783382
-      active: 0
     layer: 8
     isStatic: 1
     tag: Untagged
