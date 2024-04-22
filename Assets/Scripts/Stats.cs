@@ -22,35 +22,35 @@ public class Stats : MonoBehaviour
 {
     private string filePath = "Assets/PlayerStats.json";
 
-    public void SaveSpeed(float speed)
+    public static void SaveSpeed(float speed)
     {
         JSONNode userStatsJson = LoadUserStats();
         userStatsJson["speed"] = speed;
         SaveUserStats(userStatsJson);
     }
 
-    public void SaveTime(float time)
+    public static void SaveTime(float time)
     {
         JSONNode userStatsJson = LoadUserStats();
         userStatsJson["time"] = time;
         SaveUserStats(userStatsJson);
     }
 
-    public void SaveCollisionCount(int collisionCount)
+    public static void SaveCollisionCount(int collisionCount)
     {
         JSONNode userStatsJson = LoadUserStats();
         userStatsJson["collisionCount"] = collisionCount;
         SaveUserStats(userStatsJson);
     }
 
-    public void IncrementCollisionCount()
+    public static void IncrementCollisionCount()
     {
         JSONNode userStatsJson = LoadUserStats();
         userStatsJson["collisionCount"] = userStatsJson["collisionCount"]+1;
         SaveUserStats(userStatsJson);
     }
 
-    public void SaveAllStats(float speed, float time, int collisionCount)
+    public static void SaveAllStats(float speed, float time, int collisionCount)
     {
         JSONNode userStatsJson = new JSONObject();
         userStatsJson["speed"] = speed;
@@ -59,7 +59,7 @@ public class Stats : MonoBehaviour
         SaveUserStats(userStatsJson);
     }
 
-    public JSONNode LoadUserStats()
+    public static JSONNode LoadUserStats()
     {
         // Check if the JSON file exists
         if (File.Exists(filePath))
