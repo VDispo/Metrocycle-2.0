@@ -20,79 +20,81 @@ public class PlayerStats
 
 public class Stats : MonoBehaviour
 {
-    private string filePath = "Assets/PlayerStats.json";
+    private static string filePath;
 
-    public static void SaveSpeed(float speed)
+    public static void SaveSpeed(float speed, string sceneId)
     {
-        JSONNode userStatsJson = LoadUserStats();
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
+        JSONNode userStatsJson = LoadUserStats(filePath);
         userStatsJson["speed"] = speed;
-        SaveUserStats(userStatsJson);
+        SaveUserStats(userStatsJson, filePath);
     }
 
-    public static void SaveTime(float time)
+    public static void SaveTime(float time, string sceneId)
     {
-        JSONNode userStatsJson = LoadUserStats();
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
+        JSONNode userStatsJson = LoadUserStats(filePath);
         userStatsJson["time"] = time;
-        SaveUserStats(userStatsJson);
+        SaveUserStats(userStatsJson, filePath);
     }
 
-    public static void SaveCollisionCount(int collisionCount)
+    public static void SaveCollisionCount(int collisionCount, string sceneId)
     {
-        JSONNode userStatsJson = LoadUserStats();
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
+        JSONNode userStatsJson = LoadUserStats(filePath);
         userStatsJson["collisionCount"] = collisionCount;
-        SaveUserStats(userStatsJson);
+        SaveUserStats(userStatsJson, filePath);
     }
 
-    public static void IncrementCollisionCount()
+    public static void IncrementCollisionCount(string sceneId)
     {
-        JSONNode userStatsJson = LoadUserStats();
-        userStatsJson["collisionCount"] = userStatsJson["collisionCount"]+1;
-        SaveUserStats(userStatsJson);
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
+        JSONNode userStatsJson = LoadUserStats(filePath);
+        userStatsJson["collisionCount"] = userStatsJson["collisionCount"].AsInt + 1;
+        SaveUserStats(userStatsJson, filePath);
     }
 
-    public static void SaveAllStats(float speed, float time, int collisionCount)
+    public static void SaveAllStats(float speed, float time, int collisionCount, string sceneId)
     {
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
         JSONNode userStatsJson = new JSONObject();
         userStatsJson["speed"] = speed;
         userStatsJson["time"] = time;
         userStatsJson["collisionCount"] = collisionCount;
-        SaveUserStats(userStatsJson);
+        SaveUserStats(userStatsJson, filePath);
     }
 
-    public static JSONNode LoadUserStats()
+    public static JSONNode LoadUserStats(string filePath)
     {
-        // Check if the JSON file exists
         if (File.Exists(filePath))
         {
-            // Read the JSON file as a string
             string jsonString = File.ReadAllText(filePath);
-
-            // Parse the JSON string into a JSONNode
             return JSON.Parse(jsonString);
         }
         else
         {
-            // Create a new JSONObject if the file doesn't exist
             return new JSONObject();
         }
     }
 
-    private void SaveUserStats(JSONNode userStatsJson)
+    private static void SaveUserStats(JSONNode userStatsJson, string filePath)
     {
-        // Write the JSONObject to a JSON file
         File.WriteAllText(filePath, userStatsJson.ToString());
     }
 
     void Start()
     {
+        string sceneId = "Scenario1";
+        filePath = "Assets/PlayerStats_" + sceneId + ".json";
+
         // Example usage
-        SaveSpeed(10.0f);
-        SaveTime(120.0f);
-        SaveCollisionCount(5);
-        IncrementCollisionCount();
+        SaveSpeed(10.0f, sceneId);
+        SaveTime(120.0f, sceneId);
+        SaveCollisionCount(5, sceneId);
+        IncrementCollisionCount(sceneId);
 
         // Load and display user stats
-        JSONNode userStatsJson = LoadUserStats();
+        JSONNode userStatsJson = LoadUserStats(filePath);
         float speed = userStatsJson["speed"].AsFloat;
         float time = userStatsJson["time"].AsFloat;
         int collisionCount = userStatsJson["collisionCount"].AsInt;
