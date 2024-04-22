@@ -336,7 +336,7 @@ MonoBehaviour:
     maxSuspension: 0.15354562
   frontTrigger: {fileID: 1439586286300859910}
   shadowHolder: {fileID: 0}
-  vehicleType: 0
+  vehicleType: 2
   maxSuspension: 0
   suspensionPosition: 0.5
   maxSteer: 30
