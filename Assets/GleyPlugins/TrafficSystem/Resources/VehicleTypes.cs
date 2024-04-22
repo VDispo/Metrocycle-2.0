@@ -6,6 +6,7 @@ namespace GleyTrafficSystem
 		Car,
 		Bike,
 		Motorbike,
+		Bus,
 	}
 }
 #endif
