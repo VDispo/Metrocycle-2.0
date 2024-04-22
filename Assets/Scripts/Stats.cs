@@ -22,42 +22,83 @@ public class Stats : MonoBehaviour
 {
     private string filePath = "Assets/PlayerStats.json";
 
-    public void SavePlayerStats(float speed, float timeToComplete, int collisionCount)
+    public void SaveSpeed(float speed)
     {
-        // Create a JSONObject to hold the player's stats
-        JSONObject playerStatsJson = new JSONObject();
-        playerStatsJson["speed"] = speed;
-        playerStatsJson["timeToComplete"] = timeToComplete;
-        playerStatsJson["collisionCount"] = collisionCount;
-
-        // Write the JSONObject to a JSON file
-        File.WriteAllText(filePath, playerStatsJson.ToString());
+        JSONNode userStatsJson = LoadUserStats();
+        userStatsJson["speed"] = speed;
+        SaveUserStats(userStatsJson);
     }
 
-    public PlayerStats LoadPlayerStats()
+    public void SaveTime(float time)
     {
-        // Read the JSON file as a string
-        string jsonString = File.ReadAllText(filePath);
+        JSONNode userStatsJson = LoadUserStats();
+        userStatsJson["time"] = time;
+        SaveUserStats(userStatsJson);
+    }
 
-        // Parse the JSON string into a JSONNode
-        JSONNode playerStatsJson = JSON.Parse(jsonString);
+    public void SaveCollisionCount(int collisionCount)
+    {
+        JSONNode userStatsJson = LoadUserStats();
+        userStatsJson["collisionCount"] = collisionCount;
+        SaveUserStats(userStatsJson);
+    }
 
-        // Retrieve the player's stats from the JSONNode
-        float speed = playerStatsJson["speed"].AsFloat;
-        float timeToComplete = playerStatsJson["timeToComplete"].AsFloat;
-        int collisionCount = playerStatsJson["collisionCount"].AsInt;
+    public void IncrementCollisionCount()
+    {
+        JSONNode userStatsJson = LoadUserStats();
+        userStatsJson["collisionCount"] = userStatsJson["collisionCount"]+1;
+        SaveUserStats(userStatsJson);
+    }
 
-        // Return the player's stats as a PlayerStats object
-        return new PlayerStats(speed, timeToComplete, collisionCount);
+    public void SaveAllStats(float speed, float time, int collisionCount)
+    {
+        JSONNode userStatsJson = new JSONObject();
+        userStatsJson["speed"] = speed;
+        userStatsJson["time"] = time;
+        userStatsJson["collisionCount"] = collisionCount;
+        SaveUserStats(userStatsJson);
+    }
+
+    public JSONNode LoadUserStats()
+    {
+        // Check if the JSON file exists
+        if (File.Exists(filePath))
+        {
+            // Read the JSON file as a string
+            string jsonString = File.ReadAllText(filePath);
+
+            // Parse the JSON string into a JSONNode
+            return JSON.Parse(jsonString);
+        }
+        else
+        {
+            // Create a new JSONObject if the file doesn't exist
+            return new JSONObject();
+        }
+    }
+
+    private void SaveUserStats(JSONNode userStatsJson)
+    {
+        // Write the JSONObject to a JSON file
+        File.WriteAllText(filePath, userStatsJson.ToString());
     }
 
     void Start()
     {
-        SavePlayerStats(10.0f, 120.0f, 5);
+        // Example usage
+        SaveSpeed(10.0f);
+        SaveTime(120.0f);
+        SaveCollisionCount(5);
+        IncrementCollisionCount();
 
-        PlayerStats playerStats = LoadPlayerStats();
-        Debug.Log("Speed: " + playerStats.speed);
-        Debug.Log("Time to Complete: " + playerStats.timeToComplete);
-        Debug.Log("Collision Count: " + playerStats.collisionCount);
+        // Load and display user stats
+        JSONNode userStatsJson = LoadUserStats();
+        float speed = userStatsJson["speed"].AsFloat;
+        float time = userStatsJson["time"].AsFloat;
+        int collisionCount = userStatsJson["collisionCount"].AsInt;
+
+        Debug.Log("Speed: " + speed);
+        Debug.Log("Time: " + time);
+        Debug.Log("Collision Count: " + collisionCount);
     }
 }
