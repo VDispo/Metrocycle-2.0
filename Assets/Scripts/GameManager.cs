@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     private GameObject bikeTransform;
 
+    private blinkers blinkerScript;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -62,11 +65,12 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        bikeRB = bike.GetComponent<Rigidbody>();
-
-        bike.AddComponent<CollisionWithObstacles>();
-
         bikeType = type;
+
+        bikeRB = bike.GetComponent<Rigidbody>();
+        bike.AddComponent<CollisionWithObstacles>();
+        blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
+
         bike.SetActive(true);
         return bike;
     }
@@ -119,22 +123,66 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool hasDoneHeadCheck(Direction direction)
+    public bool isDoingHeadCheck(Direction direction)
     {
-        bool isValid;
-        // TODO: decide if we should add Direction.FORWARD (needs to be handled in e.g. blinker code)
-        //       or if using null for forward is OK
-        if (direction == null) {
-            isValid = HeadCheckScript.isLookingForward();
-        } else {
-            isValid = ((direction == Direction.RIGHT && HeadCheckScript.isLookingRight())
-            || (direction == Direction.LEFT && HeadCheckScript.isLookingLeft())
-            );
+        bool isValid = false;
+        switch (direction) {
+            case Direction.LEFT:
+                isValid = HeadCheckScript.isLookingLeft();
+                break;
+            case Direction.RIGHT:
+                isValid = HeadCheckScript.isLookingRight();
+                break;
+            case Direction.FORWARD:
+                isValid = HeadCheckScript.isLookingForward();
+                break;
+            default:
+                Debug.LogError("Invalid Direction " + direction);
+                break;
         }
 
         return isValid;
     }
 
+    public bool verifyHeadCheck(Direction direction) {
+        float turnTime = Time.time;
+        float headCheckTime;
+
+        if (direction == Direction.LEFT) {
+            headCheckTime = HeadCheckScript.leftCheckTime;
+        } else {
+            headCheckTime = HeadCheckScript.rightCheckTime;
+        }
+
+        bool isDuringHeadCheck = isDoingHeadCheck(direction);
+        Debug.Log("Check" + HeadCheckScript.leftCheckTime + " " + HeadCheckScript.rightCheckTime  + " " + turnTime + " " + isDuringHeadCheck);
+
+        if (isDuringHeadCheck) {
+            return true;
+        }
+
+        float turnDelay = Time.time - headCheckTime;
+        if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
+            const string errorText = "Make sure to perform a head check right before changing lanes.";
+            GameManager.Instance.PopupSystem.popError(
+                "Uh oh!", errorText
+            );
+
+            return false;
+        }
+
+        if (headCheckTime < blinkerScript.blinkerActivationTime) {
+            string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
+            GameManager.Instance.PopupSystem.popError(
+                "Uh oh!", errorText
+            );
+
+            return false;
+        }
+
+        // FALLTRHOUGH: no error found
+        return true;
+    }
 
     void Update() {
         if (bike == null) {

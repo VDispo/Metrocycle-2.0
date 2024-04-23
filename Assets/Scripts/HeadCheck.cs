@@ -9,7 +9,8 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera right;
     [SerializeField] public CinemachineVirtualCamera left;
     [SerializeField] public float headCheckSpeed;
-
+    // Turn must be made within reasonable time after head check
+    [SerializeField] public float maxHeadCheckDelay = 5f;
 
     [HideInInspector] public float leftCheckTime;
     [HideInInspector] public float rightCheckTime;

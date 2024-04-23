@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum Direction {
     LEFT,
-    RIGHT
+    RIGHT,
+    FORWARD
 };
 
 public enum BlinkerStatus {
@@ -61,6 +62,8 @@ public class blinkers : MonoBehaviour
     }
 
     void setBlinker(Direction which, BlinkerStatus status) {
+        Debug.Assert(which != Direction.FORWARD);
+
         int own_status, other_status;
         float own_alpha, other_alpha;
         lastActiveBlinker = which;
@@ -132,6 +135,8 @@ public class blinkers : MonoBehaviour
     }
 
     bool checkAutoBlinkerOff(Direction which) {
+        Debug.Assert(which != Direction.FORWARD);
+
         if ( (which == Direction.RIGHT && turnAngle > blinkerAutoOffAngle)
             || (which == Direction.LEFT && -turnAngle > blinkerAutoOffAngle)
         ) {

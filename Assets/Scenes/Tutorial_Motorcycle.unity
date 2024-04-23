@@ -32497,8 +32497,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  checkLookingForward: 0
-  headCheckScript: {fileID: 1891683445}
   popupType: 1
   popupTitle: Oops! You are not performing a left head check
   popupText: Hold the head check position until the next checkpoint by holding the
@@ -35649,9 +35647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e895e63de0085f34a789e4aaf3e6d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
-  checkLookingForward: 1
-  headCheckScript: {fileID: 1891683445}
+  direction: 2
   popupType: 1
   popupTitle: Oops! You have to keep your eyes on the road!
   popupText: 'Looking at your blindspots for too long can be dangerous since you
@@ -36020,8 +36016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  checkLookingForward: 0
-  headCheckScript: {fileID: 1891683445}
   popupType: 1
   popupTitle: Oops! You are not performing a right head check
   popupText: Hold the head check position until the next checkpoint by holding the
@@ -40978,18 +40972,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc75ae5013580e2009221941bd32dc1e, type: 3}
---- !u!114 &1891683445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1891683444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ade20b8bfbb7ca779e12470375e9fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1900754003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46603,9 +46585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e895e63de0085f34a789e4aaf3e6d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 1
-  checkLookingForward: 1
-  headCheckScript: {fileID: 1891683445}
+  direction: 2
   popupType: 1
   popupTitle: Oops! You have to keep your eyes on the road!
   popupText: 'Looking at your blindspots for too long can be dangerous since you

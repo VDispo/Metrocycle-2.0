@@ -11,10 +11,6 @@ public class ChangeLaneChecker : MonoBehaviour
     public float maxBlinkerOffTime;
     public GameObject bikeLane;
 
-    public HeadCheck headCheckScript;
-    // Turn must be made within reasonable time after head check
-    public float maxHeadCheckDelay = 5f;
-
     private blinkers blinkerScript;
 
     private int previousLane;
@@ -79,8 +75,6 @@ public class ChangeLaneChecker : MonoBehaviour
             hasError = true;
         }
 
-        hasError = verifyHeadCheck(which) || hasError;
-
         previousLane = newLane;
         if (hasError) {
             GameManager.Instance.PopupSystem.popError(
@@ -92,42 +86,8 @@ public class ChangeLaneChecker : MonoBehaviour
             // HACK: modify property directly. Should use func/message
             blinkerScript.blinkerActivationTime = Time.time;
         }
-    }
 
-    public bool verifyHeadCheck(Direction direction) {
-        float turnTime = Time.time;
-        float headCheckTime;
-        bool isDuringHeadCheck = false;
-        if (direction == Direction.LEFT) {
-            headCheckTime = headCheckScript.leftCheckTime;
-            isDuringHeadCheck = headCheckScript.isLookingLeft();
-        } else {
-            headCheckTime = headCheckScript.rightCheckTime;
-            isDuringHeadCheck = headCheckScript.isLookingRight();
-        }
-        Debug.Log("Check" + headCheckScript.leftCheckTime + " " + headCheckScript.rightCheckTime  + " " + turnTime + " " + isDuringHeadCheck);
-
-        float turnDelay = Time.time - headCheckTime;
-
-        if (!isDuringHeadCheck) {
-            if (turnDelay > maxHeadCheckDelay) {
-                errorText = "Make sure to perform a head check right before changing lanes.";
-                GameManager.Instance.PopupSystem.popError(
-                    "Uh oh!", errorText
-                );
-                return true;
-            }
-
-            if (headCheckTime < blinkerScript.blinkerActivationTime) {
-                errorText = "Make sure to perform a head check even after you use your " + blinkerName;
-                GameManager.Instance.PopupSystem.popError(
-                    "Uh oh!", errorText
-                );
-                return true;
-            }
-        }
-
-        return false;
+        GameManager.Instance.verifyHeadCheck(which);
     }
 
     public void checkEnteredBikeLane(GameObject lane) {
