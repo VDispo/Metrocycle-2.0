@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8008,6 +8008,12 @@ MonoBehaviour:
   popupTitle: Great! Now look back forward again.
   popupText: "To finish your left head check, let go of the J key  to look ahead
     again.\r"
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &423867879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24854,6 +24860,12 @@ MonoBehaviour:
   popupTitle: Great! Next, perform a right head check
   popupText: Press the K key before the yellow mark and hold until the green mark
     to check your right blindspot.
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &866309663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29404,6 +29416,12 @@ MonoBehaviour:
 
     Hold A while moving forward
     to turn left.'
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &1121348448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30589,6 +30607,12 @@ MonoBehaviour:
 
     Hold D while moving forward
     to turn right.'
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &1182756704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -38847,8 +38871,14 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   popupTitle: Great! Now look back forward again.
-  popupText: "To finish your left head check, let go of the K key  to look ahead
+  popupText: "To finish your right head check, let go of the K key  to look ahead
     again.\r"
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &1728133395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41048,6 +41078,12 @@ MonoBehaviour:
 
     Press the J key before the
     yellow mark and hold it until the green mark to perform a left head check.'
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &1912685026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44404,6 +44440,12 @@ MonoBehaviour:
   popupType: 4
   popupTitle: Congratulations! You have finished the tutorial.
   popupText: That's it for the basic controls!
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &2021479495
 MeshCollider:
   m_ObjectHideFlags: 0

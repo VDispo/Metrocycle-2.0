@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Blinker {
+public enum Direction {
     LEFT,
     RIGHT
 };
@@ -24,7 +24,7 @@ public class blinkers : MonoBehaviour
 
     public float blinkerActivationTime;
     public float blinkerOffTime;
-    public Blinker lastActiveBlinker;
+    public Direction lastActiveBlinker;
 
     public float maxUncancelledBlinkerTime = 5f;
 
@@ -60,7 +60,7 @@ public class blinkers : MonoBehaviour
         shouldCancelAtTime = -1;
     }
 
-    void setBlinker(Blinker which, BlinkerStatus status) {
+    void setBlinker(Direction which, BlinkerStatus status) {
         int own_status, other_status;
         float own_alpha, other_alpha;
         lastActiveBlinker = which;
@@ -85,7 +85,7 @@ public class blinkers : MonoBehaviour
             blinkerOffTime = Time.time;
         }
 
-        if (which == Blinker.LEFT) {
+        if (which == Direction.LEFT) {
             leftStatus = own_status;
             left.alpha = own_alpha;
             if (status == BlinkerStatus.ON) {
@@ -131,15 +131,15 @@ public class blinkers : MonoBehaviour
         }
     }
 
-    bool checkAutoBlinkerOff(Blinker which) {
-        if ( (which == Blinker.RIGHT && turnAngle > blinkerAutoOffAngle)
-            || (which == Blinker.LEFT && -turnAngle > blinkerAutoOffAngle)
+    bool checkAutoBlinkerOff(Direction which) {
+        if ( (which == Direction.RIGHT && turnAngle > blinkerAutoOffAngle)
+            || (which == Direction.LEFT && -turnAngle > blinkerAutoOffAngle)
         ) {
-            // Debug.Log("Blinker OFF.");
+            // Debug.Log("Direction OFF.");
             // if (leftStatus == 1)
-            //     setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
+            //     setBlinker(Direction.LEFT, BlinkerStatus.OFF);
             // if (rightStatus == 1)
-            //     setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+            //     setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
             return true;
         }
 
@@ -153,20 +153,20 @@ public class blinkers : MonoBehaviour
         if (Input.GetKeyDown("q"))
         {
             if (leftStatus == 1){
-                setBlinker(Blinker.LEFT, BlinkerStatus.OFF);
+                setBlinker(Direction.LEFT, BlinkerStatus.OFF);
             }
             else {
-                setBlinker(Blinker.LEFT, BlinkerStatus.ON);
+                setBlinker(Direction.LEFT, BlinkerStatus.ON);
                 blinkTimer = 0;
             }
         }
         if (Input.GetKeyDown("e"))
         {
             if (rightStatus == 1){
-                setBlinker(Blinker.RIGHT, BlinkerStatus.OFF);
+                setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
             }
             else {
-                setBlinker(Blinker.RIGHT, BlinkerStatus.ON);
+                setBlinker(Direction.RIGHT, BlinkerStatus.ON);
                 blinkTimer = 0;
             }
         }
@@ -182,7 +182,7 @@ public class blinkers : MonoBehaviour
 
             // Detect when blinker should be off only when turn buttons are not pressed
             if (hasHorizontalInput) {
-                Blinker which = leftStatus == 1 ? Blinker.LEFT : Blinker.RIGHT;
+                Direction which = leftStatus == 1 ? Direction.LEFT : Direction.RIGHT;
                 if (shouldCancelAtTime == -1 && checkAutoBlinkerOff(which)) {
                     shouldCancelAtTime = Time.time;
                     Debug.Log("Should autooff now " + shouldCancelAtTime);

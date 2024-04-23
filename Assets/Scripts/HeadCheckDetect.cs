@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HeadCheckDetect : MonoBehaviour
 {
-    public Blinker direction;
+    public Direction direction;
     public bool checkLookingForward = false;
-    public HeadCheck headCheckScript;
 
     public PopupType popupType;
     [TextArea(3, 10)] public string popupTitle;
@@ -15,11 +14,9 @@ public class HeadCheckDetect : MonoBehaviour
     void OnTriggerEnter (Collider other) {
         bool isValid = false;
         if (checkLookingForward) {
-            isValid = headCheckScript.isLookingForward();
+            isValid = GameManager.hasDoneHeadCheck(null);
         } else {
-            isValid = ((direction == Blinker.RIGHT && headCheckScript.isLookingRight())
-                        || (direction == Blinker.LEFT && headCheckScript.isLookingLeft())
-                      );
+            isValid = GameManager.hasDoneHeadCheck(direction);;
         }
 
         Debug.Log("isValid " + isValid + "dir " + direction + "forward " + checkLookingForward + " left " + headCheckScript.isLookingLeft() + headCheckScript.isLookingRight());

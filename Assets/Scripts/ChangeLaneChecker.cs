@@ -52,11 +52,11 @@ public class ChangeLaneChecker : MonoBehaviour
         bool hasError = false;
         // HACK: For now, lets assume that the lanes on a road are numbered
         //       increasing from 0, left to Right
-        Blinker which = (newLane > previousLane) ? Blinker.RIGHT : Blinker.LEFT;
-        Debug.Log("Changed lane to the " + ((which == Blinker.LEFT) ? "Left" : "Right"));
+        Direction which = (newLane > previousLane) ? Direction.RIGHT : Direction.LEFT;
+        Debug.Log("Changed lane to the " + ((which == Direction.LEFT) ? "Left" : "Right"));
 
-        bool isBlinkerOn = ((which == Blinker.LEFT && blinkerScript.leftStatus == 1)
-        || (which == Blinker.RIGHT && blinkerScript.rightStatus == 1));
+        bool isBlinkerOn = ((which == Direction.LEFT && blinkerScript.leftStatus == 1)
+        || (which == Direction.RIGHT && blinkerScript.rightStatus == 1));
 
         // HACK: only true when leftStatus == rightStatus == 0
         if (blinkerScript.leftStatus - blinkerScript.rightStatus == 0
@@ -94,11 +94,11 @@ public class ChangeLaneChecker : MonoBehaviour
         }
     }
 
-    public bool verifyHeadCheck(Blinker direction) {
+    public bool verifyHeadCheck(Direction direction) {
         float turnTime = Time.time;
         float headCheckTime;
         bool isDuringHeadCheck = false;
-        if (direction == Blinker.LEFT) {
+        if (direction == Direction.LEFT) {
             headCheckTime = headCheckScript.leftCheckTime;
             isDuringHeadCheck = headCheckScript.isLookingLeft();
         } else {

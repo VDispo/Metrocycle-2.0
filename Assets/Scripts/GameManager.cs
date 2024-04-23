@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public popUp PopupSystem = null;
+    public HeadCheck HeadCheckScript = null;
 
     public GameObject bike;
     private Metrocycle.BikeType bikeType;
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
         if (PopupSystem == null) {
             PopupSystem = GameObject.Find("/popUp").GetComponent<popUp>();
             Debug.Log("PopupSystem Force Initialized " + PopupSystem);
+        }
+        if (HeadCheckScript == null) {
+            HeadCheckScript = GameObject.Find("/Cameras/Main Camera").GetComponent<HeadCheck>();
+            Debug.Log("HeadCheckScript Force Initialized " + HeadCheckScript);
         }
 
         // setBikeType(Metrocycle.BikeType.Motorcycle);    // TODO: move this call to selection of motorcycle or bicycle
@@ -113,6 +118,23 @@ public class GameManager : MonoBehaviour
             return "hand signals";
         }
     }
+
+    public bool hasDoneHeadCheck(Direction direction)
+    {
+        bool isValid;
+        // TODO: decide if we should add Direction.FORWARD (needs to be handled in e.g. blinker code)
+        //       or if using null for forward is OK
+        if (direction == null) {
+            isValid = HeadCheckScript.isLookingForward();
+        } else {
+            isValid = ((direction == Direction.RIGHT && HeadCheckScript.isLookingRight())
+            || (direction == Direction.LEFT && HeadCheckScript.isLookingLeft())
+            );
+        }
+
+        return isValid;
+    }
+
 
     void Update() {
         if (bike == null) {
