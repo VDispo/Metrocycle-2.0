@@ -6,7 +6,7 @@ public class SpeedChecker : MonoBehaviour
 {
     public int speedLimit;
     private float speed;
-    private float speedMax;
+    private const float speedMax = 120f;
 
     // amount of allowable extra in speed
     // e.g. limit = 20 and leeway = 3 => warn at speed 23
@@ -17,8 +17,6 @@ public class SpeedChecker : MonoBehaviour
     }
 
     void OnTriggerStay (Collider other) {
-        speedMax = 120f;
-
         speed = GameManager.Instance.getBikeSpeed();
         if (speed > speedMax) speed = speedMax;
         

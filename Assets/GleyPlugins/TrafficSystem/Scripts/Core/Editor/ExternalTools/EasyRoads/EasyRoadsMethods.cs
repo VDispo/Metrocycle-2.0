@@ -171,6 +171,7 @@ namespace GleyTrafficSystem
 
                     for (int j = 0; j < curLane.childCount; ++j) {
                         GameObject waypoint = curLane.GetChild(j).gameObject;
+                        WaypointSettings waypointSettings = waypoint.GetComponent<WaypointSettings>();
 
                         // Add change lane detect script
                         ChangeLaneDetect detectScript = waypoint.AddComponent<ChangeLaneDetect>();
@@ -178,7 +179,11 @@ namespace GleyTrafficSystem
                         detectScript.allLaneHolders = lanes;
                         detectScript.adjacentLaneHolders = adjacentLanes;
 
-                        // add collider for triggering change lane detect
+                        // Add speed limit detect script
+                        SpeedChecker speedChecker = waypoint.AddComponent<SpeedChecker>();
+                        speedChecker.speedLimit = waypointSettings.maxSpeed;
+
+                        // add collider for triggering detect scriptss
                         BoxCollider collider = waypoint.AddComponent<BoxCollider>();
                         collider.isTrigger = true;
                         const int layer_Detect = 3;

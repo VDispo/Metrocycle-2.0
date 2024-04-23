@@ -148,6 +148,8 @@ public class GameManager : MonoBehaviour
         float turnTime = Time.time;
         float headCheckTime;
 
+        Debug.Assert(direction != Direction.FORWARD);
+
         if (direction == Direction.LEFT) {
             headCheckTime = HeadCheckScript.leftCheckTime;
         } else {
