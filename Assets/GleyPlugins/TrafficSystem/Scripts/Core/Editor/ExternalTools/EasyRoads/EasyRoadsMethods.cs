@@ -61,7 +61,7 @@ namespace GleyTrafficSystem
                 if (!roads[i].roadScript.isSideObject)
                 {
                     Debug.Log("MTS-ER3D: Processing road " + roads[i].gameObject);
-                    GameObject road = new GameObject(roads[i].GetName() + "(ER3DRoad_)");
+                    GameObject road = new GameObject(roads[i].GetName() + " (ER3DRoad)");
                     road.transform.SetParent(waypointsHolder);
                     GameObject lanesHolder = new GameObject("Lanes");
                     Transform connectorsHolder = new GameObject("Connectors").transform;
@@ -381,7 +381,7 @@ namespace GleyTrafficSystem
         }
 
 
-        private static void AddIntersections(Transform intersectionHolder, IntersectionType intersectionType, float greenLightTime, float yellowLightTime)
+        private static void AddIntersections(Transform intersectionHolder, IntersectionType defaultIntersectionType, float greenLightTime, float yellowLightTime)
         {
             allERIntersections = FindObjectsOfType<ERCrossings>();
             for (int i = 0; i < allERIntersections.Length; i++)
@@ -390,6 +390,13 @@ namespace GleyTrafficSystem
                 intersection.transform.SetParent(intersectionHolder);
                 intersection.transform.position = allERIntersections[i].gameObject.transform.position;
                 GenericIntersectionSettings intersectionScript = null;
+
+                // HACK: encode traffic light type in name of intersection object
+                //       of the format ".*TrafficLight.*"
+                IntersectionType intersectionType =
+                    intersection.name.ToLower().Contains("trafficlight") ? IntersectionType.TrafficLights
+                        : defaultIntersectionType
+                    ;
                 switch (intersectionType)
                 {
                     case IntersectionType.Priority:

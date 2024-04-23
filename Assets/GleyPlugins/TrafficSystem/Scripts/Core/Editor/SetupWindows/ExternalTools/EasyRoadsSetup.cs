@@ -8,7 +8,7 @@ namespace GleyTrafficSystem
     public class EasyRoadsSetup : SetupWindowBase
     {
 #if USE_EASYROADS3D
-        IntersectionType selectedType;
+        IntersectionType selectedType = IntersectionType.Priority;
         private float greenLightTime = 10;
         private float yellowLightTime = 3;
         private bool linkLanes = true;
@@ -48,11 +48,12 @@ namespace GleyTrafficSystem
             EditorGUILayout.LabelField("Select default intersection type to use:");
             selectedType = (IntersectionType)EditorGUILayout.EnumPopup("Intersection type:", selectedType);
 
-            if (selectedType == IntersectionType.TrafficLights)
-            {
+            // NOTE: Metrocycle modification; always show config widgets for green/yellow light
+            // if (selectedType == IntersectionType.TrafficLights)
+            // {
                 greenLightTime = EditorGUILayout.FloatField("Green Light Time", greenLightTime);
                 yellowLightTime = EditorGUILayout.FloatField("Yellow Light Time", yellowLightTime);
-            }
+            // }
 
             linkLanes = EditorGUILayout.Toggle("Link lanes for overtake", linkLanes);
             if (linkLanes)
