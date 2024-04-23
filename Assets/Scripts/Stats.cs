@@ -81,4 +81,7 @@ public class Stats : MonoBehaviour
     {
         File.WriteAllText(filePath, userStatsJson.ToString());
     }
+
+    // use these functions in other scripts by calling Stats.NameFunction
+    // don't forget to include the filePath declaration
 }
