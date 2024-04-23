@@ -81,26 +81,4 @@ public class Stats : MonoBehaviour
     {
         File.WriteAllText(filePath, userStatsJson.ToString());
     }
-
-    void Start()
-    {
-        string sceneId = "Scenario1";
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-
-        // Example usage
-        SaveSpeed(10.0f, sceneId);
-        SaveTime(120.0f, sceneId);
-        SaveCollisionCount(5, sceneId);
-        IncrementCollisionCount(sceneId);
-
-        // Load and display user stats
-        JSONNode userStatsJson = LoadUserStats(filePath);
-        float speed = userStatsJson["speed"].AsFloat;
-        float time = userStatsJson["time"].AsFloat;
-        int collisionCount = userStatsJson["collisionCount"].AsInt;
-
-        Debug.Log("Speed: " + speed);
-        Debug.Log("Time: " + time);
-        Debug.Log("Collision Count: " + collisionCount);
-    }
 }
