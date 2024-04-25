@@ -54,7 +54,10 @@ MonoBehaviour:
   carRoutesSave:
     routesColor:
     - {r: 1, g: 1, b: 1, a: 1}
-    active: 01
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 01010101
   allWaypointsSettings:
     showConnections: 0
     showOtherLanes: 0
