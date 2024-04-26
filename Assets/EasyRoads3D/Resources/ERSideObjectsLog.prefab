@@ -2631,10 +2631,10 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: 'CmnW 8-Lane 60-SpeedLimit '
+  - roadTypeName: 'CmnW 10-Lane 60-SpeedLimit '
     id: 1713114246.1951156
-    timestamp: 1714072980.2347376
-    roadWidth: 37.5
+    timestamp: 1714120503.4778135
+    roadWidth: 47.5
     totalLanes: 2
     laneWidth: 3.5
     medianWidth: 0
@@ -2679,8 +2679,8 @@ MonoBehaviour:
     speedLimit: 50
     speedLimitConnections: 50
     roadShape:
-    - {x: 18.75, y: 0}
-    - {x: -18.75, y: 0}
+    - {x: 23.75, y: 0}
+    - {x: -23.75, y: 0}
     roadShapeExt: []
     roadShapeExt2: []
     doConnectionTri: 
@@ -2706,7 +2706,7 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: 97bdc17e946650e4e9ab8d919d9e90bc, type: 2}
+    roadMaterial: {fileID: 2100000, guid: fe6a024a286bfec4a9f78fda2212a782, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
