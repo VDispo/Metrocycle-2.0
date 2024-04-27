@@ -9,7 +9,7 @@ public class IntersectionChecker : MonoBehaviour
     [Header("IMPORTANT: Add Lane Detect Objects in Counter Clockwise direction, left lane detects in even positions.")]
     public GameObject[] laneDetects;
     [Header("IMPORTANT: Add Green light objects in same order (and number) as lane detects.")]
-    public GameObject[] greenLights;
+    public GameObject[] greenLights = null;
     [TextArea(3, 10)] public string wrongWayText;
     [TextArea(3, 10)] public string redLightText;
     [TextArea(3, 10)] public string leftLaneLeftTurnText;
@@ -66,6 +66,10 @@ public class IntersectionChecker : MonoBehaviour
         return -1;
     }
 
+    public void resetEntry() {
+        entryIdx = -1;
+    }
+
     public void laneDetectEntered(GameObject laneDetect) {
         Debug.Log("Collision with" + laneDetect);
         int idx = GetLaneDetectIndex(laneDetect);
@@ -105,11 +109,13 @@ public class IntersectionChecker : MonoBehaviour
                 // e.g. wrong entry at Idx 14; correctedt to 14+2 = Idx 16 = Idx 0
                 entryIdx = (entryIdx+2) % laneDetects.Length;
             } else {
-                int trafficLightIdx = (int) (entryIdx / 2);
-                if (!greenLights[trafficLightIdx].active) {
-                    Debug.Log("Entered on Red Light " + entryIdx);
-                    type = PopupType.ERROR;
-                    popupText = redLightText;
+                if (greenLights != null) {
+                    int trafficLightIdx = (int) (entryIdx / 2);
+                    if (greenLights[trafficLightIdx] != null && !greenLights[trafficLightIdx].active) {
+                        Debug.Log("Entered on Red Light " + entryIdx);
+                        type = PopupType.ERROR;
+                        popupText = redLightText;
+                    }
                 }
             }
         }
