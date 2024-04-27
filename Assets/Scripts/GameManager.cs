@@ -186,6 +186,50 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
+    public void checkProperTurnOrLaneChange(Direction direction, bool requireHeadCheck=true) {
+        bool isBlinkerOn = ((direction == Direction.LEFT && blinkerScript.leftStatus == 1)
+        || (direction == Direction.RIGHT && blinkerScript.rightStatus == 1));
+
+        // HACK: only true when leftStatus == rightStatus == 0
+        if (blinkerScript.leftStatus + blinkerScript.rightStatus == 0
+            && Time.time - blinkerScript.blinkerOffTime <= blinkerScript.maxBlinkerOffTime)
+        {
+            // blinker currently not on, but was on a few moments ago
+            isBlinkerOn = direction == blinkerScript.lastActiveBlinker;
+        }
+
+        string blinkerName = GameManager.Instance.blinkerName();
+        string errorText = "";
+        bool hasError = false;
+        if (!isBlinkerOn) {
+            if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
+                errorText = "You used the " + blinkerName + " for the opposite direction!";
+            } else {
+                errorText = "You did not use your " + blinkerName + " before changing lanes.";
+            }
+
+            hasError = true;
+        } else if (Time.time - blinkerScript.blinkerActivationTime < blinkerScript.minBlinkerTime) {
+            errorText = "You did not give ample time for other road users to react to your " + blinkerName;
+            hasError = true;
+        }
+
+        if (hasError) {
+            GameManager.Instance.PopupSystem.popError(
+                "You changed lanes incorrectly", errorText
+            );
+        } else {
+            if (requireHeadCheck) {
+                GameManager.Instance.verifyHeadCheck(direction);
+            }
+
+            // Successful lane change, reset blinkerActivationTime
+            // this is to prevent changing multiple lanes at once
+            // HACK: modify property directly. Should use func/message
+            blinkerScript.blinkerActivationTime = Time.time;
+        }
+    }
+
     void Update() {
         if (bike == null) {
             return;
