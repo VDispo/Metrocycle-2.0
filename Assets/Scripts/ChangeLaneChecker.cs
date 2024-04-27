@@ -42,7 +42,6 @@ public class ChangeLaneChecker : MonoBehaviour
             return;
         }
 
-        bool hasError = false;
         // HACK: For now, lets assume that the lanes on a road are numbered
         //       increasing from 0, left to Right
         Direction direction = (newLane > previousLane) ? Direction.RIGHT : Direction.LEFT;
