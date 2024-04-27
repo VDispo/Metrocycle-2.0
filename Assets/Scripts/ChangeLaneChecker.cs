@@ -10,6 +10,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
     [SerializeField]
     public GameObject[] bicycleAllowedInLanes;
+    private HashSet<GameObject> bicycleAllowed_Set;
 
     private blinkers blinkerScript;
 
@@ -23,6 +24,8 @@ public class ChangeLaneChecker : MonoBehaviour
 
         previousLane = -1;
         blinkerName = GameManager.Instance.blinkerName();
+
+        bicycleAllowed_Set = new HashSet<GameObject>(bicycleAllowedInLanes);
     }
 
     public void enteredLane(GameObject lane) {
@@ -30,9 +33,9 @@ public class ChangeLaneChecker : MonoBehaviour
         int lanePartStart = lane.name.LastIndexOf(lanePrefix) + lanePrefix.Length;
         int newLane = int.Parse(lane.name.Substring(lanePartStart));
 
-        checkBlinkerForLaneChange(newLane);
         checkEnteredBikeLane(lane);
         checkBicycleEnteredForbiddenLane(lane);
+        checkBlinkerForLaneChange(newLane);
     }
 
     public void checkBlinkerForLaneChange(int newLane) {
@@ -72,11 +75,11 @@ public class ChangeLaneChecker : MonoBehaviour
     }
 
     public void checkBicycleEnteredForbiddenLane(GameObject lane) {
-        if (GameManager.Instance.getBikeType() == Metrocycle.BikeType.Bicycle) {
+        if (GameManager.Instance.getBikeType() != Metrocycle.BikeType.Bicycle) {
             return;
         }
 
-        if (bicycleAllowedInLanes.Contain(lane)) {
+        if (bicycleAllowed_Set.Contains(lane)) {
             errorText = "Bicycles are not allowed in this lane which is used by motored vehicles.";
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
