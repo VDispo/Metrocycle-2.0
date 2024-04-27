@@ -194,9 +194,6 @@ public class blinkers : MonoBehaviour
                 if (shouldCancelAtTime == -1 && checkAutoBlinkerOff(which)) {
                     shouldCancelAtTime = Time.time;
                     Debug.Log("Should autooff now " + shouldCancelAtTime);
-
-                    // Also check if the driver used their blinker
-                    GameManager.Instance.checkProperTurnOrLaneChange(which, false);
                 }
 
             }
