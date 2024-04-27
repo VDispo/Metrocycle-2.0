@@ -8,6 +8,9 @@ public class ChangeLaneChecker : MonoBehaviour
 {
     public GameObject bikeLane;
 
+    [SerializeField]
+    public GameObject[] bicycleAllowedInLanes;
+
     private blinkers blinkerScript;
 
     private int previousLane;
@@ -29,6 +32,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
         checkBlinkerForLaneChange(newLane);
         checkEnteredBikeLane(lane);
+        checkBicycleEnteredForbiddenLane(lane);
     }
 
     public void checkBlinkerForLaneChange(int newLane) {
@@ -65,5 +69,18 @@ public class ChangeLaneChecker : MonoBehaviour
         GameManager.Instance.PopupSystem.popError(
             "Uh oh!", errorText
         );
+    }
+
+    public void checkBicycleEnteredForbiddenLane(GameObject lane) {
+        if (GameManager.Instance.getBikeType() == Metrocycle.BikeType.Bicycle) {
+            return;
+        }
+
+        if (bicycleAllowedInLanes.Contain(lane)) {
+            errorText = "Bicycles are not allowed in this lane which is used by motored vehicles.";
+            GameManager.Instance.PopupSystem.popError(
+                "Uh oh!", errorText
+            );
+        }
     }
 }
