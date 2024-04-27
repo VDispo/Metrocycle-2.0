@@ -3640,10 +3640,10 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: 'CmnW 4-Lane 60-SpeedLimit '
+  - roadTypeName: 'CmnW 6-Lane 60-SpeedLimit '
     id: 1713707774.8689263
-    timestamp: 1714072517.3341484
-    roadWidth: 20
+    timestamp: 1714238345.6257129
+    roadWidth: 29
     totalLanes: 2
     laneWidth: 3.5
     medianWidth: 0
@@ -3661,9 +3661,9 @@ MonoBehaviour:
     roadShapeDataActive: 0
     roadShapeData:
       nodes:
-      - {x: -3, y: 0}
-      - {x: 3, y: 0}
-      hardEdge: 0000
+      - {x: 10, y: 0}
+      - {x: -10, y: 0}
+      hardEdge: 
       priorityNodeIndexLeft: 0
       priorityNodeIndexRight: 1
       nodesV3: []
@@ -3688,8 +3688,8 @@ MonoBehaviour:
     speedLimit: 50
     speedLimitConnections: 50
     roadShape:
-    - {x: 10, y: 0}
-    - {x: -10, y: 0}
+    - {x: 14.5, y: 0}
+    - {x: -14.5, y: 0}
     roadShapeExt: []
     roadShapeExt2: []
     doConnectionTri: 
@@ -3715,7 +3715,7 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0.01
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: da25a339e11e6d04bbbe1b49d0a79a04, type: 2}
+    roadMaterial: {fileID: 2100000, guid: 68abb7de5103d0d4ba39bc10f515392b, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
@@ -3727,9 +3727,13 @@ MonoBehaviour:
     soData: []
     soDataExt: []
     soDataLog:
+    - id: 1714072924.7749438
+      active: 0
     - id: 1714070234.7084663
       active: 1
     - id: 1714072072.658111
+      active: 0
+    - id: 1714128740.03633
       active: 0
     - id: 1708761651.6665618
       active: 0
@@ -3794,7 +3798,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: TSoraAve 4-Lane 40-SpeedLimit
     id: 1714073072.6965744
-    timestamp: 1714073152.2136655
+    timestamp: 1714238012.2683659
     roadWidth: 20
     totalLanes: 2
     laneWidth: 3.5
@@ -3871,18 +3875,21 @@ MonoBehaviour:
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 0}
+    connectionMaterial: {fileID: 2100000, guid: acf0fdbfd0605ec46a7f255c4d39e407,
+      type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
     soData: []
     soDataExt: []
     soDataLog:
-    - id: 1714070234.7084663
-      active: 0
     - id: 1714072924.7749438
       active: 1
+    - id: 1714070234.7084663
+      active: 0
     - id: 1714072072.658111
+      active: 0
+    - id: 1714128740.03633
       active: 0
     - id: 1708761651.6665618
       active: 0
