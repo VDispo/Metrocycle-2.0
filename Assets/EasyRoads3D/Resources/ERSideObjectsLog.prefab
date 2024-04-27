@@ -2727,9 +2727,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: 6-lane1-way road with Motor and Bike Lanes(EDSA)
+  - roadTypeName: 6-lane1-way road with Motor and Bike Lanes(EDSA)  60-SpeedLimit
     id: 1709956653.341486
-    timestamp: 1713438939.001749
+    timestamp: 1714217836.42576
     roadWidth: 4.5
     totalLanes: 2
     laneWidth: 3.5
@@ -2813,8 +2813,12 @@ MonoBehaviour:
     soData: []
     soDataExt: []
     soDataLog:
+    - id: 1713637109.783382
+      active: 0
     - id: 1708761651.6665618
       active: 1
+    - id: 1713635763.343755
+      active: 0
     layer: 8
     isStatic: 1
     tag: Untagged
@@ -3028,9 +3032,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: EDSA (2.5) 3-Lane 1-way Road with Bike lane
+  - roadTypeName: EDSA (2.5) 3-Lane 1-way Road with Bike lane 60-SpeedLimit
     id: 1713436464.7772598
-    timestamp: 1713717779.277045
+    timestamp: 1714217847.0763378
     roadWidth: 13.5
     totalLanes: 2
     laneWidth: 3.5
@@ -3180,9 +3184,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: EDSA Maharlika 3-Lane with bus lane
+  - roadTypeName: EDSA Maharlika 3-Lane with bus lane 60-SpeedLimit
     id: 1713437849.983599
-    timestamp: 1713642690.991873
+    timestamp: 1714217855.404219
     roadWidth: 13.5
     totalLanes: 2
     laneWidth: 3.5
@@ -3332,9 +3336,9 @@ MonoBehaviour:
     trafficPosts: []
     activeTrafficPostIndex: -1
     showTrafficPosts: 0
-  - roadTypeName: EDSA 6-Lane with Bus and Bike lane
+  - roadTypeName: EDSA 6-Lane with Bus and Bike lane 60-SpeedLimit
     id: 1713438953.219893
-    timestamp: 1713706059.940491
+    timestamp: 1714217864.306777
     roadWidth: 25
     totalLanes: 2
     laneWidth: 3.5

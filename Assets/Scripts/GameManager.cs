@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
 
         float turnDelay = Time.time - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
-            const string errorText = "Make sure to perform a head check right before changing lanes.";
+            const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
             );
@@ -184,6 +184,45 @@ public class GameManager : MonoBehaviour
 
         // FALLTRHOUGH: no error found
         return true;
+    }
+
+    public void checkProperTurnOrLaneChange(Direction direction, bool requireHeadCheck=true) {
+        bool isBlinkerOn = ((direction == Direction.LEFT && blinkerScript.leftStatus == 1)
+        || (direction == Direction.RIGHT && blinkerScript.rightStatus == 1));
+
+        // HACK: only true when leftStatus == rightStatus == 0
+        if (blinkerScript.leftStatus + blinkerScript.rightStatus == 0
+            && Time.time - blinkerScript.blinkerOffTime <= blinkerScript.maxBlinkerOffTime)
+        {
+            // blinker currently not on, but was on a few moments ago
+            isBlinkerOn = direction == blinkerScript.lastActiveBlinker;
+        }
+
+        string blinkerName = GameManager.Instance.blinkerName();
+        string errorText = "";
+        bool hasError = false;
+        if (!isBlinkerOn) {
+            if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
+                errorText = "You used the " + blinkerName + " for the opposite direction!";
+            } else {
+                errorText = "You did not use your " + blinkerName + " before changing lanes or turning.";
+            }
+
+            hasError = true;
+        } else if (Time.time - blinkerScript.blinkerActivationTime < blinkerScript.minBlinkerTime) {
+            errorText = "You did not give ample time for other road users to react to your " + blinkerName;
+            hasError = true;
+        }
+
+        if (hasError) {
+            GameManager.Instance.PopupSystem.popError(
+                "Uh oh", errorText
+            );
+        } else {
+            if (requireHeadCheck) {
+                GameManager.Instance.verifyHeadCheck(direction);
+            }
+        }
     }
 
     void Update() {
