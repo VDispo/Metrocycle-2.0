@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
 
         float turnDelay = Time.time - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
-            const string errorText = "Make sure to perform a head check right before changing lanes.";
+            const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
             );
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
             if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
                 errorText = "You used the " + blinkerName + " for the opposite direction!";
             } else {
-                errorText = "You did not use your " + blinkerName + " before changing lanes.";
+                errorText = "You did not use your " + blinkerName + " before changing lanes or turning.";
             }
 
             hasError = true;
@@ -216,17 +216,12 @@ public class GameManager : MonoBehaviour
 
         if (hasError) {
             GameManager.Instance.PopupSystem.popError(
-                "You changed lanes incorrectly", errorText
+                "Uh oh", errorText
             );
         } else {
             if (requireHeadCheck) {
                 GameManager.Instance.verifyHeadCheck(direction);
             }
-
-            // Successful lane change, reset blinkerActivationTime
-            // this is to prevent changing multiple lanes at once
-            // HACK: modify property directly. Should use func/message
-            blinkerScript.blinkerActivationTime = Time.time;
         }
     }
 

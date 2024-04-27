@@ -57,6 +57,11 @@ public class ChangeLaneChecker : MonoBehaviour
         GameManager.Instance.checkProperTurnOrLaneChange(direction);
 
         previousLane = newLane;
+
+        // Successful lane change, reset blinkerActivationTime
+        // this is to prevent changing multiple lanes at once
+        // HACK: modify property directly. Should use func/message
+        blinkerScript.blinkerActivationTime = Time.time;
     }
 
     public void checkEnteredBikeLane(GameObject lane) {

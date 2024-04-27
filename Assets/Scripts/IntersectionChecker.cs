@@ -117,6 +117,16 @@ public class IntersectionChecker : MonoBehaviour
             // Normalize entryIdx to either Idx 0 or 1
             entryIdx = entryIdx % 2;
 
+            // Check blinker/head check for right turn
+            if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
+                GameManager.Instance.checkProperTurnOrLaneChange(Direction.RIGHT);
+            }
+            // Check blinker/head check for left turn/u-turn
+            if (bad_RightLaneLeftTurnIdx.Contains(idx)
+                || bad_RightLaneUTurnIdx.Contains(idx)) {
+                GameManager.Instance.checkProperTurnOrLaneChange(Direction.LEFT);
+            }
+
             // TODO: use PopupType.WARNING for bad
             if (invalid_WrongWayIdx.Contains(idx)) {
                 Debug.Log("Invalid Wrong Way " + idx);
