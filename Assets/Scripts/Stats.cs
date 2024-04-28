@@ -2,86 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using SimpleJSON;
-
-public class PlayerStats
-{
-    public float speed;
-    public float timeToComplete;
-    public int collisionCount;
-
-    public PlayerStats(float speed, float timeToComplete, int collisionCount)
-    {
-        this.speed = speed;
-        this.timeToComplete = timeToComplete;
-        this.collisionCount = collisionCount;
-    }
-}
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
-    private static string filePath;
+   public static void SetStats (string SceneName, float Speed, float elapsedTime, int Errors)
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
 
-    public static void SaveSpeed(float speed, string sceneId)
-    {
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        JSONNode userStatsJson = LoadUserStats(filePath);
-        userStatsJson["speed"] = speed;
-        SaveUserStats(userStatsJson, filePath);
-    }
+        PlayerPrefs.SetFloat(SceneName+"_Speed", Speed);
+        PlayerPrefs.SetFloat(SceneName+"_elapsedTime", elapsedTime);
+        PlayerPrefs.SetInt(SceneName+"_Errors", Errors);
+   }
 
-    public static void SaveTime(float time, string sceneId)
-    {
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        JSONNode userStatsJson = LoadUserStats(filePath);
-        userStatsJson["time"] = time;
-        SaveUserStats(userStatsJson, filePath);
-    }
+    public static void GetStats (string SceneName)
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
 
-    public static void SaveCollisionCount(int collisionCount, string sceneId)
-    {
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        JSONNode userStatsJson = LoadUserStats(filePath);
-        userStatsJson["collisionCount"] = collisionCount;
-        SaveUserStats(userStatsJson, filePath);
-    }
-
-    public static void IncrementCollisionCount(string sceneId)
-    {
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        JSONNode userStatsJson = LoadUserStats(filePath);
-        userStatsJson["collisionCount"] = userStatsJson["collisionCount"].AsInt + 1;
-        SaveUserStats(userStatsJson, filePath);
-    }
-
-    public static void SaveAllStats(float speed, float time, int collisionCount, string sceneId)
-    {
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        JSONNode userStatsJson = new JSONObject();
-        userStatsJson["speed"] = speed;
-        userStatsJson["time"] = time;
-        userStatsJson["collisionCount"] = collisionCount;
-        SaveUserStats(userStatsJson, filePath);
-    }
-
-    public static JSONNode LoadUserStats(string filePath)
-    {
-        if (File.Exists(filePath))
-        {
-            string jsonString = File.ReadAllText(filePath);
-            return JSON.Parse(jsonString);
-        }
-        else
-        {
-            return new JSONObject();
-        }
-    }
-
-    private static void SaveUserStats(JSONNode userStatsJson, string filePath)
-    {
-        File.WriteAllText(filePath, userStatsJson.ToString());
-    }
-
-    // use these functions in other scripts by calling Stats.NameFunction
-    // don't forget to include the filePath declaration
+        Debug.Log(PlayerPrefs.GetFloat(SceneName+"_Speed"));
+        Debug.Log(PlayerPrefs.GetFloat(SceneName+"_elapsedTime"));
+        Debug.Log(PlayerPrefs.GetInt(SceneName+"_Errors"));
+        Debug.Log("TEST2");
+   }
 }
