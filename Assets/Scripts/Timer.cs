@@ -17,8 +17,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         // TRYING OUT STATS //
-        Stats.SetStats("Basic1",100.0f, 10.0f,20);
-        Stats.GetStats("Basic1");
+        Stats.SetStats(100.0f, 10.0f,20);
+        Stats.GetStats();
         //////////////////////
 
         currentTime = 0;
