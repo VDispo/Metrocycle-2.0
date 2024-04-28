@@ -25,7 +25,9 @@ public class CheckpointDetection : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider other) {
+        if (other.CompareTag("Player")) {
         Debug.Log("Entered collision with " + other.gameObject.name);
+
         if (pairCollider != null) {
             pairCollider.SetActive(true);
         }
@@ -43,5 +45,6 @@ public class CheckpointDetection : MonoBehaviour
         }
 
         triggerSignal.Invoke();
+        }
     }
 }

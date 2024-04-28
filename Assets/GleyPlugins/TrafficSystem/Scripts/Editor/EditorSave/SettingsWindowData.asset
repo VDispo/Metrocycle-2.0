@@ -104,7 +104,8 @@ MonoBehaviour:
   speedRoutesSave:
     routesColor:
     - {r: 1, g: 1, b: 1, a: 1}
-    active: 01
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 0101
   intersectionSave:
     showAll: 0
     showExit: 0

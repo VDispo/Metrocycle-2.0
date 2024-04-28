@@ -64,7 +64,11 @@ namespace GleyTrafficSystem
             EditorGUILayout.Space();
             if (GUILayout.Button("Extract Waypoints"))
             {
-                List<int> vehicleTypes = System.Enum.GetValues(typeof(VehicleTypes)).Cast<int>().ToList();
+                List<int> vehicleTypes = System.Enum.GetValues(typeof(VehicleTypes)).Cast<int>().ToList()
+                                        // NOTE: Metrocycle modification, remove Bike and Bus from default vehicles
+                                        .Except(new VehicleTypes[] { VehicleTypes.Bike, VehicleTypes.Bus }.Cast<int>()).ToList();
+
+
                 EasyRoadsMethods.ExtractWaypoints(selectedType, greenLightTime, yellowLightTime, linkLanes, linkDistance, vehicleTypes);
             }
             EditorGUILayout.Space();

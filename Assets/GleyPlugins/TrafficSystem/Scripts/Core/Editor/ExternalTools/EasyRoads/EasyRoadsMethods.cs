@@ -68,6 +68,10 @@ namespace GleyTrafficSystem
                     lanesHolder.transform.SetParent(road.transform);
                     connectorsHolder.SetParent(road.transform);
 
+                    // Add "link" to ER3DRoad and MTS road for easier selection
+                    roads[i].gameObject.AddComponent<LinkedRoad>().setOtherRoad(road);     // ER3DRoad
+                    road.AddComponent<LinkedRoad>().setOtherRoad(roads[i].gameObject);     // MTS road
+
                     roadHolders.Add(road);
                     if (roads[i].GetLaneCount() > 0)
                     {

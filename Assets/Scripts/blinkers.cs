@@ -28,6 +28,9 @@ public class blinkers : MonoBehaviour
     public Direction lastActiveBlinker;
 
     public float maxUncancelledBlinkerTime = 5f;
+    public float minBlinkerTime = 3f;
+    // blinker can turn off early, within reasonable max
+    public float maxBlinkerOffTime = 3f;
 
     private CanvasGroup left;
     private CanvasGroup right;
