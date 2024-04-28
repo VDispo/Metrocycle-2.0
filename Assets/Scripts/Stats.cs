@@ -15,6 +15,36 @@ public class Stats : MonoBehaviour
         PlayerPrefs.SetInt(sceneName+"_Errors", Errors);
    }
 
+    public static void SetSpeed (float Speed)
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        PlayerPrefs.SetFloat(sceneName+"_Speed", Speed);
+   }
+
+   public static void SetTime (float elapsedTime)
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        PlayerPrefs.SetFloat(sceneName+"_elapsedTime", elapsedTime);
+   }
+
+    public static void SetErrors (int Errors)
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        PlayerPrefs.SetInt(sceneName+"_Errors", Errors);
+   }
+
+    public static void incrementErrors ()
+   {
+        string sceneName = SceneManager.GetActiveScene().name;
+        int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
+
+        PlayerPrefs.SetInt(sceneName+"_Errors", errors+1);
+   }
+
+
     public static void GetStats ()
    {
         string sceneName = SceneManager.GetActiveScene().name;
