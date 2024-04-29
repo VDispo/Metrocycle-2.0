@@ -23,7 +23,7 @@ public class SpeedChecker : MonoBehaviour
         
         if (speed > speedLimit+speedLeeway){
             Debug.Log("Exceeded speed limit!");
-            string text = popupText ?? "Make sure to keep an eye on your speedometer.";
+            string text = (popupText ?? "") == "" ? "Make sure to keep an eye on your speedometer." : popupText;
             GameManager.Instance.PopupSystem.popError(
                 $"You have exceeded the {speedLimit} kph speed limit!",
                 text

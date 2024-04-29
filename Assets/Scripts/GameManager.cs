@@ -225,6 +225,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void startBlinkerCancelTimer()
+    {
+        blinkerScript.startBlinkerCancelTimer();
+    }
+
     void Update() {
         if (bike == null) {
             return;
