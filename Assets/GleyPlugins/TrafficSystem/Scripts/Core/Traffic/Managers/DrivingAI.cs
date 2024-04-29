@@ -545,7 +545,12 @@ namespace GleyTrafficSystem
                 case SpecialDriveActionTypes.Forward:
                     return 0;
                 case SpecialDriveActionTypes.StopInDistance:
-                    return 2.5f;
+                    // return 2.5f;
+                    // NOTE: Metrocycle modification: reduce stop time == greater distance when stopping
+                    //       this helps since current AI cars stop too close from player, even a small
+                    //       amount of backward movement (e.g. from slope) causes crash (which can happen on game start!)
+                    //       note that this value also affects other events which use StopInDistance, but should be fine
+                    return 1f;
                 case SpecialDriveActionTypes.AvoidReverse:
                 case SpecialDriveActionTypes.Reverse:
                     return 2;
