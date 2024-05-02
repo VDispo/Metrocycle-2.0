@@ -52,6 +52,7 @@ public class IntersectionChecker : MonoBehaviour
 
     // Idx of lane where driver came from
     private int entryIdx;
+    private float headCheckRefTime;
 
     void Start() {
         entryIdx = -1;
@@ -78,6 +79,12 @@ public class IntersectionChecker : MonoBehaviour
             entryIdx = idx;
             Debug.Log("Entry:" + entryIdx);
             isEntry = true;
+
+            // NOTE: If a user is turning (left/right/u-turn), technically head check
+            // and blinker should be checked here at ENTRY. BUT we are not sure
+            // if user will be performing a turn or going straight until EXIT
+            // hence, we record ENTRY time for reference later
+            headCheckRefTime = Time.time;
         }
         else {
             // "rotate" perspective to either Idx 0 or 1
@@ -125,12 +132,12 @@ public class IntersectionChecker : MonoBehaviour
 
             // Check blinker/head check for right turn
             if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
-                GameManager.Instance.checkProperTurnOrLaneChange(Direction.RIGHT);
+                GameManager.Instance.checkProperTurnOrLaneChange(Direction.RIGHT, headCheckRefTime);
             }
             // Check blinker/head check for left turn/u-turn
             if (bad_RightLaneLeftTurnIdx.Contains(idx)
                 || bad_RightLaneUTurnIdx.Contains(idx)) {
-                GameManager.Instance.checkProperTurnOrLaneChange(Direction.LEFT);
+                GameManager.Instance.checkProperTurnOrLaneChange(Direction.LEFT, headCheckRefTime);
             }
 
             // TODO: use PopupType.WARNING for bad
@@ -172,6 +179,7 @@ public class IntersectionChecker : MonoBehaviour
 
             // reset entryIdx
             entryIdx = -1;
+            headCheckRefTime = -1f;
         }
 
         Debug.Log(popupText);
