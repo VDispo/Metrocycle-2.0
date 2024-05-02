@@ -240,6 +240,18 @@ public class GameManager : MonoBehaviour
         blinkerScript.startBlinkerCancelTimer();
     }
 
+    public void teleportBike(Transform newTransform)
+    {
+        gameObject.transform.position = newTransform.position;
+        gameObject.transform.rotation = newTransform.rotation;
+
+        bike.transform.position = newTransform.position;
+        bike.transform.rotation = newTransform.rotation;
+
+        // Kill velocity, we don't want bike to move after teleport
+        bikeRB.velocity = new Vector3(0, 0, 0);
+    }
+
     void Update() {
         if (bike == null) {
             return;
