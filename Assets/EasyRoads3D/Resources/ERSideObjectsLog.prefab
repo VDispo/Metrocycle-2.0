@@ -3642,7 +3642,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: 'CmnW 6-Lane 60-SpeedLimit '
     id: 1713707774.8689263
-    timestamp: 1714238345.6257129
+    timestamp: 1714888902.6750288
     roadWidth: 29
     totalLanes: 2
     laneWidth: 3.5

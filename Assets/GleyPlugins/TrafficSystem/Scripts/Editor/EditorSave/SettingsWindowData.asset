@@ -59,7 +59,7 @@ MonoBehaviour:
     - {r: 1, g: 1, b: 1, a: 1}
     active: 01010101
   allWaypointsSettings:
-    showConnections: 0
+    showConnections: 1
     showOtherLanes: 0
     showSpeed: 0
     showCars: 0
