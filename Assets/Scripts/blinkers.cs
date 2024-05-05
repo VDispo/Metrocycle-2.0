@@ -89,6 +89,7 @@ public class blinkers : MonoBehaviour
             other_status = 1;
             other_alpha = 1f;
             blinkerOffTime = Time.time;
+            shouldCancelAtTime = -1;
         }
 
         if (which == Direction.LEFT) {
