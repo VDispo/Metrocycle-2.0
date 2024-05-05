@@ -17,6 +17,7 @@ public class CheckpointDetection : MonoBehaviour
     [TextArea(3, 10)] public string popupText;
 
     public UnityEvent callback = null;
+    public UnityEvent loadStateCallback = null;
     [HideInInspector]
     public UnityEvent triggerSignal;
 

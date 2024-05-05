@@ -22,6 +22,11 @@ public enum PopupType {
 
 public class popUp : MonoBehaviour
 {
+    public enum ErrorBehavior {
+        Reset,
+        LoadSave
+    };
+
     public GameObject popUpSystem;
 
     private Transform lastActiveSet = null;
@@ -56,7 +61,17 @@ public class popUp : MonoBehaviour
                     buttonScript.onClick.AddListener(() => {
                         closePopup(); SceneManager.LoadScene("Main Menu");
                     });
+                } else if (button.name.StartsWith("loadSaveState")) {
+                    buttonScript.onClick.AddListener(() => {
+                        if (GameManager.Instance.hasSaveState()) {
+                            GameManager.Instance.loadSaveState();
+                        } else {
+                            GameManager.Instance.restartGame();
+                        }
+                        closePopup();
+                    });
                 }
+
             }
         }
     }
@@ -168,6 +183,26 @@ public class popUp : MonoBehaviour
         popUpBox.gameObject.SetActive(false);
 
         GameManager.Instance.resumeGame();
+    }
+
+    public void setErrorBehavior(ErrorBehavior b)
+    {
+        Transform errorSet = popUpSystem.transform.Find("errorSet");
+        if (errorSet == null) {
+            Debug.Log("NO ERROR SET");
+            return;
+        }
+
+        Debug.Log("Set ERROR BEHAVIOR");
+        GameObject resetButton = errorSet.Find("resetButton").gameObject;
+        GameObject loadSaveStateButton = errorSet.Find("loadSaveStateButton").gameObject;
+        if (b == ErrorBehavior.LoadSave) {
+            loadSaveStateButton?.SetActive(true);
+            resetButton?.SetActive(false);
+        } else {
+            loadSaveStateButton?.SetActive(false);
+            resetButton?.SetActive(true);
+        }
     }
 
     void setHeaderText(Transform set, string headerMessage)
