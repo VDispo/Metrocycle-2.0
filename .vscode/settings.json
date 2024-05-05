@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Metrocycle-prototype.sln"
+    "dotnet.defaultSolution": "Metrocycle-prototype.sln",
+    "dotnet.preferCSharpExtension": true
 }

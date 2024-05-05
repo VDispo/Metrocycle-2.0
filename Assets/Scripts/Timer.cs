@@ -6,29 +6,20 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    float currentTime;
+    public static float CurrentTime;
     public Text currentTimeText;
-
-    // TRYING OUT STATS //
-    private static string filePath;
-    //////////////////////
 
     // Start is called before the first frame update
     void Start()
     {
-        // TRYING OUT STATS //
-        Stats.SetStats(100.0f, 10.0f,20);
-        Stats.GetStats();
-        //////////////////////
-
-        currentTime = 0;
+        CurrentTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime = currentTime + Time.deltaTime;
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        CurrentTime = CurrentTime + Time.deltaTime;
+        TimeSpan time = TimeSpan.FromSeconds(CurrentTime);
         if (time.Seconds.ToString().Length == 1){
             currentTimeText.text = time.Minutes.ToString() + ":0" + time.Seconds.ToString();
         }

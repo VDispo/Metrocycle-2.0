@@ -13,7 +13,7 @@ public class GameoverPopup : MonoBehaviour
     public void popupShown()
     {
         // double avgSpeed = System.Math.Round(GetAvgSpeed(), 2);
-        double avgSpeed = speedometer.GetComponent<Speedometer>().GetAvgSpeed();
+        double avgSpeed = Speedometer.GetAvgSpeed();
         avgSpeed = System.Math.Round(avgSpeed, 2);
         Text  timerText = timer.GetComponent<Text>();
         string[] time_comps = timerText.text.Split(":");

@@ -6,57 +6,52 @@ using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
-   public static void SetStats (float Speed, float elapsedTime, int Errors)
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
+     void Awake() {
+          string sceneName = SceneManager.GetActiveScene().name;
+          if (PlayerPrefs.GetInt(sceneName+"_Errors")==0){
+               SetErrors(0);
+          }
+    }
 
-        PlayerPrefs.SetFloat(sceneName+"_Speed", Speed);
-        PlayerPrefs.SetFloat(sceneName+"_elapsedTime", elapsedTime);
-        PlayerPrefs.SetInt(sceneName+"_Errors", Errors);
-   }
+     public static void SetSpeed ()
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
 
-    public static void SetSpeed (float Speed)
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
+          float Speed = Speedometer.GetAvgSpeed();
+          PlayerPrefs.SetFloat(sceneName+"_Speed",Speed);
+     }
 
-        PlayerPrefs.SetFloat(sceneName+"_Speed", Speed);
-   }
+     public static void SetTime ()
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
 
-   public static void SetTime (float elapsedTime)
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
+          float elapsedTime = Timer.CurrentTime;
+          PlayerPrefs.SetFloat(sceneName+"_elapsedTime", elapsedTime);
+     }
 
-        PlayerPrefs.SetFloat(sceneName+"_elapsedTime", elapsedTime);
-   }
+     public static void SetErrors (int Errors)
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
 
-    public static void SetErrors (int Errors)
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
+          PlayerPrefs.SetInt(sceneName+"_Errors", Errors);
+     }
 
-        PlayerPrefs.SetInt(sceneName+"_Errors", Errors);
-   }
+     public static void incrementErrors ()
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
+          int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
 
-    public static void incrementErrors ()
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
-        int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
+          PlayerPrefs.SetInt(sceneName+"_Errors", errors+1);
+     }
 
-        PlayerPrefs.SetInt(sceneName+"_Errors", errors+1);
-   }
+     public static (float speed, float elapsedTime, int errors) GetStats()
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
 
+          float speed = PlayerPrefs.GetFloat(sceneName+"_Speed");
+          float elapsedTime = PlayerPrefs.GetFloat(sceneName+"_elapsedTime");
+          int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
 
-    public static void GetStats ()
-   {
-        string sceneName = SceneManager.GetActiveScene().name;
-        
-        float speed = PlayerPrefs.GetFloat(sceneName+"_Speed");
-        float elapsedTime = PlayerPrefs.GetFloat(sceneName+"_elapsedTime");
-        int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
-
-        Debug.Log(sceneName);
-        Debug.Log(speed);
-        Debug.Log(elapsedTime);
-        Debug.Log(errors);
-
-   }
+          return (speed, elapsedTime, errors);
+     }
 }
