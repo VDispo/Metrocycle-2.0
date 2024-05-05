@@ -99,6 +99,8 @@ public class IntersectionChecker : MonoBehaviour
                 // hence we expect exit idx to be 8 = -8 + 16
                 idx += laneDetects.Length;
             }
+
+            GameManager.Instance.startBlinkerCancelTimer();
         }
 
         PopupType type = PopupType.INFO;
