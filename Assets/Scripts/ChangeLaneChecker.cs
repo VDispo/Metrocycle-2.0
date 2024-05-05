@@ -26,6 +26,7 @@ public class ChangeLaneChecker : MonoBehaviour
         blinkerName = GameManager.Instance.blinkerName();
 
         bicycleAllowed_Set = new HashSet<GameObject>(bicycleAllowedInLanes);
+        bicycleAllowed_Set.Add(bikeLane);
     }
 
     public void enteredLane(GameObject lane) {
@@ -84,7 +85,7 @@ public class ChangeLaneChecker : MonoBehaviour
             return;
         }
 
-        if (bicycleAllowed_Set.Contains(lane)) {
+        if (!bicycleAllowed_Set.Contains(lane)) {
             errorText = "Bicycles are not allowed in this lane which is used by motored vehicles.";
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
