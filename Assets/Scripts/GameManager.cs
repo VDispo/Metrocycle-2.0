@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
 
             hasError = true;
         } else if (Time.time - blinkerScript.blinkerActivationTime < blinkerScript.minBlinkerTime) {
-            errorText = "You did not give ample time for other road users to react to your " + blinkerName;
+            errorText = "You did not give ample time for other road users to react to your " + blinkerName + ".\nIt is recommended to indicate your intent 5s before the action (e.g. lane change).";
             hasError = true;
         }
 
