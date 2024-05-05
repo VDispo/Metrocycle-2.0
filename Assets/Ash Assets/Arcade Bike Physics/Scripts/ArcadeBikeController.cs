@@ -109,7 +109,7 @@ namespace ArcadeBP
                 //brakelogic
                 if (Input.GetAxis("Jump") > 0.1f)
                 {
-                    rb.constraints = RigidbodyConstraints.FreezeRotationX;
+                    // rb.constraints = RigidbodyConstraints.FreezeRotationX;
                 }
                 else
                 {
@@ -128,15 +128,27 @@ namespace ArcadeBP
                 else if (movementMode == MovementMode.Velocity)
                 {
                     float accel = accelaration;
-                    if (verticalInput < 0.1f && getSpeed() >= MaxReverseSpeed) {
-                        // don't accelerate anymore to keep reverse slow
-                        accel = 0f;
+                    float targetSpeed = MaxSpeed;
+                    bool hasVerticalInput = Mathf.Abs(verticalInput) > 0.1f;
+                    bool isPressingBackward = verticalInput < -0.1f && hasVerticalInput;
+                    bool isBikeReversing = Vector3.Dot(carBody.transform.forward, carVelocity.normalized) < -0.1f
+                                            && carVelocity.magnitude > 1f;
 
+                    if (isPressingBackward && isBikeReversing) {
+                        // when bike is going in reverse, limit speed
+                        targetSpeed = MaxReverseSpeed;
+                    } else if ((Input.GetAxis("Jump") > 0.1f) && (getSpeed() <= MaxReverseSpeed)) {
+                        rb.velocity = new Vector3(0, 0, 0);
+                    } else if (!isBikeReversing && (isPressingBackward || (Input.GetAxis("Jump") > 0.1f))) {
+                        // use half acceleration (braking is "slower" than accelarating)
+                        accel = accelaration / 2;
+                        verticalInput = -1f;
+                        hasVerticalInput = true;
                     }
 
-                    if (Mathf.Abs(verticalInput) > 0.1f && Input.GetAxis("Jump") < 0.1f)
+                    if (hasVerticalInput)
                     {
-                        rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * MaxSpeed, accel / 10 * Time.deltaTime);
+                        rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * targetSpeed, accel / 10 * Time.deltaTime);
                     }
                 }
 
