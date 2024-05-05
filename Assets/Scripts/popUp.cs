@@ -152,11 +152,12 @@ public class popUp : MonoBehaviour
         Stats.SetSpeed();
         Stats.SetTime();
 
-
         (float speed, float elapsedTime, int errors) = Stats.GetStats();
         Transform finishSet = popUpSystem.transform.Find("finishSet");
         
         setFinishText(finishSet, speed, elapsedTime, errors);
+        
+        Stats.SetErrors(0);
 
         showPopup(finishSet);
     }
