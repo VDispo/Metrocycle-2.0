@@ -19,6 +19,9 @@ public class Speedometer : MonoBehaviour {
     private double speedTotal;
     private int numSpeedSamples;
 
+    [SerializeField] private int updateEveryNthFrame = 5;
+    private int frameCount;
+
     private void Awake() {
         needleTranform = transform.Find("needle");
         speedLabelTemplateTransform = transform.Find("speedLabelTemplate2");
@@ -36,6 +39,7 @@ public class Speedometer : MonoBehaviour {
         speedTotal = 0f;
         
         CreateSpeedLabels();
+        frameCount = 0;
     }
 
     private void Update() {
@@ -49,8 +53,12 @@ public class Speedometer : MonoBehaviour {
             ++numSpeedSamples;
         }
 
-        // Update digital Speedometer display
-        digitalSpeedometerText.text = Mathf.RoundToInt(speed) + "kph";
+        if (++frameCount == updateEveryNthFrame) {
+            // Update digital Speedometer display
+            digitalSpeedometerText.text = Mathf.RoundToInt(speed) + "kph";
+            // reset frameCount
+            frameCount = 0;
+        }
     }
 
     private void CreateSpeedLabels() {

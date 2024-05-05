@@ -154,6 +154,16 @@ public class blinkers : MonoBehaviour
         return false;
     }
 
+    public void startBlinkerCancelTimer()
+    {
+        if (shouldCancelAtTime == -1
+            && (leftStatus == 1 || rightStatus == 1)
+        )
+        {
+            shouldCancelAtTime = Time.time;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {   
@@ -192,7 +202,7 @@ public class blinkers : MonoBehaviour
             if (hasHorizontalInput) {
                 Direction which = leftStatus == 1 ? Direction.LEFT : Direction.RIGHT;
                 if (shouldCancelAtTime == -1 && checkAutoBlinkerOff(which)) {
-                    shouldCancelAtTime = Time.time;
+                    // shouldCancelAtTime = Time.time;
                     Debug.Log("Should autooff now " + shouldCancelAtTime);
                 }
 

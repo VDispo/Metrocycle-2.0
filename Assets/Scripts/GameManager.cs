@@ -144,8 +144,13 @@ public class GameManager : MonoBehaviour
         return isValid;
     }
 
-    public bool verifyHeadCheck(Direction direction) {
-        float turnTime = Time.time;
+    public bool verifyHeadCheck(Direction direction, float turnTime=-1f) {
+        if (Mathf.Abs(turnTime - (-1f)) < 0.1f) {
+            turnTime = Time.time;
+        }
+
+        // Debug.Log("Turn Time " + turnTime + " curTime " + Time.time);
+
         float headCheckTime;
 
         Debug.Assert(direction != Direction.FORWARD);
@@ -163,7 +168,7 @@ public class GameManager : MonoBehaviour
             return true;
         }
 
-        float turnDelay = Time.time - headCheckTime;
+        float turnDelay = turnTime - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
             const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
             GameManager.Instance.PopupSystem.popError(
@@ -186,7 +191,12 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    public void checkProperTurnOrLaneChange(Direction direction, bool requireHeadCheck=true) {
+    public void checkProperTurnOrLaneChange(Direction direction, float headCheckRefTime=-1f, bool requireHeadCheck=true) {
+        // NOTE: headCheckRefTime if the time when head check should have been checked
+        // e.g.  when performing a U-turn, checkProperTurnOrLaneChange can only be
+        //       called AFTER the U-turn is complete (i.e. at exit instead of at entry)
+        //       but head check should have been called at ENTRY time
+
         bool isBlinkerOn = ((direction == Direction.LEFT && blinkerScript.leftStatus == 1)
         || (direction == Direction.RIGHT && blinkerScript.rightStatus == 1));
 
@@ -220,9 +230,26 @@ public class GameManager : MonoBehaviour
             );
         } else {
             if (requireHeadCheck) {
-                GameManager.Instance.verifyHeadCheck(direction);
+                GameManager.Instance.verifyHeadCheck(direction, headCheckRefTime);
             }
         }
+    }
+
+    public void startBlinkerCancelTimer()
+    {
+        blinkerScript.startBlinkerCancelTimer();
+    }
+
+    public void teleportBike(Transform newTransform)
+    {
+        gameObject.transform.position = newTransform.position;
+        gameObject.transform.rotation = newTransform.rotation;
+
+        bike.transform.position = newTransform.position;
+        bike.transform.rotation = newTransform.rotation;
+
+        // Kill velocity, we don't want bike to move after teleport
+        bikeRB.velocity = new Vector3(0, 0, 0);
     }
 
     void Update() {

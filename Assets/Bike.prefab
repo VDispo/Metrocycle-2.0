@@ -518,6 +518,8 @@ MonoBehaviour:
   blinkerOffTime: 0
   lastActiveBlinker: 0
   maxUncancelledBlinkerTime: 5
+  minBlinkerTime: 3
+  maxBlinkerOffTime: 3
 --- !u!1 &4918266890496185760
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +764,7 @@ GameObject:
   - component: {fileID: 3421073126216474872}
   m_Layer: 0
   m_Name: Bike
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,6 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopupSystem: {fileID: 0}
+  HeadCheckScript: {fileID: 0}
   bike: {fileID: 0}
 --- !u!114 &3421073126216474872
 MonoBehaviour:
@@ -1366,6 +1369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Motorcycle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979533320120663939, guid: ca91199b324624e269e7ee016c18b2b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6674008020840532439, guid: ca91199b324624e269e7ee016c18b2b3,
         type: 3}

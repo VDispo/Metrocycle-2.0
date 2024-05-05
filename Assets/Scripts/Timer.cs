@@ -17,9 +17,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         // TRYING OUT STATS //
-        string sceneId = "Scenario1";
-        filePath = "Assets/PlayerStats_" + sceneId + ".json";
-        Stats.SaveSpeed(100.0f, sceneId);
+        Stats.SetStats(100.0f, 10.0f,20);
+        Stats.GetStats();
         //////////////////////
 
         currentTime = 0;
