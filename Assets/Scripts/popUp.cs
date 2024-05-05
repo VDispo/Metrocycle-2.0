@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -124,6 +125,7 @@ public class popUp : MonoBehaviour
     {
         Transform errorSet = popUpSystem.transform.Find("errorSet");
 
+        Stats.incrementErrors();
         setHeaderText(errorSet, headerMessage);
         setBodyText(errorSet, bodyMessage);
 
@@ -132,7 +134,15 @@ public class popUp : MonoBehaviour
 
     public void popFinish()
     {
+        Stats.SetSpeed();
+        Stats.SetTime();
+
+
+        (float speed, float elapsedTime, int errors) = Stats.GetStats();
         Transform finishSet = popUpSystem.transform.Find("finishSet");
+        
+        setFinishText(finishSet, speed, elapsedTime, errors);
+
         showPopup(finishSet);
     }
 
@@ -172,5 +182,25 @@ public class popUp : MonoBehaviour
         TextMeshProUGUI bodyText = bodyTextObject.GetComponent<TextMeshProUGUI>();
 
         bodyText.text = bodyMessage;
+    }
+    void setFinishText(Transform set, float speed, float elapsedTime, int errors)
+    {
+        GameObject speedTextObject = set.Find("speed").gameObject;
+        TextMeshProUGUI speedText = speedTextObject.GetComponent<TextMeshProUGUI>();
+        GameObject timeTextObject = set.Find("time").gameObject;
+        TextMeshProUGUI timeText = timeTextObject.GetComponent<TextMeshProUGUI>();
+        GameObject errorsTextObject = set.Find("errors").gameObject;
+        TextMeshProUGUI errorsText = errorsTextObject.GetComponent<TextMeshProUGUI>();
+
+        TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
+        if (time.Seconds.ToString().Length == 1){
+            timeText.text = "Time: " + time.Minutes.ToString() + ":0" + time.Seconds.ToString();
+        }
+        else{
+            timeText.text = "Time: " + time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        }
+
+        speedText.text = "Avg Speed: " + speed.ToString("F2") + " kph";
+        errorsText.text = "Errors: " + errors.ToString();
     }
 }

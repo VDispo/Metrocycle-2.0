@@ -16,8 +16,8 @@ public class Speedometer : MonoBehaviour {
     private float speedMax;
     private float speed;
 
-    private double speedTotal;
-    private int numSpeedSamples;
+    private static float speedTotal;
+    private static int numSpeedSamples;
 
     [SerializeField] private int updateEveryNthFrame = 5;
     private int frameCount;
@@ -90,8 +90,8 @@ public class Speedometer : MonoBehaviour {
         return ZERO_SPEED_ANGLE - speedNormalized * totalAngleSize;
     }
 
-    public double GetAvgSpeed()
+    public static float GetAvgSpeed()
     {
-        return speedTotal / ((double) numSpeedSamples);
+        return speedTotal / ((float) numSpeedSamples);
     }
 }
