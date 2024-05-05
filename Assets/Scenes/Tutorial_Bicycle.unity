@@ -123,54 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!28 &985032
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1386984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1739,54 +1691,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &88540715
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &93249687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4282,6 +4186,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &248434640
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &260025862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7363,6 +7315,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &405051569
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!114 &408763630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7983,11 +7983,11 @@ Transform:
   m_GameObject: {fileID: 423867876}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 155.37, y: 0.04, z: 202.02}
-  m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
+  m_LocalPosition: {x: 56.750008, y: -46.239998, z: -20.130005}
+  m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: -0.062, y: 0, z: -0.274}
 --- !u!114 &423867878
 MonoBehaviour:
@@ -8009,6 +8009,9 @@ MonoBehaviour:
   popupText: "To finish your left head check, let go of the J key  to look ahead
     again.\r"
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -10968,12 +10971,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603328820}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.77, y: 0.1, z: 42.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -123.39761, y: -46.145294, z: -163.80046}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &603328823
 MeshCollider:
@@ -11767,6 +11770,140 @@ MonoBehaviour:
   rotationCenter: 0
   side: 0
   otherSide: {fileID: 0}
+--- !u!1 &641743190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641743191}
+  - component: {fileID: 641743195}
+  - component: {fileID: 641743194}
+  - component: {fileID: 641743193}
+  - component: {fileID: 641743192}
+  m_Layer: 3
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641743191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641743190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
+  m_LocalPosition: {x: 56.592384, y: -46.1, z: 168.2}
+  m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1648884833}
+  m_LocalEulerAnglesHint: {x: -0.062, y: 0, z: -0.274}
+--- !u!114 &641743192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641743190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082502c912441ac47be73a6c68c422c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairCollider: {fileID: 0}
+  deactivateAfterCollision: 1
+  showPopup: 1
+  popupType: 4
+  popupTitle: Great!
+  popupText: Finally, you can use the space bar or the S key to brake.
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerSignal:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!64 &641743193
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641743190}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1919
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &641743194
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641743190}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 125a4a0a7f041684cbfbd3bbd03bbf11, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &641743195
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641743190}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &642239962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12838,54 +12975,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &704359678
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 10
-  m_Height: 2
-  m_CompleteImageSize: 112
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 112
-  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &706694870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23511,19 +23600,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1647460853}
-  - {fileID: 1182756702}
-  - {fileID: 603328821}
-  - {fileID: 1121348446}
-  - {fileID: 1416701736}
-  - {fileID: 1912685024}
-  - {fileID: 1368907037}
-  - {fileID: 423867877}
-  - {fileID: 1560649922}
-  - {fileID: 866309661}
-  - {fileID: 1580180291}
-  - {fileID: 1728133393}
-  - {fileID: 2143044055}
-  - {fileID: 2021479493}
   - {fileID: 1426056420}
   m_Father: {fileID: 622902871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24835,11 +24911,11 @@ Transform:
   m_GameObject: {fileID: 866309660}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 155.16, y: 0.1, z: 242.12}
-  m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
+  m_LocalPosition: {x: 56.540016, y: -46.18, z: 22.790009}
+  m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: -0.062, y: 0, z: -0.274}
 --- !u!114 &866309662
 MonoBehaviour:
@@ -24861,6 +24937,9 @@ MonoBehaviour:
   popupText: Press the K key before the yellow mark and hold until the green mark
     to check your right blindspot.
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -27249,6 +27328,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &966852306
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 10
+  m_Height: 2
+  m_CompleteImageSize: 112
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 112
+  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &967578079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29386,12 +29513,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121348445}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 24.15, y: 0.1, z: 85.16}
-  m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -74.477615, y: -46.145294, z: -120.94046}
+  m_LocalScale: {x: 1, y: 0.88219, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1121348447
 MonoBehaviour:
@@ -29417,6 +29544,9 @@ MonoBehaviour:
     Hold A while moving forward
     to turn left.'
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -30577,12 +30707,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182756701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.46, y: 0.1, z: 7.63}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -124.087616, y: -46.145294, z: -198.47046}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1182756703
 MonoBehaviour:
@@ -30608,6 +30738,9 @@ MonoBehaviour:
     Hold D while moving forward
     to turn right.'
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -31736,6 +31869,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &1292116970
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!114 &1297787633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32401,54 +32582,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350644634}
   m_CullTransparentMesh: 1
---- !u!28 &1362284366
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 12
-  m_Height: 12
-  m_CompleteImageSize: 760
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 760
-  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1368907036
 GameObject:
   m_ObjectHideFlags: 0
@@ -32477,12 +32610,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368907036}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 155.43, y: 0.1, z: 188.05}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.81, y: -46.18, z: -34.1}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1368907038
 MonoBehaviour:
@@ -32942,12 +33075,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416701735}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 104.25, y: 0.1, z: 84.64}
-  m_LocalScale: {x: 1, y: 0.88219, z: 0.3828}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 5.622383, y: -46.145294, z: -121.460464}
+  m_LocalScale: {x: 1, y: 0.88219, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!64 &1416701738
 MeshCollider:
@@ -33653,6 +33786,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &1431802239
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 12
+  m_Height: 12
+  m_CompleteImageSize: 760
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 760
+  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1432558726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35580,12 +35761,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560649921}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 155.25, y: 0.1, z: 231.93}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.630013, y: -46.18, z: 12.6}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560649923
 MonoBehaviour:
@@ -35948,12 +36129,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580180290}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 155.2, y: 0.1, z: 287.95}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.58001, y: -46.18, z: 63.3}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1580180292
 MonoBehaviour:
@@ -37584,6 +37765,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 755585892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1648884832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648884833}
+  m_Layer: 0
+  m_Name: Checkers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648884833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648884832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 98.62762, y: 46.245293, z: 206.10046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1182756702}
+  - {fileID: 603328821}
+  - {fileID: 1121348446}
+  - {fileID: 1416701736}
+  - {fileID: 1912685024}
+  - {fileID: 1368907037}
+  - {fileID: 423867877}
+  - {fileID: 1560649922}
+  - {fileID: 866309661}
+  - {fileID: 1580180291}
+  - {fileID: 1728133393}
+  - {fileID: 2143044055}
+  - {fileID: 2021479493}
+  - {fileID: 641743191}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1656694812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38842,11 +39068,11 @@ Transform:
   m_GameObject: {fileID: 1728133392}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0023210559, y: -0.000025177995, z: -0.01084698, w: 0.9999385}
-  m_LocalPosition: {x: 155.17, y: 0.09, z: 302.2}
-  m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
+  m_LocalPosition: {x: 56.55001, y: -46.19, z: 77.55}
+  m_LocalScale: {x: 1, y: 0.88219, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: -0.266, y: 0, z: -1.243}
 --- !u!114 &1728133394
 MonoBehaviour:
@@ -38868,6 +39094,9 @@ MonoBehaviour:
   popupText: "To finish your right head check, let go of the K key  to look ahead
     again.\r"
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -39097,6 +39326,77 @@ MonoBehaviour:
   sideObject: {fileID: 1108306029}
   id: 1708761651.6665618
   active: 0
+  vecPositions: []
+  toggleActive: 0
+  autoGenerate: 0
+  markerActive: 1
+  m_distance: 0
+  xPosition: 0
+  oldXPosition: 0
+  yPosition: 0
+  randomRotation: {x: 0, y: 0, z: 0}
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  distanceChange: 0
+  xPosChange: 0
+  yPosChange: 0
+  rotationAngleChange: 0
+  rotationDistanceChange: 0
+  lockRandomRotations: 0
+  randomXPositionChange: 0
+  randomYPositionChange: 0
+  xPositionDistanceChange: 0
+  randomXPosition: 0
+  randomMinXPosition: 0
+  randomMaxXPosition: 0
+  minRandomXPositionDistance: 0
+  maxRandomXPositionDistance: 0
+  boxColliderScale: {x: 1, y: 1, z: 1}
+  yPositionDistanceChange: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  sourceObject: {fileID: 0}
+  sections: []
+  objects: []
+  runtimeObjects: []
+  interpolateOnConnection: 0
+  lastEndPosition: {x: 0, y: 0, z: 0}
+  clampToMarkers: 0
+  instance: {fileID: 0}
+  snapIntsStartSide1: 
+  snapIntsEndSide1: 
+  snapIntsStartSide2: 
+  snapIntsEndSide2: 
+  snapMeshSide1: {fileID: 0}
+  snapMeshSide2: {fileID: 0}
+  otherRoadStartLeft: {fileID: 0}
+  otherRoadStartRight: {fileID: 0}
+  otherRoadEndLeft: {fileID: 0}
+  otherRoadEndRight: {fileID: 0}
+  otherSoDataStartLeft: {fileID: 0}
+  otherSoDataStartRight: {fileID: 0}
+  otherSoDataEndLeft: {fileID: 0}
+  otherSoDataEndRight: {fileID: 0}
+--- !u!114 &1762294388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1195050255, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sideObject: {fileID: 1108306029}
+  id: 1708761651.6665618
+  active: 1
   vecPositions: []
   toggleActive: 0
   autoGenerate: 0
@@ -40853,54 +41153,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc75ae5013580e2009221941bd32dc1e, type: 3}
---- !u!28 &1899721431
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1900754003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41031,12 +41283,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912685023}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.57, y: 0.1, z: 144.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55.94239, y: -46.145294, z: -61.400467}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1912685025
 MonoBehaviour:
@@ -41061,6 +41313,9 @@ MonoBehaviour:
     Press the J key before the
     yellow mark and hold it until the green mark to perform a left head check.'
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -42132,8 +42387,8 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 2-Lane
     id: 1708760731.257212
-    timestamp: 1710078329.090179
-    roadWidth: 10
+    timestamp: 1713623869.59984
+    roadWidth: 9
     totalLanes: 2
     laneWidth: 3.5
     medianWidth: 0
@@ -42151,8 +42406,8 @@ MonoBehaviour:
     roadShapeDataActive: 0
     roadShapeData:
       nodes:
-      - {x: -5, y: 0}
-      - {x: 5, y: 0}
+      - {x: -4.5, y: 0}
+      - {x: 4.5, y: 0}
       hardEdge: 0000
       priorityNodeIndexLeft: -1
       priorityNodeIndexRight: -1
@@ -42178,12 +42433,12 @@ MonoBehaviour:
     speedLimit: 50
     speedLimitConnections: 50
     roadShape:
-    - {x: -5, y: 0}
-    - {x: 5, y: 0}
+    - {x: -4.5, y: 0}
+    - {x: 4.5, y: 0}
     roadShapeExt: []
     roadShapeExt2:
-    - {x: -5, y: 0}
-    - {x: 5, y: 0}
+    - {x: -4.5, y: 0}
+    - {x: 4.5, y: 0}
     doConnectionTri: 0101
     doConnectionTriExt: 
     roadShapeUVs:
@@ -42211,13 +42466,14 @@ MonoBehaviour:
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 0}
+    connectionMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c,
+      type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
     soData: []
     soDataExt:
-    - {fileID: 613999542}
+    - {fileID: 1762294388}
     soDataLog: []
     layer: 8
     isStatic: 1
@@ -42627,11 +42883,11 @@ MonoBehaviour:
   infoTexture: {fileID: 0}
   infoTexture2: {fileID: 0}
   infoTextures: []
-  plusSignTexture: {fileID: 1362284366}
-  minSignTexture: {fileID: 704359678}
-  signPostHeaderBG: {fileID: 1899721431}
-  signPostListBG: {fileID: 88540715}
-  signPostListSelBG: {fileID: 985032}
+  plusSignTexture: {fileID: 1431802239}
+  minSignTexture: {fileID: 966852306}
+  signPostHeaderBG: {fileID: 248434640}
+  signPostListBG: {fileID: 405051569}
+  signPostListSelBG: {fileID: 1292116970}
   editorSkin: 0
   showAllPrefabs: 1
   standardPrefabsFlag: 0
@@ -42830,7 +43086,7 @@ MonoBehaviour:
   importRoadPresetsAlert: 1
   importCrossingPresetsAlert: 0
   importSidewalkPresetsAlert: 1
-  updateSideObjectsAlert: 0
+  updateSideObjectsAlert: 1
   updateRoadPresetsAlert: 1
   updateCrossingPresetsAlert: 0
   updateSidewalkPresetsAlert: 0
@@ -44398,11 +44654,11 @@ Transform:
   m_GameObject: {fileID: 2021479492}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 155.22, y: 0.1, z: 382.2}
-  m_LocalScale: {x: 1, y: 0.8821899, z: 0.38280004}
+  m_LocalPosition: {x: 56.592384, y: -46.2, z: 128.80003}
+  m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: -0.062, y: 0, z: -0.274}
 --- !u!114 &2021479494
 MonoBehaviour:
@@ -44419,10 +44675,13 @@ MonoBehaviour:
   pairCollider: {fileID: 0}
   deactivateAfterCollision: 1
   showPopup: 1
-  popupType: 4
-  popupTitle: Congratulations! You have finished the tutorial.
-  popupText: That's it for the basic controls!
+  popupType: 1
+  popupTitle: Great!
+  popupText: Finally, you can use the space bar or the S key to brake.
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -46494,12 +46753,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143044054}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 155.2, y: 0.1, z: 341.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.57238, y: -45.8, z: 120.1}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 755585892}
+  m_Father: {fileID: 1648884833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2143044056
 MonoBehaviour:
@@ -47715,3 +47974,4 @@ SceneRoots:
   - {fileID: 635147919401377253}
   - {fileID: 1958783165}
   - {fileID: 623999846}
+  - {fileID: 1648884833}

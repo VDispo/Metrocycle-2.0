@@ -8,7 +8,9 @@ public class Stats : MonoBehaviour
 {
      void Awake() {
           string sceneName = SceneManager.GetActiveScene().name;
-          if (PlayerPrefs.GetInt(sceneName+"_Errors")==0){
+          if(PlayerPrefs.HasKey(sceneName+"_Errors")){
+          }
+          else{
                SetErrors(0);
           }
     }

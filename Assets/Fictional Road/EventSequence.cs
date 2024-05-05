@@ -37,12 +37,12 @@ public class EventSequence : MonoBehaviour
     public void moveToNextEvent() {
         events[curEventIdx].SetActive(false);
 
-        if (++curEventIdx >= events.Length){
+        if (curEventIdx+1 >= events.Length){
             Debug.Log("Somehow exceeded the number of events.");
             return;
         }
 
-        GameObject nextEvent = events[curEventIdx];
+        GameObject nextEvent = events[++curEventIdx];
         nextEvent.SetActive(true);
         Debug.Log("Next event: " + nextEvent);
 
@@ -52,5 +52,21 @@ public class EventSequence : MonoBehaviour
             finishLine.transform.position = new Vector3(curPosition.x, curPosition.y,
                                                     nextEvent.transform.position.z) + offsetFromEventDetect;
         }
+    }
+
+    public void moveToPreviousEvent() {
+        events[curEventIdx].SetActive(false);
+        if (curEventIdx-1 < 0) {
+            Debug.Log("Already at first event the number of events.");
+
+            return;
+        }
+
+        GameObject prevEvent = events[--curEventIdx];
+        prevEvent.SetActive(true);
+        Debug.Log("Prev event: " + prevEvent);
+
+        // NOTE: finishLine code is leftover when EventSequence was simpler (See Basic_Multilane)
+        //       since it won't be used there anymore, no need to implement here
     }
 }

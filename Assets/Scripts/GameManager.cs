@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     private blinkers blinkerScript;
 
+    private GameObject saveStateDetect = null;
 
     private void Awake()
     {
@@ -242,6 +243,7 @@ public class GameManager : MonoBehaviour
 
     public void teleportBike(Transform newTransform)
     {
+        bike.SetActive(false);
         gameObject.transform.position = newTransform.position;
         gameObject.transform.rotation = newTransform.rotation;
 
@@ -250,6 +252,38 @@ public class GameManager : MonoBehaviour
 
         // Kill velocity, we don't want bike to move after teleport
         bikeRB.velocity = new Vector3(0, 0, 0);
+
+        bike.SetActive(true);
+        Debug.Log("Bike teleported to " + newTransform);
+    }
+
+    public void setSaveState(CheckpointDetection detect)
+    {
+        saveStateDetect = detect.gameObject;
+        Debug.Log("SAVE STATE " + detect.gameObject);
+        PopupSystem?.setErrorBehavior(popUp.ErrorBehavior.LoadSave);
+    }
+    public void loadSaveState()
+    {
+        CheckpointDetection detect = saveStateDetect.GetComponent<CheckpointDetection>();
+        // HACK: always teleport bike to location of save Detect
+        // TODO: make more generic (teleport location optional/can be supplied idependently)
+        // Pause
+        Debug.Log("LOADING SAVE " + detect);
+        Time.timeScale = 0;
+
+        GameManager.Instance.teleportBike(saveStateDetect.transform);
+
+        if (detect?.loadStateCallback != null) {
+            detect.loadStateCallback.Invoke();
+        }
+
+        // Resume
+        Time.timeScale = 1;
+    }
+    public bool hasSaveState()
+    {
+        return saveStateDetect != null;
     }
 
     void Update() {
