@@ -2880,7 +2880,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: 'CmnW 10-Lane 60-SpeedLimit '
     id: 1713114246.1951156
-    timestamp: 1714127781.9078646
+    timestamp: 1714921580.0442636
     roadWidth: 47.5
     totalLanes: 2
     laneWidth: 3.5
@@ -2965,11 +2965,13 @@ MonoBehaviour:
     soData: []
     soDataExt: []
     soDataLog:
-    - id: 1714070234.7084663
-      active: 0
     - id: 1714072924.7749438
       active: 1
+    - id: 1714070234.7084663
+      active: 0
     - id: 1714072072.658111
+      active: 0
+    - id: 1714128740.03633
       active: 0
     - id: 1708761651.6665618
       active: 0
