@@ -131,15 +131,18 @@ namespace ArcadeBP
                     float targetSpeed = MaxSpeed;
                     bool hasVerticalInput = Mathf.Abs(verticalInput) > 0.1f;
                     bool isPressingBackward = verticalInput < -0.1f && hasVerticalInput;
-                    bool isBikeReversing = Vector3.Dot(carBody.transform.forward, carVelocity.normalized) < -0.1f
+                    bool isBikeReversing = Vector3.Dot(carBody.transform.forward, carBody.velocity.normalized) < -0.1f
                                             && carVelocity.magnitude > 1f;
 
                     if (isPressingBackward && isBikeReversing) {
+                        // Debug.Log("Slow Reverse");
                         // when bike is going in reverse, limit speed
                         targetSpeed = MaxReverseSpeed;
                     } else if ((Input.GetAxis("Jump") > 0.1f) && (getSpeed() <= MaxReverseSpeed)) {
                         rb.velocity = new Vector3(0, 0, 0);
+                        // Debug.Log("Full stop");
                     } else if (!isBikeReversing && (isPressingBackward || (Input.GetAxis("Jump") > 0.1f))) {
+                        // Debug.Log("BRAKE");
                         // use half acceleration (braking is "slower" than accelarating)
                         accel = accelaration / 2;
                         verticalInput = -1f;
