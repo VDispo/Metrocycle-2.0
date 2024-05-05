@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLabelDistance: -1
+  updateEveryNthFrame: 5
 --- !u!1 &3265439439249520361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,6 +1366,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2969384988200066483}
     m_Modifications:
+    - target: {fileID: 989309691621460989, guid: ca91199b324624e269e7ee016c18b2b3,
+        type: 3}
+      propertyPath: accelaration
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5979533320120663939, guid: ca91199b324624e269e7ee016c18b2b3,
         type: 3}
       propertyPath: m_Name
