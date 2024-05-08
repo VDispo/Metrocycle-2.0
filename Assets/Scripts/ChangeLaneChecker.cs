@@ -19,6 +19,7 @@ public class ChangeLaneChecker : MonoBehaviour
     private string errorText = "";
     private string blinkerName;
 
+    private float lastDetectTime;
 
     void Start(){
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
@@ -28,12 +29,25 @@ public class ChangeLaneChecker : MonoBehaviour
 
         bicycleAllowed_Set = new HashSet<GameObject>(bicycleAllowedInLanes);
         bicycleAllowed_Set.Add(bikeLane);
+        lastDetectTime = -1;
     }
 
     public void enteredLane(GameObject lane) {
         string lanePrefix = Metrocycle.Constants.laneNamePrefix;
         int lanePartStart = lane.name.LastIndexOf(lanePrefix) + lanePrefix.Length;
         int newLane = int.Parse(lane.name.Substring(lanePartStart));
+
+        // NOTE: Problem: last remembered lane is "sticky"
+        //  e.g. if we have two roads each with 2 lanes  ===(A) ====(B)
+        //       if bike leaves road A at lane 1, drives through road B and changes to lane 2
+        //       then in the perspective of road A, bike is still at lane 1
+        // HACK: we make roads "forget" the last lane when enough time has passed (Set to 2s)
+        //       assumption: current lane within road is updated regularly; this is true since
+        //       we have evenly spaced lane detects of small enough size within roads (assuming use of MTS_ER3D automated waypoints)
+        if (Time.time - lastDetectTime > 2) {
+            previousLane = -1;
+        }
+        lastDetectTime = Time.time;
 
         checkEnteredBusOrBikeLane(lane);
         checkBicycleEnteredForbiddenLane(lane);
