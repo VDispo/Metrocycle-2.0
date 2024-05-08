@@ -107,17 +107,17 @@ public class IntersectionChecker : MonoBehaviour
         string popupText = "";
 
         if (isEntry) {
-            if ((entryIdx % 4) >= 2) {
-                // Refer to legend, every 3rd or 4th Idx is in reverse direction
-                Debug.Log("Entered Wrong Way " + entryIdx);
-                type = PopupType.ERROR;
-                popupText = wrongWayText + " Entry";
-
-                // "Forgive" driver, set entryIdx to adjacent valid entry lane
-                // e.g. If they entered via Idx 2, correct to Idx 4
-                // e.g. wrong entry at Idx 14; correctedt to 14+2 = Idx 16 = Idx 0
-                entryIdx = (entryIdx+2) % laneDetects.Length;
-            } else {
+            // if ((entryIdx % 4) >= 2) {
+            //     // Refer to legend, every 3rd or 4th Idx is in reverse direction
+            //     Debug.Log("Entered Wrong Way " + entryIdx);
+            //     type = PopupType.ERROR;
+            //     popupText = wrongWayText + " Entry";
+            //
+            //     // "Forgive" driver, set entryIdx to adjacent valid entry lane
+            //     // e.g. If they entered via Idx 2, correct to Idx 4
+            //     // e.g. wrong entry at Idx 14; correctedt to 14+2 = Idx 16 = Idx 0
+            //     entryIdx = (entryIdx+2) % laneDetects.Length;
+            // } else {
                 if (greenLights != null) {
                     int trafficLightIdx = (int) (entryIdx / 2);
                     if (greenLights[trafficLightIdx] != null && !greenLights[trafficLightIdx].active) {
@@ -126,7 +126,7 @@ public class IntersectionChecker : MonoBehaviour
                         popupText = redLightText;
                     }
                 }
-            }
+            // }
         }
         else {
             // Normalize entryIdx to either Idx 0 or 1
