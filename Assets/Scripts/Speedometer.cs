@@ -16,8 +16,8 @@ public class Speedometer : MonoBehaviour {
     private float speedMax;
     private float speed;
 
-    private static float speedTotal;
-    private static int numSpeedSamples;
+    [SerializeField] private static float runningAvgSpeed;
+    [SerializeField] private static int numSpeedSamples;
 
     [SerializeField] private int updateEveryNthFrame = 5;
     private int frameCount;
@@ -29,15 +29,16 @@ public class Speedometer : MonoBehaviour {
 
         if (speedLabelDistance == -1) {
             speedLabelDistance = (speedLabelTemplateTransform.Find("speedText").transform.position
-                                - speedLabelTemplateTransform.Find("dashImage").transform.position).magnitude;
+            - speedLabelTemplateTransform.Find("dashImage").transform.position).magnitude;
         }
 
         digitalSpeedometerText = transform.Find("digital Speedometer").GetComponent<Text>();
 
         speed = 0f;
         speedMax = 120f;
-        speedTotal = 0f;
-        
+        runningAvgSpeed = 0f;
+        numSpeedSamples = 0;
+
         CreateSpeedLabels();
         frameCount = 0;
     }
@@ -48,12 +49,12 @@ public class Speedometer : MonoBehaviour {
 
         needleTranform.eulerAngles = new Vector3(0,0,GetSpeedRotation());
 
-        if (speed > 0.1f) {
-            speedTotal += speed;
-            ++numSpeedSamples;
-        }
-
         if (++frameCount == updateEveryNthFrame) {
+            if (speed > 1f) {
+                ++numSpeedSamples;
+                runningAvgSpeed = runningAvgSpeed*(numSpeedSamples-1) / numSpeedSamples + (speed / numSpeedSamples);
+            }
+
             // Update digital Speedometer display
             digitalSpeedometerText.text = Mathf.RoundToInt(speed) + "kph";
             // reset frameCount
@@ -78,7 +79,7 @@ public class Speedometer : MonoBehaviour {
             speedLabelTransform.gameObject.SetActive(true);
 
             speedText.transform.position = Vector3.MoveTowards(speedText.transform.position, needleTranform.position, speedLabelDistance);
-        }   
+        }
         needleTranform.SetAsLastSibling();
     }
 
@@ -92,6 +93,6 @@ public class Speedometer : MonoBehaviour {
 
     public static float GetAvgSpeed()
     {
-        return speedTotal / ((float) numSpeedSamples);
+        return runningAvgSpeed;
     }
 }
