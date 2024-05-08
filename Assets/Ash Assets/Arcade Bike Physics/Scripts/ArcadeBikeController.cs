@@ -132,7 +132,7 @@ namespace ArcadeBP
                     bool hasVerticalInput = Mathf.Abs(verticalInput) > 0.1f;
                     bool isPressingBackward = verticalInput < -0.1f && hasVerticalInput;
                     bool isBikeReversing = Vector3.Dot(carBody.transform.forward, carBody.velocity.normalized) < -0.1f
-                                            && carVelocity.magnitude > 1f;
+                                            && getSpeed() > 1f;
 
                     if (isPressingBackward && isBikeReversing) {
                         // Debug.Log("Slow Reverse");
