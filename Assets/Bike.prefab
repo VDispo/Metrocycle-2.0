@@ -519,7 +519,7 @@ MonoBehaviour:
   blinkerOffTime: 0
   lastActiveBlinker: 0
   maxUncancelledBlinkerTime: 5
-  minBlinkerTime: 3
+  minBlinkerTime: 2
   maxBlinkerOffTime: 3
 --- !u!1 &4918266890496185760
 GameObject:
