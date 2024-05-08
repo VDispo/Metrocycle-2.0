@@ -6,6 +6,8 @@ public class SpeedChecker : MonoBehaviour
 {
     public int speedLimit;
     public string popupText = null;
+
+    [SerializeField] PopupType popupType = PopupType.PROMPT;
     private float speed;
     private const float speedMax = 120f;
 
@@ -24,10 +26,14 @@ public class SpeedChecker : MonoBehaviour
         if (speed > speedLimit+speedLeeway){
             Debug.Log("Exceeded speed limit!");
             string text = (popupText ?? "") == "" ? "Make sure to keep an eye on your speedometer." : popupText;
-            GameManager.Instance.PopupSystem.popError(
+            GameManager.Instance.PopupSystem.popWithType(popupType,
                 $"You have exceeded the {speedLimit} kph speed limit!",
-                text
+                text,
+                true    // countAsError
             );
+
+            // HACK: Kill velocity so that driver won't be flagged for overspeeding again immediately on resume
+            GameManager.Instance.stopBike();
         }
     }
 }

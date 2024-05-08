@@ -257,6 +257,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Bike teleported to " + newTransform);
     }
 
+    public void stopBike()
+    {
+        bikeRB.velocity = new Vector3(0, 0, 0);
+    }
+
     public void setSaveState(CheckpointDetection detect)
     {
         saveStateDetect = detect.gameObject;
