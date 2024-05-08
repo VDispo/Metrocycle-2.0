@@ -57,7 +57,7 @@ MonoBehaviour:
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 0, g: 1, b: 0.0029821396, a: 1}
     - {r: 0.9039198, g: 0.9622642, b: 0.013616921, a: 1}
-    active: 01000000
+    active: 01010000
   allWaypointsSettings:
     showConnections: 1
     showOtherLanes: 0
