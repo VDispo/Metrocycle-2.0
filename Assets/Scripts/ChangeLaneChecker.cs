@@ -7,6 +7,7 @@ using TMPro;
 public class ChangeLaneChecker : MonoBehaviour
 {
     public GameObject bikeLane;
+    public GameObject busLane;
 
     [SerializeField]
     public GameObject[] bicycleAllowedInLanes;
@@ -34,7 +35,7 @@ public class ChangeLaneChecker : MonoBehaviour
         int lanePartStart = lane.name.LastIndexOf(lanePrefix) + lanePrefix.Length;
         int newLane = int.Parse(lane.name.Substring(lanePartStart));
 
-        checkEnteredBikeLane(lane);
+        checkEnteredBusOrBikeLane(lane);
         checkBicycleEnteredForbiddenLane(lane);
         checkBlinkerForLaneChange(newLane);
     }
@@ -65,16 +66,19 @@ public class ChangeLaneChecker : MonoBehaviour
         blinkerScript.blinkerActivationTime = Time.time;
     }
 
-    public void checkEnteredBikeLane(GameObject lane) {
+    public void checkEnteredBusOrBikeLane(GameObject lane) {
         if (GameManager.Instance.getBikeType() == Metrocycle.BikeType.Bicycle) {
             return;
         }
 
-        if (lane != bikeLane) {
+        if (lane == bikeLane) {
+            errorText = "Motorcycles are not allowed on the Bike Lane!";
+        } else if (lane == busLane) {
+            errorText = "Motorcycles are not allowed on the Bus Lane!";
+        } else {
             return;
         }
 
-        errorText = "Motorcycles are not allowed on the Bike Lane!";
         GameManager.Instance.PopupSystem.popError(
             "Uh oh!", errorText
         );
