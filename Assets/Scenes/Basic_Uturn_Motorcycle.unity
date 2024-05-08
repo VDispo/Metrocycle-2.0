@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21900,6 +21900,9 @@ MonoBehaviour:
   callback:
     m_PersistentCalls:
       m_Calls: []
+  loadStateCallback:
+    m_PersistentCalls:
+      m_Calls: []
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
@@ -27366,7 +27369,8 @@ PrefabInstance:
         type: 3}
       propertyPath: scenarioText
       value: "Make a left u-turn. \r\n\r\nRemember to stay in the leftmost lane and
-        slow done upon approaching the u-turn.\r\n"
+        slow done upon approaching the u-turn. Use your signals and perform a head
+        check before turning.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -41949,6 +41953,9 @@ MonoBehaviour:
   callback:
     m_PersistentCalls:
       m_Calls: []
+  loadStateCallback:
+    m_PersistentCalls:
+      m_Calls: []
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
@@ -49974,6 +49981,9 @@ MonoBehaviour:
   callback:
     m_PersistentCalls:
       m_Calls: []
+  loadStateCallback:
+    m_PersistentCalls:
+      m_Calls: []
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
@@ -51432,6 +51442,9 @@ MonoBehaviour:
   popupTitle: 
   popupText: 
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -57599,6 +57612,9 @@ MonoBehaviour:
   popupTitle: 
   popupText: 
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
@@ -68292,6 +68308,9 @@ MonoBehaviour:
   callback:
     m_PersistentCalls:
       m_Calls: []
+  loadStateCallback:
+    m_PersistentCalls:
+      m_Calls: []
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
@@ -78398,6 +78417,9 @@ MonoBehaviour:
   popupTitle: You missed the U-turn.
   popupText: Remember to gradually slow down when approaching a U-turn.
   callback:
+    m_PersistentCalls:
+      m_Calls: []
+  loadStateCallback:
     m_PersistentCalls:
       m_Calls: []
   triggerSignal:
