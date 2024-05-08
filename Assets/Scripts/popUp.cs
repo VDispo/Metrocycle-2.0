@@ -32,7 +32,7 @@ public class popUp : MonoBehaviour
     private Transform lastActiveSet = null;
     private Transform popUpBox;
 
-    delegate void PopDelegate(string header, string body);
+    delegate void PopDelegate(string header, string body, bool countAsError);
     void Awake()
     {
         popUpBox = popUpSystem.transform.Find("popUpBox");
@@ -76,7 +76,7 @@ public class popUp : MonoBehaviour
         }
     }
 
-    public void popWithType(PopupType type, string headerMessage, string bodyMessage)
+    public void popWithType(PopupType type, string headerMessage, string bodyMessage, bool countAsError=false)
     {
         switch(type) {
             case PopupType.PAUSE:
@@ -94,6 +94,7 @@ public class popUp : MonoBehaviour
                 break;
             case PopupType.ERROR:
                 popFunc = popError;
+                countAsError = true;
                 break;
             case PopupType.PROMPT:
                 popFunc = popPrompt;
@@ -104,14 +105,16 @@ public class popUp : MonoBehaviour
         }
 
         if (popFunc != null) {
-            popFunc(headerMessage, bodyMessage);
+            popFunc(headerMessage, bodyMessage, countAsError);
         } else {
 
         }
     }
 
-    public void popStart(string headerMessage, string bodyMessage)
+    public void popStart(string headerMessage, string bodyMessage, bool countAsError=false)
     {
+        // NOTE: countAsError parameter is ignored; only added to keep function signature of pop* functions consistent
+
         Transform startSet = popUpSystem.transform.Find("startSet");
 
         setHeaderText(startSet, headerMessage);
@@ -126,18 +129,24 @@ public class popUp : MonoBehaviour
         showPopup(pauseSet);
     }
 
-    public void popPrompt(string headerMessage, string bodyMessage)
+    public void popPrompt(string headerMessage, string bodyMessage, bool countAsError=false)
     {
         Transform promptSet = popUpSystem.transform.Find("promptSet");
 
         setHeaderText(promptSet, headerMessage);
         setBodyText(promptSet, bodyMessage);
 
+        if (countAsError) {
+            Stats.incrementErrors();
+        }
+
         showPopup(promptSet);
     }
 
-    public void popError(string headerMessage, string bodyMessage)
+    public void popError(string headerMessage, string bodyMessage, bool countAsError=true)
     {
+        // NOTE: countAsError parameter is ignored; only added to keep function signature of pop* functions consistent
+
         Transform errorSet = popUpSystem.transform.Find("errorSet");
 
         Stats.incrementErrors();
