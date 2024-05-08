@@ -54,10 +54,10 @@ MonoBehaviour:
   carRoutesSave:
     routesColor:
     - {r: 0.2784314, g: 0.2784314, b: 0.9607844, a: 1}
-    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
     - {r: 0, g: 1, b: 0.0029821396, a: 1}
     - {r: 0.9039198, g: 0.9622642, b: 0.013616921, a: 1}
-    active: 01010000
+    active: 00010000
   allWaypointsSettings:
     showConnections: 1
     showOtherLanes: 0
