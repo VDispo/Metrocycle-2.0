@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ApplyAfter: 0
   m_Tilt: 0
-  m_Pan: -140.79
+  m_Pan: -121.6
   m_Dutch: 0
   m_ZoomScale: 1
   m_FollowAttachment: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ApplyAfter: 0
   m_Tilt: 0
-  m_Pan: 140.79
+  m_Pan: 121.6
   m_Dutch: 0
   m_ZoomScale: 1
   m_FollowAttachment: 1
@@ -490,6 +490,7 @@ MonoBehaviour:
   right: {fileID: 1155043554112211233}
   left: {fileID: 8138568303991613292}
   headCheckSpeed: 0.5
+  maxHeadCheckDelay: 5
   leftCheckTime: 0
   rightCheckTime: 0
 --- !u!1 &4515003856583963539
