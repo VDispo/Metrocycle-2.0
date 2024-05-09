@@ -6,6 +6,7 @@ public class SpeedChecker : MonoBehaviour
 {
     public int speedLimit;
     public string popupText = null;
+    public string popupTitle = null;
 
     [SerializeField] PopupType popupType = PopupType.PROMPT;
     private float speed;
@@ -26,8 +27,9 @@ public class SpeedChecker : MonoBehaviour
         if (speed > speedLimit+speedLeeway){
             Debug.Log("Exceeded speed limit!");
             string text = (popupText ?? "") == "" ? "Make sure to keep an eye on your speedometer." : popupText;
+            string title = (popupTitle ?? "") == "" ? $"You have exceeded the {speedLimit} kph speed limit!" : popupTitle;
             GameManager.Instance.PopupSystem.popWithType(popupType,
-                $"You have exceeded the {speedLimit} kph speed limit!",
+                popupTitle,
                 text,
                 true    // countAsError
             );
