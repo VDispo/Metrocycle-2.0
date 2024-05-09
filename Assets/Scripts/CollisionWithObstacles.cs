@@ -27,14 +27,16 @@ public class CollisionWithObstacles : MonoBehaviour
         Debug.Log("Obstacle hit by Layer: " + other.gameObject.layer + other.gameObject.name);
 
         string otherDescription = "";
+        bool isVehicle = false;
         switch (otherLayer) {
-            case layer_AITraffic:   otherDescription = "another vehicle"; break;
+            case layer_AITraffic:   otherDescription = "another vehicle"; isVehicle = true; break;
             case layer_obstacles:   otherDescription = "the side of the road"; break;
             default:                break;
         }
 
         GameManager.Instance.PopupSystem.popWithType(popupType,
             "Uh oh!", "You collided with " + otherDescription + ". Remember to control your speed and direction."
+                + (isVehicle ? "When driving, maintain a minimum of 1 car length away from other vehicles." : "")
         );
     }
 }

@@ -88,7 +88,7 @@ public class ChangeLaneChecker : MonoBehaviour
         if (lane == bikeLane) {
             errorText = "Motorcycles are not allowed on the Bike Lane!";
         } else if (lane == busLane) {
-            errorText = "Motorcycles are not allowed on the Bus Lane!";
+            errorText = "The Bus lane is only for public utility buses (PUBs) and ambulances or goverment vehicles responding to emergencies.";
         } else {
             return;
         }
