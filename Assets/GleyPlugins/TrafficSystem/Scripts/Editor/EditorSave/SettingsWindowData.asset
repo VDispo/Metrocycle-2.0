@@ -60,7 +60,7 @@ MonoBehaviour:
     active: 00010000
   allWaypointsSettings:
     showConnections: 1
-    showOtherLanes: 0
+    showOtherLanes: 1
     showSpeed: 0
     showCars: 0
   disconnectedWaypointsSettings:
