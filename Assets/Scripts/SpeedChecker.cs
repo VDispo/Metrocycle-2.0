@@ -29,7 +29,7 @@ public class SpeedChecker : MonoBehaviour
             string text = (popupText ?? "") == "" ? "Make sure to keep an eye on your speedometer." : popupText;
             string title = (popupTitle ?? "") == "" ? $"You have exceeded the {speedLimit} kph speed limit!" : popupTitle;
             GameManager.Instance.PopupSystem.popWithType(popupType,
-                popupTitle,
+                title,
                 text,
                 true    // countAsError
             );
