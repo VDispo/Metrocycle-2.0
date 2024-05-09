@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -58761,9 +58761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your left blinker on. \n\nPress
-    Q to turn on your left blinker."
+  popupTitle: You forgot to signal!
+  popupText: You should already signal your intent to turn 25m away from the turn.
 --- !u!64 &1478587387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -81121,9 +81120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your right blinker on. \n\nPress
-    Q to turn on your left blinker."
+  popupTitle: You forgot to signal!
+  popupText: You should already signal your intent to turn 25m away from the turn.
 --- !u!64 &1928082040
 MeshCollider:
   m_ObjectHideFlags: 0
