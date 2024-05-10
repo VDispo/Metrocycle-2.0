@@ -102,17 +102,26 @@ public class GameManager : MonoBehaviour
     }
 
     public void pauseGame() {
-        getDashboard().SetActive(false);
+        setDashboardVisibility(false);
         Time.timeScale = 0;
     }
     public void resumeGame() {
-        getDashboard().SetActive(true);
+        setDashboardVisibility(true);
         Time.timeScale = 1;
     }
     public void restartGame() {
-        getDashboard().SetActive(true);
+        setDashboardVisibility(true);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void setDashboardVisibility(bool isVisible) {
+        GameObject dashboard = getDashboard();
+        // NOTE: hardcoded to prefab: Only first two children (Speedometer, Blinkers) are actually part of dashboard
+        //       Timer and Pause buttons are just part of UI (should not be hidden on prompt)
+        foreach (int i in new int[]{0, 1}) {
+            dashboard.transform.GetChild(i).gameObject.SetActive(isVisible);
+        }
     }
 
     public string blinkerName()
