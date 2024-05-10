@@ -15,10 +15,10 @@ MonoBehaviour:
   debug: 0
   debugSpeed: 0
   debugAI: 0
-  debugIntersections: 1
-  debugWaypoints: 1
-  debugDisabledWaypoints: 1
-  stopIntersectionUpdate: 1
-  drawBodyForces: 1
-  drawRaycasts: 1
-  debugDesnity: 1
+  debugIntersections: 0
+  debugWaypoints: 0
+  debugDisabledWaypoints: 0
+  stopIntersectionUpdate: 0
+  drawBodyForces: 0
+  drawRaycasts: 0
+  debugDesnity: 0
