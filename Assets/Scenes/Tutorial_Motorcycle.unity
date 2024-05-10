@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7983,7 +7983,7 @@ Transform:
   m_GameObject: {fileID: 423867876}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 56.750008, y: -46.239998, z: -20.130005}
+  m_LocalPosition: {x: 56.750008, y: -46.2, z: -20.130005}
   m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10972,7 +10972,7 @@ Transform:
   m_GameObject: {fileID: 603328820}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -123.39761, y: -46.145294, z: -163.80046}
+  m_LocalPosition: {x: -123.39761, y: -46.2, z: -163.80046}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11799,7 +11799,7 @@ Transform:
   m_GameObject: {fileID: 641743190}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 56.592384, y: -46.1, z: 168.2}
+  m_LocalPosition: {x: 56.592384, y: -46.2, z: 168.2}
   m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24911,7 +24911,7 @@ Transform:
   m_GameObject: {fileID: 866309660}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00054097374, y: -0.0000012934923, z: -0.0023910375, w: 0.9999971}
-  m_LocalPosition: {x: 56.540016, y: -46.18, z: 22.790009}
+  m_LocalPosition: {x: 56.540016, y: -46.2, z: 22.790009}
   m_LocalScale: {x: 1, y: 0.88218987, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29514,7 +29514,7 @@ Transform:
   m_GameObject: {fileID: 1121348445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -74.477615, y: -46.145294, z: -120.94046}
+  m_LocalPosition: {x: -74.477615, y: -46.2, z: -120.94046}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30708,7 +30708,7 @@ Transform:
   m_GameObject: {fileID: 1182756701}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -124.087616, y: -46.145294, z: -198.47046}
+  m_LocalPosition: {x: -124.087616, y: -46.2, z: -198.47046}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32611,7 +32611,7 @@ Transform:
   m_GameObject: {fileID: 1368907036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.81, y: -46.18, z: -34.1}
+  m_LocalPosition: {x: 56.81, y: -46.2, z: -34.1}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33076,7 +33076,7 @@ Transform:
   m_GameObject: {fileID: 1416701735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.622383, y: -46.145294, z: -121.460464}
+  m_LocalPosition: {x: 5.622383, y: -46.2, z: -121.460464}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280004}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35762,7 +35762,7 @@ Transform:
   m_GameObject: {fileID: 1560649921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.630013, y: -46.18, z: 12.6}
+  m_LocalPosition: {x: 56.630013, y: -46.2, z: 12.6}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35787,8 +35787,7 @@ MonoBehaviour:
     can''t see what''s in front of you.
 
 
-    To look forward on the road again,
-    don''t press the J or K button.'
+    Let go of J or K to look ahead.'
 --- !u!64 &1560649924
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36130,7 +36129,7 @@ Transform:
   m_GameObject: {fileID: 1580180290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.58001, y: -46.18, z: 63.3}
+  m_LocalPosition: {x: 56.58001, y: -46.2, z: 63.3}
   m_LocalScale: {x: 1, y: 0.8821899, z: 0.3828001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39068,7 +39067,7 @@ Transform:
   m_GameObject: {fileID: 1728133392}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0023210559, y: -0.000025177995, z: -0.01084698, w: 0.9999385}
-  m_LocalPosition: {x: 56.55001, y: -46.19, z: 77.55}
+  m_LocalPosition: {x: 56.55001, y: -46.2, z: 77.55}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.3828}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41284,7 +41283,7 @@ Transform:
   m_GameObject: {fileID: 1912685023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.94239, y: -46.145294, z: -61.400467}
+  m_LocalPosition: {x: 55.94239, y: -46.2, z: -61.400467}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46754,7 +46753,7 @@ Transform:
   m_GameObject: {fileID: 2143044054}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.57238, y: -45.8, z: 120.1}
+  m_LocalPosition: {x: 56.57238, y: -46.2, z: 120.1}
   m_LocalScale: {x: 1, y: 0.88219, z: 0.38280007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46779,8 +46778,7 @@ MonoBehaviour:
     can''t see what''s in front of you.
 
 
-    To look forward on the road again,
-    don''t press the J or K button.'
+    Let go of J or K to look ahead.'
 --- !u!64 &2143044057
 MeshCollider:
   m_ObjectHideFlags: 0
