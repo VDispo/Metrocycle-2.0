@@ -22,6 +22,7 @@ public class blinkers : MonoBehaviour
 
     public int leftStatus;
     public int rightStatus;
+    public int alphaOff;
 
     public float blinkerActivationTime;
     public float blinkerOffTime;
@@ -52,6 +53,7 @@ public class blinkers : MonoBehaviour
 
         left.alpha = 0.1f;
         right.alpha = 0.1f;
+        alphaOff = 0;
 
         prevRotation = new Vector3(0, 0, 0);
         turnAngle = 0f;
@@ -68,6 +70,7 @@ public class blinkers : MonoBehaviour
             // NOTE: in blinker prefab, motor left and right icons are first 2 children,
             //       bike left and right icons are third and 4th children
             leftIdx += 2;
+            alphaOff = 1;
         }
 
         for (int i = 0; i < blinkerGroup.transform.childCount; ++i) {
@@ -82,8 +85,8 @@ public class blinkers : MonoBehaviour
 
         left = blinkerLeft.GetComponent<CanvasGroup>();
         right = blinkerRight.GetComponent<CanvasGroup>();
-        left.alpha = 0.1f;
-        right.alpha = 0.1f;
+        left.alpha = (alphaOff == 0) ? 0.1f : 0f;
+        right.alpha = (alphaOff == 0) ? 0.1f : 0f;
 
         bikeType = newBikeType;
     }
@@ -99,7 +102,7 @@ public class blinkers : MonoBehaviour
             own_status = 1;
             own_alpha = 1f;
             other_status = 0;
-            other_alpha = 0.1f;
+            other_alpha = (alphaOff == 0) ? 0.1f : 0f;
 
             prevRotation = bike.transform.eulerAngles;
             turnAngle = 0f;
@@ -109,7 +112,7 @@ public class blinkers : MonoBehaviour
         }
         else {
             own_status = 0;
-            own_alpha = 0.1f;
+            own_alpha = (alphaOff == 0) ? 0.1f : 0f;
             other_status = 1;
             other_alpha = 1f;
             blinkerOffTime = Time.time;
