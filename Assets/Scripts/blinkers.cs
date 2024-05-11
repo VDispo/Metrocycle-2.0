@@ -39,13 +39,11 @@ public class blinkers : MonoBehaviour
     private double turnAngle;
     private float shouldCancelAtTime;
 
+    private Metrocycle.BikeType bikeType;
+
     void Start()
     {
-        GameObject blinkerLeft = blinkerGroup.transform.GetChild(0).gameObject;
-        GameObject blinkerRight = blinkerGroup.transform.GetChild(1).gameObject;
-
-        left = blinkerLeft.GetComponent<CanvasGroup>();
-        right = blinkerRight.GetComponent<CanvasGroup>();
+        setBikeType(Metrocycle.BikeType.Motorcycle);
 
         leftStatus = 0;
         rightStatus = 0;
@@ -62,6 +60,32 @@ public class blinkers : MonoBehaviour
         blinkerOffTime = -1;
 
         shouldCancelAtTime = -1;
+    }
+
+    public void setBikeType(Metrocycle.BikeType newBikeType) {
+        int leftIdx = 0;
+        if (newBikeType == Metrocycle.BikeType.Bicycle) {
+            // NOTE: in blinker prefab, motor left and right icons are first 2 children,
+            //       bike left and right icons are third and 4th children
+            leftIdx += 2;
+        }
+
+        for (int i = 0; i < blinkerGroup.transform.childCount; ++i) {
+            blinkerGroup.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        GameObject blinkerLeft = blinkerGroup.transform.GetChild(leftIdx).gameObject;
+        GameObject blinkerRight = blinkerGroup.transform.GetChild(leftIdx+1).gameObject;
+
+        blinkerLeft.SetActive(true);
+        blinkerRight.SetActive(true);
+
+        left = blinkerLeft.GetComponent<CanvasGroup>();
+        right = blinkerRight.GetComponent<CanvasGroup>();
+        left.alpha = 0.1f;
+        right.alpha = 0.1f;
+
+        bikeType = newBikeType;
     }
 
     void setBlinker(Direction which, BlinkerStatus status) {
@@ -228,6 +252,8 @@ public class blinkers : MonoBehaviour
 
         }
 
-        animateBlinker();
+        if (bikeType == Metrocycle.BikeType.Motorcycle) {
+            animateBlinker();
+        }
     }
 }

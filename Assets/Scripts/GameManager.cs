@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
         bikeRB = bike.GetComponent<Rigidbody>();
         bike.AddComponent<CollisionWithObstacles>();
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
+        blinkerScript.setBikeType(type);
 
         bike.SetActive(true);
         return bike;
