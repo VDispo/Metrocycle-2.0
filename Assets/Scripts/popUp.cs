@@ -52,6 +52,7 @@ public class popUp : MonoBehaviour
                 ) {
                     buttonScript.onClick.AddListener(() => {
                         closePopup(); GameManager.Instance.resumeGame();
+                        GameManager.Instance.setDashboardVisibility(true);
                     });
                 } else if (button.name.StartsWith("reset")) {
                     buttonScript.onClick.AddListener(() => {
@@ -120,6 +121,7 @@ public class popUp : MonoBehaviour
         setHeaderText(startSet, headerMessage);
         setBodyText(startSet, bodyMessage);
 
+        GameManager.Instance.setDashboardVisibility(false);
         showPopup(startSet);
     }
 
@@ -168,11 +170,14 @@ public class popUp : MonoBehaviour
         
         Stats.SetErrors(0);
 
+        GameManager.Instance.setDashboardVisibility(false);
         showPopup(finishSet);
     }
 
     public void showPopup(Transform set, bool pauseGame = true)
     {
+        hideAllPopups();
+
         set.gameObject.SetActive(true);
         lastActiveSet = set;
         popUpBox.gameObject.SetActive(true);
@@ -247,5 +252,12 @@ public class popUp : MonoBehaviour
 
         speedText.text = "Avg Speed: " + speed.ToString("F2") + " kph";
         errorsText.text = "Errors: " + errors.ToString();
+    }
+
+    void hideAllPopups()
+    {
+        for (int i = 0; i < transform.childCount; ++i) {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 }
