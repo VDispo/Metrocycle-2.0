@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 /* To use, attach this script to the "Bike" prefab instance
  */
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
     public HeadCheck HeadCheckScript = null;
 
     public GameObject bike;
+    public UnityEvent resetSignal;
+
     private Metrocycle.BikeType bikeType;
     private Rigidbody bikeRB;
 
@@ -292,6 +295,9 @@ public class GameManager : MonoBehaviour
         if (detect?.loadStateCallback != null) {
             detect.loadStateCallback.Invoke();
         }
+
+        // inform listeners we loaded save state so they should probably reset states (e.g. current lane, intersection entry)
+        resetSignal.Invoke();
 
         // Resume
         Time.timeScale = 1;

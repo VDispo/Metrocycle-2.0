@@ -56,6 +56,10 @@ public class IntersectionChecker : MonoBehaviour
 
     void Start() {
         entryIdx = -1;
+
+        GameManager.Instance.resetSignal.AddListener(() => {
+            entryIdx = -1;
+        });
     }
 
     int GetLaneDetectIndex(GameObject target) {
