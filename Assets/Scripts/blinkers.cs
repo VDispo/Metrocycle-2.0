@@ -41,10 +41,13 @@ public class blinkers : MonoBehaviour
     private float shouldCancelAtTime;
 
     private Metrocycle.BikeType bikeType;
+    bool isBikeTypeSet = false;
 
-    void Start()
+    void Awake()
     {
-        setBikeType(Metrocycle.BikeType.Motorcycle);
+        if (!isBikeTypeSet) {
+            setBikeType(Metrocycle.BikeType.Motorcycle);
+        }
 
         leftStatus = 0;
         rightStatus = 0;
@@ -89,6 +92,7 @@ public class blinkers : MonoBehaviour
         right.alpha = (alphaOff == 0) ? 0.1f : 0f;
 
         bikeType = newBikeType;
+        isBikeTypeSet = true;
     }
 
     void setBlinker(Direction which, BlinkerStatus status) {
