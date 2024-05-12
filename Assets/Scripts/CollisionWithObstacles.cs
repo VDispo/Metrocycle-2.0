@@ -30,7 +30,12 @@ public class CollisionWithObstacles : MonoBehaviour
         bool isVehicle = false;
         switch (otherLayer) {
             case layer_AITraffic:   otherDescription = "another vehicle"; isVehicle = true; break;
-            case layer_obstacles:   otherDescription = "the side of the road"; break;
+            case layer_obstacles:
+                string tag = other.gameObject.tag;
+                Debug.Log("TAG: " + tag);
+                if (tag == "Side Obstacle") otherDescription = "an obstacle on the side of the road";
+                else otherDescription = "the side of the road";
+                break;
             default:                break;
         }
 
