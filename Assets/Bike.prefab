@@ -693,6 +693,7 @@ MonoBehaviour:
   blinkDuration: 0.5
   leftStatus: 0
   rightStatus: 0
+  alphaOff: 0
   blinkerActivationTime: 0
   blinkerOffTime: 0
   lastActiveBlinker: 0
@@ -1241,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
