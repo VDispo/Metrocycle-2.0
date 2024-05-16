@@ -290,6 +290,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("LOADING SAVE " + detect);
         Time.timeScale = 0;
 
+        // Clear traffic in teleport location to prevent collision on spawn
+        // And also clear up jams near save points
+        // NOTE: radius of 100 is hardcoded for now
+        GleyTrafficSystem.Manager.ClearTrafficOnArea(saveStateDetect.transform.position, 100);
         GameManager.Instance.teleportBike(saveStateDetect.transform);
 
         if (detect?.loadStateCallback != null) {
