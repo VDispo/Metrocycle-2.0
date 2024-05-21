@@ -165,7 +165,9 @@ public class popUp : MonoBehaviour
 
         (float speed, float elapsedTime, int errors) = Stats.GetStats();
         string sceneName = SceneManager.GetActiveScene().name;
+        #if (!UNITY_EDITOR && UNITY_WEBGL)
         Stats.SaveStats(sceneName, speed, elapsedTime, errors);
+        #endif
 
         Transform finishSet = popUpSystem.transform.Find("finishSet");
 
