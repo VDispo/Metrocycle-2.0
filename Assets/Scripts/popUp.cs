@@ -164,10 +164,13 @@ public class popUp : MonoBehaviour
         Stats.SetTime();
 
         (float speed, float elapsedTime, int errors) = Stats.GetStats();
+        string sceneName = SceneManager.GetActiveScene().name;
+        Stats.SaveStats(sceneName, speed, elapsedTime, errors);
+
         Transform finishSet = popUpSystem.transform.Find("finishSet");
-        
+
         setFinishText(finishSet, speed, elapsedTime, errors);
-        
+
         Stats.SetErrors(0);
 
         GameManager.Instance.setDashboardVisibility(false);

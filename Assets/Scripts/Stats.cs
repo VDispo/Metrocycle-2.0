@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 public class Stats : MonoBehaviour
 {
+     [DllImport("__Internal")]
+     public static extern void SaveStats(string sceneName, float speed, float elapsedTime, int errors);
+
      void Awake() {
           string sceneName = SceneManager.GetActiveScene().name;
           if(PlayerPrefs.HasKey(sceneName+"_Errors")){
@@ -54,6 +58,7 @@ public class Stats : MonoBehaviour
           float elapsedTime = PlayerPrefs.GetFloat(sceneName+"_elapsedTime");
           int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
 
+          // Hello();
           return (speed, elapsedTime, errors);
      }
 }
