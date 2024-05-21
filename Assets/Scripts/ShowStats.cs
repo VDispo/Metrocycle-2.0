@@ -21,11 +21,16 @@ public class ShowStats : MonoBehaviour
 
         string motorStats = "";
         string bikeStats = "";
-        Debug.Log(SceneManager.sceneCount);
-        for (int i = 0; i < SceneManager.sceneCount; ++i) {
+        Debug.Log(SceneManager.sceneCountInBuildSettings);
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; ++i) {
             Debug.Log(i);
-            string sceneName = SceneManager.GetSceneAt(i).name;
-            string sceneName_i = sceneName.ToLower();
+            string sceneName = SceneUtility.GetScenePathByBuildIndex(i);
+            int nameStart = sceneName.LastIndexOf("/") + 1;
+            int nameEnd = sceneName.LastIndexOf(".unity");
+
+            Debug.Log(sceneName + " => " + sceneName.Substring(nameStart, (nameEnd-nameStart)));
+            sceneName = sceneName.Substring(nameStart, (nameEnd-nameStart));
+            string sceneName_i = sceneName?.ToLower() ?? "";
 
             string stats = "["
                 + new StringBuilder().Insert(0, "{\"AvgSpeed\": 1,\"ElapsedTime\": 2,\"Errors\": errors,}", 20).ToString()
@@ -37,7 +42,9 @@ public class ShowStats : MonoBehaviour
             string statsText = "\n" + sceneName + "\n";
             JSONNode statNodes = JSON.Parse(stats);
             foreach (JSONNode stat in statNodes) {
-                statsText += "\t" + String.Join("\n\t", Stats.formatStats(stat["AvgSpeed"], stat["ElapsedTime"], stat["Errors"])) + "\n\n";
+                string curStats = String.Join("\n\t", Stats.formatStats(stat["AvgSpeed"], stat["ElapsedTime"], stat["Errors"]));
+                statsText += $"\t{curStats}\n\n";
+                Debug.Log($"Stats for {sceneName}: {curStats}");
             }
 
             if (sceneName_i.EndsWith("motorcycle")) {

@@ -28,11 +28,12 @@ mergeInto(LibraryManager.library, {
     let curStats = JSON.parse(localStorage.getItem(scenename)) || [];
 
     // convert dates to unix timestamp for easier transport to C#
-    curStats.foreach( (stat, idx) => {
-        curStats[idx]["DateTime"] = curStats[idx]["DateTime"].getTime();
-    });
+    for (let idx = 0; idx < curStats.length; ++idx) {
+        curStats[idx]["DateTime"] = new Date(curStats[idx]["DateTime"]).getTime();
+    }
 
    let returnStr = JSON.stringify(curStats);
+   console.log("Stats for " + scenename + ": " + returnStr);
 
    let bufferSize = lengthBytesUTF8(returnStr) + 1;
    let buffer = _malloc(bufferSize);
