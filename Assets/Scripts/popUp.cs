@@ -247,16 +247,11 @@ public class popUp : MonoBehaviour
         GameObject errorsTextObject = set.Find("errors").gameObject;
         TextMeshProUGUI errorsText = errorsTextObject.GetComponent<TextMeshProUGUI>();
 
-        TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
-        if (time.Seconds.ToString().Length == 1){
-            timeText.text = "Time: " + time.Minutes.ToString() + ":0" + time.Seconds.ToString();
-        }
-        else{
-            timeText.text = "Time: " + time.Minutes.ToString() + ":" + time.Seconds.ToString();
-        }
+        string[] statTexts = Stats.formatStats(speed, elapsedTime, errors);
+        timeText.text = statTexts[0];
 
-        speedText.text = "Avg Speed: " + speed.ToString("F2") + " kph";
-        errorsText.text = "Errors: " + errors.ToString();
+        speedText.text = statTexts[1];
+        errorsText.text = statTexts[2];
     }
 
     void hideAllPopups()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -60,5 +61,22 @@ public class Stats : MonoBehaviour
 
           // Hello();
           return (speed, elapsedTime, errors);
+     }
+
+     public static string[] formatStats(float speed, float elapsedTime, int errors) {
+          string timeText;
+          TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
+          if (time.Seconds.ToString().Length == 1){
+               timeText = "Time: " + time.Minutes.ToString() + ":0" + time.Seconds.ToString();
+          }
+          else {
+               timeText = "Time: " + time.Minutes.ToString() + ":" + time.Seconds.ToString();
+          }
+
+          return new string[] {
+               timeText,
+               "Avg Speed: " + speed.ToString("F2") + " kph",
+               "Errors: " + errors.ToString()
+          };
      }
 }
