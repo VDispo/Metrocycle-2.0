@@ -11,6 +11,9 @@ public class Stats : MonoBehaviour
      [DllImport("__Internal")]
      public static extern void SaveStats(string sceneName, float speed, float elapsedTime, int errors);
 
+     [DllImport("__Internal")]
+     public static extern string GetStatsForScene(string sceneName);
+
      void Awake() {
           string sceneName = SceneManager.GetActiveScene().name;
           if(PlayerPrefs.HasKey(sceneName+"_Errors")){
