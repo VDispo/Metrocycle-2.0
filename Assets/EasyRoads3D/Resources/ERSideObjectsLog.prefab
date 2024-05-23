@@ -2427,7 +2427,7 @@ MonoBehaviour:
     showTrafficPosts: 0
   - roadTypeName: Simple 2-Lane
     id: 1708760731.257212
-    timestamp: 1713623869.59984
+    timestamp: 1716458341.799077
     roadWidth: 9
     totalLanes: 2
     laneWidth: 3.5
@@ -2516,6 +2516,22 @@ MonoBehaviour:
     soDataLog:
     - id: 1708761651.6665618
       active: 1
+    - id: 1713635518.78665
+      active: 0
+    - id: 1713635763.343755
+      active: 0
+    - id: 1713635941.8555639
+      active: 0
+    - id: 1713637109.783382
+      active: 0
+    - id: 1714070234.7084663
+      active: 0
+    - id: 1714072072.658111
+      active: 0
+    - id: 1714072924.7749438
+      active: 0
+    - id: 1714128740.03633
+      active: 0
     layer: 8
     isStatic: 1
     tag: Untagged
