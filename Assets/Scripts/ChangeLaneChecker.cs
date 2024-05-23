@@ -70,7 +70,14 @@ public class ChangeLaneChecker : MonoBehaviour
 
         // HACK: For now, lets assume that the lanes on a road are numbered
         //       increasing from 0, left to Right
+        //       left lanes have even values, right lanes have odd values
         Direction direction = (newLane > previousLane) ? Direction.RIGHT : Direction.LEFT;
+
+        // changed parity => moved from right lane to left lane
+        if (newLane % 2 != previousLane % 2) {
+            direction = Direction.LEFT;
+        }
+
         Debug.Log("Changed lane to the " + ((direction == Direction.LEFT) ? "Left" : "Right"));
 
         GameManager.Instance.checkProperTurnOrLaneChange(direction);
