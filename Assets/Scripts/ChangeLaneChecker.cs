@@ -11,7 +11,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
     [SerializeField]
     public GameObject[] bicycleAllowedInLanes;
-    private HashSet<GameObject> bicycleAllowed_Set;
+    private HashSet<GameObject> bicycleAllowed_Set = new HashSet<GameObject>();
 
     private blinkers blinkerScript;
 
@@ -27,7 +27,10 @@ public class ChangeLaneChecker : MonoBehaviour
         previousLane = -1;
         blinkerName = GameManager.Instance.blinkerName();
 
-        bicycleAllowed_Set = new HashSet<GameObject>(bicycleAllowedInLanes);
+        foreach (GameObject lane in bicycleAllowedInLanes) {
+            bicycleAllowed_Set.Add(lane);
+        }
+
         bicycleAllowed_Set.Add(bikeLane);
         lastDetectTime = -1;
     }
@@ -109,5 +112,9 @@ public class ChangeLaneChecker : MonoBehaviour
                 "Uh oh!", errorText
             );
         }
+    }
+
+    public void addBikeAllowedLane(GameObject lane) {
+        bicycleAllowed_Set.Add(lane);
     }
 }

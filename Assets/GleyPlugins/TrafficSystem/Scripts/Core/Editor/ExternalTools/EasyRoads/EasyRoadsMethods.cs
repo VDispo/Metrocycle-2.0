@@ -145,6 +145,7 @@ namespace GleyTrafficSystem
             }
 
             // For each road, Setup change lane detects
+            int idx = 0;
             foreach (GameObject road in roadHolders) {
                 Transform lanesHolder = road.transform.GetChild(0);
                 int numLanes = lanesHolder.childCount;
@@ -152,7 +153,8 @@ namespace GleyTrafficSystem
                 Road roadScript = road.GetComponent<Road>();
 
                 // Add ChangeLaneChecker
-                road.AddComponent<ChangeLaneChecker>();
+                ChangeLaneChecker chngLaneChk = road.AddComponent<ChangeLaneChecker>();
+                bool isBikeRoad = roads[idx++].IsBikeRoad();
 
                 const float LANESPACING = 0.5f;
                 const float BIKELENGTH = 3f;
@@ -171,6 +173,10 @@ namespace GleyTrafficSystem
                         adjacentLanes = new GameObject[] {lanesHolder.GetChild(i-1).gameObject};
                     } else {
                         adjacentLanes = new GameObject[] {lanesHolder.GetChild(i-1).gameObject, lanesHolder.GetChild(i+1).gameObject};
+                    }
+
+                    if (isBikeRoad) {
+                        chngLaneChk.addBikeAllowedLane(curLane.gameObject);
                     }
 
                     for (int j = 0; j < curLane.childCount; ++j) {
@@ -784,6 +790,30 @@ public static class ERRoadExtensions{
         int speedLimit = int.Parse(speedPart.Substring(speedPartStart+1));
 
         return speedLimit;
+    }
+
+    public static bool IsBikeRoad(this ERRoad road) {
+        const string KEYWORD = "allowbike";
+
+        foreach (string name in road.GetNamesWithConfig()) {
+            if (name.Contains(KEYWORD)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static bool IsReverse(this ERRoad road) {
+        const string KEYWORD = "reverse";
+
+        foreach (string name in road.GetNamesWithConfig()) {
+            if (name.Contains(KEYWORD)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // HACK: encode the speed limit (max) in the road name
