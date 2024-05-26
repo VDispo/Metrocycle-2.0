@@ -11,6 +11,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
     [SerializeField]
     public GameObject[] bicycleAllowedInLanes;
+    public bool isBikeRoad;     // if true, bikes are allowed in all lanes
     private HashSet<GameObject> bicycleAllowed_Set = new HashSet<GameObject>();
 
     private blinkers blinkerScript;
@@ -109,7 +110,9 @@ public class ChangeLaneChecker : MonoBehaviour
     }
 
     public void checkBicycleEnteredForbiddenLane(GameObject lane) {
-        if (GameManager.Instance.getBikeType() != Metrocycle.BikeType.Bicycle) {
+        if (GameManager.Instance.getBikeType() != Metrocycle.BikeType.Bicycle
+            || isBikeRoad
+        ) {
             return;
         }
 
