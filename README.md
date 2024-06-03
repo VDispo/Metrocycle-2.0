@@ -8,7 +8,7 @@ The `Assets` folder contains most of the files of interest for developing Metroc
 This folder contains the main assets which are present in (almost) all scenes.
 
 - The `Bike` prefab contains the Motorcycle/Bicycle models and scripts, as well as the dashboard elements (speedometer, blinker signals, timer, etc.). For the Motorcycle/Bicyle models, make sure that the parts you want to interact with obstacles/detects are in the `bikebody` layer, while the wheels (or anything that you want to interact with roads in the `drivable` layer) should be in the `wheels layer`. On the other hand if you find too detects/colliders being triggered too many times, first check if the detect's layer is set to the `DetectLayer` and then reduce the (sub)models under the `bikebody` layer.
-- The `CamerasWithHeadCheck` prefab contains 3 cameras for the 3 perspectives (normal, left head check, right head check)
+- The `CamerasWithHeadCheck` prefab contains 3 cameras for the 3 perspectives (normal, left head check, right head check). If you want to edit the angle of the head check, modify the camera offsets in this prefab.
 - The `popUp` prefab contains the different popup types and their corresponding button sets
 
 ### BikeAssets
@@ -33,6 +33,30 @@ Contains prefabs used by `IntersectionLaneDetects`.
 
 #### Materials
 Contains the materials used for the in-game detect indicating the current goal (green), error (red), or a check (yellow) we want to be explicitly seen, for example a yellow detect before turns to remind the player that they need to turn on their blinker
+
+
+
+## Scripts
+Contains the actual code for checkers, dashboard, etc.
+
+- `CheckpointDetection.cs` is the general script for colliders/detects interacting with the player. It should be attached to a collider in the `DetectLayer`. It allows callbacks (hardcoded in the editor or via script) to allow various actions (e.g. save checkpoint upon reaching target, detect if player went the wrong way or was not able to follow instruction, etc.).
+- `CollisionWithObstacles.cs` decides on what the collision popup should say based on the object the player collided with (e.g. other car, side of the road)
+- `ScenarioStart.cs` should be present in each scene a it is responsible for showing the very first popup message in the scene and setting the vehicle type. It should be applied to the `Assets/MainAssets/Bike` prefab to work properly.
+- `EventSequence.cs` handles the activation of checkers for the current challenge only while deactivating checkers for other challenges so that they don't get accidentally triggered. Note that it only works for a linear sequence of challenges. See `Assets/Scenes/Basic_Intersection_Motorcycle.unity`, particularly the `Event Detects` object for an example of how to use it, especially in conjunction with checkpoints
+- `blinker.cs` and `HeadCheck.cs` simply contain the mechanics for blinkers and head checks or blind spot checks, respectively. They do NOT contain checks, so you would only modify them if you want to change the control scheme for the blinker (e.g. change button or add on screen button controls), to change the speed of head checks, etc.
+- `Speedometer.cs` and `Timer.cs` control the Speedometer on the dashboard and the on-screen timer. `Speedometer.cs` also handles the calculation of the average speed.
+- `Stats.s` handles the storage of user stats across scene loads and game reloads, while `ShowStats.cs` handles the formatting of stats when they are presented to the user.
+- `BlinkerChecker.cs` and `HeadCheckDetect.cs` are only used in the Tutorial levels to explicitly check the correct usage of blinkers and headchecks, respectively. In all other scenarios, these checks are integrated with each other (since head checks and blinkers are required for lane changes/turns) and checked in `GameManager.cs` which also provides other convenience functions for interacting with the currently active bike, the dashboard elements, etc.
+- `popUp.cs` contains the code for activating the different types of popups. If you want to add other types of popups, you need to modify this in addition to `Assets/MainAssets/popUp.prefab`.
+
+### utility
+Contains vendored dependencies (SimpleJSON) and simple helper scripts
+
+### LaneChange
+Contains checker logic for lane changes, including checks for proper blinker use and head checks. Typically you shouldn't need to apply these manually (too time consuming) since `Assets/GleyPlugins/TrafficSystem/Scripts/Core/Editor/ExternalTools/EasyRoads/EasyRoadsMethods.cs` automatically sets these checkers up with the waypoints
+
+### Intersection
+Contains checker logic for intersections. This is used by the `IntersectionLaneDetects` and `TurnDetect` prefabs in the `Assets/MainAssets/Detects` folder, so you usually use those prefabs directly instead of manually applying these scripts.
 
 ## Main Menu
 Contains art assets for the game's Main Menu.
