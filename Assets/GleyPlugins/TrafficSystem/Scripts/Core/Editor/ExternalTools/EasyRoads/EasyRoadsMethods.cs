@@ -162,6 +162,7 @@ namespace GleyTrafficSystem
                 for (int i = 0; i < numLanes; ++i) {
                     Transform curLane = lanesHolder.GetChild(i);
                     lanes[i] = curLane.gameObject;
+                    curLane.tag = "Untagged";
 
                     GameObject[] adjacentLanes;
 
@@ -181,6 +182,8 @@ namespace GleyTrafficSystem
 
                     for (int j = 0; j < curLane.childCount; ++j) {
                         GameObject waypoint = curLane.GetChild(j).gameObject;
+                        waypoint.tag = "Untagged";
+
                         WaypointSettings waypointSettings = waypoint.GetComponent<WaypointSettings>();
 
                         // Add change lane detect script
