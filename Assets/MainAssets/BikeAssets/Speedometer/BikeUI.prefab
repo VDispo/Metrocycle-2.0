@@ -471,7 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea40dc4f59c8fb419fc9b168b6de9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bike: {fileID: 0}
+  speedLabelDistance: -1
+  updateEveryNthFrame: 5
 --- !u!1 &6168971125344745375
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +601,6 @@ GameObject:
   - component: {fileID: 9129140180573471429}
   - component: {fileID: 2555789665926320864}
   - component: {fileID: 82261869938638775}
-  - component: {fileID: 4342129930067045712}
   m_Layer: 5
   m_Name: BikeUI
   m_TagString: Untagged
@@ -692,16 +692,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4342129930067045712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342961299756740341}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e0ac09522204b83901bfd49c78af4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bike: {fileID: 0}
