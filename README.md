@@ -46,17 +46,17 @@ To minimize merge conlicts, try to ensure only one person is working on a single
 Contains third party assets, including the main Motorcycle and Bicycle assets, as well as extra models (e.g. buildings, human characters, road objects) which can be used in the future.
 
 ### Ash Assets
-Contains the models and code for the ![Ash Arcade Bike Physics](https://assetstore.unity.com/packages/tools/physics/arcade-bike-physics-224528) asset. This contains full source code, so you can modify the behavior of the Bicycle. See `git log --follow e6ed153ae064feee3e4ec827837818ba5c87c9d8..HEAD 'Assets/ThirdPartyAssets/Ash Assets/Arcade Bike Physics/Scripts/ArcadeBikeController.cs'` for examples of how we modified the script to limit the reverse speed.
+Contains the models and code for the [Ash Arcade Bike Physics](https://assetstore.unity.com/packages/tools/physics/arcade-bike-physics-224528) asset. This contains full source code, so you can modify the behavior of the Bicycle. See `git log --follow e6ed153ae064feee3e4ec827837818ba5c87c9d8..HEAD 'Assets/ThirdPartyAssets/Ash Assets/Arcade Bike Physics/Scripts/ArcadeBikeController.cs'` for examples of how we modified the script to limit the reverse speed.
 
 ### BycicleSystem (sic)
-Contains the models and code for the ![Simple Bicycle System](https://github.com/RayznGames/BicycleSystem/releases). See the `Assets/MainAssets/Bike` prefab for the list of modifications done to the model (mostly halfed scale size and adjusted (angular) accelaration)
+Contains the models and code for the [Simple Bicycle System](https://github.com/RayznGames/BicycleSystem/releases). See the `Assets/MainAssets/Bike` prefab for the list of modifications done to the model (mostly halfed scale size and adjusted (angular) accelaration)
 
 ### TrafficModels
 Contains the models used for road obstacles (mostly cars) and AI vehicles.
 
-The `AI Bike`, `AI Motorcycle 1`, etc. prefabs are basically modified versions of `Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/OriginalSmallSedan.prefab` with the model replaced and the wheels adjusted. To add more AI vehicles, follow this ![Gley MTS car tutorial](https://www.youtube.com/watch?v=moGHcd2Jaa4) and add the AI vehicle to the scene Traffic Script's Vehicle Pool. If your AI vehicle does not work properly, try removing all items in the `All Wheels` section of the `Vehicle Component` script then pressing `Configure Car`.
+The `AI Bike`, `AI Motorcycle 1`, etc. prefabs are basically modified versions of `Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/OriginalSmallSedan.prefab` with the model replaced and the wheels adjusted. To add more AI vehicles, follow this [Gley MTS car tutorial](https://www.youtube.com/watch?v=moGHcd2Jaa4) and add the AI vehicle to the scene Traffic Script's Vehicle Pool. If your AI vehicle does not work properly, try removing all items in the `All Wheels` section of the `Vehicle Component` script then pressing `Configure Car`.
 
-The `AI Bus` model is taken from ![FREE School bus - Low Poly by SophieJu on Sketchfab](https://sketchfab.com/3d-models/free-school-bus-low-poly-392a362ca6e6453f8c29ffbf3fc20608), while the the `Jeepney` model is taken from ![Jeepney by Maclin Macalindong on Sketchfab](https://sketchfab.com/3d-models/jeepney-0b8bcde5df19458da9fa5606989b1e7d).
+The `AI Bus` model is taken from [FREE School bus - Low Poly by SophieJu on Sketchfab](https://sketchfab.com/3d-models/free-school-bus-low-poly-392a362ca6e6453f8c29ffbf3fc20608), while the the `Jeepney` model is taken from [Jeepney by Maclin Macalindong on Sketchfab](https://sketchfab.com/3d-models/jeepney-0b8bcde5df19458da9fa5606989b1e7d).
 
 ### SyntyStudios / Down Town Pack
 Asset packs containing a lot of models and prefabs. For example, the buildings in `Assets/Scenes/Advanced_Fictional_Motorcycle.unity` terrain and the police officer and car models in `Assets/Scenes/Advanced_Commonwealth_Bicycle.unity` are taken from `SyntyStudios`.
@@ -70,9 +70,9 @@ Note that materials/textures prefixed with `X-` are simply the (horizontally) fl
 
 ## GleyPlugins
 **NOTE: Do not move this folder since the asset relies on absolute paths rooted on the Assets folder**
-Code for the ![Gley Mobile Trafic System](https://gleygames.com/traffic-system/) which is responsible for adding AI vehicles to the roads via integration with EasyRoads3D.
+Code for the [Gley Mobile Trafic System](https://gleygames.com/traffic-system/) which is responsible for adding AI vehicles to the roads via integration with EasyRoads3D.
 
-If your AI vehicles do not show up or do not move, try following the ![Gley MTS Tutorial](https://www.youtube.com/watch?v=203UgxPlfNo&list=PLKeb94eicHQtyL7nYgZ4De1htLs8lmz9C&index=2) fully, especially the Layer setup, and Grid Setup. In Metrocycle, roads should be in the `drivable` layer and AI vehicles should be in the `AI Traffic Layer`.
+If your AI vehicles do not show up or do not move, try following the [Gley MTS Tutorial](https://www.youtube.com/watch?v=203UgxPlfNo&list=PLKeb94eicHQtyL7nYgZ4De1htLs8lmz9C&index=2) fully, especially the Layer setup, and Grid Setup. In Metrocycle, roads should be in the `drivable` layer and AI vehicles should be in the `AI Traffic Layer`.
 
 This asset has full source available so you can actually how the other vehicles behave. Additionally, the waypoints (which guide the path of AI vehiclesS) produced by this asset cover all roads, so they have double purpose in Metrocycle where they also contain colliders and scripts for various checks (e.g. Speed limit, lane change).
 
@@ -80,12 +80,12 @@ The main script to be edited would probably be `Assets/GleyPlugins/TrafficSystem
 
 ## EasyRoads3D / EasyRoads3D scenes
 **NOTE: Do not move this folder since the asset relies on absolute paths rooted on the Assets folder**
-Contains the ![EasyRoads3D](https://www.easyroads3d.com/) asset, which is mostly binary (dll) and cannot be modified easily. `Assets/EasyRoads3D/Scripts/runtimeScript.cs` might be of interest as it contains a (commented out) list and example usage of ER3D methods for manipulating road objects, some of which are not present in the ![tutorial](https://www.easyroads3d.com/tutorials.php) nor the ![manual](https://www.easyroads3d.com/v3/manualv3.html).
+Contains the [EasyRoads3D](https://www.easyroads3d.com/) asset, which is mostly binary (dll) and cannot be modified easily. `Assets/EasyRoads3D/Scripts/runtimeScript.cs` might be of interest as it contains a (commented out) list and example usage of ER3D methods for manipulating road objects, some of which are not present in the [tutorial](https://www.easyroads3d.com/tutorials.php) nor the [manual](https://www.easyroads3d.com/v3/manualv3.html).
 
 ## Plugins
 Generally contains plugins for Unity, but in our case the important part is that it contains `jsfuncs.jslib` which holds the JavaScript functions for interacting with Web code in WebGL builds.
 
-Currently, Metrocycle uses ![Web localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store user stats. If you want to add more JavaScript code for interacting with the Web in the WebGL build, read the ![Interaction with browser scripting](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html) page of the Unity manual, particularly the ![setup](https://docs.unity3d.com/Manual/web-interacting-browser-js.html) and the ![cross-interaction between JS/Unity C# code](https://docs.unity3d.com/Manual/web-interacting-browser-js-to-unity.html).
+Currently, Metrocycle uses [Web localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store user stats. If you want to add more JavaScript code for interacting with the Web in the WebGL build, read the [Interaction with browser scripting](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html) page of the Unity manual, particularly the [setup](https://docs.unity3d.com/Manual/web-interacting-browser-js.html) and the [cross-interaction between JS/Unity C# code](https://docs.unity3d.com/Manual/web-interacting-browser-js-to-unity.html).
 
 
 ## CS198_Playground
