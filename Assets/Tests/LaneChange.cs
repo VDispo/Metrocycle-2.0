@@ -14,6 +14,9 @@ public class LaneChange
     private blinkers blinkerScript;
     private bool isSceneLoaded = false;
 
+    private GameObject AICar;
+    private GameObject obstacle;
+
     private static float minBlinkerTime = 1f;
     // NOTE: For now, the maxHeadCheckDelay is hardcoded (see value in scene) since it needs to be determined before the UnitySetup above
     // TODO:  maybe use a dynamic array for the ValueSource instead so that we can modify it in runtime?
@@ -37,6 +40,14 @@ public class LaneChange
         GameObject laneChangeObj = GameObject.Find("/ChangeLaneChecker");
         Debug.Log("CHECKING laneChangeObj");
         Assert.IsNotNull(laneChangeObj);
+
+        GameObject AICar = GameObject.Find("/AICar");
+        Debug.Log($"CHECKING AICar {AICar}");
+        Assert.IsNotNull(AICar);
+
+        GameObject obstacle = GameObject.Find("/Obstacle");
+        Debug.Log($"CHECKING obstacle {obstacle}");
+        Assert.IsNotNull(obstacle);
 
         laneChangeScript = laneChangeObj.GetComponent<ChangeLaneChecker>();
         Debug.Log("CHECKING laneChangeScript");
@@ -246,6 +257,37 @@ public class LaneChange
         } else {
             GameManager.Instance.HeadCheckScript.rightCheckTime = Time.time;
         }
+    }
+
+    [UnityTest]
+    public IEnumerator TestAIVehicleCollision()
+    {
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+
+        AICar = GameObject.Find("/AICar");
+        Debug.Log(AICar);
+        GameManager.Instance.teleportBike(AICar.transform);
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.COLLISION_AIVEHICLE, GameManager.Instance.getLastErrorReason());
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator TestObstacleCollision()
+    {
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        obstacle = GameObject.Find("/Obstacle");
+        Debug.Log(obstacle);
+        GameManager.Instance.teleportBike(obstacle.transform);
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.COLLISION_OBSTACLE, GameManager.Instance.getLastErrorReason());
+        yield return null;
     }
 
     [OneTimeTearDown]
