@@ -290,6 +290,36 @@ public class LaneChange
         yield return null;
     }
 
+    [UnityTest]
+    public IEnumerator TestBusLane()
+    {
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        laneChangeScript.busLane.gameObject.SetActive(true);
+        GameManager.Instance.teleportBike(laneChangeScript.busLane.transform.GetChild(0));
+
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.EXCLUSIVE_BUSLANE, GameManager.Instance.getLastErrorReason());
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator TestNonBikeLane()
+    {
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        lanesHolder.GetChild(1).gameObject.SetActive(true);
+        GameManager.Instance.teleportBike(lanesHolder.GetChild(1).GetChild(0));
+
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.BIKE_NOTALLOWED, GameManager.Instance.getLastErrorReason());
+        yield return null;
+    }
+
     [OneTimeTearDown]
     public void testsDone()
     {
