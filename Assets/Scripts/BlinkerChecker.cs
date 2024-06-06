@@ -20,6 +20,12 @@ public class BlinkerCheck : MonoBehaviour
             || (whichBlinker == Direction.LEFT && blinkerScript.leftStatus == 0)
         ) {
             GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
+
+            GameManager.setErrorReason(
+                whichBlinker == Direction.LEFT
+                    ? Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER
+                    : Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER
+            );
         }
 
         gameObject.SetActive(false);

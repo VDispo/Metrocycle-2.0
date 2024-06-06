@@ -21,6 +21,11 @@ namespace Metrocycle {
         RIGHTTURN_NO_BLINKER,
         LEFTTURN_NO_HEADCHECK,
         RIGHTTURN_NO_HEADCHECK,
+        SHORT_BLINKER_TIME, // turn/lane change performed immediately without waiting e.g. 2s for other vehicles to react
+        EXPIRED_HEADCHECK,  // Headcheck performed, but too much time has passed (e.g. last head check was 10s ago)
+        NO_HEADCHECK_AFTER_BLINKER,
+        WRONG_BLINKER,
+
 
         // Error codes for intersections
         INTERSECTION_REDLIGHT,
@@ -31,5 +36,18 @@ namespace Metrocycle {
         INTERSECTION_LEFTTURN_TO_OUTERLANE,
         INTERSECTION_LEFT_UTURN_TO_OUTERLANE,
         INTERSECTION_LEFT_UTURN_FROM_OUTERLANE,
+        LANECHANGE_NOTALLOWED,    // no lane change in solid line
+
+        // Error codes for collisions
+        COLLISION_AIVEHICLE,
+        COLLISION_OBSTACE,
+
+        // Error codes for forbidden lanes
+        EXCLUSIVE_BIKELANE,
+        EXCLUSIVE_BUSLANE,
+        BIKE_NOTALLOWED,
+
+        OVERSPEEDING,
+        UNCANCELLED_BLINKER,
     }
 }

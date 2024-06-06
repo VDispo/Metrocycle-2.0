@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject saveStateDetect = null;
 
+    // TODO: Maybe centralize all error messages in one location, just decide based on lastErrorReason?
+    //       This will make it easier to see ALL checks and make translation of error messages easier
     private Metrocycle.ErrorReason lastErrorReason = Metrocycle.ErrorReason.NOERROR;
 
     private void Awake()
@@ -187,6 +189,8 @@ public class GameManager : MonoBehaviour
         float turnDelay = turnTime - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
             const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
+            GameManager.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
+
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
             );
@@ -196,6 +200,8 @@ public class GameManager : MonoBehaviour
 
         if (headCheckTime < blinkerScript.blinkerActivationTime) {
             string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
+            GameManager.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
+
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
             );
@@ -230,14 +236,24 @@ public class GameManager : MonoBehaviour
         if (!isBlinkerOn) {
             if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
                 errorText = "You used the " + blinkerName + " for the opposite direction!";
+
+                GameManager.setErrorReason(Metrocycle.ErrorReason.WRONG_BLINKER);
             } else {
                 errorText = "You did not use your " + blinkerName + " before changing lanes or turning.";
+
+                GameManager.setErrorReason(
+                    direction == Direction.LEFT
+                    ? Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER
+                    : Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER
+                );
             }
 
             hasError = true;
         } else if (Time.time - blinkerScript.blinkerActivationTime < blinkerScript.minBlinkerTime) {
             errorText = "You did not give ample time for other road users to react to your " + blinkerName + ".\nIt is recommended to indicate your intent 5s before the action (e.g. lane change).";
             hasError = true;
+
+            GameManager.setErrorReason(Metrocycle.ErrorReason.SHORT_BLINKER_TIME);
         }
 
         if (hasError) {

@@ -257,6 +257,8 @@ public class blinkers : MonoBehaviour
                                 "Make sure to cancel your " + GameManager.Instance.blinkerName() + " after performing a turn.");
                         }
 
+                        GameManager.setErrorReason(Metrocycle.ErrorReason.UNCANCELLED_BLINKER);
+
                         shouldCancelAtTime = -1;
                     }
                 }

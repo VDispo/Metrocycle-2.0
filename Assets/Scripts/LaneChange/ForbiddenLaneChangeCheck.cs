@@ -19,6 +19,8 @@ public class ForbiddenLaneChangeCheck : MonoBehaviour
                 "You used the intersection incorrectly",
                 "You are not allowed to change lane anymore when the line is solid."
             );
+
+            GameManager.setErrorReason(Metrocycle.ErrorReason.LANECHANGE_NOTALLOWED);
         }
 
         hasCrossedLine = false;

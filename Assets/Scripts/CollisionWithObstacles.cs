@@ -29,14 +29,25 @@ public class CollisionWithObstacles : MonoBehaviour
         string otherDescription = "";
         bool isVehicle = false;
         switch (otherLayer) {
-            case layer_AITraffic:   otherDescription = "another vehicle"; isVehicle = true; break;
+            case layer_AITraffic:
+                otherDescription = "another vehicle";
+                isVehicle = true;
+
+                GameManager.setErrorReason(Metrocycle.ErrorReason.COLLISION_AIVEHICLE);
+                break;
             case layer_obstacles:
                 string tag = other.gameObject.tag;
                 Debug.Log("TAG: " + tag);
-                if (tag == "Side Obstacle") otherDescription = "an obstacle on the side of the road";
-                else otherDescription = "the side of the road";
+                if (tag == "Side Obstacle") {
+                    otherDescription = "an obstacle on the side of the road";
+                } else {
+                    otherDescription = "the side of the road";
+                }
+
+                GameManager.setErrorReason(Metrocycle.ErrorReason.COLLISION_OBSTACLE);
                 break;
-            default:                break;
+            default:
+                break;
         }
 
         GameManager.Instance.PopupSystem.popWithType(popupType,
