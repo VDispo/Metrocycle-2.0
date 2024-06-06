@@ -77,8 +77,13 @@ public class ChangeLaneChecker : MonoBehaviour
         }
 
         // HACK: For now, lets assume that the lanes on a road are numbered
-        //       increasing from 0, left to Right
+        //       increasing from 0, leftmost to rightmost
         //       left lanes have even values, right lanes have odd values
+        //       e.g. on a standard 4-lane, 2-way road
+        //        <<< 2 <<<
+        //        <<< 0 <<<
+        //        >>> 1 >>>
+        //        >>> 3 >>>
         Direction direction = (newLane > previousLane) ? Direction.RIGHT : Direction.LEFT;
 
         // changed parity => moved from right lane to left lane
