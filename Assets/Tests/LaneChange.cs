@@ -153,7 +153,7 @@ public class LaneChange
             doBlinker = true, blinkerTime = minBlinkerTime,
             doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
         };  // Proper lane change to the left
-        yield return new LaneChangeTestCase {from = 4, to = 5, expectedError = ErrorReason.NOERROR, dir = Direction.LEFT,
+        yield return new LaneChangeTestCase {from = 4, to = 5, expectedError = ErrorReason.NOERROR, dir = Direction.RIGHT,
             doBlinker = true, blinkerTime = minBlinkerTime,
             doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
         };   // Proper lane change to the right
@@ -358,6 +358,7 @@ public class LaneChange
         Assert.AreEqual(ErrorReason.NOERROR, GameManager.Instance.getLastErrorReason());
 
         laneChangeScript.isBikeRoad = false;
+        yield return new WaitForSeconds(0.1f);
         yield return null;
     }
 
