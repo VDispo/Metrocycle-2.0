@@ -185,6 +185,48 @@ public class Intersection
             doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
         };  // Proper right turn
 
+        // Next, test no blinker AND no headcheck
+        // NOTE: blinker is checked first, so we have no blinker errors
+        yield return new IntersectionTestCase {from = 0, to = 10, expectedError = ErrorReason.LEFTTURN_NO_BLINKER, dir = Direction.LEFT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };  // left turn
+        yield return new IntersectionTestCase {from = 0, to = 14, expectedError = ErrorReason.LEFTTURN_NO_BLINKER, dir = Direction.LEFT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };   // left U-turn
+        yield return new IntersectionTestCase {from = 1, to = 3, expectedError = ErrorReason.RIGHTTURN_NO_BLINKER, dir = Direction.RIGHT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };  // right turn
+
+        // Next, test with headcheck, NO blinker
+        yield return new IntersectionTestCase {from = 0, to = 10, expectedError = ErrorReason.LEFTTURN_NO_BLINKER, dir = Direction.LEFT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // left turn
+        yield return new IntersectionTestCase {from = 0, to = 14, expectedError = ErrorReason.LEFTTURN_NO_BLINKER, dir = Direction.LEFT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };   // left U-turn
+        yield return new IntersectionTestCase {from = 1, to = 3, expectedError = ErrorReason.RIGHTTURN_NO_BLINKER, dir = Direction.RIGHT,
+            doBlinker = false, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // right turn
+
+        // Next, test with blinker, NO headcheck
+        yield return new IntersectionTestCase {from = 0, to = 10, expectedError = ErrorReason.LEFTTURN_NO_HEADCHECK, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };  // left turn
+        yield return new IntersectionTestCase {from = 0, to = 14, expectedError = ErrorReason.LEFTTURN_NO_HEADCHECK, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };   // left U-turn
+        yield return new IntersectionTestCase {from = 1, to = 3, expectedError = ErrorReason.RIGHTTURN_NO_HEADCHECK, dir = Direction.RIGHT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = false, headCheckTime = maxHeadCheckDelay,
+        };  // right turn
     }
 
     public struct IntersectionTestCase
