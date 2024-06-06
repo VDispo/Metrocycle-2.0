@@ -320,6 +320,28 @@ public class LaneChange
         yield return null;
     }
 
+    // NOTE: almost exactly the same as TestNonBikeLane above, except we set isBikeRoad = true
+    //       hence, all non-bike lanes in this road should become (non-exclusive) bike lanes
+    [UnityTest]
+    public IEnumerator TestIsBikeRoad()
+    {
+        laneChangeScript.isBikeRoad = true;
+
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        GameManager.Instance.bike.SetActive(false);
+        GameManager.Instance.resetSignal.Invoke();
+        yield return new WaitForSeconds(0.1f);
+
+        lanesHolder.GetChild(1).gameObject.SetActive(true);
+        GameManager.Instance.teleportBike(lanesHolder.GetChild(1).GetChild(0));
+        GameManager.Instance.bike.SetActive(true);
+
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.NOERROR, GameManager.Instance.getLastErrorReason());
+        yield return null;
+    }
+
     [OneTimeTearDown]
     public void testsDone()
     {
