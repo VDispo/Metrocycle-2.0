@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
         float turnDelay = turnTime - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
             const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
-            GameManager.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
 
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
 
         if (headCheckTime < blinkerScript.blinkerActivationTime) {
             string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
-            GameManager.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
 
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
@@ -237,11 +237,11 @@ public class GameManager : MonoBehaviour
             if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
                 errorText = "You used the " + blinkerName + " for the opposite direction!";
 
-                GameManager.setErrorReason(Metrocycle.ErrorReason.WRONG_BLINKER);
+                GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.WRONG_BLINKER);
             } else {
                 errorText = "You did not use your " + blinkerName + " before changing lanes or turning.";
 
-                GameManager.setErrorReason(
+                GameManager.Instance.setErrorReason(
                     direction == Direction.LEFT
                     ? Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER
                     : Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER
@@ -253,7 +253,7 @@ public class GameManager : MonoBehaviour
             errorText = "You did not give ample time for other road users to react to your " + blinkerName + ".\nIt is recommended to indicate your intent 5s before the action (e.g. lane change).";
             hasError = true;
 
-            GameManager.setErrorReason(Metrocycle.ErrorReason.SHORT_BLINKER_TIME);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.SHORT_BLINKER_TIME);
         }
 
         if (hasError) {
@@ -329,13 +329,17 @@ public class GameManager : MonoBehaviour
         return saveStateDetect != null;
     }
 
-    public void getLastErrorReason(Metrocycle.ErrorReason er)
+    public Metrocycle.ErrorReason getLastErrorReason(Metrocycle.ErrorReason er)
     {
         return lastErrorReason;
     }
     public void setErrorReason(Metrocycle.ErrorReason er)
     {
         lastErrorReason = er;
+    }
+    public void resetErrorReason()
+    {
+        lastErrorReason = Metrocycle.ErrorReason.NOERROR;
     }
 
     void Update() {

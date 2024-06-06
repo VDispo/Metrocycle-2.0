@@ -16,7 +16,7 @@ public class HeadCheckDetect : MonoBehaviour
         if (!isValid) {
             GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
 
-            GameManager.setErrorReason(
+            GameManager.Instance.setErrorReason(
                 direction == Direction.LEFT
                 ? Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK
                 : Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK

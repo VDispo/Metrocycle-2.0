@@ -33,7 +33,7 @@ public class CollisionWithObstacles : MonoBehaviour
                 otherDescription = "another vehicle";
                 isVehicle = true;
 
-                GameManager.setErrorReason(Metrocycle.ErrorReason.COLLISION_AIVEHICLE);
+                GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.COLLISION_AIVEHICLE);
                 break;
             case layer_obstacles:
                 string tag = other.gameObject.tag;
@@ -44,7 +44,7 @@ public class CollisionWithObstacles : MonoBehaviour
                     otherDescription = "the side of the road";
                 }
 
-                GameManager.setErrorReason(Metrocycle.ErrorReason.COLLISION_OBSTACLE);
+                GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.COLLISION_OBSTACLE);
                 break;
             default:
                 break;

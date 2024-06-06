@@ -21,7 +21,7 @@ public class BlinkerCheck : MonoBehaviour
         ) {
             GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
 
-            GameManager.setErrorReason(
+            GameManager.Instance.setErrorReason(
                 whichBlinker == Direction.LEFT
                     ? Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER
                     : Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER

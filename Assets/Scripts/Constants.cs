@@ -40,7 +40,7 @@ namespace Metrocycle {
 
         // Error codes for collisions
         COLLISION_AIVEHICLE,
-        COLLISION_OBSTACE,
+        COLLISION_OBSTACLE,
 
         // Error codes for forbidden lanes
         EXCLUSIVE_BIKELANE,

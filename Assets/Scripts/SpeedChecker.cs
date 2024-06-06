@@ -34,7 +34,7 @@ public class SpeedChecker : MonoBehaviour
                 true    // countAsError
             );
 
-            GameManager.setErrorReason(Metrocycle.ErrorReason.OVERSPEEDING);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.OVERSPEEDING);
 
             // HACK: Kill velocity so that driver won't be flagged for overspeeding again immediately on resume
             GameManager.Instance.stopBike();

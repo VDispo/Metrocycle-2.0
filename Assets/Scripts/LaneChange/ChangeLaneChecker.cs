@@ -99,11 +99,11 @@ public class ChangeLaneChecker : MonoBehaviour
         if (lane == bikeLane) {
             errorText = "Motorcycles are not allowed on the Bike Lane!";
 
-            GameManager.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BIKELANE);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BIKELANE);
         } else if (lane == busLane) {
             errorText = "The Bus lane is only for public utility buses (PUBs) and ambulances or goverment vehicles responding to emergencies.";
 
-            GameManager.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BUSLANE);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BUSLANE);
         } else {
             return;
         }
@@ -126,7 +126,7 @@ public class ChangeLaneChecker : MonoBehaviour
                 "Uh oh!", errorText
             );
 
-            GameManager.setErrorReason(Metrocycle.ErrorReason.BIKE_NOTALLOWED);
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.BIKE_NOTALLOWED);
         }
     }
 
