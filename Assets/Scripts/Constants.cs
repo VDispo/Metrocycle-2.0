@@ -6,6 +6,7 @@ namespace Metrocycle {
     public static class Constants
     {
         public const string laneNamePrefix = "Lane_";
+        public const float ASSUME_HEADCHECK = -100f;
     }
 
     public enum BikeType {

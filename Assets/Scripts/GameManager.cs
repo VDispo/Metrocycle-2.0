@@ -167,8 +167,9 @@ public class GameManager : MonoBehaviour
         return isValid;
     }
 
-    public bool verifyHeadCheck(Direction direction, float turnTime=-1f) {
-        if (Mathf.Abs(turnTime - (-1f)) < 0.1f) {
+    public bool verifyHeadCheck(Direction direction, float turnTime=Metrocycle.Constants.ASSUME_HEADCHECK) {
+        if (Mathf.Abs(turnTime - (Metrocycle.Constants.ASSUME_HEADCHECK)) < 0.1f) {
+            Debug.Log("ASSUMING Head check was done. Set time to now so that checks succeed.");
             turnTime = Time.time;
         }
 
@@ -185,7 +186,7 @@ public class GameManager : MonoBehaviour
         }
 
         bool isDuringHeadCheck = isDoingHeadCheck(direction);
-        Debug.Log("Check" + HeadCheckScript.leftCheckTime + " " + HeadCheckScript.rightCheckTime  + " " + turnTime + " " + isDuringHeadCheck);
+        Debug.Log("Check " + HeadCheckScript.leftCheckTime + " " + HeadCheckScript.rightCheckTime  + " " + turnTime + $" CurTime: {Time.time}" + isDuringHeadCheck);
 
         if (isDuringHeadCheck) {
             return true;
@@ -194,7 +195,18 @@ public class GameManager : MonoBehaviour
         float turnDelay = turnTime - headCheckTime;
         if (turnDelay > HeadCheckScript.maxHeadCheckDelay) {
             const string errorText = "Make sure to perform a head check right before changing lanes or turning.";
-            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
+
+            if (turnDelay > 3*HeadCheckScript.maxHeadCheckDelay || headCheckTime == -1) {
+                // last headcheck was very long ago, driver probably forget to do head check at all
+                GameManager.Instance.setErrorReason(
+                    direction == Direction.LEFT
+                    ? Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK
+                    : Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK
+                );
+            } else {
+                // last headcheck reasonably "recent", but not recent enough to be valid
+                GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
+            }
 
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
@@ -218,7 +230,7 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    public void checkProperTurnOrLaneChange(Direction direction, float headCheckRefTime=-1f, bool requireHeadCheck=true) {
+    public void checkProperTurnOrLaneChange(Direction direction, float headCheckRefTime=Metrocycle.Constants.ASSUME_HEADCHECK, bool requireHeadCheck=true) {
         // NOTE: headCheckRefTime if the time when head check should have been checked
         // e.g.  when performing a U-turn, checkProperTurnOrLaneChange can only be
         //       called AFTER the U-turn is complete (i.e. at exit instead of at entry)
@@ -229,7 +241,8 @@ public class GameManager : MonoBehaviour
 
         // HACK: only true when leftStatus == rightStatus == 0
         if (blinkerScript.leftStatus + blinkerScript.rightStatus == 0
-            && Time.time - blinkerScript.blinkerOffTime <= blinkerScript.maxBlinkerOffTime)
+            && Time.time - blinkerScript.blinkerOffTime <= blinkerScript.maxBlinkerOffTime
+            && blinkerScript.blinkerOffTime != -1)
         {
             // blinker currently not on, but was on a few moments ago
             isBlinkerOn = direction == blinkerScript.lastActiveBlinker;
