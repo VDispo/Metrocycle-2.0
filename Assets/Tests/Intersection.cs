@@ -30,7 +30,6 @@ public class Intersection
 
         SceneManager.LoadScene("Test_Intersection");
 
-
         yield return new WaitForSeconds(0.5f);
         isSceneLoaded = true;
 
@@ -62,7 +61,7 @@ public class Intersection
 
         // Some time-based timers don't work if current clock (Time.time) is near 0, so wait for a few seconds
         yield return new WaitForSeconds(minBlinkerTime + maxHeadCheckDelay + leewayTime);
-}
+    }
 
     [UnityTest]
     public IEnumerator TestIntersectionChecks([ValueSource(nameof(IntersectionTestCases))] IntersectionTestCase tc)
@@ -94,6 +93,68 @@ public class Intersection
         greenLight.SetActive(false);
         yield return GenericIntersectionTest(tc);
         greenLight.SetActive(true);
+    }
+
+    private static IEnumerable NoLaneChangeLineTestCases()
+    {
+        // NOTE: intersection.childCount = 8 (4 directions * 2 for northbound and southbound)
+        for (int i=0; i < 8; i += 2) {
+            yield return i;
+        }
+    }
+
+    [UnityTest]
+    public IEnumerator TestNoLaneChangeLine([ValueSource(nameof(NoLaneChangeLineTestCases))] int detectPairIdx)
+    {
+        Transform detectPair = intersection.transform.GetChild(detectPairIdx);
+        Debug.Log("Checking detectPair");
+        Assert.IsNotNull(detectPair);
+
+        // NoLaneChaneLine prefab is 2nd child
+        Transform solidLine = detectPair.GetChild(2-1);
+        Debug.Log("Checking solidLine");
+        Assert.IsNotNull(solidLine);
+
+        Transform leftLane = solidLine.GetChild(0).GetChild(0).GetChild(0);
+        Debug.Log("Checking leftLane");
+        Assert.IsNotNull(leftLane);
+        Transform rightLane = solidLine.GetChild(0).GetChild(1).GetChild(0);
+        Debug.Log("Checking rightLane");
+        Assert.IsNotNull(rightLane);
+
+        float dist = Vector3.Distance(leftLane.position, rightLane.position);
+
+        // Test 1: slowly move towards right lane, passing over line
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        GameManager.Instance.resetSignal.Invoke();
+
+        GameManager.Instance.teleportBike(leftLane);
+        for (int i=1; i <= 20; ++i) {
+            GameManager.Instance.bike.SetActive(false);
+            GameManager.Instance.bike.transform.position = Vector3.MoveTowards(GameManager.Instance.bike.transform.position, rightLane.position, dist / 20f);
+            yield return new WaitForSeconds(0.1f);
+            GameManager.Instance.bike.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+        }
+        Assert.AreEqual(ErrorReason.LANECHANGE_NOTALLOWED, GameManager.Instance.getLastErrorReason());
+
+        // Test 2: from right lane to left lane
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        GameManager.Instance.resetSignal.Invoke();
+
+        GameManager.Instance.teleportBike(rightLane);
+        for (int i=1; i <= 20; ++i) {
+            GameManager.Instance.bike.SetActive(false);
+            GameManager.Instance.bike.transform.position = Vector3.MoveTowards(GameManager.Instance.bike.transform.position, leftLane.position, dist / 20f);
+            yield return new WaitForSeconds(0.1f);
+            GameManager.Instance.bike.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+        }
+        Assert.AreEqual(ErrorReason.LANECHANGE_NOTALLOWED, GameManager.Instance.getLastErrorReason());
+
+        yield return null;
     }
 
     private IEnumerator GenericIntersectionTest(IntersectionTestCase tc,

@@ -27,6 +27,7 @@ public class ForbiddenLaneChangeCheck : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider other) {
+        Debug.Log($"Solid line crossed {other}");
         hasCrossedLine = true;
     }
 }
