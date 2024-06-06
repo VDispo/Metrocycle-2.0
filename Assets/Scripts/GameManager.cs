@@ -186,10 +186,21 @@ public class GameManager : MonoBehaviour
         }
 
         bool isDuringHeadCheck = isDoingHeadCheck(direction);
-        Debug.Log("Check " + HeadCheckScript.leftCheckTime + " " + HeadCheckScript.rightCheckTime  + " " + turnTime + $" CurTime: {Time.time}" + isDuringHeadCheck);
+        Debug.Log($"HEAD Check {isDuringHeadCheck}" + HeadCheckScript.leftCheckTime + " " + HeadCheckScript.rightCheckTime  + $" {headCheckTime} TURN" + turnTime + $" CurTime: {Time.time} blinker {blinkerScript.blinkerActivationTime}");
 
         if (isDuringHeadCheck) {
             return true;
+        }
+
+        if (headCheckTime < blinkerScript.blinkerActivationTime) {
+            string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
+
+            GameManager.Instance.PopupSystem.popError(
+                "Uh oh!", errorText
+            );
+
+            return false;
         }
 
         float turnDelay = turnTime - headCheckTime;
@@ -207,17 +218,6 @@ public class GameManager : MonoBehaviour
                 // last headcheck reasonably "recent", but not recent enough to be valid
                 GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
             }
-
-            GameManager.Instance.PopupSystem.popError(
-                "Uh oh!", errorText
-            );
-
-            return false;
-        }
-
-        if (headCheckTime < blinkerScript.blinkerActivationTime) {
-            string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
-            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
 
             GameManager.Instance.PopupSystem.popError(
                 "Uh oh!", errorText
