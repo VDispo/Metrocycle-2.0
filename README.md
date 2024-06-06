@@ -115,7 +115,7 @@ Currently, Metrocycle uses [Web localstorage](https://developer.mozilla.org/en-U
 Contains the automated tests. In addition to checking for regressions and making future refactors easier, the test cases can also be used as guides to the checks being implemented.
 
 
-To run the tests, Go to `Window > General > Test Runner` and select all the test you want to run then press `Run Selected`.
+To run the tests, Go to `Window > General > Test Runner` and click on the `PlayMode` tab. Select all the test you want to run then press `Run Selected`.
 
 
 For more info on how to write additional test cases, you can visit
