@@ -192,7 +192,8 @@ public class GameManager : MonoBehaviour
             return true;
         }
 
-        if (headCheckTime < blinkerScript.blinkerActivationTime) {
+
+        if (headCheckTime != -1 && headCheckTime < blinkerScript.blinkerActivationTime) {
             string errorText = "Make sure to perform a head check even after you use your " + GameManager.Instance.blinkerName();
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
 
