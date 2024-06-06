@@ -12,6 +12,7 @@ public class Intersection
     private GameObject intersection;
     private IntersectionChecker intersectionScript;
     private blinkers blinkerScript;
+    private GameObject greenLight;
     private bool isSceneLoaded = false;
 
     private static float minBlinkerTime = 1f;
@@ -47,6 +48,10 @@ public class Intersection
         Debug.Log("CHECKING blinkerScript");
         Assert.IsNotNull(blinkerScript);
 
+        greenLight = GameObject.Find("/GreenLightOn");
+        Debug.Log("CHECKING greenLight");
+        Assert.IsNotNull(greenLight);
+
         // NOTE: For now, the blinker time is hardcoded (see value in scene) since it needs to be determined before the UnitySetup above
         // TODO:  maybe use a dynamic array for the ValueSource instead so that we can modify it in runtime?
         // minBlinkerTime = blinkerScript.minBlinkerTime + leewayTime;
@@ -77,12 +82,26 @@ public class Intersection
         yield return GenericIntersectionTest(tc, true, true);
     }
 
+    private static IEnumerable RedLightTestCases()
+    {
+        yield return new IntersectionTestCase {from = 0, to = 6, expectedError = ErrorReason.INTERSECTION_REDLIGHT};
+        yield return new IntersectionTestCase {from = 1, to = 7, expectedError = ErrorReason.INTERSECTION_REDLIGHT};
+    }
+
+    [UnityTest]
+    public IEnumerator TestRedLight([ValueSource(nameof(RedLightTestCases))] IntersectionTestCase tc)
+    {
+        greenLight.SetActive(false);
+        yield return GenericIntersectionTest(tc);
+        greenLight.SetActive(true);
+    }
+
     private IEnumerator GenericIntersectionTest(IntersectionTestCase tc,
                                                 bool needHeadCheckAndBlinkers=false,
                                                 bool doAHeadCheckBeforeBlinker=false)
     {
-        // NOTE: Intersection can be "rotated" by adding 2 to index (see IntersectionChecker.cs), so test all combinations
-        for (int i = 0; i < intersectionScript.laneDetects.Length; i += 2) {
+        // NOTE: Intersection can be "rotated" by adding 4 to index (see IntersectionChecker.cs), so test all combinations
+        for (int i = 0; i < intersectionScript.laneDetects.Length; i += 4) {
             tc.from = (tc.from+i) % intersectionScript.laneDetects.Length;
             tc.to = (tc.to+i) % intersectionScript.laneDetects.Length;
 
