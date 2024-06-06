@@ -59,6 +59,7 @@ public class IntersectionChecker : MonoBehaviour
 
         GameManager.Instance.resetSignal.AddListener(() => {
             entryIdx = -1;
+            headCheckRefTime = -1;
         });
     }
 
@@ -140,11 +141,13 @@ public class IntersectionChecker : MonoBehaviour
 
             // Check blinker/head check for right turn
             if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
+                Debug.Log("Checking Proper RIGHT Turn");
                 GameManager.Instance.checkProperTurnOrLaneChange(Direction.RIGHT, headCheckRefTime);
             }
             // Check blinker/head check for left turn/u-turn
             if (bad_RightLaneLeftTurnIdx.Contains(idx)
                 || bad_RightLaneUTurnIdx.Contains(idx)) {
+                Debug.Log("Checking Proper LEFT Turn");
                 GameManager.Instance.checkProperTurnOrLaneChange(Direction.LEFT, headCheckRefTime);
             }
 

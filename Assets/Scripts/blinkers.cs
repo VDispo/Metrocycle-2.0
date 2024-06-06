@@ -69,6 +69,10 @@ public class blinkers : MonoBehaviour
         GameManager.Instance.resetSignal.AddListener(() => {
             setBlinker(Direction.LEFT, BlinkerStatus.OFF);
             setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
+
+            blinkerActivationTime = -1;
+            blinkerOffTime = -1;
+            turnAngle = -1;
         });
     }
 
@@ -124,7 +128,10 @@ public class blinkers : MonoBehaviour
             own_alpha = (alphaOff == 0) ? 0.1f : 0f;
             other_status = 1;
             other_alpha = 1f;
-            blinkerOffTime = Time.time;
+
+            if (leftStatus == 1 || rightStatus == 1) {
+                blinkerOffTime = Time.time;
+            }
         }
 
         shouldCancelAtTime = -1;

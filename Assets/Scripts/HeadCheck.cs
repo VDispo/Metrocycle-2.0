@@ -30,6 +30,14 @@ public class HeadCheck : MonoBehaviour
 
         leftCheckTime = -1;
         rightCheckTime = -1;
+
+        GameManager.Instance.resetSignal.AddListener(() => {
+            resetPriorities();
+
+            leftCheckTime = -1;
+            rightCheckTime = -1;
+            lastView = normal;
+       });
     }
 
     void resetPriorities()
