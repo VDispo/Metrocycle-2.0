@@ -53,7 +53,7 @@ public class ChangeLaneChecker : MonoBehaviour
         // HACK: we make roads "forget" the last lane when enough time has passed (Set to 2s)
         //       assumption: current lane within road is updated regularly; this is true since
         //       we have evenly spaced lane detects of small enough size within roads (assuming use of MTS_ER3D automated waypoints)
-
+        // TODO: use a more robust solution. E.g. every road tracks/listens on where the bike currently is. If the bike is outside this road, this road then forgets the previousLane
         if (lastDetectTime != -1 && Time.time - lastDetectTime > 10) {
             previousLane = -1;
         }
