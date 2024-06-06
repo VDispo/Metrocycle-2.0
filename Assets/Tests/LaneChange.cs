@@ -308,15 +308,24 @@ public class LaneChange
     [UnityTest]
     public IEnumerator TestNonBikeLane()
     {
+        laneChangeScript.isBikeRoad = false;
+
         GameManager.Instance.resetErrorReason();
         GameManager.Instance.PopupSystem.closePopup();
+        GameManager.Instance.bike.SetActive(false);
+        GameManager.Instance.resetSignal.Invoke();
         yield return new WaitForSeconds(0.1f);
 
-        lanesHolder.GetChild(1).gameObject.SetActive(true);
-        GameManager.Instance.teleportBike(lanesHolder.GetChild(1).GetChild(0));
+        GameManager.Instance.teleportBike(lanesHolder.GetChild(2).GetChild(0));
+        yield return new WaitForSeconds(0.1f);
+        lanesHolder.GetChild(2).gameObject.SetActive(true);
+        GameManager.Instance.bike.SetActive(true);
 
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(ErrorReason.BIKE_NOTALLOWED, GameManager.Instance.getLastErrorReason());
+
+        laneChangeScript.isBikeRoad = false;
+        yield return new WaitForSeconds(0.1f);
         yield return null;
     }
 
@@ -334,6 +343,9 @@ public class LaneChange
 
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(ErrorReason.EXCLUSIVE_BIKELANE, GameManager.Instance.getLastErrorReason());
+
+        GameManager.Instance.setBikeType(Metrocycle.BikeType.Bicycle);
+        yield return new WaitForSeconds(0.5f);
         yield return null;
     }
 
@@ -342,16 +354,19 @@ public class LaneChange
     [UnityTest]
     public IEnumerator TestIsBikeRoad()
     {
-        laneChangeScript.isBikeRoad = true;
-
+        yield return new WaitForSeconds(0.5f);
         GameManager.Instance.resetErrorReason();
         GameManager.Instance.PopupSystem.closePopup();
         GameManager.Instance.bike.SetActive(false);
         GameManager.Instance.resetSignal.Invoke();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
 
-        lanesHolder.GetChild(1).gameObject.SetActive(true);
-        GameManager.Instance.teleportBike(lanesHolder.GetChild(1).GetChild(0));
+        laneChangeScript.isBikeRoad = true;
+        yield return new WaitForSeconds(0.5f);
+
+        GameManager.Instance.teleportBike(lanesHolder.GetChild(2).GetChild(0));
+        yield return new WaitForSeconds(0.1f);
+        lanesHolder.GetChild(2).gameObject.SetActive(true);
         GameManager.Instance.bike.SetActive(true);
 
         yield return new WaitForSeconds(0.1f);
