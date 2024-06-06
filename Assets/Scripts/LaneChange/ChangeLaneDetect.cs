@@ -40,7 +40,7 @@ public class ChangeLaneDetect : MonoBehaviour
 
     void OnTriggerEnter (Collider other) {
         GameObject currentLaneHolder = transform.parent.gameObject;
-        Debug.Log("Entered Lane " + currentLaneHolder);
+        // Debug.Log("Entered Lane " + currentLaneHolder);
 
         // Disable all lane colliders
         foreach (GameObject laneHolder in allLaneHolders) {

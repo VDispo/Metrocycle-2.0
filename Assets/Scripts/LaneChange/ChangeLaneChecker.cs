@@ -34,6 +34,11 @@ public class ChangeLaneChecker : MonoBehaviour
 
         bicycleAllowed_Set.Add(bikeLane);
         lastDetectTime = -1;
+
+        GameManager.Instance.resetSignal.AddListener(() => {
+            previousLane = -1;
+            lastDetectTime = -1;
+        });
     }
 
     public void enteredLane(GameObject lane) {
@@ -48,7 +53,8 @@ public class ChangeLaneChecker : MonoBehaviour
         // HACK: we make roads "forget" the last lane when enough time has passed (Set to 2s)
         //       assumption: current lane within road is updated regularly; this is true since
         //       we have evenly spaced lane detects of small enough size within roads (assuming use of MTS_ER3D automated waypoints)
-        if (Time.time - lastDetectTime > 2) {
+
+        if (lastDetectTime != -1 && Time.time - lastDetectTime > 10) {
             previousLane = -1;
         }
         lastDetectTime = Time.time;
@@ -62,6 +68,7 @@ public class ChangeLaneChecker : MonoBehaviour
         if (previousLane == -1) {
             // This is the first lane we entered so just record it and do nothing;
             previousLane = newLane;
+            Debug.Log($"ENTERED lane {newLane}");
             return;
         }
 
