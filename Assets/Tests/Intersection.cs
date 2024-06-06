@@ -11,7 +11,11 @@ public class Intersection
 {
     private GameObject intersection;
     private IntersectionChecker intersectionScript;
+    private blinkers blinkerScript;
     private bool isSceneLoaded = false;
+
+    private static float minBlinkerTime = 2f;
+    private static float leewayTime = 0.1f;
 
     [UnitySetUp]
     public IEnumerator TestIntersectionSetup()
@@ -29,14 +33,35 @@ public class Intersection
         GameManager.Instance.isTestMode = true;
 
         intersection = GameObject.Find("/IntersectionLaneDetects");
+        Debug.Log("CHECKING intersection");
         Assert.IsNotNull(intersection);
 
         intersectionScript = intersection.GetComponent<IntersectionChecker>();
+        Debug.Log("CHECKING intersectionScript");
         Assert.IsNotNull(intersectionScript);
+
+        blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
+        Debug.Log("CHECKING blinkerScript");
+        Assert.IsNotNull(blinkerScript);
+
+        // NOTE: For now, the blinker time is hardcoded (see value in scene) since it needs to be determined before the UnitySetup above
+        // TODO:  maybe use a dynamic array for the ValueSource instead so that we can modify it in runtime?
+        // minBlinkerTime = blinkerScript.minBlinkerTime + leewayTime;
     }
 
     [UnityTest]
     public IEnumerator TestIntersectionChecks([ValueSource(nameof(IntersectionTestCases))] IntersectionTestCase tc)
+    {
+        yield return GenericIntersectionTest(tc);
+    }
+
+    [UnityTest]
+    public IEnumerator BlinkerAndHeadChecks([ValueSource(nameof(BlinkerAndHeadCheckTestCases))] IntersectionTestCase tc)
+    {
+        yield return GenericIntersectionTest(tc, true);
+    }
+
+    private IEnumerator GenericIntersectionTest(IntersectionTestCase tc, bool needHeadCheckAndBlinkers=false)
     {
         // NOTE: Intersection can be "rotated" by adding 2 to index (see IntersectionChecker.cs), so test all combinations
         for (int i = 0; i < intersectionScript.laneDetects.Length; i += 2) {
@@ -47,12 +72,39 @@ public class Intersection
             GameManager.Instance.PopupSystem.closePopup();
 
             Debug.Log($"INTERSECTION TESTING FROM {tc.from} TO {tc.to}");
+            if (needHeadCheckAndBlinkers) {
+                if (!tc.doBlinker) {
+                    Debug.Log("\tWITHOUT Blinker");
+                }
+
+                if (!tc.doHeadCheck) {
+                    Debug.Log("\tWITHOUT Blinker");
+                }
+            }
 
             // Simulate the driver driving through the intersection by entering the lane at index *from* and exiting the lane at index *to*
             // Touch lane detect of *from*
             GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.from].transform);
             // Touch lane detect of *to*.
             yield return new WaitForSeconds(0.1f);
+            if (needHeadCheckAndBlinkers) {
+                if (tc.doBlinker) {
+                    blinkerScript.setBlinker(tc.dir, BlinkerStatus.ON);
+                    yield return new WaitForSeconds(tc.blinkerTime);
+                }
+                if (tc.doHeadCheck) {
+                    // NOTE: Currently, headcheck inputs are tied to KeyDown/KeyUp events which are hard to decouple
+                    //       and Unity does not have a native way to simulate Key Presses
+                    // HACK: to simulate headcheck, simply change last headcheck time
+                    if (tc.dir == Direction.LEFT) {
+                        GameManager.Instance.HeadCheckScript.leftCheckTime = Time.time;
+                    } else {
+                        GameManager.Instance.HeadCheckScript.rightCheckTime = Time.time;
+                    }
+                    yield return new WaitForSeconds(tc.headCheckTime);
+                }
+            }
+
             GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.to].transform);
             yield return new WaitForSeconds(0.1f);
 
@@ -104,11 +156,38 @@ public class Intersection
         yield return new IntersectionTestCase {from = 1, to = 15, expectedError = ErrorReason.INTERSECTION_LEFT_UTURN_FROM_OUTERLANE};
     }
 
+    private static IEnumerable BlinkerAndHeadCheckTestCases()
+    {
+        Debug.Log("MIN BLINKER TIME" + minBlinkerTime);
+        float maxHeadCheckDelay = GameManager.Instance?.HeadCheckScript.maxHeadCheckDelay ?? 0f;
+        maxHeadCheckDelay -= leewayTime;
+
+        // First, test proper turning
+        yield return new IntersectionTestCase {from = 0, to = 10, expectedError = ErrorReason.NOERROR, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // Proper left turn
+        yield return new IntersectionTestCase {from = 0, to = 14, expectedError = ErrorReason.NOERROR, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };   // Proper left U-turn
+        yield return new IntersectionTestCase {from = 1, to = 3, expectedError = ErrorReason.NOERROR, dir = Direction.RIGHT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // Proper right turn
+
+    }
+
     public struct IntersectionTestCase
     {
         public int from;
         public int to;
         public ErrorReason expectedError;
+        public Direction dir;
+        public bool doBlinker;
+        public float blinkerTime;       // Time between blinker and headcheck
+        public bool doHeadCheck;
+        public float headCheckTime;     // Time between head check and turn
     }
 
     [OneTimeTearDown]

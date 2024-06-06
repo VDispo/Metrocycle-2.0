@@ -100,7 +100,7 @@ public class blinkers : MonoBehaviour
         isBikeTypeSet = true;
     }
 
-    void setBlinker(Direction which, BlinkerStatus status) {
+    public void setBlinker(Direction which, BlinkerStatus status) {
         Debug.Assert(which != Direction.FORWARD);
 
         int own_status, other_status;
