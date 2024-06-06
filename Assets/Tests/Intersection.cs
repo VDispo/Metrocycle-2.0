@@ -47,7 +47,14 @@ public class Intersection
         // NOTE: For now, the blinker time is hardcoded (see value in scene) since it needs to be determined before the UnitySetup above
         // TODO:  maybe use a dynamic array for the ValueSource instead so that we can modify it in runtime?
         // minBlinkerTime = blinkerScript.minBlinkerTime + leewayTime;
-    }
+
+        GameManager.Instance.resetSignal.AddListener(() => {
+            Debug.Log($"GAME RESET blinker {blinkerScript.leftStatus + blinkerScript.rightStatus == 0}{blinkerScript.blinkerActivationTime} {blinkerScript.blinkerOffTime} Headcheck {GameManager.Instance.HeadCheckScript.leftCheckTime} {GameManager.Instance.HeadCheckScript.rightCheckTime}");
+        });
+
+        // Some time-based timers don't work if current clock (Time.time) is near 0, so wait for a few seconds
+        yield return new WaitForSeconds(5f);
+}
 
     [UnityTest]
     public IEnumerator TestIntersectionChecks([ValueSource(nameof(IntersectionTestCases))] IntersectionTestCase tc)
@@ -78,15 +85,14 @@ public class Intersection
                 }
 
                 if (!tc.doHeadCheck) {
-                    Debug.Log("\tWITHOUT Blinker");
+                    Debug.Log("\tWITHOUT Head Check");
                 }
             }
 
-            // Simulate the driver driving through the intersection by entering the lane at index *from* and exiting the lane at index *to*
-            // Touch lane detect of *from*
-            GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.from].transform);
-            // Touch lane detect of *to*.
-            yield return new WaitForSeconds(0.1f);
+            // Reset game to turn off blinkers, reset headcheck timers
+            GameManager.Instance.resetSignal.Invoke();
+            // --- Simulate the driver driving through the intersection by entering the lane at index *from* and exiting the lane at index *to*
+            // Use blinker and do headcheck first before entering intersection
             if (needHeadCheckAndBlinkers) {
                 if (tc.doBlinker) {
                     blinkerScript.setBlinker(tc.dir, BlinkerStatus.ON);
@@ -104,7 +110,10 @@ public class Intersection
                     yield return new WaitForSeconds(tc.headCheckTime);
                 }
             }
-
+            // Touch lane detect of *from*
+            GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.from].transform);
+            // Touch lane detect of *to*.
+            yield return new WaitForSeconds(0.1f);
             GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.to].transform);
             yield return new WaitForSeconds(0.1f);
 
