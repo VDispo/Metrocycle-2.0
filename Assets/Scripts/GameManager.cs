@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject saveStateDetect = null;
 
+    private Metrocycle.ErrorReason lastErrorReason = Metrocycle.ErrorReason.NOERROR;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -309,6 +311,15 @@ public class GameManager : MonoBehaviour
     public bool hasSaveState()
     {
         return saveStateDetect != null;
+    }
+
+    public void getLastErrorReason(Metrocycle.ErrorReason er)
+    {
+        return lastErrorReason;
+    }
+    public void setErrorReason(Metrocycle.ErrorReason er)
+    {
+        lastErrorReason = er;
     }
 
     void Update() {

@@ -128,6 +128,8 @@ public class IntersectionChecker : MonoBehaviour
                         Debug.Log("Entered on Red Light " + entryIdx);
                         type = PopupType.ERROR;
                         popupText = redLightText;
+
+                        GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_REDLIGHT);
                     }
                 }
             // }
@@ -151,20 +153,28 @@ public class IntersectionChecker : MonoBehaviour
                 Debug.Log("Invalid Wrong Way " + idx);
                 type = PopupType.ERROR;
                 popupText = wrongWayText;
+
+                GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_WRONGWAY);
             }
             else if (entryIdx == 0){
                 Debug.Log("From Left to " + idx);
                 if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = leftLaneRightTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_FROM_OUTERLANE);
                 }
                 else if (bad_LeftLaneLeftTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = leftLaneLeftTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_TO_OUTERLANE);
                 }
                 else if (bad_LeftLaneUTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = leftLaneUTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_TO_OUTERLANE);
                 }
             }
             else {
@@ -172,14 +182,20 @@ public class IntersectionChecker : MonoBehaviour
                 if (bad_RightLaneRightTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = rightLaneRightTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_TO_OUTERLANE);
                 }
                 else if (bad_RightLaneLeftTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = rightLaneLeftTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_FROM_OUTERLANE);
                 }
                 else if (bad_RightLaneUTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
                     popupText = rightLaneUTurnText;
+
+                    GameManager.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_FROM_OUTERLANE);
                 }
             }
 
