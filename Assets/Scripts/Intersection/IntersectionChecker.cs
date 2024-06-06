@@ -148,6 +148,15 @@ public class IntersectionChecker : MonoBehaviour
                 GameManager.Instance.checkProperTurnOrLaneChange(Direction.LEFT, headCheckRefTime);
             }
 
+            if (idx == 0 || idx == 1) {
+                // NOTE: SOFT ERROR. Driver back-pedalled in intersection. Assume they will exit intersection normally at some point
+                // TODO: handle this situation better. For now, we set it internally as error but no popup prompt
+                GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_WRONGWAY);
+
+                entryIdx = -1;
+                return;
+            }
+
             // TODO: use PopupType.WARNING for bad
             if (invalid_WrongWayIdx.Contains(idx)) {
                 Debug.Log("Invalid Wrong Way " + idx);
