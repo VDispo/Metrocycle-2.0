@@ -111,6 +111,19 @@ Generally contains plugins for Unity, but in our case the important part is that
 
 Currently, Metrocycle uses [Web localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store user stats. If you want to add more JavaScript code for interacting with the Web in the WebGL build, read the [Interaction with browser scripting](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html) page of the Unity manual, particularly the [setup](https://docs.unity3d.com/Manual/web-interacting-browser-js.html) and the [cross-interaction between JS/Unity C# code](https://docs.unity3d.com/Manual/web-interacting-browser-js-to-unity.html).
 
+## Tests
+Contains the automated tests. In addition to checking for regressions and making future refactors easier, the test cases can also be used as guides to the checks being implemented.
+
+
+To run the tests, Go to `Window > General > Test Runner` and select all the test you want to run then press `Run Selected`.
+
+
+For more info on how to write additional test cases, you can visit
+[the](https://gameconductor.net/blog/unity-test-framework-tutorial.html)
+[following](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/course/test-cases.html)
+[UTF](https://medium.com/xrpractices/all-you-need-to-know-about-testing-in-unity3d-part-1-70658818ce5e)
+[tutorials](https://medium.com/codex/writing-unit-tests-for-my-game-in-unity-b0163e2c9b47)
+
 
 ## CS198_Playground
 Contains currently unused code for some ideas which couldn't be implemented (e.g. procedural road generation for better CPU/RAM performance, procedural obstacle generation).
