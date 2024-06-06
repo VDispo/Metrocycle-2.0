@@ -320,6 +320,23 @@ public class LaneChange
         yield return null;
     }
 
+    [UnityTest]
+    public IEnumerator TestExclusiveBikeLane()
+    {
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        GameManager.Instance.setBikeType(Metrocycle.BikeType.Motorcycle);
+        yield return new WaitForSeconds(0.1f);
+
+        GameObject bikeLane = laneChangeScript.bikeLane;
+        bikeLane.SetActive(true);
+        GameManager.Instance.teleportBike(bikeLane.transform.GetChild(0));
+
+        yield return new WaitForSeconds(0.1f);
+        Assert.AreEqual(ErrorReason.EXCLUSIVE_BIKELANE, GameManager.Instance.getLastErrorReason());
+        yield return null;
+    }
+
     // NOTE: almost exactly the same as TestNonBikeLane above, except we set isBikeRoad = true
     //       hence, all non-bike lanes in this road should become (non-exclusive) bike lanes
     [UnityTest]
@@ -339,6 +356,8 @@ public class LaneChange
 
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(ErrorReason.NOERROR, GameManager.Instance.getLastErrorReason());
+
+        laneChangeScript.isBikeRoad = false;
         yield return null;
     }
 

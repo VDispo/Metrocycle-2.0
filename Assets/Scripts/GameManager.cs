@@ -59,8 +59,9 @@ public class GameManager : MonoBehaviour
     {
         // disable previous bike
         if (bike != null) {
-            Debug.LogError("Bicycle type can only be set once per Scene");
-            return bike;
+            Debug.LogWarning("WARNING: Bike type can only be set once per Scene");
+            Debug.LogWarning("WARNING: Calling setBikeType() twice results to blinkers not working");
+            // return bike;
         }
 
         switch(type) {
