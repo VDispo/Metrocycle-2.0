@@ -43,7 +43,7 @@ public class blinkers : MonoBehaviour
     private Metrocycle.BikeType bikeType;
     bool isBikeTypeSet = false;
 
-    void Awake()
+    void Start()
     {
         if (!isBikeTypeSet) {
             setBikeType(Metrocycle.BikeType.Motorcycle);
