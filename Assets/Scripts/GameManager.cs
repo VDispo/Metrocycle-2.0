@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     //       This will make it easier to see ALL checks and make translation of error messages easier
     private Metrocycle.ErrorReason lastErrorReason = Metrocycle.ErrorReason.NOERROR;
 
+    public bool isTestMode = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -111,7 +113,10 @@ public class GameManager : MonoBehaviour
 
     public void pauseGame() {
         setDashboardVisibility(false);
-        Time.timeScale = 0;
+        // NOTE: we disable pausing in auto tests since 0 timescale also disables progress in tests
+        if (!isTestMode) {
+            Time.timeScale = 0;
+        }
     }
     public void resumeGame() {
         setDashboardVisibility(true);
@@ -306,7 +311,7 @@ public class GameManager : MonoBehaviour
         // TODO: make more generic (teleport location optional/can be supplied idependently)
         // Pause
         Debug.Log("LOADING SAVE " + detect);
-        Time.timeScale = 0;
+        GameManager.Instance.pauseGame();
 
         // Clear traffic in teleport location to prevent collision on spawn
         // And also clear up jams near save points
@@ -322,14 +327,14 @@ public class GameManager : MonoBehaviour
         resetSignal.Invoke();
 
         // Resume
-        Time.timeScale = 1;
+        GameManager.Instance.resumeGame();
     }
     public bool hasSaveState()
     {
         return saveStateDetect != null;
     }
 
-    public Metrocycle.ErrorReason getLastErrorReason(Metrocycle.ErrorReason er)
+    public Metrocycle.ErrorReason getLastErrorReason()
     {
         return lastErrorReason;
     }

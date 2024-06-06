@@ -6,6 +6,7 @@ using Metrocycle;
 public class ScenarioStart : MonoBehaviour
 {
     public BikeType bikeType = BikeType.Motorcycle;
+    public bool isTestScene = false;
     [TextArea(3, 10)] public string scenarioTitle;
     [TextArea(3, 10)] public string scenarioText;
 
@@ -14,6 +15,7 @@ public class ScenarioStart : MonoBehaviour
     {
         GameManager.Instance.PopupSystem.popStart(scenarioTitle, scenarioText);
         GameManager.Instance.setBikeType(bikeType);
+        GameManager.Instance.isTestMode = isTestScene;
     }
 
     public void pauseGame()
