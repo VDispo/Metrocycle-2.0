@@ -59,8 +59,10 @@ public class ChangeLaneChecker : MonoBehaviour
         }
         lastDetectTime = Time.time;
 
-        checkEnteredBusOrBikeLane(lane);
-        checkBicycleEnteredForbiddenLane(lane);
+        Debug.Log($"Entered Lane {lane}");
+        bool hasError = checkEnteredBusOrBikeLane(lane);
+
+        if (!hasError) hasError = checkBicycleEnteredForbiddenLane(lane);
         checkBlinkerForLaneChange(newLane);
     }
 
@@ -103,33 +105,38 @@ public class ChangeLaneChecker : MonoBehaviour
         blinkerScript.blinkerActivationTime = Time.time;
     }
 
-    public void checkEnteredBusOrBikeLane(GameObject lane) {
+    public bool checkEnteredBusOrBikeLane(GameObject lane) {
+        if (lane == busLane) {
+            errorText = "The Bus lane is only for public utility buses (PUBs) and ambulances or goverment vehicles responding to emergencies.";
+
+            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BUSLANE);
+            return true;
+        }
+
         if (GameManager.Instance.getBikeType() == Metrocycle.BikeType.Bicycle) {
-            return;
+            return false;
         }
 
         if (lane == bikeLane) {
             errorText = "Motorcycles are not allowed on the Bike Lane!";
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BIKELANE);
-        } else if (lane == busLane) {
-            errorText = "The Bus lane is only for public utility buses (PUBs) and ambulances or goverment vehicles responding to emergencies.";
-
-            GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BUSLANE);
-        } else {
-            return;
+        }  else {
+            return false;
         }
 
         GameManager.Instance.PopupSystem.popError(
             "Uh oh!", errorText
         );
+
+        return true;
     }
 
-    public void checkBicycleEnteredForbiddenLane(GameObject lane) {
+    public bool checkBicycleEnteredForbiddenLane(GameObject lane) {
         if (GameManager.Instance.getBikeType() != Metrocycle.BikeType.Bicycle
             || isBikeRoad
         ) {
-            return;
+            return false;
         }
 
         if (!bicycleAllowed_Set.Contains(lane)) {
@@ -139,7 +146,10 @@ public class ChangeLaneChecker : MonoBehaviour
             );
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.BIKE_NOTALLOWED);
+            return true;
         }
+
+        return false;
     }
 
     public void addBikeAllowedLane(GameObject lane) {
