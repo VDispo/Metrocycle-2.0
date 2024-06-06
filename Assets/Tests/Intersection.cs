@@ -38,24 +38,30 @@ public class Intersection
     [UnityTest]
     public IEnumerator TestIntersectionChecks([ValueSource(nameof(IntersectionTestCases))] IntersectionTestCase tc)
     {
-        GameManager.Instance.resetErrorReason();
-        GameManager.Instance.PopupSystem.closePopup();
+        // NOTE: Intersection can be "rotated" by adding 2 to index (see IntersectionChecker.cs), so test all combinations
+        for (int i = 0; i < intersectionScript.laneDetects.Length; i += 2) {
+            tc.from = (tc.from+i) % intersectionScript.laneDetects.Length;
+            tc.to = (tc.to+i) % intersectionScript.laneDetects.Length;
 
-        Debug.Log($"INTERSECTION TESTING FROM {tc.from} TO {tc.to}");
+            GameManager.Instance.resetErrorReason();
+            GameManager.Instance.PopupSystem.closePopup();
 
-        // Simulate the driver driving through the intersection by entering the lane at index *from* and exiting the lane at index *to*
-        // Touch lane detect of *from*
-        GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.from].transform);
-        // Touch lane detect of *to*.
-        yield return new WaitForSeconds(0.1f);
-        GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.to].transform);
-        yield return new WaitForSeconds(0.1f);
+            Debug.Log($"INTERSECTION TESTING FROM {tc.from} TO {tc.to}");
 
-        // Check error code
-        Assert.AreEqual(tc.expectedError, GameManager.Instance.getLastErrorReason());
+            // Simulate the driver driving through the intersection by entering the lane at index *from* and exiting the lane at index *to*
+            // Touch lane detect of *from*
+            GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.from].transform);
+            // Touch lane detect of *to*.
+            yield return new WaitForSeconds(0.1f);
+            GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.to].transform);
+            yield return new WaitForSeconds(0.1f);
 
-        GameManager.Instance.resetErrorReason();
-        GameManager.Instance.PopupSystem.closePopup();
+            // Check error code
+            Assert.AreEqual(tc.expectedError, GameManager.Instance.getLastErrorReason());
+
+            GameManager.Instance.resetErrorReason();
+            GameManager.Instance.PopupSystem.closePopup();
+        }
 
         yield return null;
     }
