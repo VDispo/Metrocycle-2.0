@@ -65,6 +65,11 @@ public class blinkers : MonoBehaviour
         blinkerOffTime = -1;
 
         shouldCancelAtTime = -1;
+
+        GameManager.Instance.resetSignal.AddListener(() => {
+            setBlinker(Direction.LEFT, BlinkerStatus.OFF);
+            setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
+        });
     }
 
     public void setBikeType(Metrocycle.BikeType newBikeType) {
