@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Advanced_EDSA_Bicycle.unity
     guid: daf4e587317ba731690cc3bb0dda6550
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Test_Intersection.unity
+    guid: 5bcd773faf373ac4493c36af5c7de91d
   m_configObjects: {}
