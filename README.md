@@ -1,3 +1,17 @@
+# Setup for Developers
+1. First, download and Install Unity Hub. see [https://docs.unity3d.com/hub/manual/InstallHub.html](https://docs.unity3d.com/hub/manual/InstallHub.html) for the instructions for your Operating System.
+
+2. Get a local copy of the [Metrocycle repository](https://github.com/jmbatrina/Metrocycle-Prototype) (preferrably with the `git` VCS, e.g. via `git clone git@github.com:jmbatrina/Metrocycle-prototype.git`).
+
+3. Open Unity Hub and login using your credentials. Go to the `Projects` tab.
+
+4. Click the dropdown button beside the `Add` button, then press `Add project from disk`
+
+5. Select the folder for the `Metrocycle repository` you downloaded from Step 2.
+
+6. Open the project by clicking on its entry on the `Projects` tab. This should initiate a download of the required Unity Editor version (`2022.3.15f1`)
+
+All other dependencies are already included in this repository.
 
 # Folder Structure
 The toplevel folders in this repo (except for `EasyRoads3Dv3`) are the default folders from an empty Unity build. Consult external references (e.g. https://medium.com/@jsj5909/a-brief-anatomy-of-a-unity-project-folder-563bd3f4ad40) for better explanations of their roles.
