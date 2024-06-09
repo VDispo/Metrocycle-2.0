@@ -308,6 +308,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("Bike teleported to " + newTransform);
     }
 
+    public void setBikeSpeed(Vector3 speed)
+    {
+        stopBike();
+        bikeRB.velocity = (speed/speed.magnitude) * (speed.magnitude / 3);
+    }
+
     public void stopBike()
     {
         bikeRB.velocity = new Vector3(0, 0, 0);

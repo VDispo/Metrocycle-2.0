@@ -16,6 +16,8 @@ public class LaneChange
 
     private GameObject AICar;
     private GameObject obstacle;
+    private GameObject SpeedLimit80;
+    private GameObject SpeedLimit60;
 
     private static float minBlinkerTime = 1f;
     // NOTE: For now, the maxHeadCheckDelay is hardcoded (see value in scene) since it needs to be determined before the UnitySetup above
@@ -73,9 +75,97 @@ public class LaneChange
             Debug.Log($"GAME RESET blinker {blinkerScript.leftStatus + blinkerScript.rightStatus == 0}{blinkerScript.blinkerActivationTime} {blinkerScript.blinkerOffTime} Headcheck {GameManager.Instance.HeadCheckScript.leftCheckTime} {GameManager.Instance.HeadCheckScript.rightCheckTime}");
         });
 
+        GameObject SpeedLimit80 = GameObject.Find("/80SpeedLimit");
+        Debug.Log($"CHECKING SpeedLimit80 {SpeedLimit80}");
+        Assert.IsNotNull(SpeedLimit80);
+
+        GameObject SpeedLimit60 = GameObject.Find("/60SpeedLimit");
+        Debug.Log($"CHECKING SpeedLimit60 {SpeedLimit60}");
+        Assert.IsNotNull(SpeedLimit60);
+
         // Some time-based timers don't work if current clock (Time.time) is near 0, so wait for a few seconds
         yield return new WaitForSeconds(minBlinkerTime + maxHeadCheckDelay + leewayTime);
     }
+
+    private static IEnumerable SpeedLimitTestCases()
+    {
+        yield return 80;
+        yield return 60;
+    }
+
+    [UnityTest]
+    public IEnumerator SpeedLimit([ValueSource(nameof(SpeedLimitTestCases))] int limit)
+    {
+        GameObject SpeedLimit80 = GameObject.Find("/80SpeedLimit");
+        GameObject SpeedLimit60 = GameObject.Find("/60SpeedLimit");
+
+        GameObject speedDetect = (limit == 80) ? SpeedLimit80 : SpeedLimit60;
+        Assert.IsNotNull(speedDetect);
+
+        SpeedChecker speedScript = speedDetect.GetComponent<SpeedChecker>();
+
+        Assert.IsNotNull(speedScript);
+
+        // First, test exact limit
+        float speed = speedScript.speedLimit;
+
+        Debug.Log($"Testing Speed {speed}");
+        GameManager.Instance.teleportBike(speedDetect.transform);
+        GameManager.Instance.resetSignal.Invoke();
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        GameManager.Instance.setBikeSpeed(new Vector3(0, 0, speed));
+        yield return new WaitForSeconds(0.01f);
+        Assert.AreEqual(ErrorReason.NOERROR, GameManager.Instance.getLastErrorReason());
+
+        // next, test within leeway
+        yield return new WaitForSeconds(0.1f);
+        speed = speedScript.speedLimit + speedScript.speedLeeway;
+
+        Debug.Log($"Testing Speed {speed}");
+        GameManager.Instance.teleportBike(speedDetect.transform);
+        GameManager.Instance.resetSignal.Invoke();
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        GameManager.Instance.setBikeSpeed(new Vector3(0, 0, speed));
+        yield return new WaitForSeconds(0.01f);
+        Assert.AreEqual(ErrorReason.NOERROR, GameManager.Instance.getLastErrorReason());
+
+        // test exactly a bit over
+        yield return new WaitForSeconds(0.1f);
+        speed = speedScript.speedLimit + speedScript.speedLeeway + 2 ;
+
+        Debug.Log($"Testing Speed {speed}");
+        GameManager.Instance.teleportBike(speedDetect.transform);
+        GameManager.Instance.resetSignal.Invoke();
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        GameManager.Instance.setBikeSpeed(new Vector3(0, 0, speed));
+        yield return new WaitForSeconds(0.01f);
+        Assert.AreEqual(ErrorReason.OVERSPEEDING, GameManager.Instance.getLastErrorReason());
+
+        // test twice of speed limit
+        yield return new WaitForSeconds(0.1f);
+        speed = speedScript.speedLimit*2;
+
+        Debug.Log($"Testing Speed {speed}");
+        GameManager.Instance.teleportBike(speedDetect.transform);
+        GameManager.Instance.resetSignal.Invoke();
+        GameManager.Instance.resetErrorReason();
+        GameManager.Instance.PopupSystem.closePopup();
+        yield return new WaitForSeconds(0.1f);
+
+        GameManager.Instance.setBikeSpeed(new Vector3(0, 0, speed));
+        yield return new WaitForSeconds(0.01f);
+        Assert.AreEqual(ErrorReason.OVERSPEEDING, GameManager.Instance.getLastErrorReason());
+    }
+
 
     [UnityTest]
     public IEnumerator BlinkerAndHeadCheckBasic([ValueSource(nameof(BlinkerAndHeadCheckBasicTestCases))] LaneChangeTestCase tc)
