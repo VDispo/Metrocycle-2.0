@@ -20,6 +20,8 @@ public class Intersection
     // TODO:  maybe use a dynamic array for the ValueSource instead so that we can modify it in runtime?
     private static float leewayTime = 0.1f;
     private static float maxHeadCheckDelay = 1f - leewayTime;
+    // NOTE: hardcoded value equal to setting in Test_Intersection's blinker script
+    private static float maxUncancelledBlinkerTime = 0.5f;
 
     [UnitySetUp]
     public IEnumerator TestIntersectionSetup()
@@ -157,9 +159,32 @@ public class Intersection
         yield return null;
     }
 
+    [UnityTest]
+    public IEnumerator UncancelledBlinker([ValueSource(nameof(UncancelledBlinkerTestCases))] IntersectionTestCase tc)
+    {
+        yield return GenericIntersectionTest(tc, true, false, maxUncancelledBlinkerTime);
+    }
+
+    private static IEnumerable UncancelledBlinkerTestCases()
+    {
+        yield return new IntersectionTestCase {from = 0, to = 10, expectedError = ErrorReason.UNCANCELLED_BLINKER, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // Proper left turn
+        yield return new IntersectionTestCase {from = 0, to = 14, expectedError = ErrorReason.UNCANCELLED_BLINKER, dir = Direction.LEFT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };   // Proper left U-turn
+        yield return new IntersectionTestCase {from = 1, to = 3, expectedError = ErrorReason.UNCANCELLED_BLINKER, dir = Direction.RIGHT,
+            doBlinker = true, blinkerTime = minBlinkerTime,
+            doHeadCheck = true, headCheckTime = maxHeadCheckDelay,
+        };  // Proper right turn
+    }
+
     private IEnumerator GenericIntersectionTest(IntersectionTestCase tc,
                                                 bool needHeadCheckAndBlinkers=false,
-                                                bool doAHeadCheckBeforeBlinker=false)
+                                                bool doAHeadCheckBeforeBlinker=false,
+                                                float delay=0f)
     {
         // NOTE: Intersection can be "rotated" by adding 4 to index (see IntersectionChecker.cs), so test all combinations
         for (int i = 0; i < intersectionScript.laneDetects.Length; i += 4) {
@@ -206,6 +231,10 @@ public class Intersection
             yield return new WaitForSeconds(0.1f);
             GameManager.Instance.teleportBike(intersectionScript.laneDetects[tc.to].transform);
             yield return new WaitForSeconds(0.1f);
+
+            if (Mathf.Abs(delay) > 0.1f) {
+                yield return new WaitForSeconds(delay + leewayTime);
+            }
 
             // Check error code
             Assert.AreEqual(tc.expectedError, GameManager.Instance.getLastErrorReason());
