@@ -337,7 +337,9 @@ public class GameManager : MonoBehaviour
         // Clear traffic in teleport location to prevent collision on spawn
         // And also clear up jams near save points
         // NOTE: radius of 100 is hardcoded for now
-        GleyTrafficSystem.Manager.ClearTrafficOnArea(saveStateDetect.transform.position, 100);
+        // NOTE: Disabled for now since the assembly hierarchy for Gley will become cyclical
+        // TODO: re-enable this and fix assembly hierarchy
+        // GleyTrafficSystem.Manager.ClearTrafficOnArea(saveStateDetect.transform.position, 100);
         GameManager.Instance.teleportBike(saveStateDetect.transform);
 
         if (detect?.loadStateCallback != null) {
