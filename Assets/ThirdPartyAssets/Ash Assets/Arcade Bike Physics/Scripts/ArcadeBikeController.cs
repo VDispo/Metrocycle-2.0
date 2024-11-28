@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ArcadeBP
 {
@@ -44,6 +45,10 @@ namespace ArcadeBP
         private float radius, horizontalInput, verticalInput;
         private Vector3 origin;
 
+        [Header("Android Controls")]
+        [SerializeField] private bool isAndroid;
+        [SerializeField] private Slider throttleSlider;
+
         private void Start()
         {
             radius = rb.GetComponent<SphereCollider>().radius;
@@ -52,11 +57,26 @@ namespace ArcadeBP
                 Physics.defaultMaxAngularSpeed = 150;
             }
             rb.centerOfMass = Vector3.zero;
+
+            isAndroid = Application.platform == RuntimePlatform.Android;
+            isAndroid = true; // debug
+            if (isAndroid) Input.gyro.enabled = true;
         }
         private void Update()
         {
-            horizontalInput = Input.GetAxis("Horizontal"); //turning input
-            verticalInput = Input.GetAxis("Vertical");     //accelaration input
+            if (isAndroid) 
+            {
+                //turning input [this worked once with me, pero its bad and inconsistent pls replace this logic]
+                float yaw = -Mathf.Clamp(Input.gyro.attitude.eulerAngles.z, 20, 130); // 75 +- 55 (eyeballed), also negated since it starts off inverted 
+                horizontalInput = (yaw - 75) / 55; // normalized
+
+                verticalInput = throttleSlider.value; //acceleration input
+            }
+            else
+            {
+                horizontalInput = Input.GetAxis("Horizontal"); //turning input
+                verticalInput = Input.GetAxis("Vertical"); //acceleration input
+            }
             Visuals();
             AudioManager();
 
