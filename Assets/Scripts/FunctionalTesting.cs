@@ -47,7 +47,7 @@ public class FunctionalTesting : MonoBehaviour
                     numFPSSamples += 1;
                     AvgFPS = SumFPS / numFPSSamples;
 
-                    Debug.Log($"FPS: {CurrentFPS} | AVGFPS: {AvgFPS} | LOWFPS: {LowestFPS} | HIGHFPS: {HighestFPS}");
+                    // Debug.Log($"FPS: {CurrentFPS} | AVGFPS: {AvgFPS} | LOWFPS: {LowestFPS} | HIGHFPS: {HighestFPS}");
                 }
             }
         }

@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public popUp PopupSystem = null;
     public HeadCheck HeadCheckScript = null;
 
+    public bool isAndroid; // FOR TESTING ANDROID CONTROLS
+
+    public GameObject mobileControlsCanvas;
+
     public GameObject bike;
     public UnityEvent resetSignal;
 
@@ -34,6 +38,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        isAndroid = Application.platform == RuntimePlatform.Android;
+        isAndroid = true; // For Android Build
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -49,6 +55,11 @@ public class GameManager : MonoBehaviour
         if (HeadCheckScript == null) {
             HeadCheckScript = GameObject.Find("/Cameras/Main Camera").GetComponent<HeadCheck>();
             Debug.Log("HeadCheckScript Force Initialized " + HeadCheckScript);
+        }
+        if (isAndroid) {
+            mobileControlsCanvas.SetActive(true);
+        } else {
+            mobileControlsCanvas.SetActive(false);
         }
 
         // setBikeType(Metrocycle.BikeType.Motorcycle);    // TODO: move this call to selection of motorcycle or bicycle

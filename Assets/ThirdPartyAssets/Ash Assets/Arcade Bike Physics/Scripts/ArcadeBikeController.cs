@@ -60,7 +60,7 @@ namespace ArcadeBP
             rb.centerOfMass = Vector3.zero;
 
             isAndroid = Application.platform == RuntimePlatform.Android;
-            isAndroid = true; // debug
+            isAndroid = true; // FOR ANDROID BUILD
 
             if (isAndroid && SystemInfo.supportsGyroscope)
             {
@@ -73,21 +73,21 @@ namespace ArcadeBP
             if (isAndroid) 
             {
                 //turning input
-                if (hasGyroscope) // use gyroscope if available
+                if (false) // use gyroscope if available
                 {
+                    Debug.Log("Using Gyroscope");
                     horizontalInput += -Input.gyro.rotationRate.z * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
-                    //Debug.LogWarning("using gyroscope: " + horizontalInput);
                 }
                 else // use accelerometer if no gyroscope
                 {
                     horizontalInput = Input.acceleration.x; 
-                    //Debug.LogWarning("using accelerometer: " + horizontalInput);
                 }
 
                 verticalInput = throttleSlider.value; //acceleration input
             }
             else
             {
+                Debug.Log("Not Android" + Input.GetAxis("Vertical"));
                 horizontalInput = Input.GetAxis("Horizontal"); //turning input
                 verticalInput = Input.GetAxis("Vertical"); //acceleration input
             }

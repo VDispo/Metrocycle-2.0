@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Direction {
     LEFT,
@@ -17,6 +18,7 @@ public class blinkers : MonoBehaviour
 {
     public GameObject blinkerGroup;
     public GameObject bike;
+    public Slider blinkerSlider;
     public int blinkerAutoOffAngle;
     public float blinkDuration = 0.5f;
 
@@ -39,12 +41,17 @@ public class blinkers : MonoBehaviour
     private Vector3 prevRotation;
     private double turnAngle;
     private float shouldCancelAtTime;
+    private bool isAndroid;
+    private int lastBlinkerValue;
 
     private Metrocycle.BikeType bikeType;
     bool isBikeTypeSet = false;
 
     void Start()
     {
+        isAndroid = Application.platform == RuntimePlatform.Android;
+        isAndroid = true; // For Android Build
+        
         if (!isBikeTypeSet) {
             setBikeType(Metrocycle.BikeType.Motorcycle);
         }
@@ -212,27 +219,51 @@ public class blinkers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if (isAndroid) {
+            if (lastBlinkerValue != (int) blinkerSlider.value) {
+                lastBlinkerValue = (int) blinkerSlider.value;
+                if (lastBlinkerValue == 0) {
+                    if (leftStatus == 1) {
+                        setBlinker(Direction.LEFT, BlinkerStatus.OFF);
+                    } else {
+                        setBlinker(Direction.LEFT, BlinkerStatus.ON);
+                        blinkTimer = 0;
+                    }
+                } else if (lastBlinkerValue == 2) {
+                    if (rightStatus == 1) {
+                        setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
+                    } else {
+                        setBlinker(Direction.RIGHT, BlinkerStatus.ON);
+                        blinkTimer = 0;
+                    }
+                } else {
+                    setBlinker(leftStatus == 1 ? Direction.LEFT : Direction.RIGHT, BlinkerStatus.OFF);
+                }
+            }
+        } else {
+            if (Input.GetKeyDown("q"))
+            {
+                if (leftStatus == 1){
+                    setBlinker(Direction.LEFT, BlinkerStatus.OFF);
+                }
+                else {
+                    setBlinker(Direction.LEFT, BlinkerStatus.ON);
+                    blinkTimer = 0;
+                }
+            }
+            if (Input.GetKeyDown("e"))
+            {
+                if (rightStatus == 1){
+                    setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
+                }
+                else {
+                    setBlinker(Direction.RIGHT, BlinkerStatus.ON);
+                    blinkTimer = 0;
+                }
+            }
+        }
         // TURNING ON BLINKER
-        if (Input.GetKeyDown("q"))
-        {
-            if (leftStatus == 1){
-                setBlinker(Direction.LEFT, BlinkerStatus.OFF);
-            }
-            else {
-                setBlinker(Direction.LEFT, BlinkerStatus.ON);
-                blinkTimer = 0;
-            }
-        }
-        if (Input.GetKeyDown("e"))
-        {
-            if (rightStatus == 1){
-                setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
-            }
-            else {
-                setBlinker(Direction.RIGHT, BlinkerStatus.ON);
-                blinkTimer = 0;
-            }
-        }
+        
 
 
         bool hasHorizontalInput = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
