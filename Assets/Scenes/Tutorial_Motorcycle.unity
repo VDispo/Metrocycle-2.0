@@ -6633,9 +6633,9 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great! Now look back forward again.
-  popupText: "To finish your left head check, let go of the J key  to look ahead
-    again.\r"
+  popupTitle: Looking Forward
+  popupText: "To finish your left head check, let go of the left button  to look
+    ahead again.\r"
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -8911,8 +8911,8 @@ MonoBehaviour:
   whichBlinker: 1
   popupType: 1
   popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your right blinker on. \r\n\r\nPress
-    E to turn on your right blinker."
+  popupText: "By this point, you should already have your right blinker on. \r\n\r\nPull
+    the slider to the right."
 --- !u!1001 &607706519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9294,6 +9294,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 158359103462919741, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_text
+      value: Accelerate Forward
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360883690870059907, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638870317652099700, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295461333705008464, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_text
+      value: 'Let''s start by accelerating forward!
+
+
+        Pull down the slider
+        on the right to accelerate forward.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530626472667584846, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141918305938076157, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7366137456209663318, guid: b34ef6462ffba72b8ba819910427c17c,
         type: 3}
       propertyPath: m_Name
@@ -9592,8 +9626,8 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 4
-  popupTitle: Great!
-  popupText: Finally, you can use the space bar or the S key to brake.
+  popupTitle: Good Job
+  popupText: You did it!
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -22199,9 +22233,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great! Next, perform a right head check
-  popupText: Press the K key before the yellow mark and hold until the green mark
-    to check your right blindspot.
+  popupTitle: Right Head Checking
+  popupText: 'It''s time to check your blindspots on the right.
+
+
+    Click the right
+    button on the left to perform a right headcheck. Do it before the yellow mark
+    and until the green mark.'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -26302,13 +26340,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great! Now let's try turning left.
-  popupText: 'Press Q to turn on the left blinker.
+  popupTitle: Turning Left
+  popupText: 'Great! Now, let''s turn left.
 
 
-
-    Hold A while moving forward
-    to turn left.'
+    First, turn on the left blinker
+    by pulling the slider on the lower left to the left. Then, tilt the device to
+    the left.'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -27153,13 +27191,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great! Now let's try turning right.
-  popupText: 'Press E to turn on the right blinker.
+  popupTitle: Turning Right
+  popupText: 'Great! Now, let''s turn right.
 
 
-
-    Hold D while moving forward
-    to turn right.'
+    First, turn on the right blinker
+    by pulling the slider on the lower left to the right. Then, tilt the device to
+    the right.'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -28884,7 +28922,7 @@ MonoBehaviour:
   popupType: 1
   popupTitle: Oops! You are not performing a left head check
   popupText: Hold the head check position until the next checkpoint by holding the
-    J key.
+    left button.
 --- !u!64 &1368907039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29420,8 +29458,8 @@ MonoBehaviour:
   whichBlinker: 0
   popupType: 1
   popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your left blinker on. \r\n\r\nPress
-    Q to turn on your left blinker."
+  popupText: "By this point, you should already have your left blinker on. \r\n\r\nPull
+    the slider to the left."
 --- !u!114 &1420200610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31926,7 +31964,7 @@ MonoBehaviour:
     can''t see what''s in front of you.
 
 
-    Let go of J or K to look ahead.'
+    Let go of the button to look ahead.'
 --- !u!64 &1560649924
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32152,7 +32190,7 @@ MonoBehaviour:
   popupType: 1
   popupTitle: Oops! You are not performing a right head check
   popupText: Hold the head check position until the next checkpoint by holding the
-    K key.
+    right button.
 --- !u!64 &1580180293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34810,9 +34848,9 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great! Now look back forward again.
-  popupText: "To finish your right head check, let go of the K key  to look ahead
-    again.\r"
+  popupTitle: Looking Forward
+  popupText: "To finish your left head check, let go of the right button  to look
+    ahead again.\r\r"
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -36889,12 +36927,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great Now let's do a head check!
-  popupText: 'This is to check your blindspots.
+  popupTitle: Left Head Checking
+  popupText: 'It''s time to check your blindspots on the left.
 
 
-    Press the J key before the
-    yellow mark and hold it until the green mark to perform a left head check.'
+    Click the left
+    button on the left to perform a left headcheck. Do it before the yellow mark
+    and until the green mark.'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -39867,8 +39906,12 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Great!
-  popupText: Finally, you can use the space bar or the S key to brake.
+  popupTitle: Braking
+  popupText: 'Almost done! Just need to brake.
+
+
+    Press down either the Rear or
+    Front Brake at the top to stop.'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -41690,7 +41733,7 @@ MonoBehaviour:
     can''t see what''s in front of you.
 
 
-    Let go of J or K to look ahead.'
+    Let go of the button to look ahead.'
 --- !u!64 &2143044057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41899,6 +41942,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2122102995329135011, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_text
+      value: 'Front Brake
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2604823443028027900, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -41973,6 +42023,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: scenarioText
+      value: 'Let''s start by accelerating forward!
+
+
+        Pull down the slider
+        on the right to accelerate forward.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: scenarioTitle
+      value: Accelerating Forward
       objectReference: {fileID: 0}
     - target: {fileID: 3904753565212644260, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -42078,6 +42142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609299962387136389, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_text
+      value: Rear Brake
       objectReference: {fileID: 0}
     - target: {fileID: 6634224779495986908, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}

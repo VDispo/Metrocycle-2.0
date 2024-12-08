@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\LaneChange\ChangeLaneChecker.cs" />
     <Compile Include="Assets\Scripts\blinkers.cs" />
+    <Compile Include="Assets\Scripts\AndroidExclusive\BrakeUI.cs" />
     <Compile Include="Assets\Scripts\LaneChange\ForbiddenLaneChangeCheck.cs" />
     <Compile Include="Assets\Scripts\Intersection\IntersectionLaneDetect.cs" />
     <Compile Include="Assets\Scripts\FunctionalTesting.cs" />

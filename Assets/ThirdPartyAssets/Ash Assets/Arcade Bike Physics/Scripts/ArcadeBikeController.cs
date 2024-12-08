@@ -49,6 +49,8 @@ namespace ArcadeBP
         [SerializeField] private bool isAndroid = false;
         [SerializeField] private bool hasGyroscope = false;
         [SerializeField] private Slider throttleSlider;
+        [SerializeField] private Button leftBrakeButton;
+        [SerializeField] private Button rightBrakeButton;
 
         private void Start()
         {
@@ -72,6 +74,7 @@ namespace ArcadeBP
         {
             if (isAndroid) 
             {
+                verticalInput = 0f;
                 //turning input
                 if (false) // use gyroscope if available
                 {
@@ -84,6 +87,23 @@ namespace ArcadeBP
                 }
 
                 verticalInput = throttleSlider.value; //acceleration input
+
+                if ((leftBrakeButton != null && leftBrakeButton.GetComponent<BrakeUI>().isPressed) || 
+                    (rightBrakeButton != null && rightBrakeButton.GetComponent<BrakeUI>().isPressed))
+                {
+                    verticalInput = 0f;
+                    if (leftBrakeButton != null && leftBrakeButton.GetComponent<BrakeUI>().isPressed)
+                    {
+                        Debug.Log("Breaking Rear");
+                        verticalInput -= 0.11f;
+                    }
+                    if (rightBrakeButton != null && rightBrakeButton.GetComponent<BrakeUI>().isPressed)
+                    {
+                        verticalInput -= 0.15f;
+                    }
+                }
+
+                
             }
             else
             {
