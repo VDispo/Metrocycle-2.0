@@ -129,15 +129,18 @@ public class GameManager : MonoBehaviour
         if (!isTestMode) {
             Time.timeScale = 0;
         }
+        mobileControlsCanvas.SetActive(false);
     }
     public void resumeGame() {
         setDashboardVisibility(true);
         Time.timeScale = 1;
+        mobileControlsCanvas.SetActive(true);
     }
     public void restartGame() {
         setDashboardVisibility(true);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        mobileControlsCanvas.SetActive(true);
     }
 
     public void setDashboardVisibility(bool isVisible) {

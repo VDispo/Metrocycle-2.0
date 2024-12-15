@@ -13,8 +13,10 @@ public class CheckpointDetection : MonoBehaviour
 
     public bool showPopup;
     public PopupType popupType;
+    public TMP_Text objectiveTextUI;
     [TextArea(3, 10)] public string popupTitle;
     [TextArea(3, 10)] public string popupText;
+    [TextArea(3, 10)] public string objectiveText;
 
     public UnityEvent callback = null;
     public UnityEvent loadStateCallback = null;
@@ -38,6 +40,7 @@ public class CheckpointDetection : MonoBehaviour
 
         if (showPopup) {
             GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
+            objectiveTextUI.text = objectiveText;
         }
 
         if (callback != null) {

@@ -71,61 +71,55 @@ public class HeadCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsAndroid) {
-            if (leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp || rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp) {
+        // Headturning controls
+        bool unpressingButton, pressingLeftHeadCheck, pressingRightHeadCheck;
+        if (IsAndroid)
+        {
+            unpressingButton = leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp || rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp;
+            if (unpressingButton)
+            {
                 leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp = false;
                 rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp = false;
-                resetPriorities();
-                normal.Priority = 20;
-            } else if (isLookingForward() && !brain.IsBlending
-                        && ((lastView == left && Time.time - leftCheckTime > headCheckSpeed)
-                            ||(lastView == right && Time.time - rightCheckTime > headCheckSpeed)
-                        )
-            ) {
-                lastView = normal;
             }
+            pressingLeftHeadCheck = leftHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed;
+            pressingRightHeadCheck = rightHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed && lastView != left;
+        } 
+        else
+        {
+            unpressingButton = Input.GetKeyUp(KeyCode.J) || Input.GetKeyUp(KeyCode.K) || Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1);
+            pressingLeftHeadCheck = Input.GetKey(KeyCode.J) || Input.GetMouseButton(0);
+            pressingRightHeadCheck = Input.GetKey(KeyCode.K) || Input.GetMouseButton(1);
+        }
 
-            if (leftHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed && !isLookingLeft()) {
-                normal.Priority = 10;
-                right.Priority = 10;
-                left.Priority = 20;
-                leftCheckTime = Time.time;
-            } else if (rightHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed && !isLookingRight()) {
-                left.Priority = 10;
-                normal.Priority = 10;
-                right.Priority = 20;
-                rightCheckTime = Time.time;
-            }
-        } else {
-            if (Input.GetKeyUp("j") || Input.GetKeyUp("k") || Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1)) {
-                resetPriorities();
-                normal.Priority = 20;
-            } else if (isLookingForward() && !brain.IsBlending
-                        && ((lastView == left && Time.time - leftCheckTime > headCheckSpeed)
-                            ||(lastView == right && Time.time - rightCheckTime > headCheckSpeed)
-                        )
-            ) {
-                lastView = normal;
-            }
+        // Headturning variables
+        if (unpressingButton)
+        {
+            resetPriorities();
+            normal.Priority = 20;
+        }
+        else if (isLookingForward() && !brain.IsBlending
+                    && ((lastView == left && Time.time - leftCheckTime > headCheckSpeed)
+                        || (lastView == right && Time.time - rightCheckTime > headCheckSpeed)))
+        {
+            lastView = normal;
+        }
 
-            if ((Input.GetKey("j") || Input.GetMouseButton(0))&& lastView != right)
-            {
-                normal.Priority = 10;
-                right.Priority = 10;
-                left.Priority = 20;
-                leftCheckTime = Time.time;
+        if (pressingLeftHeadCheck && lastView != right)
+        {
+            normal.Priority = 10;
+            right.Priority = 10;
+            left.Priority = 20;
+            leftCheckTime = Time.time;
+            lastView = left;
 
-                lastView = left;
-
-            } else if ((Input.GetKey("k") || Input.GetMouseButton(1)) && lastView != left)
-            {
-                left.Priority = 10;
-                normal.Priority = 10;
-                right.Priority = 20;
-                rightCheckTime = Time.time;
-
-                lastView = right;
-            }
+        }
+        else if (pressingRightHeadCheck && lastView != left)
+        {
+            left.Priority = 10;
+            normal.Priority = 10;
+            right.Priority = 20;
+            rightCheckTime = Time.time;
+            lastView = right;
         }
     }
 }

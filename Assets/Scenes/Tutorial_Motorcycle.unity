@@ -3701,54 +3701,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &287891569
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 12
-  m_Height: 12
-  m_CompleteImageSize: 760
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 760
-  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &288743908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6633,9 +6585,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 2173957044504790645}
   popupTitle: Looking Forward
-  popupText: "To finish your left head check, let go of the left button  to look
-    ahead again.\r"
+  popupText: "To finish your left head check, let go of the left button to look ahead
+    again.\r"
+  objectiveText: 'Look Forward
+
+'
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -8911,7 +8867,7 @@ MonoBehaviour:
   whichBlinker: 1
   popupType: 1
   popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your right blinker on. \r\n\r\nPull
+  popupText: "By this point, you should already have your right blinker on. \r\nPull
     the slider to the right."
 --- !u!1001 &607706519
 PrefabInstance:
@@ -9626,8 +9582,10 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 4
+  objectiveTextUI: {fileID: 2173957044504790645}
   popupTitle: Good Job
   popupText: You did it!
+  objectiveText: Congratulations
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -9909,6 +9867,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &657949365
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 10
+  m_Height: 2
+  m_CompleteImageSize: 112
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 112
+  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!114 &658320249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21383,54 +21389,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &798324963
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 10
-  m_Height: 2
-  m_CompleteImageSize: 112
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 112
-  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &801920452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22233,13 +22191,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Right Head Checking
-  popupText: 'It''s time to check your blindspots on the right.
-
-
-    Click the right
-    button on the left to perform a right headcheck. Do it before the yellow mark
-    and until the green mark.'
+  objectiveTextUI: {fileID: 2173957044504790645}
+  popupTitle: "Do A Right Head Check\r"
+  popupText: "Hold the button with the head icon looking to the right to do a right
+    head check.\r"
+  objectiveText: Do A Right Head Check
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -22423,6 +22379,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &877426408
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 12
+  m_Height: 12
+  m_CompleteImageSize: 760
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 760
+  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &884748774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24454,54 +24458,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &972091006
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &999213908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26340,13 +26296,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Turning Left
-  popupText: 'Great! Now, let''s turn left.
+  objectiveTextUI: {fileID: 2173957044504790645}
+  popupTitle: 'Turning Left
 
-
-    First, turn on the left blinker
-    by pulling the slider on the lower left to the left. Then, tilt the device to
-    the left.'
+'
+  popupText: "Toggle the blinker on the lower left to the left. And tilt the device
+    to the left to turn.\r"
+  objectiveText: Turn Left
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -27191,13 +27147,13 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Turning Right
-  popupText: 'Great! Now, let''s turn right.
+  objectiveTextUI: {fileID: 2173957044504790645}
+  popupTitle: 'Turning Right
 
-
-    First, turn on the right blinker
-    by pulling the slider on the lower left to the right. Then, tilt the device to
-    the right.'
+'
+  popupText: "Toggle the blinker on the lower left to the right. And tilt the device
+    to the right to turn.\r"
+  objectiveText: Turn Right
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -29458,7 +29414,7 @@ MonoBehaviour:
   whichBlinker: 0
   popupType: 1
   popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your left blinker on. \r\n\r\nPull
+  popupText: "By this point, you should already have your left blinker on. \r\n\rPull
     the slider to the left."
 --- !u!114 &1420200610
 MonoBehaviour:
@@ -31395,54 +31351,6 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
---- !u!28 &1533172439
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1537448790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31962,7 +31870,6 @@ MonoBehaviour:
   popupTitle: Oops! You have to keep your eyes on the road!
   popupText: 'Looking at your blindspots for too long can be dangerous since you
     can''t see what''s in front of you.
-
 
     Let go of the button to look ahead.'
 --- !u!64 &1560649924
@@ -32561,6 +32468,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &1600749603
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1602641582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33666,6 +33621,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &1666765546
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!114 &1667847995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34848,9 +34851,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 2173957044504790645}
   popupTitle: Looking Forward
   popupText: "To finish your left head check, let go of the right button  to look
     ahead again.\r\r"
+  objectiveText: Look Forward
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -35140,54 +35145,6 @@ MonoBehaviour:
   otherSoDataStartRight: {fileID: 0}
   otherSoDataEndLeft: {fileID: 0}
   otherSoDataEndRight: {fileID: 0}
---- !u!28 &1761867675
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!114 &1763336646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36927,13 +36884,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
-  popupTitle: Left Head Checking
-  popupText: 'It''s time to check your blindspots on the left.
-
-
-    Click the left
-    button on the left to perform a left headcheck. Do it before the yellow mark
-    and until the green mark.'
+  objectiveTextUI: {fileID: 2173957044504790645}
+  popupTitle: "Do A Left Head Check\r"
+  popupText: Hold the button with the head icon looking to the left to do a left
+    head check.
+  objectiveText: Do A Left Head Check
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -38493,7 +38448,7 @@ MonoBehaviour:
   selectedRoadRightInnerOffset: 0
   selectedCrossingMaterial: 0
   crossingTextureInfoIndex: 0
-  handleSelection: 1
+  handleSelection: 0
   positionHandleSelection: 1
   markerDirXZ: 0
   markerDirXZInt: 0
@@ -38505,11 +38460,11 @@ MonoBehaviour:
   infoTexture: {fileID: 0}
   infoTexture2: {fileID: 0}
   infoTextures: []
-  plusSignTexture: {fileID: 287891569}
-  minSignTexture: {fileID: 798324963}
-  signPostHeaderBG: {fileID: 1761867675}
-  signPostListBG: {fileID: 1533172439}
-  signPostListSelBG: {fileID: 972091006}
+  plusSignTexture: {fileID: 877426408}
+  minSignTexture: {fileID: 657949365}
+  signPostHeaderBG: {fileID: 1666765546}
+  signPostListBG: {fileID: 1980241598}
+  signPostListSelBG: {fileID: 1600749603}
   editorSkin: 0
   showAllPrefabs: 1
   standardPrefabsFlag: 0
@@ -39455,6 +39410,54 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!28 &1980241598
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1981400065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39906,12 +39909,14 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 2173957044504790645}
   popupTitle: Braking
   popupText: 'Almost done! Just need to brake.
 
 
     Press down either the Rear or
     Front Brake at the top to stop.'
+  objectiveText: Brake on the green marking
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -42024,19 +42029,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3225740604146636599, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_text
+      value: Accelerate Forward
+      objectReference: {fileID: 0}
     - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: scenarioText
-      value: 'Let''s start by accelerating forward!
-
-
-        Pull down the slider
-        on the right to accelerate forward.'
+      value: "Pull down the throttle on the right to accelerate forward.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: scenarioTitle
-      value: Accelerating Forward
+      value: "Accelerate Forward\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3904753565212644260, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -42283,6 +42289,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2173957044504790645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3225740604146636599, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4718698958074102854

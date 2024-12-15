@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: eeec97e0996ac4f4fa8a6676b9c33530
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial_Bicycle.unity
     guid: bf2a4770c3eb6ea0ca5fca8dfa161a8a
-  - enabled: 0
-    path: Assets/Scenes/Main Menu.unity
-    guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   - enabled: 1
     path: Assets/Scenes/Basic_Straight_Motorcycle.unity
     guid: 54f8fce3d765c6f4b8f92e7e6f53d2fa
@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/Test_LaneChange.unity
     guid: e419aa40dd6e7c1d4b4a6aa12d0950a5
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   m_configObjects: {}
