@@ -6681,9 +6681,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great! Now look back forward again.
   popupText: "To finish your left head check, let go of the J key  to look ahead
     again.\r"
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -9347,6 +9349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: popUp
       objectReference: {fileID: 0}
+    - target: {fileID: 9039694461212793084, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9173356330548224767, guid: b34ef6462ffba72b8ba819910427c17c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9640,8 +9647,10 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 4
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great!
   popupText: Finally, you can use the space bar or the S key to brake.
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -22199,9 +22208,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great! Next, perform a right head check
   popupText: Press the K key before the yellow mark and hold until the green mark
     to check your right blindspot.
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -26302,6 +26313,7 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great! Now let's try turning left.
   popupText: 'Press Q to turn on the left blinker.
 
@@ -26309,6 +26321,7 @@ MonoBehaviour:
 
     Hold A while moving forward
     to turn left.'
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -27153,6 +27166,7 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great! Now let's try turning right.
   popupText: 'Press E to turn on the right blinker.
 
@@ -27160,6 +27174,7 @@ MonoBehaviour:
 
     Hold D while moving forward
     to turn right.'
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -34787,9 +34802,11 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great! Now look back forward again.
   popupText: "To finish your right head check, let go of the K key  to look ahead
     again.\r"
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -36879,12 +36896,14 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great Now let's do a head check!
   popupText: 'This is to check your blindspots.
 
 
     Press the J key before the
     yellow mark and hold it until the green mark to perform a left head check.'
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -39857,8 +39876,10 @@ MonoBehaviour:
   deactivateAfterCollision: 1
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great!
   popupText: Finally, you can use the space bar or the S key to brake.
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -41948,6 +41969,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bike
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8607378005101229383, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}

@@ -4183,6 +4183,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bike
       objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8607378005101229383, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_IsActive
@@ -7331,8 +7361,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -25775,8 +25807,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -28079,8 +28113,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -31468,8 +31504,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 4
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []

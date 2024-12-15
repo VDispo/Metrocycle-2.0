@@ -20137,8 +20137,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -39706,8 +39708,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 2
+  objectiveTextUI: {fileID: 0}
   popupTitle: You missed the U-turn.
   popupText: Remember to gradually slow down when approaching a U-turn.
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -47232,8 +47236,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -48559,8 +48565,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -54568,8 +54576,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 4
+  objectiveTextUI: {fileID: 0}
   popupTitle: 
   popupText: 
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -65123,12 +65133,14 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 1
+  objectiveTextUI: {fileID: 0}
   popupTitle: Great!
   popupText: 'Next, perform a Right U-turn on the next junction.
 
 
     Remember to
     use your blinkers and to perform a head check before turning!'
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -75039,8 +75051,10 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 2
+  objectiveTextUI: {fileID: 0}
   popupTitle: You missed the U-turn.
   popupText: Remember to gradually slow down when approaching a U-turn.
+  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
