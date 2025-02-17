@@ -1,0 +1,13 @@
+﻿Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
+title,0,,Basic Scenario - Intersection,,Basic Scenario - Intersection,
+description,1,,"Araling nating dumaan sa intersection nang maayos. Ang max speed sa intersection ay 20kph. Ngayon, subukan nating lumiko pa-KANAN sa susunod na intersection.",,"Let's learn how to use the intersection correctly. Note that the max speed in intersections is 20kph. First, Try turning RIGHT on the next intersection.",
+rightTurnTitle,2,,Sunod na Pagsasanay,,Next Challenge,
+rightTurnDescription,3,,"Tandaan na kapag liliko pa-kanan sa intersection, ilagay ang sarili sa KANANG lane. Sa susunod na pagsasanay, bumalik sa intersection at lumiko naman pa-KALIWA",,"Remember that when turning right on an intersection, make sure to position yourself on the Right lane.  Next, go back to the intersection and turn LEFT.",
+leftTurnTitle,4,,Sunod na Pagsasanay,,Next Challenge,
+leftTurnDescription,5,,…,,"When turning left, prefer merging on the inner lane to minimize possible crashes (e.g. with other vehicles merging via a left turn). Next, return to the Intersection and perform a U-TURN carefully.",
+uTurnTitle,6,,Sunod na Pagsasanay,,Next Challenge,
+uTurnDescription,7,,…,,"Similar to Right turns, prefer U-turning on the inner lane. Position yourself in the correct lane in advance. Finally, return to the intersection and go straight through it.",
+straightTitle,8,,Sunod na Pagsasanay,,Next Challenge,
+straightDescription,9,,…,,"For intersections with traffic lights, make sure to follow the signals. Otherwise, drive carefully and observe if there are oncoming vehicles before proceeding.",
+endTitle,10,,Magaling!,,Great Job!,
+endDescription,11,none,<>,,<>,

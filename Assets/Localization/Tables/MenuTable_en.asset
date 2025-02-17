@@ -18,8 +18,8 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 10005605036032
-    m_Localized: TOUCH ANYWHERE TO START
+  - m_Id: 19
+    m_Localized: EDSA
     m_Metadata:
       m_Items: []
   - m_Id: 1
@@ -66,36 +66,36 @@ MonoBehaviour:
     m_Localized: ADVANCED
     m_Metadata:
       m_Items: []
-  - m_Id: 12
-    m_Localized: SELECT BASIC SCENARIO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13
-    m_Localized: STRAIGHT ROAD
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14
-    m_Localized: INTERSECTION
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15
-    m_Localized: U-TURN
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16
-    m_Localized: MULTILANE
+  - m_Id: 18
+    m_Localized: COMMONWEALTH
     m_Metadata:
       m_Items: []
   - m_Id: 17
     m_Localized: SELECT ADVANCED SCENARIO
     m_Metadata:
       m_Items: []
-  - m_Id: 18
-    m_Localized: COMMONWEALTH
+  - m_Id: 16
+    m_Localized: MULTILANE
     m_Metadata:
       m_Items: []
-  - m_Id: 19
-    m_Localized: EDSA
+  - m_Id: 15
+    m_Localized: U-TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: INTERSECTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: STRAIGHT ROAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: SELECT BASIC SCENARIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5262856258117632
+    m_Localized: TOUCH ANYWHERE TO START
     m_Metadata:
       m_Items: []
   references:

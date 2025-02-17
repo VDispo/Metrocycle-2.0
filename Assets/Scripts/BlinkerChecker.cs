@@ -8,8 +8,8 @@ public class BlinkerCheck : MonoBehaviour
     private blinkers blinkerScript;
 
     public PopupType popupType = PopupType.PROMPT;
-    [TextArea(3, 10)] public string popupTitle;
-    [TextArea(3, 10)] public string popupText;
+    public string PopupTitle { get; set; }
+    public string PopupText { get; set; }
 
     void Start() {
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
@@ -19,7 +19,7 @@ public class BlinkerCheck : MonoBehaviour
         if ((whichBlinker == Direction.RIGHT && blinkerScript.rightStatus == 0)
             || (whichBlinker == Direction.LEFT && blinkerScript.leftStatus == 0)
         ) {
-            GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
+            GameManager.Instance.PopupSystem.popWithType(popupType, PopupTitle, PopupText);
 
             GameManager.Instance.setErrorReason(
                 whichBlinker == Direction.LEFT

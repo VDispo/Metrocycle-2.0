@@ -15,7 +15,7 @@ MonoBehaviour:
   m_TableCollectionName: MenuTable
   m_TableCollectionNameGuidString: 20ceb2a93a50cd44a994e768579b7665
   m_Entries:
-  - m_Id: 10005605036032
+  - m_Id: 5262856258117632
     m_Key: initialPrompt
     m_Metadata:
       m_Items: []
@@ -23,17 +23,17 @@ MonoBehaviour:
     m_Key: play
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523041
+      - rid: 1404317527448748035
   - m_Id: 2
     m_Key: statistics
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523042
+      - rid: 1404317527448748036
   - m_Id: 3
     m_Key: settings
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523043
+      - rid: 1404317527448748037
   - m_Id: 4
     m_Key: back
     m_Metadata:
@@ -58,12 +58,12 @@ MonoBehaviour:
     m_Key: tutorial
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523044
+      - rid: 1404317527448748038
   - m_Id: 10
     m_Key: basicScenario
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523045
+      - rid: 1404317527448748039
   - m_Id: 11
     m_Key: advancedScenario
     m_Metadata:
@@ -81,17 +81,17 @@ MonoBehaviour:
     m_Key: intersection
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523047
+      - rid: 1404317527448748040
   - m_Id: 15
     m_Key: uTurn
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523048
+      - rid: 1404317527448748041
   - m_Id: 16
     m_Key: multilane
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523049
+      - rid: 1404317527448748042
   - m_Id: 17
     m_Key: selectAdvancedScenario
     m_Metadata:
@@ -100,12 +100,12 @@ MonoBehaviour:
     m_Key: commonwealth
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523050
+      - rid: 1404317527448748043
   - m_Id: 19
     m_Key: edsa
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523051
+      - rid: 1404317527448748044
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -118,47 +118,47 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1738498290176
-    - rid: 1404317198452523041
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: same
-    - rid: 1404317198452523042
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: same
-    - rid: 1404317198452523043
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: same
-    - rid: 1404317198452523044
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: same
-    - rid: 1404317198452523045
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: same
     - rid: 1404317198452523046
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same
-    - rid: 1404317198452523047
+    - rid: 1404317527448748035
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same
-    - rid: 1404317198452523048
+    - rid: 1404317527448748036
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same
-    - rid: 1404317198452523049
+    - rid: 1404317527448748037
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same
-    - rid: 1404317198452523050
+    - rid: 1404317527448748038
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same
-    - rid: 1404317198452523051
+    - rid: 1404317527448748039
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: same
+    - rid: 1404317527448748040
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: same
+    - rid: 1404317527448748041
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: same
+    - rid: 1404317527448748042
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: same
+    - rid: 1404317527448748043
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: same
+    - rid: 1404317527448748044
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: same

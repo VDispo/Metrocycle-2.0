@@ -2635,9 +2635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bikeType: 0
   isTestScene: 0
-  scenarioTitle: Metrocycle Controls Tutorial
-  scenarioText: "In this quick tutorial, we will go over the basic controls. \n\nHold
-    W to accelerate forward."
 --- !u!1 &6840200318031802422
 GameObject:
   m_ObjectHideFlags: 0

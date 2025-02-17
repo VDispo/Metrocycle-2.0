@@ -18,8 +18,8 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 10005605036032
-    m_Localized: PINDUTIN UPANG MAGSIMULA
+  - m_Id: 19
+    m_Localized: EDSA
     m_Metadata:
       m_Items: []
   - m_Id: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_Localized: PUMILI NG MODE
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523038
+      - rid: 1404317527448748032
   - m_Id: 9
     m_Localized: TUTORIAL
     m_Metadata:
@@ -67,52 +67,52 @@ MonoBehaviour:
     m_Localized: ADVANCED
     m_Metadata:
       m_Items: []
-  - m_Id: 12
-    m_Localized: PUMILI NG BASIC NA SENARYO
-    m_Metadata:
-      m_Items:
-      - rid: 1404317198452523039
-  - m_Id: 13
-    m_Localized: DIRETSONG DAAN
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14
-    m_Localized: INTERSECTION
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15
-    m_Localized: U-TURN
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16
-    m_Localized: MULTILANE
+  - m_Id: 18
+    m_Localized: COMMONWEALTH
     m_Metadata:
       m_Items: []
   - m_Id: 17
     m_Localized: PUMILI NG ADVANCED NA SENARYO
     m_Metadata:
       m_Items:
-      - rid: 1404317198452523040
-  - m_Id: 18
-    m_Localized: COMMONWEALTH
+      - rid: 1404317527448748033
+  - m_Id: 16
+    m_Localized: MULTILANE
     m_Metadata:
       m_Items: []
-  - m_Id: 19
-    m_Localized: EDSA
+  - m_Id: 15
+    m_Localized: U-TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: INTERSECTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: DIRETSONG DAAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: PUMILI NG BASIC NA SENARYO
+    m_Metadata:
+      m_Items:
+      - rid: 1404317527448748034
+  - m_Id: 5262856258117632
+    m_Localized: PINDUTIN UPANG MAGSIMULA
     m_Metadata:
       m_Items: []
   references:
     version: 2
     RefIds:
-    - rid: 1404317198452523038
+    - rid: 1404317527448748032
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: mixed
-    - rid: 1404317198452523039
+    - rid: 1404317527448748033
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: mixed
-    - rid: 1404317198452523040
+    - rid: 1404317527448748034
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: mixed

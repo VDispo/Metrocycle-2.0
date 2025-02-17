@@ -7,13 +7,13 @@ public class ScenarioStart : MonoBehaviour
 {
     public BikeType bikeType = BikeType.Motorcycle;
     public bool isTestScene = false;
-    [TextArea(3, 10)] public string scenarioTitle;
-    [TextArea(3, 10)] public string scenarioText;
+    public string ScenarioTitle { get; set; }
+    public string ScenarioText { get; set; }
 
     // Update is called once per frame
     void Start()
     {
-        GameManager.Instance.PopupSystem.popStart(scenarioTitle, scenarioText);
+        GameManager.Instance.PopupSystem.popStart(ScenarioTitle, ScenarioText);
         GameManager.Instance.setBikeType(bikeType);
         GameManager.Instance.isTestMode = isTestScene;
     }

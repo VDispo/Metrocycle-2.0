@@ -7,14 +7,14 @@ public class HeadCheckDetect : MonoBehaviour
     public Direction direction;
 
     public PopupType popupType;
-    [TextArea(3, 10)] public string popupTitle;
-    [TextArea(3, 10)] public string popupText;
+    public string PopupTitle { get; set; }
+    public string PopupText { get; set;}
 
     void OnTriggerEnter (Collider other) {
         bool isValid = isValid = GameManager.Instance.isDoingHeadCheck(direction);
 
         if (!isValid) {
-            GameManager.Instance.PopupSystem.popWithType(popupType, popupTitle, popupText);
+            GameManager.Instance.PopupSystem.popWithType(popupType, PopupTitle, PopupText);
 
             GameManager.Instance.setErrorReason(
                 direction == Direction.LEFT
