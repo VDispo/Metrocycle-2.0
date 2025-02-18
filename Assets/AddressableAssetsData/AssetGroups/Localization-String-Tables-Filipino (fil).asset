@@ -18,13 +18,49 @@ MonoBehaviour:
   m_GUID: ee20c5c512b75114ea236e4cf6aa71c7
   m_SerializeEntries:
   - m_GUID: c9c82db213f9b6c43ae1fc0b59651b54
-    m_Address: MenuTable_fil
+    m_Address: MainMenuTable_fil
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fil
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af7e5fd59529ab84c87cc44b2a724cc3
-    m_Address: Motor_Tutorial_fil
+    m_Address: Motor_TutorialTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 398fd1df1e7af094298ce411a7133e0b
+    m_Address: Motor_AdvancedCommonwealthTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba6c60b849445bd4c87033d35cbcd4cf
+    m_Address: Motor_AdvancedEDSATable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7229572baa2c2164285ea733a2f09bbb
+    m_Address: Motor_BasicIntersectionTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f632f12110573a84ca65c47975c0cd90
+    m_Address: Motor_BasicStraightTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdd97c270364472429a8b379f1171415
+    m_Address: Motor_BasicMultilaneTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93794a706fba62243983841206d2e2a1
+    m_Address: Motor_BasicUTurnTable_fil
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fil

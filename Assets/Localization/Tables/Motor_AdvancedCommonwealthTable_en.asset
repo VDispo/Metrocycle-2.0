@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Motor_AdvancedCommonwealthTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 239f07f5e987b7247b802095cfa322d1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1
+    m_Localized: Switch to the leftmost lane and make a u-turn. Remember to follow
+      road regulations and safety checks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Great job on the U-turn!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Now drive until the end of the barriers and try to go back to the
+      motorcycle lane!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: 'Wrong Way! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: You are committing counterflow! Please drive the other way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: You missed the U-turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Remember to gradually slow down when approaching a U-turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: You forgot to signal!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: You should already signal your intent to turn 25m away from the
+      turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: You took too long to switch lanes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Carefully switch lanes and reach the motorcycle lane on time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: You failed to switch to the proper lane on time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1637351743488
+    m_Localized: 'ADVANCED SCENARIO: COMMONWEALTH'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

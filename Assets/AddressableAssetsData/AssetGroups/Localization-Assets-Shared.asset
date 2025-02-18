@@ -28,6 +28,37 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 239f07f5e987b7247b802095cfa322d1
+    m_Address: Assets/Localization/Tables/Motor_AdvancedCommonwealthTable Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52656f251345a6c48903819f3994bb20
+    m_Address: Assets/Localization/Tables/Motor_AdvancedEDSATable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b5e8b58a62663140969e265d0e5b531
+    m_Address: Assets/Localization/Tables/Motor_BasicIntersectionTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cddc51285d1f003468f40f46d19dea0c
+    m_Address: Assets/Localization/Tables/Motor_BasicStraightTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ea5215b098bfe74fbbb9ff1245edd9b
+    m_Address: Assets/Localization/Tables/Motor_BasicMultilaneTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f6b9639aecb3454f8cb298ce970c2be
+    m_Address: Assets/Localization/Tables/Motor_BasicUTurnTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 97f9ae32b6876ca48b2fc72434485a1c, type: 2}
   m_SchemaSet:

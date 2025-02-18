@@ -18,13 +18,49 @@ MonoBehaviour:
   m_GUID: 112990a25015dad4d8f1ba64b22118cb
   m_SerializeEntries:
   - m_GUID: a83d15f6a98a7e24ca6c00cbbbd181a5
-    m_Address: MenuTable_en
+    m_Address: MainMenuTable_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2222e9252538e4f4e870d6d974f034b3
-    m_Address: Motor_Tutorial_en
+    m_Address: Motor_TutorialTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45260d7c51deb53419ce1de2ff4456bc
+    m_Address: Motor_AdvancedCommonwealthTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80aa317e15921b348850761e56ea51e5
+    m_Address: Motor_AdvancedEDSATable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e4bcead21f64eb4fadf92f4b3cf54d2
+    m_Address: Motor_BasicIntersectionTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07c07464963e3be479c0abc68a297ec1
+    m_Address: Motor_BasicStraightTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 000ff008074d7184ba8e963aa3a5f676
+    m_Address: Motor_BasicMultilaneTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af714e9cab1c37d42b0308f3047811bc
+    m_Address: Motor_BasicUTurnTable_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
