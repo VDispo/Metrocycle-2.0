@@ -28,6 +28,7 @@ public class popUp : MonoBehaviour
     };
 
     public GameObject popUpSystem;
+    public GameObject throttleUI;
 
     private Transform lastActiveSet = null;
     private Transform popUpBox;
@@ -201,6 +202,7 @@ public class popUp : MonoBehaviour
 
         lastActiveSet.gameObject.SetActive(false);
         popUpBox.gameObject.SetActive(false);
+        throttleUI.GetComponent<ThrottleUI>().ResetThrottle();
 
         GameManager.Instance.resumeGame();
     }

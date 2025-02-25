@@ -1990,8 +1990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -225, y: -179.99997}
-  m_SizeDelta: {x: 250, y: 200}
+  m_AnchoredPosition: {x: -275, y: -179.99997}
+  m_SizeDelta: {x: 350, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1709265391218874841
 CanvasRenderer:
@@ -3679,8 +3679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 224.99994, y: -179.99997}
-  m_SizeDelta: {x: 250, y: 200}
+  m_AnchoredPosition: {x: 275, y: -179.99997}
+  m_SizeDelta: {x: 350, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3659073765149502695
 CanvasRenderer:
@@ -3933,6 +3933,11 @@ PrefabInstance:
       propertyPath: rightBrakeButton
       value: 
       objectReference: {fileID: 8053432677966245816}
+    - target: {fileID: 989309691621460989, guid: ca91199b324624e269e7ee016c18b2b3,
+        type: 3}
+      propertyPath: accelerationCurve
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5979533320120663939, guid: ca91199b324624e269e7ee016c18b2b3,
         type: 3}
       propertyPath: m_Name

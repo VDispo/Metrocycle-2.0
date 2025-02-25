@@ -51,6 +51,8 @@ namespace ArcadeBP
         [SerializeField] private Slider throttleSlider;
         [SerializeField] private Button leftBrakeButton;
         [SerializeField] private Button rightBrakeButton;
+        [SerializeField][Range(1,10)] private float logBase = 2.71828f; // e by default
+        [SerializeField] private int accelerationCurve = 100;
 
         private void Start()
         {
@@ -86,12 +88,13 @@ namespace ArcadeBP
                     horizontalInput = Input.acceleration.x; 
                 }
 
-                verticalInput = throttleSlider.value; //acceleration input
+                verticalInput =  Mathf.Log(accelerationCurve * throttleSlider.value + 1, logBase) / Mathf.Log(accelerationCurve + 1, logBase);
+                // Debug.Log("Throttle: " + verticalInput + " ThrottleSlider: " + throttleSlider.value);
 
                 if ((leftBrakeButton != null && leftBrakeButton.GetComponent<BrakeUI>().isPressed) || 
                     (rightBrakeButton != null && rightBrakeButton.GetComponent<BrakeUI>().isPressed))
                 {
-                    verticalInput = 0f;
+                    // verticalInput = 0f;
                     if (leftBrakeButton != null && leftBrakeButton.GetComponent<BrakeUI>().isPressed)
                     {
                         Debug.Log("Breaking Rear");

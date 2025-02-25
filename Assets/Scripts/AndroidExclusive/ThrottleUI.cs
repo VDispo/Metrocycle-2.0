@@ -9,7 +9,7 @@ public class ThrottleUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     [SerializeField] private Slider throttleSlider;
 
     [Header("Values")]
-    [SerializeField][Range(0,10)] private float unthrottleRate; // speed at which, when let go, the slider goes back to 0
+    [SerializeField][Range(0,10)] private float unthrottleRate;
     private bool isThrottling;
 
     private void Update()
@@ -27,4 +27,8 @@ public class ThrottleUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         isThrottling = false;
     }
 
+    public void ResetThrottle()
+    {
+        isThrottling = false;
+    }
 }
