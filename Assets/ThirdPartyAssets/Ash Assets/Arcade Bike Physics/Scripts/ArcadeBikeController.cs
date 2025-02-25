@@ -53,6 +53,7 @@ namespace ArcadeBP
         [SerializeField] private Button rightBrakeButton;
         [SerializeField][Range(1,10)] private float logBase = 2.71828f; // e by default
         [SerializeField] private int accelerationCurve = 100;
+        [SerializeField] private float steeringMultiplier = 1f;
 
         private void Start()
         {
@@ -81,7 +82,7 @@ namespace ArcadeBP
                 if (false) // use gyroscope if available
                 {
                     Debug.Log("Using Gyroscope");
-                    horizontalInput += -Input.gyro.rotationRate.z * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
+                    horizontalInput += -Input.gyro.rotationRate.z * steeringMultiplier * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
                 }
                 else // use accelerometer if no gyroscope
                 {
