@@ -86,7 +86,7 @@ namespace ArcadeBP
                 }
                 else // use accelerometer if no gyroscope
                 {
-                    horizontalInput = Input.acceleration.x; 
+                    horizontalInput = Input.acceleration.x * steeringMultiplier; 
                 }
 
                 verticalInput =  Mathf.Log(accelerationCurve * throttleSlider.value + 1, logBase) / Mathf.Log(accelerationCurve + 1, logBase);

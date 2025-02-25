@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BicycleVehicle : MonoBehaviour
 {
@@ -33,6 +34,13 @@ public class BicycleVehicle : MonoBehaviour
 
 	[SerializeField] Transform frontWheeltransform;
 	[SerializeField] Transform backWheeltransform;
+	[SerializeField] Slider throttleSlider;
+	[SerializeField] Button leftBrakeButton;
+	[SerializeField] Button rightBrakeButton;
+	[SerializeField][Range(1,10)] private float logBase = 2.71828f; // e by default
+	[SerializeField] private int accelerationCurve = 100;
+	[SerializeField] private float steeringMultiplier = 1f;
+
 
 	// [SerializeField] TrailRenderer fronttrail;
 	// [SerializeField] TrailRenderer rearttrail;
@@ -62,10 +70,28 @@ public class BicycleVehicle : MonoBehaviour
 
 	public void GetInput()
 	{
-		horizontalInput = Input.GetAxis("Horizontal");
-		vereticallInput = Input.GetAxis("Vertical");
-		braking = Input.GetKey(KeyCode.Space);
-	}
+		// FOR DESKTOP BUILD
+		// horizontalInput = Input.GetAxis("Horizontal");
+		// vereticallInput = Input.GetAxis("Vertical");
+		// braking = Input.GetKey(KeyCode.Space);
+
+		vereticallInput = 0f;
+		//turning input
+		if (false) // use gyroscope if available
+		{
+				Debug.Log("Using Gyroscope");
+				horizontalInput += -Input.gyro.rotationRate.z * steeringMultiplier * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
+		}
+		else // use accelerometer if no gyroscope
+		{
+				horizontalInput = Input.acceleration.x * steeringMultiplier; 
+		}
+
+		vereticallInput =  Mathf.Log(accelerationCurve * throttleSlider.value + 1, logBase) / Mathf.Log(accelerationCurve + 1, logBase);
+		// Debug.Log("Throttle: " + vereticallInput + " ThrottleSlider: " + throttleSlider.value);
+
+		braking = (leftBrakeButton != null && leftBrakeButton.GetComponent<BrakeUI>().isPressed) || (rightBrakeButton != null && rightBrakeButton.GetComponent<BrakeUI>().isPressed);
+}
 
 	public void HandleEngine()
 	{

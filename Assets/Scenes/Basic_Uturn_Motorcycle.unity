@@ -20138,9 +20138,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -25696,6 +25693,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &554244033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482639008694207283, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 554244029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &556390214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27111,8 +27120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  popupTitle: 
-  popupText: 
 --- !u!1001 &609579204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39709,9 +39716,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 2
   objectiveTextUI: {fileID: 0}
-  popupTitle: You missed the U-turn.
-  popupText: Remember to gradually slow down when approaching a U-turn.
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -47237,9 +47241,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -48566,9 +48567,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -53610,8 +53608,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: 
-  popupText: 
 --- !u!1001 &1417381520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54577,9 +54573,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 4
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -55730,8 +55723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: You forgot to signal!
-  popupText: You should already signal your intent to turn 25m away from the turn.
 --- !u!64 &1478587387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65134,13 +65125,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great!
-  popupText: 'Next, perform a Right U-turn on the next junction.
-
-
-    Remember to
-    use your blinkers and to perform a head check before turning!'
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -66777,6 +66761,11 @@ PrefabInstance:
       propertyPath: leftHeadCheckButton
       value: 
       objectReference: {fileID: 554244032}
+    - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
+        type: 3}
+      propertyPath: overHeadCheckButton
+      value: 
+      objectReference: {fileID: 554244033}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: rightHeadCheckButton
@@ -75052,9 +75041,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 2
   objectiveTextUI: {fileID: 0}
-  popupTitle: You missed the U-turn.
-  popupText: Remember to gradually slow down when approaching a U-turn.
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -77760,8 +77746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  popupTitle: You forgot to signal!
-  popupText: You should already signal your intent to turn 25m away from the turn.
 --- !u!64 &1928082040
 MeshCollider:
   m_ObjectHideFlags: 0

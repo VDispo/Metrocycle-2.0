@@ -4263,6 +4263,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &192005947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482639008694207283, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 192005943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &202477372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7362,9 +7374,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -10470,8 +10479,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  popupTitle: 
-  popupText: 
 --- !u!1001 &612399232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25808,9 +25815,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -28114,9 +28118,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -31505,9 +31506,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 4
   objectiveTextUI: {fileID: 0}
-  popupTitle: 
-  popupText: 
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -32256,8 +32254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: 
-  popupText: 
 --- !u!1001 &1417459157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49556,6 +49552,11 @@ PrefabInstance:
       propertyPath: leftHeadCheckButton
       value: 
       objectReference: {fileID: 192005946}
+    - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
+        type: 3}
+      propertyPath: overHeadCheckButton
+      value: 
+      objectReference: {fileID: 192005947}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: rightHeadCheckButton

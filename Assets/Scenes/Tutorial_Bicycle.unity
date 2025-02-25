@@ -4145,6 +4145,18 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!114 &304436232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482639008694207283, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &304678875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6682,10 +6694,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great! Now look back forward again.
-  popupText: "To finish your left head check, let go of the J key  to look ahead
-    again.\r"
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -8960,9 +8968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your right blinker on. \r\n\r\nPress
-    E to turn on your right blinker."
 --- !u!1001 &607706519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9344,6 +9349,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5545582269101497515, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: throttleUI
+      value: 
+      objectReference: {fileID: 2128817754}
     - target: {fileID: 7366137456209663318, guid: b34ef6462ffba72b8ba819910427c17c,
         type: 3}
       propertyPath: m_Name
@@ -9648,9 +9658,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 4
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great!
-  popupText: Finally, you can use the space bar or the S key to brake.
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -22209,10 +22216,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great! Next, perform a right head check
-  popupText: Press the K key before the yellow mark and hold until the green mark
-    to check your right blindspot.
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -26314,14 +26317,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great! Now let's try turning left.
-  popupText: 'Press Q to turn on the left blinker.
-
-
-
-    Hold A while moving forward
-    to turn left.'
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -27167,14 +27162,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great! Now let's try turning right.
-  popupText: 'Press E to turn on the right blinker.
-
-
-
-    Hold D while moving forward
-    to turn right.'
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -28945,9 +28932,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 0
   popupType: 1
-  popupTitle: Oops! You are not performing a left head check
-  popupText: Hold the head check position until the next checkpoint by holding the
-    J key.
 --- !u!64 &1368907039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29482,9 +29466,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  popupTitle: You forgot to turn on your blinker!
-  popupText: "By this point, you should already have your left blinker on. \r\n\r\nPress
-    Q to turn on your left blinker."
 --- !u!114 &1420200610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31913,12 +31894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 2
   popupType: 1
-  popupTitle: Oops! You have to keep your eyes on the road!
-  popupText: 'Looking at your blindspots for too long can be dangerous since you
-    can''t see what''s in front of you.
-
-
-    Let go of J or K to look ahead.'
 --- !u!64 &1560649924
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32142,9 +32117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 1
   popupType: 1
-  popupTitle: Oops! You are not performing a right head check
-  popupText: Hold the head check position until the next checkpoint by holding the
-    K key.
 --- !u!64 &1580180293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34803,10 +34775,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great! Now look back forward again.
-  popupText: "To finish your right head check, let go of the K key  to look ahead
-    again.\r"
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -36681,43 +36649,48 @@ PrefabInstance:
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -74.415794
+      value: -73.10004
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.833647
+      value: 21.102736
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 110.87714
+      value: 112.19447
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.99556696
+      value: -0.4969109
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09316641
+      value: 0.04650137
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.012846415
+      value: -0.86278516
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0012019828
+      value: 0.080740616
       objectReference: {fileID: 0}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: leftHeadCheckButton
       value: 
       objectReference: {fileID: 2173957044504790643}
+    - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
+        type: 3}
+      propertyPath: overHeadCheckButton
+      value: 
+      objectReference: {fileID: 304436232}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: rightHeadCheckButton
@@ -36897,13 +36870,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great Now let's do a head check!
-  popupText: 'This is to check your blindspots.
-
-
-    Press the J key before the
-    yellow mark and hold it until the green mark to perform a left head check.'
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -39877,9 +39843,6 @@ MonoBehaviour:
   showPopup: 1
   popupType: 1
   objectiveTextUI: {fileID: 0}
-  popupTitle: Great!
-  popupText: Finally, you can use the space bar or the S key to brake.
-  objectiveText: 
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -41447,6 +41410,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &2128817754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8949535679900133506, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2141003237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41696,12 +41665,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 2
   popupType: 1
-  popupTitle: Oops! You have to keep your eyes on the road!
-  popupText: 'Looking at your blindspots for too long can be dangerous since you
-    can''t see what''s in front of you.
-
-
-    Let go of J or K to look ahead.'
 --- !u!64 &2143044057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41895,6 +41858,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 398133132196896252, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: throttleSlider
+      value: 
+      objectReference: {fileID: 2173957044504790644}
+    - target: {fileID: 398133132196896252, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: leftBrakeButton
+      value: 
+      objectReference: {fileID: 2173957044504790646}
+    - target: {fileID: 398133132196896252, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: rightBrakeButton
+      value: 
+      objectReference: {fileID: 2173957044504790645}
     - target: {fileID: 398133132196896254, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_IsActive
@@ -42006,7 +41984,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8930486416044424930, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
+    - {fileID: 3614480421322702162, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
+    - {fileID: 3945195905571671872, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
+    - {fileID: 809387932070933061, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
@@ -42025,6 +42007,42 @@ MonoBehaviour:
 --- !u!114 &2173957044504790643 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4190105915461650655, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2173957044504790644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 132864376514398835, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128817754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2173957044504790645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8053432677966245816, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2173957044504790646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4147808786786721444, guid: b80445d0d840830df8cd902c0cea3559,
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}

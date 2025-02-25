@@ -4012,6 +4012,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2969384988200066483}
     m_Modifications:
+    - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: throttleSlider
+      value: 
+      objectReference: {fileID: 132864376514398835}
+    - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: leftBrakeButton
+      value: 
+      objectReference: {fileID: 4147808786786721444}
+    - target: {fileID: 4664322994268695228, guid: b9f42de6425d7a64492e24f3f8462954,
+        type: 3}
+      propertyPath: rightBrakeButton
+      value: 
+      objectReference: {fileID: 8053432677966245816}
     - target: {fileID: 4664322994268695230, guid: b9f42de6425d7a64492e24f3f8462954,
         type: 3}
       propertyPath: m_Name

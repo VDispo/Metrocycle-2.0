@@ -558,7 +558,7 @@ MonoBehaviour:
   normal: {fileID: 7336374719459004984}
   right: {fileID: 1155043554112211233}
   left: {fileID: 8138568303991613292}
-  overhead: {fileID: 0}
+  overhead: {fileID: 5554914067527691108}
   headCheckSpeed: 0.5
   maxHeadCheckDelay: 5
   leftCheckTime: 0
