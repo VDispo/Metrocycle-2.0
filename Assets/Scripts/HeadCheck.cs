@@ -11,6 +11,7 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera normal;
     [SerializeField] public CinemachineVirtualCamera right;
     [SerializeField] public CinemachineVirtualCamera left;
+    [SerializeField] public CinemachineVirtualCamera overhead;
     [SerializeField] public float headCheckSpeed;
     // Turn must be made within reasonable time after head check
     [SerializeField] public float maxHeadCheckDelay = 5f;
@@ -20,6 +21,7 @@ public class HeadCheck : MonoBehaviour
 
     public Button leftHeadCheckButton;
     public Button rightHeadCheckButton;
+    public Button overHeadCheckButton;
 
     private CinemachineBrain brain;
     private CinemachineVirtualCamera lastView;
@@ -56,6 +58,7 @@ public class HeadCheck : MonoBehaviour
         normal.Priority = 10;
         right.Priority = 10;
         left.Priority = 10;
+        overhead.Priority = 10;
     }
 
     public bool isLookingRight() {
@@ -67,28 +70,34 @@ public class HeadCheck : MonoBehaviour
     public bool isLookingForward() {
         return normal.Priority == 20;
     }
+    public bool isLookingOverhead() {
+        return overhead.Priority == 20;
+    }
 
     // Update is called once per frame
     void Update()
     {
         // Headturning controls
-        bool unpressingButton, pressingLeftHeadCheck, pressingRightHeadCheck;
+        bool unpressingButton, pressingLeftHeadCheck, pressingRightHeadCheck, pressingOverHeadCheck;
         if (IsAndroid)
         {
-            unpressingButton = leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp || rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp;
+            unpressingButton = leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp || rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp || overHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp;
             if (unpressingButton)
             {
                 leftHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp = false;
                 rightHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp = false;
+                overHeadCheckButton.GetComponent<HeadCheckUI>().simulateKeyUp = false;
             }
             pressingLeftHeadCheck = leftHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed;
             pressingRightHeadCheck = rightHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed && lastView != left;
+            pressingOverHeadCheck = overHeadCheckButton.GetComponent<HeadCheckUI>().isButtonPressed;
         } 
         else
         {
             unpressingButton = Input.GetKeyUp(KeyCode.J) || Input.GetKeyUp(KeyCode.K) || Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1);
             pressingLeftHeadCheck = Input.GetKey(KeyCode.J) || Input.GetMouseButton(0);
             pressingRightHeadCheck = Input.GetKey(KeyCode.K) || Input.GetMouseButton(1);
+            pressingOverHeadCheck = Input.GetKey(KeyCode.L);
         }
 
         // Headturning variables
@@ -111,7 +120,6 @@ public class HeadCheck : MonoBehaviour
             left.Priority = 20;
             leftCheckTime = Time.time;
             lastView = left;
-
         }
         else if (pressingRightHeadCheck && lastView != left)
         {
@@ -120,6 +128,14 @@ public class HeadCheck : MonoBehaviour
             right.Priority = 20;
             rightCheckTime = Time.time;
             lastView = right;
+        }
+        else if (pressingOverHeadCheck && lastView != left && lastView != right)
+        {
+            left.Priority = 10;
+            right.Priority = 10;
+            normal.Priority = 10;
+            overhead.Priority = 20;
+            lastView = overhead;
         }
     }
 }
