@@ -25435,9 +25435,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1178383782787929272, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1664345169483333614, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698123261490377052, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2969384988200066483, guid: b80445d0d840830df8cd902c0cea3559,
@@ -25512,6 +25522,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bike
       objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743361050868369582, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8607378005101229383, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_IsActive
@@ -25558,6 +25598,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 554244029}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &554244034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482639008694207283, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 554244029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &556390214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66552,6 +66604,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 132.65956
       objectReference: {fileID: 0}
+    - target: {fileID: 5554914067527691108, guid: fc75ae5013580e2009221941bd32dc1e,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 554244030}
     - target: {fileID: 7336374719459004984, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_Follow
@@ -66662,6 +66719,11 @@ PrefabInstance:
       propertyPath: leftHeadCheckButton
       value: 
       objectReference: {fileID: 554244032}
+    - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
+        type: 3}
+      propertyPath: overHeadCheckButton
+      value: 
+      objectReference: {fileID: 554244034}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: rightHeadCheckButton

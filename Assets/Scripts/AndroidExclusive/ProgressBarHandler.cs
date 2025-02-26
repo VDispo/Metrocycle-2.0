@@ -15,14 +15,16 @@ public class ProgressBarHandler : MonoBehaviour
     void Start()
     {
         progressBar = GetComponent<Slider>();
-        int numCheckpoints = checkpoints.transform.childCount;
+        if (checkpoints) {
+            numCheckpoints = checkpoints.transform.childCount;
+        }
         Debug.Log($"Number of checkpoints: {numCheckpoints}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currCheckpointIdx != GetDisabledChildCount()) {
+        if (checkpoints && currCheckpointIdx != GetDisabledChildCount()) {
             currCheckpointIdx = GetDisabledChildCount();
             numCheckpoints = GetCheckpointCount();
             Debug.Log($"Current checkpoint index: {currCheckpointIdx} / {numCheckpoints}");
