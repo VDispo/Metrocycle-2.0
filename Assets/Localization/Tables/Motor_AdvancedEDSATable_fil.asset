@@ -24,11 +24,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1
     m_Localized: Magmaneho tayo sa EDSA, ang pangalawang pinaka-accident prone na
-      daan sa Metro Manila.
+      daan sa Metro Manila. Dumiretso sa EDSA Service Road at lumiko sa susunod na
+      kanan, papuntang Kamuning Road.
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Magmaneho sa EDSA
+    m_Localized: Kumanan papuntang Kamuning Road
     m_Metadata:
       m_Items: []
   - m_Id: 3

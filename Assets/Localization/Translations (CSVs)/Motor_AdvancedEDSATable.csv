@@ -1,7 +1,7 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
 title,0,,ADVANCED SCENARIO - EDSA,,Advanced Scenario - EDSA,ADVANCED SCENARIO - EDSA
-description,1,,"Magmaneho tayo sa EDSA, ang pangalawang pinaka-accident prone na daan sa Metro Manila.",,"Let's drive through EDSA, the 2nd most accident prone road in Metro Manila.",
-objective,2,,Magmaneho sa EDSA,,Drive through EDSA,
+description,1,,"Magmaneho tayo sa EDSA, ang pangalawang pinaka-accident prone na daan sa Metro Manila. Dumiretso sa EDSA Service Road at lumiko sa susunod na kanan, papuntang Kamuning Road.",,"Let's drive through EDSA, the 2nd most accident prone road in Metro Manila. Continue driving through EDSA Service Road. Take the next right turn to Kamuning Road.",
+objective,2,,Kumanan papuntang Kamuning Road,,Turn right to Kamuning Road,
 good_KamuningTitle,3,,Ang Galing!,,Great!,
 good_KamuningDescription,4,,"Bumalik ka sa simula. Upang gawin ito, lumiko pa-kanan sa dalawang susunod na likuan.",,Go back to the starting area by turning right on the next two turns.,
 bad1_KamuningTitle,5,,Hala!,,Uh oh!,

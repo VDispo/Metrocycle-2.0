@@ -25,11 +25,12 @@ MonoBehaviour:
       - rid: 1404317732907778061
   - m_Id: 1
     m_Localized: Let's drive through EDSA, the 2nd most accident prone road in Metro
-      Manila.
+      Manila. Continue driving through EDSA Service Road. Take the next right turn
+      to Kamuning Road.
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Drive through EDSA
+    m_Localized: Turn right to Kamuning Road
     m_Metadata:
       m_Items: []
   - m_Id: 3
