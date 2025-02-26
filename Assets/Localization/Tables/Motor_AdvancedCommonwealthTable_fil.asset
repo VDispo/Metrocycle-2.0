@@ -63,11 +63,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Masyadong Nang Matagal na ang Pagpapalit ng Lane.
+    m_Localized: Masyadong Nang Matagal ang Pagpapalit ng Lane.
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Dahan dahan ngunit 'wag masyadong tagalan ang paglipat ng lane (papunta
+    m_Localized: Dahan-dahan ngunit 'wag masyadong tagalan ang paglipat ng lane (papunta
       sa motorcycle lane).
     m_Metadata:
       m_Items: []
