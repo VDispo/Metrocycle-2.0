@@ -10,14 +10,14 @@ public class IntersectionChecker : MonoBehaviour
     public GameObject[] laneDetects;
     [Header("IMPORTANT: Add Green light objects in same order (and number) as lane detects.")]
     public GameObject[] greenLights = null;
-    [TextArea(3, 10)] public string wrongWayText;
-    [TextArea(3, 10)] public string redLightText;
-    [TextArea(3, 10)] public string leftLaneLeftTurnText;
-    [TextArea(3, 10)] public string leftLaneRightTurnText;
-    [TextArea(3, 10)] public string leftLaneUTurnText;
-    [TextArea(3, 10)] public string rightLaneLeftTurnText;
-    [TextArea(3, 10)] public string rightLaneRightTurnText;
-    [TextArea(3, 10)] public string rightLaneUTurnText;
+    public string WrongWayText { get; set; }
+    public string RedLightText { get; set; }
+    public string LeftLaneLeftTurnText { get; set; }
+    public string LeftLaneRightTurnText { get; set; }
+    public string LeftLaneUTurnText { get; set; }
+    public string RightLaneLeftTurnText { get; set; }
+    public string RightLaneRightTurnText { get; set; }
+    public string RightLaneUTurnText { get; set; }
 
     // Index Legend:
     //         13 12  10 11
@@ -116,7 +116,7 @@ public class IntersectionChecker : MonoBehaviour
                 // Refer to legend, every 3rd or 4th Idx is in reverse direction
                 Debug.Log("Entered Wrong Way " + entryIdx);
                 type = PopupType.ERROR;
-                popupText = wrongWayText + " Entry";
+                popupText = WrongWayText + " Entry";
 
                 // "Forgive" driver, set entryIdx to adjacent valid entry lane
                 // e.g. If they entered via Idx 2, correct to Idx 4
@@ -130,7 +130,7 @@ public class IntersectionChecker : MonoBehaviour
                     if (greenLights[trafficLightIdx] != null && !greenLights[trafficLightIdx].activeSelf) {
                         Debug.Log("Entered on Red Light " + entryIdx);
                         type = PopupType.ERROR;
-                        popupText = redLightText;
+                        popupText = RedLightText;
 
                         GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_REDLIGHT);
                     }
@@ -166,7 +166,7 @@ public class IntersectionChecker : MonoBehaviour
             if (invalid_WrongWayIdx.Contains(idx)) {
                 Debug.Log("Invalid Wrong Way " + idx);
                 type = PopupType.ERROR;
-                popupText = wrongWayText;
+                popupText = WrongWayText;
 
                 GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_WRONGWAY);
             }
@@ -174,19 +174,19 @@ public class IntersectionChecker : MonoBehaviour
                 Debug.Log("From Left to " + idx);
                 if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = leftLaneRightTurnText;
+                    popupText = LeftLaneRightTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_FROM_OUTERLANE);
                 }
                 else if (bad_LeftLaneLeftTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = leftLaneLeftTurnText;
+                    popupText = LeftLaneLeftTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_TO_OUTERLANE);
                 }
                 else if (bad_LeftLaneUTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = leftLaneUTurnText;
+                    popupText = LeftLaneUTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_TO_OUTERLANE);
                 }
@@ -195,19 +195,19 @@ public class IntersectionChecker : MonoBehaviour
                 Debug.Log("From Right to " + idx);
                 if (bad_RightLaneRightTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = rightLaneRightTurnText;
+                    popupText = RightLaneRightTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_TO_OUTERLANE);
                 }
                 else if (bad_RightLaneLeftTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = rightLaneLeftTurnText;
+                    popupText = RightLaneLeftTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_FROM_OUTERLANE);
                 }
                 else if (bad_RightLaneUTurnIdx.Contains(idx)) {
                     type = PopupType.ERROR;
-                    popupText = rightLaneUTurnText;
+                    popupText = RightLaneUTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_FROM_OUTERLANE);
                 }

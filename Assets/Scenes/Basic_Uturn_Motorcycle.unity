@@ -4872,6 +4872,18 @@ MonoBehaviour:
   distances: []
   locked: 0
   sectionEndIndexes: 
+--- !u!114 &146767743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6722665824690197577, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 773392103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c2d113e3bbef142b2f66549e5d5d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &147460236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25566,10 +25578,40 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1694819216128298580, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694819216128298580, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7f6b9639aecb3454f8cb298ce970c2be
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713199763948294713, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713199763948294713, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7f6b9639aecb3454f8cb298ce970c2be
+      objectReference: {fileID: 0}
     - target: {fileID: 2698123261490377052, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878335600895685093, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 63267201024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878335600895685093, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7f6b9639aecb3454f8cb298ce970c2be
       objectReference: {fileID: 0}
     - target: {fileID: 2969384988200066483, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -29086,6 +29128,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1574570376}
     m_Modifications:
+    - target: {fileID: 997659774847908673, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      propertyPath: objectiveTextUI
+      value: 
+      objectReference: {fileID: 1421822405}
     - target: {fileID: 1866718831588572527, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29210,7 +29257,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955595}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955594}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955593}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955592}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955591}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955590}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955589}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364955588}
+    - targetCorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 674264278}
+    - targetCorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 674264277}
   m_SourcePrefab: {fileID: 100100000, guid: 3b60cb7fc553f83639362e1bbdd0f0ee, type: 3}
 --- !u!4 &674264275 stripped
 Transform:
@@ -29218,6 +29305,104 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 674264274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &674264276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 674264274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &674264277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674264276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 674264279}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &674264278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674264276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 674264279}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &674264279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997659774847908673, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 674264274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674264276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082502c912441ac47be73a6c68c422c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &676292953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37898,6 +38083,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 533448054}
     m_Modifications:
+    - target: {fileID: 997659774847908673, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      propertyPath: objectiveTextUI
+      value: 
+      objectReference: {fileID: 1421822405}
     - target: {fileID: 1866718831588572527, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38001,7 +38191,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058756}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058755}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058754}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058753}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058752}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058751}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058750}
+    - targetCorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799058749}
+    - targetCorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 773392107}
+    - targetCorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 773392106}
   m_SourcePrefab: {fileID: 100100000, guid: 3b60cb7fc553f83639362e1bbdd0f0ee, type: 3}
 --- !u!4 &773392104 stripped
 Transform:
@@ -38009,6 +38239,104 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 773392103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &773392105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2332275678574086066, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 773392103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &773392106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773392105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 773392108}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &773392107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773392105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 773392108}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &773392108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997659774847908673, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 773392103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773392105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082502c912441ac47be73a6c68c422c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &780327326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38731,6 +39059,18 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!114 &806624954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6722665824690197577, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 674264274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c2d113e3bbef142b2f66549e5d5d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &808167239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39713,6 +40053,8 @@ GameObject:
   - component: {fileID: 838750473}
   - component: {fileID: 838750472}
   - component: {fileID: 838750471}
+  - component: {fileID: 838750476}
+  - component: {fileID: 838750475}
   m_Layer: 8
   m_Name: MissedUturnCheck
   m_TagString: Untagged
@@ -39751,7 +40093,7 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 2
-  objectiveTextUI: {fileID: 0}
+  objectiveTextUI: {fileID: 1421822405}
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -39833,6 +40175,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838750469}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &838750475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838750469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 8
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 838750471}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &838750476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838750469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 7
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 838750471}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &845258767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52668,6 +53090,332 @@ MonoBehaviour:
   rotationCenter: 0
   side: 0
   otherSide: {fileID: 0}
+--- !u!1 &1364955587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 674264274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364955588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 16
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RightLaneUTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 17
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RightLaneRightTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 14
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RightLaneLeftTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 13
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneUTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 12
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneRightTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 11
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneLeftTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 10
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RedLightText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1364955595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364955587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 9
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 806624954}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_WrongWayText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1368261768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53948,6 +54696,18 @@ MonoBehaviour:
   markerStartUVY: 0.64173126
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!114 &1421822405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3225740604146636599, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 554244029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1423254051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54608,7 +55368,7 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 4
-  objectiveTextUI: {fileID: 0}
+  objectiveTextUI: {fileID: 1421822405}
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -55723,6 +56483,8 @@ GameObject:
   - component: {fileID: 1478587388}
   - component: {fileID: 1478587387}
   - component: {fileID: 1478587386}
+  - component: {fileID: 1478587392}
+  - component: {fileID: 1478587391}
   m_Layer: 8
   m_Name: LeftBlinkerCheck
   m_TagString: Untagged
@@ -55831,6 +56593,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478587384}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1478587391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478587384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 6
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1478587386}
+        m_TargetAssemblyTypeName: BlinkerCheck, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1478587392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478587384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 5
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1478587386}
+        m_TargetAssemblyTypeName: BlinkerCheck, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1483807067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65122,6 +65964,8 @@ GameObject:
   - component: {fileID: 1772302684}
   - component: {fileID: 1772302683}
   - component: {fileID: 1772302682}
+  - component: {fileID: 1772302687}
+  - component: {fileID: 1772302686}
   m_Layer: 8
   m_Name: U-turn end
   m_TagString: Untagged
@@ -65159,8 +66003,8 @@ MonoBehaviour:
   pairCollider: {fileID: 0}
   deactivateAfterCollision: 0
   showPopup: 1
-  popupType: 1
-  objectiveTextUI: {fileID: 0}
+  popupType: 0
+  objectiveTextUI: {fileID: 1421822405}
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -65242,6 +66086,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772302680}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1772302686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772302680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 4
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1772302682}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1772302687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772302680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 3
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1772302682}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1773193456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65791,6 +66715,332 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &1799058748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7478837762484477111, guid: 3b60cb7fc553f83639362e1bbdd0f0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 773392103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799058749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 16
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 15
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RightLaneRightTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 14
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RightLaneLeftTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 13
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneUTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 12
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneRightTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 11
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_LeftLaneLeftTurnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 10
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_RedLightText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1799058756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799058748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 9
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146767743}
+        m_TargetAssemblyTypeName: IntersectionChecker, GameAssembly
+        m_MethodName: set_WrongWayText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1812746374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75058,6 +76308,8 @@ GameObject:
   - component: {fileID: 1914613574}
   - component: {fileID: 1914613573}
   - component: {fileID: 1914613572}
+  - component: {fileID: 1914613577}
+  - component: {fileID: 1914613576}
   m_Layer: 8
   m_Name: MissedUturnCheck
   m_TagString: Untagged
@@ -75095,8 +76347,8 @@ MonoBehaviour:
   pairCollider: {fileID: 0}
   deactivateAfterCollision: 0
   showPopup: 1
-  popupType: 2
-  objectiveTextUI: {fileID: 0}
+  popupType: 0
+  objectiveTextUI: {fileID: 1421822405}
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -75178,6 +76430,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914613570}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1914613576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914613570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 8
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1914613572}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1914613577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914613570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 7
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1914613572}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1919491027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77766,6 +79098,8 @@ GameObject:
   - component: {fileID: 1928082041}
   - component: {fileID: 1928082040}
   - component: {fileID: 1928082039}
+  - component: {fileID: 1928082045}
+  - component: {fileID: 1928082044}
   m_Layer: 8
   m_Name: RightBlinkerCheck
   m_TagString: Untagged
@@ -77874,6 +79208,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928082037}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1928082044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928082037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 6
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1928082039}
+        m_TargetAssemblyTypeName: BlinkerCheck, GameAssembly
+        m_MethodName: set_PopupText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1928082045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928082037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 5
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1928082039}
+        m_TargetAssemblyTypeName: BlinkerCheck, GameAssembly
+        m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1929037749
 MonoBehaviour:
   m_ObjectHideFlags: 0
