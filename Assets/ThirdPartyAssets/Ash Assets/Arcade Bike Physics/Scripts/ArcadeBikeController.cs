@@ -200,7 +200,7 @@ namespace ArcadeBP
                     {
                         // Ensure velocity doesn't dip below zero unintentionally
                         rb.velocity = Vector3.zero;
-                        Debug.Log("Full stop");
+                        // Debug.Log("Full stop");
                     }
                     else if (!isBikeReversing && isPressingBackward)
                     {

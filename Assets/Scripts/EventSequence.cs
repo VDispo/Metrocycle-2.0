@@ -16,6 +16,8 @@ public class EventSequence : MonoBehaviour
     {
         events = new GameObject[transform.childCount];
         for (int i = 0; i < transform.childCount; ++i) {
+            Debug.Log("Event " + i + ": " + transform.GetChild(i).gameObject);
+
             Transform eventTransform = transform.GetChild(i);
             events[i] = eventTransform.gameObject;
             events[i].SetActive(false);
