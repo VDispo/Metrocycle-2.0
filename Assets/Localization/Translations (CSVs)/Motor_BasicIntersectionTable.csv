@@ -1,6 +1,6 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
 title,0,,BASIC SCENARIO - Intersection,,BASIC SCENARIO - Intersection,
-description,1,,Pag-aralan natin ang tamang pagdaan sa intersection. Tandaan na 20kph ang max speed sa intersection. Subukang KUMANAN sa susunod na intersection.,,"Let's learn how to use the intersection correctly. Note that the max speed in intersections is 20kph. First, Try turning RIGHT on the next intersection.",
+description,1,,Pag-aralan natin ang tamang pagdaan sa intersection. Tandaan na 20kph ang speed limit sa intersection. Subukang KUMANAN sa susunod na intersection.,,"Let's learn how to use the intersection correctly. Note that the max speed in intersections is 20kph. First, Try turning RIGHT on the next intersection.",
 objective,2,,Kumanan sa intersection,,Turn right on the intersection,
 rightTurnTitle,3,,Susunod na Pagsusubok,,Next Challenge,
 rightTurnDescription,4,,"Tandaan na sa tuwing kakanan sa intersection, manatili sa kanang lane. Ngayon, bumalik sa intersection at KUMALIWA.",,"Remember that when turning right on an intersection, make sure to position yourself on the Right lane.  Next, go back to the intersection and turn LEFT.",

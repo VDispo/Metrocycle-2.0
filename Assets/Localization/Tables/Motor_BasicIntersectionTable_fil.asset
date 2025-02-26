@@ -24,7 +24,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1
     m_Localized: Pag-aralan natin ang tamang pagdaan sa intersection. Tandaan na
-      20kph ang max speed sa intersection. Subukang KUMANAN sa susunod na intersection.
+      20kph ang speed limit sa intersection. Subukang KUMANAN sa susunod na intersection.
     m_Metadata:
       m_Items: []
   - m_Id: 2
