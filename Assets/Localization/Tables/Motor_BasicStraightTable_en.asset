@@ -19,12 +19,16 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 25170337792
-    m_Localized: 'Basic Scenario: Straight Road'
+    m_Localized: BASIC SCENARIO - Straight Road
     m_Metadata:
       m_Items: []
   - m_Id: 1
     m_Localized: Simply drive straight towards the finish line but don't forget to
       follow the speed limit!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Drive straight
     m_Metadata:
       m_Items: []
   references:

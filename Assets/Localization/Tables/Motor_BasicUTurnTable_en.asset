@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 63267201024
-    m_Localized: 'Basic Scenario: Making a U-turn'
+    m_Localized: BASIC SCENARIO - Making a U-turn
     m_Metadata:
       m_Items: []
   - m_Id: 1
@@ -29,71 +29,72 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Great!
+    m_Localized: Make a left u-turn
     m_Metadata:
       m_Items: []
   - m_Id: 3
+    m_Localized: Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
     m_Localized: Next, perform a Right U-turn on the next junction. Remember to use
       your blinkers and to perform a head check before turning!
     m_Metadata:
       m_Items: []
-  - m_Id: 4
+  - m_Id: 5
     m_Localized: You forgot to signal!
     m_Metadata:
       m_Items: []
-  - m_Id: 5
+  - m_Id: 6
     m_Localized: You should already signal your intent to turn 25m away from the
       turn.
     m_Metadata:
       m_Items: []
-  - m_Id: 6
+  - m_Id: 7
     m_Localized: You missed the U-turn.
     m_Metadata:
       m_Items: []
-  - m_Id: 7
+  - m_Id: 8
     m_Localized: Remember to gradually slow down when approaching a U-turn.
     m_Metadata:
       m_Items: []
-  - m_Id: 8
+  - m_Id: 9
     m_Localized: Wrong Way
     m_Metadata:
       m_Items: []
-  - m_Id: 9
+  - m_Id: 10
     m_Localized: Oops! You entered the intersection while the traffic light was on
       red. Make sure to stop right before the stop line (white)
     m_Metadata:
       m_Items: []
-  - m_Id: 10
+  - m_Id: 11
     m_Localized: Left U-Turn Ok, but stay on inner lane (e.g. vehicles turning right)
     m_Metadata:
       m_Items: []
-  - m_Id: 11
+  - m_Id: 12
     m_Localized: When turning right, position your vehicle on the right lane in advance
     m_Metadata:
       m_Items: []
-  - m_Id: 12
+  - m_Id: 13
     m_Localized: U-Turn Ok, but stay on inner lane
     m_Metadata:
       m_Items: []
-  - m_Id: 13
+  - m_Id: 14
     m_Localized: When turning left, position your vehicle on the left lane in advance
     m_Metadata:
       m_Items: []
-  - m_Id: 14
+  - m_Id: 15
     m_Localized: Right Turn Ok, but stay on inner lane to minimize risk of crashes
       (e.g. vehicles turning left)
     m_Metadata:
       m_Items: []
-  - m_Id: 15
+  - m_Id: 16
     m_Localized: U-Turn Ok, but stay on inner lane
     m_Metadata:
       m_Items: []
-  - m_Id: 16
-    m_Localized: "\uFFFD"
-    m_Metadata:
-      m_Items: []
   - m_Id: 17
-    m_Localized: "\uFFFD"
+    m_Localized: Right U-Turn Ok, but stay on inner lane to minimize risk of crashes
+      (e.g. vehicles turning left)
     m_Metadata:
       m_Items: []
   references:

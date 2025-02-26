@@ -24,15 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Key: endTitle
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3
-    m_Key: endDescription
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4
-    m_Key: endObjective
+    m_Key: objective
     m_Metadata:
       m_Items: []
   m_Metadata:

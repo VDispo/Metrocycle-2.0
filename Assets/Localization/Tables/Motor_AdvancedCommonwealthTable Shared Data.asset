@@ -18,56 +18,61 @@ MonoBehaviour:
   - m_Id: 1637351743488
     m_Key: title
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 1404317732907778060
   - m_Id: 1
     m_Key: description
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Key: good_uTurnTitle
+    m_Key: objective
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Key: good_uTurnDescription
+    m_Key: good_uTurnTitle
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Key: wrongWayTitle
+    m_Key: good_uTurnDescription
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Key: wrongWayDescription
+    m_Key: wrongWayTitle
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Key: bad_uTurnTitle
+    m_Key: wrongWayDescription
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Key: bad_uTurnDescription
+    m_Key: bad_uTurnTitle
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Key: bad_blinkerTitle
+    m_Key: bad_uTurnDescription
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Key: bad_blinkerDescription
+    m_Key: bad_blinkerTitle
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Key: bad_laneSwitchTitle
+    m_Key: bad_blinkerDescription
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Key: bad_laneSwitchDescription
+    m_Key: bad_laneSwitchTitle
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Key: missedTitle
+    m_Key: bad_laneSwitchDescription
     m_Metadata:
       m_Items: []
   - m_Id: 13
+    m_Key: missedTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
     m_Key: missedDescription
     m_Metadata:
       m_Items: []
@@ -83,3 +88,7 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1739861063373
+    - rid: 1404317732907778060
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: all caps

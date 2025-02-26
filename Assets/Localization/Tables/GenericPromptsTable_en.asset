@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GenericPromptsTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 84f7b85360b4472419a0ca311dd08804, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 25505882112
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: You collided with {0}. Remember to control your speed and direction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: an obstacle on the side of the road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: the side of the road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: When driving, maintain a minimum of 1 car length away from other
+      vehicles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: You have exceeded the {0} kph speed limit!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Make sure to keep an eye on your speedometer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: You forgot to cancel your blinker.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Make sure to cancel your {0}  after performing a turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Make sure to perform a head check even after you use your {0}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Make sure to perform a head check right before changing lanes or
+      turning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: You did not give ample time for other road users to react to your
+      {0}.\nIt is recommended to indicate your intent 5s before the action (e.g.
+      lane change).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: You used the intersection incorrectly!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Wrong Way
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Oops! You entered the intersection while the traffic light was on
+      red.\nMake sure to stop right before the stop line (white).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Left Turn Ok, but stay on inner lane to minimize risk of crashes
+      (e.g. vehicles turning right)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: When turning right, position your vehicle on the right lane in advance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: U-Turn Ok, but stay on inner lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: When turning left, position your vehicle on the left lane in advance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Right Turn Ok, but stay on inner lane to minimize risk of crashes
+      (e.g. vehicles turning left).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: U-Turn Ok, but stay on inner lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: The Bus lane is only for public utility buses (PUBs) and ambulances
+      or goverment vehicles responding to emergencies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Motorcycles are not allowed on the Bike Lane!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Bicycles are not allowed in this lane which is used by motored vehicles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: You used the intersection incorrectly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: You are not allowed to change lane when the lines between the lanes
+      are solid lines (they must be dotted lines).
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

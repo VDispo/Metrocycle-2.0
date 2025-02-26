@@ -1,6 +1,4 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
-title,0,,Basic Scenario: Straight Road,,Basic Scenario: Straight Road,
-description,1,,Dumiretso hanggang sa finish line. Huwag kalimutang sundin ang speed limits!,,Simply drive straight towards the finish line but don't forget to follow the speed limit!,
-endTitle,2,?,,,,
-endDescription,3,?,,,,
-endObjective,4,?,,,,
+title,0,,BASIC SCENARIO - Straight Road,,BASIC SCENARIO - Straight Road,
+description,1,,Dumiretso hanggang sa finish line. Huwag kalimutang sundin ang mga speed limit!,,Simply drive straight towards the finish line but don't forget to follow the speed limit!,
+objective,2,,Dumiretso,,Drive straight,
