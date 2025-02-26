@@ -21,7 +21,8 @@ MonoBehaviour:
   - m_Id: 30757150720
     m_Localized: Advanced Scenario - EDSA
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 1404317732907778061
   - m_Id: 1
     m_Localized: Let's drive through EDSA, the 2nd most accident prone road in Metro
       Manila.
@@ -82,7 +83,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: You took a left turn. To go back to the stargin position, you should
+    m_Localized: You took a left turn. To go back to the starting position, you should
       take a right turn instead.
     m_Metadata:
       m_Items: []
@@ -91,7 +92,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Remember to slow down when dogin down slopes as they are areas prone
+    m_Localized: Remember to slow down when going down slopes as they are areas prone
       to road crashes. Continue driving down EDSA.
     m_Metadata:
       m_Items: []
@@ -109,7 +110,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: Remember to slow down when dogin down slopes as they are areas prone
+    m_Localized: Remember to slow down when going down slopes as they are areas prone
       to road crashes. Continue driving down EDSA.
     m_Metadata:
       m_Items: []
@@ -194,4 +195,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1404317732907778061
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: ADVANCED SCENARIO - EDSA

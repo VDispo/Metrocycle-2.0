@@ -19,21 +19,21 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1
-    m_Localized: Switch to the leftmost lane and make a u-turn. Remember to follow
-      road regulations and safety checks.
+    m_Localized: Switch to the leftmost lane and make a U-turn to the left. Remember
+      to follow road regulations.
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Great job on the U-turn!
+    m_Localized: Great U-turn!
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Now drive until the end of the barriers and try to go back to the
+    m_Localized: Now, drive until the end of the barriers and try to go back to the
       motorcycle lane!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: 'Wrong Way! '
+    m_Localized: Wrong Way! Stop Counterflowing.
     m_Metadata:
       m_Items: []
   - m_Id: 5
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: You missed the U-turn.
+    m_Localized: U-turn Missed.
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -49,16 +49,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: You forgot to signal!
+    m_Localized: Use the Blinkers to Signal the Turn.
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: You should already signal your intent to turn 25m away from the
-      turn.
+    m_Localized: You should signal your intent to turn 25 meters away from the turn.
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: You took too long to switch lanes!
+    m_Localized: Lane Switching Took too Long.
     m_Metadata:
       m_Items: []
   - m_Id: 11
@@ -66,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Uh oh!
+    m_Localized: Uh oh.
     m_Metadata:
       m_Items: []
   - m_Id: 13

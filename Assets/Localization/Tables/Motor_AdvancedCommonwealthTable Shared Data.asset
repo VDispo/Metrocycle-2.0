@@ -18,7 +18,8 @@ MonoBehaviour:
   - m_Id: 1637351743488
     m_Key: title
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 1404317732907778060
   - m_Id: 1
     m_Key: description
     m_Metadata:
@@ -83,3 +84,7 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1739861063373
+    - rid: 1404317732907778060
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: all caps

@@ -17,7 +17,180 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 52656f251345a6c48903819f3994bb20, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 30757150720
+    m_Localized: ADVANCED SCENARIO - EDSA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: Magdrive tayo sa EDSA, ang pangalawang pinaka-accident prone na
+      daan sa Metro Manila.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Ang Galing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Bumalik ka sa simula. Upang gawin ito, lumiko pa-kanan sa dalawang
+      susunod na likuan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Maling daan! Galing ka na sa EDSA Service Road kaya dumiretso ka
+      nalang.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Nalampasan mo ang kanang likuan papuntang Kamuning Road.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Pumasok ka sa elevated Maharlika Highway. Manatili lang sa EDSA
+      Service Road.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Sunod na Pagsubok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Ngayon, magmaneho sa elevated Maharlika Highway
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Mali ang nalikuan mo, napunta ka sa KF Street.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Lumiko ka pa-kaliwa. Para makabalik sa simula, dapat lumiko ka pa-kanan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Ang galing mo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Tandaang maghinay sa mga pababang daan (slopes) dahil madaling maaksidente
+      dito. Magpatuloy magmaneho sa EDSA.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: Pumasok ka sa EDSA Service Road, dapat sa elevated Maharlika Highway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Ang Galing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Tandaang maghinay sa mga pababang daan (slopes) dahil madaling maaksidente
+      dito. Magpatuloy magmaneho sa EDSA.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: Sunod na Pagsubok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Magpatuloy lang sa EDSA Service Road at lumiko sa susunod na kanan,
+      papuntang K-3rd Street.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Kumaliwa ka. Para makabalik sa simula, lumiko ka dapat sa kanan
+      dito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Kumaliwa ka. Para makabalik sa simula, lumiko ka dapat sa kanan
+      dito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Sunod na Pagsubok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: Bumalik sa simula uli, baybayin ang K-3rd at KF Streets. Kumanan
+      sa pangalawang likuan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: Nalampasan mo ang kanang likuan papuntang K-3rd Street.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: Mali ang nalikuan mo, ikaw ay nasa Kamuning Street na. Ang K-3rd
+      Street ay diretso pa dapat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: Mali ang nalikuan mo, ikaw ay nasa isang kantong papuntang dead
+      end. Ang K-3rd Street ay diretso pa dapat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: Pumasok ka sa elevated Maharlika Highway. Manatili lamang sa EDSA
+      Service Road para makapunta sa K-3rd Street.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Huwag masyadong tagalan ang pagpalit ng lane.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
