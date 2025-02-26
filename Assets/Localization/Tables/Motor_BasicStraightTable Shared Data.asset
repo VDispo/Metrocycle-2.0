@@ -24,20 +24,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Key: endTitle
+    m_Key: objective
     m_Metadata:
-      m_Items:
-      - rid: 1404317732907778065
-  - m_Id: 3
-    m_Key: endDescription
-    m_Metadata:
-      m_Items:
-      - rid: 1404317732907778066
-  - m_Id: 4
-    m_Key: endObjective
-    m_Metadata:
-      m_Items:
-      - rid: 1404317732907778067
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -50,15 +39,3 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1739861890211
-    - rid: 1404317732907778065
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: '?'
-    - rid: 1404317732907778066
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: '?'
-    - rid: 1404317732907778067
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: '?'

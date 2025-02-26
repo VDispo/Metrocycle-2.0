@@ -24,74 +24,78 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Key: good_leftUTurnTitle
+    m_Key: objective
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Key: good_leftUTurnDescription
+    m_Key: good_leftUTurnTitle
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Key: bad_blinkerTitle
+    m_Key: good_leftUTurnDescription
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Key: bad_blinkerDescription
+    m_Key: bad_blinkerTitle
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Key: bad_uTurnTitle
+    m_Key: bad_blinkerDescription
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Key: bad_uTurnDescription
+    m_Key: bad_uTurnTitle
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Key: wrongWay
+    m_Key: bad_uTurnDescription
     m_Metadata:
-      m_Items:
-      - rid: 1404317732907778050
+      m_Items: []
   - m_Id: 9
-    m_Key: redLight
+    m_Key: wrongWay
     m_Metadata:
       m_Items:
       - rid: 1404317732907778051
   - m_Id: 10
-    m_Key: leftLaneLeftUTurn
+    m_Key: redLight
     m_Metadata:
       m_Items:
       - rid: 1404317732907778052
   - m_Id: 11
-    m_Key: leftLaneRightTurn
+    m_Key: leftLaneLeftUTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778053
   - m_Id: 12
-    m_Key: leftLaneUTurn
+    m_Key: leftLaneRightTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778054
   - m_Id: 13
-    m_Key: rightLaneLeftTurn
+    m_Key: leftLaneUTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778055
   - m_Id: 14
-    m_Key: rightLaneRightTurn
+    m_Key: rightLaneLeftTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778056
   - m_Id: 15
-    m_Key: rightLaneUTurn
+    m_Key: rightLaneRightTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778057
   - m_Id: 16
-    m_Key: rightLaneRightUTurn
+    m_Key: rightLaneUTurn
     m_Metadata:
       m_Items:
       - rid: 1404317732907778058
+  - m_Id: 17
+    m_Key: rightLaneRightUTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778113
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -104,10 +108,6 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1739861942074
-    - rid: 1404317732907778050
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: GenericPrompt
     - rid: 1404317732907778051
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
@@ -115,11 +115,11 @@ MonoBehaviour:
     - rid: 1404317732907778052
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: GenericPrompt (modified)
+        m_CommentText: GenericPrompt
     - rid: 1404317732907778053
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: GenericPrompt
+        m_CommentText: GenericPrompt (modified)
     - rid: 1404317732907778054
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
@@ -137,6 +137,10 @@ MonoBehaviour:
       data:
         m_CommentText: GenericPrompt
     - rid: 1404317732907778058
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778113
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: GenericPrompt (modified)

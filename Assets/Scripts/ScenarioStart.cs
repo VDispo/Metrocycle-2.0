@@ -12,11 +12,12 @@ public class ScenarioStart : MonoBehaviour
     public TMP_Text objectiveTextUI;
     public string ScenarioTitle { get; set; }
     public string ScenarioText { get; set; }
+    public string ObjectiveText { get; set; }
 
     // Update is called once per frame
     void Start()
     {
-        objectiveTextUI.text = ScenarioTitle;
+        objectiveTextUI.text = ObjectiveText;
         GameManager.Instance.PopupSystem.popStart(ScenarioTitle, ScenarioText);
         GameManager.Instance.setBikeType(bikeType);
         GameManager.Instance.isTestMode = isTestScene;

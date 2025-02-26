@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 35668680704
-    m_Localized: Basic Scenario - Multilane Road
+    m_Localized: BASIC SCENARIO - Multilane Road
     m_Metadata:
       m_Items: []
   - m_Id: 1
@@ -29,90 +29,94 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Great!
+    m_Localized: Change lane to the right safely
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Try Changing to the next lane on the right again
+    m_Localized: Great!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Uh oh!
+    m_Localized: Try Changing to the next lane on the right again
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: You failed to switch to the proper lane on time.
+    m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Great!
+    m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Now try going back to the Motorcycle lane (with blue lines)
+    m_Localized: Great!
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Uh oh!
+    m_Localized: Now try going back to the Motorcycle lane (with blue lines)
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: You failed to switch to the proper lane on time.
+    m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Great!
+    m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Go back to the adjacent lane on the right again.
+    m_Localized: Great!
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Uh oh!
+    m_Localized: Go back to the adjacent lane on the right again.
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: You failed to switch to the proper lane on time.
+    m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Great!
+    m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: Finally, go to the leftmost lane.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16
-    m_Localized: Uh oh!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17
-    m_Localized: You failed to switch to the proper lane on time.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 18
     m_Localized: Great!
     m_Metadata:
       m_Items: []
-  - m_Id: 19
-    m_Localized: Great job! You now know how to change lanes properly.
+  - m_Id: 16
+    m_Localized: Finally, go to the leftmost lane.
     m_Metadata:
       m_Items: []
-  - m_Id: 20
+  - m_Id: 17
     m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
-  - m_Id: 21
+  - m_Id: 18
     m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []
-  - m_Id: 22
+  - m_Id: 19
+    m_Localized: Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Great job! You now know how to change lanes properly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
     m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
+  - m_Id: 22
+    m_Localized: You failed to switch to the proper lane on time.
+    m_Metadata:
+      m_Items: []
   - m_Id: 23
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
     m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []

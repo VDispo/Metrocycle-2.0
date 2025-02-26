@@ -19,100 +19,106 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 35668680704
-    m_Localized: Basic Scenario - Multilane Road
+    m_Localized: BASIC SCENARIO - Multilane Road
     m_Metadata:
       m_Items: []
   - m_Id: 1
     m_Localized: Upang makaliko nang ligtas, sumilip sa salamin, i-signal ang pagliko,
       sumilip muli sa salamin, at sumilip sa likod (head check) para sa blind spots.
-      Lumipat sa lane sa kanan.
+      Lumipat sa lane sa kanan mo.
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Ang galing mo!
+    m_Localized: Lumipat sa kanang lane sa ligtas na pamamaraan
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Lumipat nang isa pang beses sa kanang lane.
+    m_Localized: Ang Galing!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Ay nako!
+    m_Localized: Lumipat muli sa sumunod na kanang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hala!
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Ang galing mo!
+    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Ngayon, subukang bumalik sa motorcycle lane (may mga asul na linya).
+    m_Localized: Ang Galing!
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Ay nako!
+    m_Localized: Ngayon, subukan mong bumalik sa motorcycle lane (may mga asul na
+      linya).
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hala!
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Ang galing mo!
+    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Bumalik muli sa lane sa kanan.
+    m_Localized: Ang Galing!
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Ay nako!
+    m_Localized: Pumunta muli sa lane sa kanan mo.
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hala!
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Ang galing mo!
+    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: At ang huli, pumunta sa pinaka-kaliwang lane.
+    m_Localized: Ang Galing!
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Ay nako!
+    m_Localized: At bilang panghuli, pumunta sa pinaka-kaliwang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hala!
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Ang galing mo!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19
-    m_Localized: Napakagaling at maalam na sa paglipat ng lane nang maayos!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20
-    m_Localized: Ay nako!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 21
     m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
+  - m_Id: 19
+    m_Localized: Ang Galing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Ang galing mo! Alam mo na kung paano ang paglipat ng lanes nang
+      maayos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
   - m_Id: 22
-    m_Localized: Ay nako!
+    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
   - m_Id: 23
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
     m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
     m_Metadata:
       m_Items: []
