@@ -23,21 +23,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1
-    m_Localized: Hilain pababa ang pihitan sa kanan ng screen para tumulin ang takbo
+    m_Localized: Hilain pababa ang pihitan sa kanan ng screen para bumilis ang takbo
       (accelerate).
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Magpatulin ng Takbo
+    m_Localized: Bilisan ang Takbo
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Kanang Likuan
+    m_Localized: Lumiko pa-Kanan
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Upang mag-signal ng liko, igilid pa-kanan ang blinker sa ibabang
-      kaliwa ng screen. Itabingi naman ang screen upang lumiko.
+    m_Localized: Para mag-signal ng liko, igilid pa-kanan ang blinker sa ibabang
+      kaliwa ng screen. Subukan mong itabingi ang screen para lumiko.
     m_Metadata:
       m_Items: []
   - m_Id: 5
@@ -94,7 +94,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17
     m_Localized: Matagal na pindutin (i-hold) ang left head check button upang tumagal
-      ang pagsilip sa kaliwa. Dapat umabot ito hanggang sa next checkpoint.
+      ang pagsilip sa kaliwa. Subukan mong paabutin ito hanggang sa sunod na checkpoint.
     m_Metadata:
       m_Items: []
   - m_Id: 18
@@ -137,7 +137,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 27
     m_Localized: Matagal na pindutin (i-hold) ang right head check button upang tumagal
-      ang pagsilip sa kanan. Dapat umabot ito hanggang sa next checkpoint.
+      ang pagsilip sa kanan. Subukan mong paabutin ito hanggang sa sunod na checkpoint.
     m_Metadata:
       m_Items: []
   - m_Id: 28
