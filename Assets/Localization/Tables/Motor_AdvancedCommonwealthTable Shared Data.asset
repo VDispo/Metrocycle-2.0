@@ -36,6 +36,10 @@ MonoBehaviour:
     m_Key: good_uTurnDescription
     m_Metadata:
       m_Items: []
+  - m_Id: 15
+    m_Key: good_uTurnObjective
+    m_Metadata:
+      m_Items: []
   - m_Id: 5
     m_Key: wrongWayTitle
     m_Metadata:

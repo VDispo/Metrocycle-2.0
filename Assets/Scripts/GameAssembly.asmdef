@@ -20,7 +20,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.UI.EditorTests",
         "Unity.Sysroot.EditorTests",
-        "Unity.SysrootPackage.Editor"
+        "Unity.SysrootPackage.Editor",
+        "Unity.Localization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

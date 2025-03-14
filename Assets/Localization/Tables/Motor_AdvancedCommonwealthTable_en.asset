@@ -33,7 +33,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4
     m_Localized: Now, drive until the end of the barriers and try to go back to the
-      motorcycle lane!
+      motorcycle lane (has blue lines).
     m_Metadata:
       m_Items: []
   - m_Id: 5
@@ -78,6 +78,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14
     m_Localized: You failed to switch to the proper lane on time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Drive to the end and go back to the motorcycle lane (has blue lines)
     m_Metadata:
       m_Items: []
   references:

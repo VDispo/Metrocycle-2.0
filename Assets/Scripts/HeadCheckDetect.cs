@@ -11,7 +11,7 @@ public class HeadCheckDetect : MonoBehaviour
     public string PopupText { get; set;}
 
     void OnTriggerEnter (Collider other) {
-        bool isValid = isValid = GameManager.Instance.isDoingHeadCheck(direction);
+        bool isValid = GameManager.Instance.isDoingHeadCheck(direction);
 
         if (!isValid) {
             GameManager.Instance.PopupSystem.popWithType(popupType, PopupTitle, PopupText);

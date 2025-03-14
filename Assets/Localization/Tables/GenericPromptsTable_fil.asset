@@ -23,28 +23,29 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1
-    m_Localized: Bumanga ka {0}. Tandaan na kontrolin ang bilis at direksyon ng pagtakbo.
+    m_Localized: Bumanga ka sa {0}. Tandaan na kontrolin ang bilis at direksyon ng
+      pagtakbo.
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: sa harang sa daan
+    m_Localized: harang sa daan
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: sa tabi ng daan
+    m_Localized: tabi ng daan
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Panatiliing may malaking pagitan (isang kotse ang haba) sa kotse
+    m_Localized: Panatiliing may malaking pagitan (na isang kotse ang haba) sa kotse
       sa harap.
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: Lumampas sa {0} kph Speed Limit!
+    m_Localized: Lumampas ka sa {0} kph Speed Limit!
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Bantayan palagi ang iyong speedometer.
+    m_Localized: Bantayan palagi ang iyong Speedometer.
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -52,7 +53,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Patayin ang {0} kapag tapos mo na ito gamitin sa pagliko.
+    m_Localized: Patayin ang {0} blinker kapag tapos mo na ito gamitin sa pagliko.
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -60,11 +61,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Sumilip o mag-head check parin kahit gumagamit na ng {0}.
+    m_Localized: Mag-head check ka parin kahit nagsignal ka na gamit ang {0} blinker.
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Sumilip o mag-head check bago magpalit ng lane o lumiko.
+    m_Localized: Mag-head check bago magpalit ng lane o lumiko.
     m_Metadata:
       m_Items: []
   - m_Id: 12
@@ -72,12 +73,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: Hindi mo nabigyan ng sapat na oras mapansin ng ibang tao ang iyong
-      {0}.\nInirerekumenda na mag-signal 5 segundo bago gawin ang aksyon.
+    m_Localized: Hindi mo binigyan ng sapat na oras mapansin ng ibang tao ang iyong
+      {0}. Dapat na mag-signal 5 segundo bago gawin ang aksyon.
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Maling Paggamit ng Intersection.
+    m_Localized: Mali ang pagdaan mo sa Intersection.
     m_Metadata:
       m_Items: []
   - m_Id: 15
@@ -85,36 +86,36 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Nako! Pumasok ka sa intersection nang pula ang traffic light.\nMaghintay
-      sa likod ng stop line (puti).
+    m_Localized: Nako! Pumasok ka sa intersection nang pula ang traffic light. Hangga't
+      di pa pula, maghintay muna sa likod ng stop line (puti).
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Maganda ang pagliko mo sa kaliwa, ngunit dapat manatili sa inner
-      lane upang makaiwas sa bangga.
+    m_Localized: Maganda yung pagliko mo sa kaliwa, pero dapat pumasok ka sa inner
+      lane para mas safe.
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Bago lumiko pa-kanan, manatili sa kanang lane.
+    m_Localized: Bago ka lumiko sa kanan, manatili sa kanang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: Maganda ang pag-U-turn mo, ngunit dapat manatili sa inner lane upang
-      makaiwas sa bangga.
+    m_Localized: Maganda yung pag-U-turn mo, pero dapat pumasok ka sa inner lane
+      para mas safe.
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: Bago lumiko pa-kaliwa, manatili sa kaliwang lane.
+    m_Localized: Bago ka lumiko sa kaliwa, manatili sa kaliwang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: Maganda ang pagliko mo sa kanan, ngunit dapat manatili sa inner
-      lane upang makaiwas sa bangga.
+    m_Localized: Maganda yung pagliko mo sa kanan, pero dapat pumasok ka sa inner
+      lane para mas safe.
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: Maganda ang pag-U-turn mo, ngunit dapat manatili sa inner lane upang
-      makaiwas sa bangga.
+    m_Localized: Maganda yung pag-U-turn mo, pero dapat manatili sa inner lane para
+      mas safe.
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -135,12 +136,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: Maling Paggamit ng Intersection.
+    m_Localized: Mali ang pagdaan mo sa Intersection.
     m_Metadata:
       m_Items: []
   - m_Id: 28
     m_Localized: Hindi ka pwedeng magpalit ng lane kapag solid lines ang pumapagitan
-      (pwede lamang kapag dotted lines).
+      sa lanes (pwede lamang kapag dotted lines).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: isang sasakyan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Hala!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: Ginamit mo ang {0} mo sa kabilang direksyon!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Hindi mo ginamit ang {0} mo bago magpalit ng lane o lumiko.
     m_Metadata:
       m_Items: []
   references:

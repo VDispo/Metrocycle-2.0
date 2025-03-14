@@ -89,7 +89,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: DIRETSONG DAAN
+    m_Localized: STRAIGHT NA DAAN
     m_Metadata:
       m_Items: []
   - m_Id: 12
@@ -98,7 +98,7 @@ MonoBehaviour:
       m_Items:
       - rid: 1404317527448748034
   - m_Id: 5262856258117632
-    m_Localized: PINDUTIN UPANG MAGSIMULA
+    m_Localized: PINDUTIN PARA MAGSIMULA
     m_Metadata:
       m_Items: []
   references:

@@ -74,8 +74,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13
     m_Localized: You did not give ample time for other road users to react to your
-      {0}.\nIt is recommended to indicate your intent 5s before the action (e.g.
-      lane change).
+      {0}. It is recommended to indicate your intent 5s before the action (e.g. lane
+      change).
     m_Metadata:
       m_Items: []
   - m_Id: 14
@@ -88,7 +88,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 16
     m_Localized: Oops! You entered the intersection while the traffic light was on
-      red.\nMake sure to stop right before the stop line (white).
+      red. Make sure to stop right before the stop line (white).
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -141,6 +141,22 @@ MonoBehaviour:
   - m_Id: 28
     m_Localized: You are not allowed to change lane when the lines between the lanes
       are solid lines (they must be dotted lines).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: another vehicle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Uh oh!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: You used the {0} for the opposite direction!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: You did not use your {0} before changing lanes or turning.
     m_Metadata:
       m_Items: []
   references:

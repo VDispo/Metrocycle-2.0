@@ -19,10 +19,9 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 30757150720
-    m_Localized: Advanced Scenario - EDSA
+    m_Localized: ADVANCED SCENARIO - EDSA
     m_Metadata:
-      m_Items:
-      - rid: 1404317732907778061
+      m_Items: []
   - m_Id: 1
     m_Localized: Let's drive through EDSA, the 2nd most accident prone road in Metro
       Manila. Continue driving through EDSA Service Road. Take the next right turn
@@ -93,12 +92,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Great!
+    m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Remember to slow down when going down slopes as they are areas prone
-      to road crashes. Continue driving down EDSA.
+    m_Localized: You took a left turn. To go back to the starting position, you should
+      take a right turn instead.
     m_Metadata:
       m_Items: []
   - m_Id: 19
@@ -120,21 +119,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: Next Challenge
-    m_Metadata:
-      m_Items: []
-  - m_Id: 24
-    m_Localized: Continue down EDSA Service Road again and take the next right turn
-      to K-3rd Street
-    m_Metadata:
-      m_Items: []
-  - m_Id: 25
     m_Localized: Uh oh!
     m_Metadata:
       m_Items: []
+  - m_Id: 24
+    m_Localized: You entered the EDSA Service Road instead of the elevated Maharlika
+      Highway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Next Challenge
+    m_Metadata:
+      m_Items: []
   - m_Id: 26
-    m_Localized: You took a left turn. To go back to the stargin position, you should
-      take a right turn instead.
+    m_Localized: Continue down EDSA Service Road again and take the next right turn
+      to K-3rd Street
     m_Metadata:
       m_Items: []
   - m_Id: 27
@@ -198,10 +197,26 @@ MonoBehaviour:
     m_Localized: You failed to switch to the proper lane on time.
     m_Metadata:
       m_Items: []
+  - m_Id: 41
+    m_Localized: Take the next two right turns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Localized: Continue down EDSA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Localized: Take the next right turn, heading to K-3rd Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: Drive through the elevated Maharlika Highway
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Localized: Go straight through K-3rd and KF street. Take the 2nd right turn.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds:
-    - rid: 1404317732907778061
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: ADVANCED SCENARIO - EDSA
+    RefIds: []

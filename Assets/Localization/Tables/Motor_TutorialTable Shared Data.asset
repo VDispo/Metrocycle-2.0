@@ -86,7 +86,8 @@ MonoBehaviour:
   - m_Id: 17
     m_Key: bad_leftHeadCheckDescription
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6707803005191454728
   - m_Id: 18
     m_Key: forwardHeadCheckTitle
     m_Metadata:
@@ -126,7 +127,8 @@ MonoBehaviour:
   - m_Id: 27
     m_Key: bad_rightHeadCheckDescription
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6707803005191454729
   - m_Id: 28
     m_Key: brakingTitle
     m_Metadata:
@@ -163,3 +165,11 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1739753097053
+    - rid: 6707803005191454728
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: "this part in gameplay doesn\u2019t make sense might remove"
+    - rid: 6707803005191454729
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: "this part in gameplay doesn\u2019t make sense might remove"

@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1
-    m_Localized: Lumipat sa pinaka-kaliwang lane at mag-U-turn pa-kaliwa. Sundin
+    m_Localized: Lumipat sa pinaka-kaliwang lane, tapos mag-U-turn pa-kaliwa. Sundin
       ang mga regulasyon sa daan.
     m_Metadata:
       m_Items: []
@@ -28,33 +28,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Magandang pag-U-turn!
+    m_Localized: Ang galing mo mag-U-turn!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Ngayon, dumiretso ka sa dulo ng barikada at subukang bumalik sa
-      motorcycle lane.
+    m_Localized: Ngayon, dumiretso ka sa dulo at subukang bumalik sa motorcycle lane
+      (may mga blue na linya).
     m_Metadata:
-      m_Items:
-      - rid: 1404317732907778112
+      m_Items: []
   - m_Id: 5
-    m_Localized: Wrong way! Bawal mag-Counterflow.
+    m_Localized: Wrong way! Bawal mag-Counterflow
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Ikaw ay nag-counterflow. Dumiretso sa kabilang direksyon.
+    m_Localized: Counterflow ang tawag sa pagmaneho sa maling direksyon sa isang
+      daan.
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Lumampas na ang U-turn Slot.
+    m_Localized: Nalampasan mo ang U-turn Slot
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Tandaan na dahan-dahang bumagal sa paglapit sa U-turn slot.
+    m_Localized: Dahan-dahang lapitan ang U-turn slot para maghanda sa pagliko.
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: Gamitin ang Blinkers Para mag-Signal ng Pagliko.
+    m_Localized: Gamitin ang Blinkers para mag-signal ng pagliko
     m_Metadata:
       m_Items: []
   - m_Id: 10
@@ -63,16 +63,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Masyadong Nang Matagal ang Pagpapalit ng Lane.
+    m_Localized: Masyadong kang matagal sa pagpapalit ng Lane.
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Dahan-dahan ngunit 'wag masyadong tagalan ang paglipat ng lane (papunta
-      sa motorcycle lane).
+    m_Localized: Dahan-dahan sa pagpalit ng lane (papunta sa motorcycle lane) ngunit
+      'wag kang masyadong matagal.
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: Hala.
+    m_Localized: Hala!
     m_Metadata:
       m_Items: []
   - m_Id: 1637351743488
@@ -80,13 +80,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Natagalan ka masyado magpalit ng lane!
+    m_Localized: Hindi ka nakalipat sa tamang lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Dumiretso sa dulo at bumalik sa motorcycle lane (may mga blue na
+      linya)
     m_Metadata:
       m_Items: []
   references:
     version: 2
-    RefIds:
-    - rid: 1404317732907778112
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: '? unsure what barriers means here'
+    RefIds: []

@@ -241,7 +241,7 @@ public class blinkers : MonoBehaviour
                 }
             }
         } else {
-            if (Input.GetKeyDown("q"))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 if (leftStatus == 1){
                     setBlinker(Direction.LEFT, BlinkerStatus.OFF);
@@ -251,7 +251,7 @@ public class blinkers : MonoBehaviour
                     blinkTimer = 0;
                 }
             }
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (rightStatus == 1){
                     setBlinker(Direction.RIGHT, BlinkerStatus.OFF);
@@ -291,8 +291,10 @@ public class blinkers : MonoBehaviour
                 } else {
                     if (Time.time - shouldCancelAtTime > maxUncancelledBlinkerTime) {
                         if (GameManager.Instance.PopupSystem != null) {
-                            GameManager.Instance.PopupSystem.popPrompt("You forgot to cancel your blinker",
-                                "Make sure to cancel your " + GameManager.Instance.blinkerName() + " after performing a turn.");
+                            string title = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "blinkerTitle");
+                            string text = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "blinkerDescription");
+                            GameManager.Instance.PopupSystem.popPrompt(title,
+                                string.Format(text, GameManager.Instance.blinkerName()));
                         }
 
                         GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.UNCANCELLED_BLINKER);

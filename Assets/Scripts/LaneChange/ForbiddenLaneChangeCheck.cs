@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class ForbiddenLaneChangeCheck : MonoBehaviour
 {
@@ -15,10 +12,10 @@ public class ForbiddenLaneChangeCheck : MonoBehaviour
         if (hasCrossedLine) {
             Debug.Log("Illegal lane change!!!!");
 
-            GameManager.Instance.PopupSystem.popError(
-                "You used the intersection incorrectly",
-                "You are not allowed to change lane anymore when the line is solid."
-            );
+            string title = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "solidLineTitle");
+            string text = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "solidLineDescription");
+
+            GameManager.Instance.PopupSystem.popError(title, text);
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.LANECHANGE_NOTALLOWED);
         }

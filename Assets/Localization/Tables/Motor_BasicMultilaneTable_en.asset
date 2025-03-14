@@ -29,7 +29,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Change lane to the right safely
+    m_Localized: Change lane to the right safely (check mirror, signal, mirror again,
+      head check, go)
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -37,7 +38,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Try Changing to the next lane on the right again
+    m_Localized: Try changing to the next lane on the right again (check mirror,
+      signal, mirror again, head check, go)
     m_Metadata:
       m_Items: []
   - m_Id: 5
@@ -53,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Now try going back to the Motorcycle lane (with blue lines)
+    m_Localized: Now try going back to the motorcycle lane (with blue lines)
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -118,6 +120,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24
     m_Localized: You failed to switch to the proper lane on time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Go to the lane on the right again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Go back to the motorcycle lane (with bliue lines)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Go to the lane on the right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Reach the leftmost lane
     m_Metadata:
       m_Items: []
   references:

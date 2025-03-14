@@ -23,12 +23,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1
-    m_Localized: Dumiretso hanggang sa finish line. Huwag kalimutang sundin ang mga
-      speed limit!
+    m_Localized: Dumiretso hanggang sa finish line. 'Wag kalimutang sundin ang mga
+      speed limit signs!
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Dumiretso
+    m_Localized: Dumiretso lang at sundin ang mga speed limit signs
     m_Metadata:
       m_Items: []
   references:

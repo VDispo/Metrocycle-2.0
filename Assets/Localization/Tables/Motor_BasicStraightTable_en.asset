@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Drive straight
+    m_Localized: Drive straight while keeping in mind the speed limit
     m_Metadata:
       m_Items: []
   references:

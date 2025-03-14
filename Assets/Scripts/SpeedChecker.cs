@@ -5,8 +5,6 @@ using UnityEngine;
 public class SpeedChecker : MonoBehaviour
 {
     public int speedLimit;
-    public string popupText = null;
-    public string popupTitle = null;
 
     [SerializeField] PopupType popupType = PopupType.PROMPT;
     private float speed;
@@ -26,10 +24,12 @@ public class SpeedChecker : MonoBehaviour
         
         if (speed > speedLimit+speedLeeway){
             Debug.Log($"Exceeded speed limit! ({speed})");
-            string text = (popupText ?? "") == "" ? "Make sure to keep an eye on your speedometer." : popupText;
-            string title = (popupTitle ?? "") == "" ? $"You have exceeded the {speedLimit} kph speed limit!" : popupTitle;
+            string title = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "speedLimitErrorTitle");
+            string text = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "speedLimitErrorText");
+            Debug.Log($"title: ({title})");
+            Debug.Log($"text: ({text})");
             GameManager.Instance.PopupSystem.popWithType(popupType,
-                title,
+                string.Format(title, speedLimit),
                 text,
                 true    // countAsError
             );

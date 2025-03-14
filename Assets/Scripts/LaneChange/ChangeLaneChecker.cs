@@ -22,6 +22,12 @@ public class ChangeLaneChecker : MonoBehaviour
 
     private float lastDetectTime;
 
+    public string PopupTitle { get; set; }
+    public string BusLaneErrText { get; set; }
+    public string BikeLaneErrText { get; set; }
+    public string MotorLaneErrText { get; set; }
+
+
     void Start(){
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
 
@@ -107,7 +113,7 @@ public class ChangeLaneChecker : MonoBehaviour
 
     public bool checkEnteredBusOrBikeLane(GameObject lane) {
         if (lane == busLane) {
-            errorText = "The Bus lane is only for public utility buses (PUBs) and ambulances or goverment vehicles responding to emergencies.";
+            errorText = BusLaneErrText;
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BUSLANE);
             return true;
@@ -118,7 +124,7 @@ public class ChangeLaneChecker : MonoBehaviour
         }
 
         if (lane == bikeLane) {
-            errorText = "Motorcycles are not allowed on the Bike Lane!";
+            errorText = BikeLaneErrText;
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.EXCLUSIVE_BIKELANE);
         }  else {
@@ -126,7 +132,7 @@ public class ChangeLaneChecker : MonoBehaviour
         }
 
         GameManager.Instance.PopupSystem.popError(
-            "Uh oh!", errorText
+            PopupTitle, errorText
         );
 
         return true;
@@ -140,9 +146,9 @@ public class ChangeLaneChecker : MonoBehaviour
         }
 
         if (!bicycleAllowed_Set.Contains(lane)) {
-            errorText = "Bicycles are not allowed in this lane which is used by motored vehicles.";
+            errorText = MotorLaneErrText;
             GameManager.Instance.PopupSystem.popError(
-                "Uh oh!", errorText
+                PopupTitle, errorText
             );
 
             GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.BIKE_NOTALLOWED);

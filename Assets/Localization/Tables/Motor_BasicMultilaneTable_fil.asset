@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1
-    m_Localized: Upang makaliko nang ligtas, sumilip sa salamin, i-signal ang pagliko,
+    m_Localized: 'Para makaliko nang ligtas: sumilip sa salamin, i-signal ang pagliko,
       sumilip muli sa salamin, at sumilip sa likod (head check) para sa blind spots.
-      Lumipat sa lane sa kanan mo.
+      Lumipat sa lane sa kanan mo.'
     m_Metadata:
       m_Items: []
   - m_Id: 2
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 4
@@ -45,16 +45,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Ngayon, subukan mong bumalik sa motorcycle lane (may mga asul na
-      linya).
+    m_Localized: Ngayon, subukan mong bumalik sa motorcycle lane (may mga blue na
+      linya sa daan).
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -62,15 +62,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Pumunta muli sa lane sa kanan mo.
+    m_Localized: Pumunta uli sa lane sa kanan mo.
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -78,15 +78,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: At bilang panghuli, pumunta sa pinaka-kaliwang lane.
+    m_Localized: 'Ito na ang huling pagsubok mo: pumunta sa pinaka-kaliwang lane.'
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -94,16 +94,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: Ang galing mo! Alam mo na kung paano ang paglipat ng lanes nang
-      maayos.
+    m_Localized: Napakagaling mo! Alam mo na kung paano ang paglipat ng lanes nang
+      ligtas at maayos.
     m_Metadata:
       m_Items: []
   - m_Id: 21
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -119,7 +119,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: Huwag masyadong matagalan sa paglipat ng lane.
+    m_Localized: Hindi ka nakalipat sa tamang lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Lumipat sa sumunod na kanang lane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Bumalik sa motocycle lane (mga blue na linya)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Lumipat sa lane sa kanan mo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Pumunta sa pinaka-kaliwang lane
     m_Metadata:
       m_Items: []
   references:

@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
-using UnityEngine.SceneManagement;
 
 public class CollisionWithObstacles : MonoBehaviour
 {
@@ -30,7 +24,7 @@ public class CollisionWithObstacles : MonoBehaviour
         bool isVehicle = false;
         switch (otherLayer) {
             case layer_AITraffic:
-                otherDescription = "another vehicle";
+                otherDescription = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "collider3");
                 isVehicle = true;
 
                 GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.COLLISION_AIVEHICLE);
@@ -39,9 +33,9 @@ public class CollisionWithObstacles : MonoBehaviour
                 string tag = other.gameObject.tag;
                 Debug.Log("TAG: " + tag);
                 if (tag == "Side Obstacle") {
-                    otherDescription = "an obstacle on the side of the road";
+                    otherDescription = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "collider1");
                 } else {
-                    otherDescription = "the side of the road";
+                    otherDescription = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "collider2");
                 }
 
                 GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.COLLISION_OBSTACLE);
@@ -50,9 +44,12 @@ public class CollisionWithObstacles : MonoBehaviour
                 break;
         }
 
+        string title = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "collisionTitle");
+        string text1 = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "collisionDescription");
+        string text2 = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "isVehicle");
         GameManager.Instance.PopupSystem.popWithType(popupType,
-            "Uh oh!", "You collided with " + otherDescription + ". Remember to control your speed and direction."
-                + (isVehicle ? "When driving, maintain a minimum of 1 car length away from other vehicles." : "")
+            title, 
+            string.Format(text1, otherDescription) + (isVehicle ? text2 : "")
         );
     }
 }

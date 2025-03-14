@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1
-    m_Localized: Mag-U-turn pakaliwa. Tandaan na manatili sa pinaka-kaliwang lane
-      at dahan-dahang lapitan ang u-turn slot. Huwag ding kalimutan na mag signal
-      at sumilip (head check) bago lumiko.
+    m_Localized: Mag-U-turn pakaliwa. Manatili sa pinaka-kaliwang lane at dahan-dahang
+      lapitan ang u-turn slot. 'Wag kalimutang mag signal at mag-head check bago
+      lumiko.
     m_Metadata:
       m_Items: []
   - m_Id: 2
@@ -33,16 +33,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Ang Galing!
+    m_Localized: Ang galing mo!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Nagyon, mag-U-turn pa-kanan sa susunod na junction. Tandaang mag-signal
+    m_Localized: Nagyon, mag-U-turn pakanan sa susunod na junction. Tandaang mag-signal
       at head check bago lumiko!
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: Gamitin ang Blinker pang-Signal!
+    m_Localized: Gamitin mo ang Blinker para i-signal ang liko!
     m_Metadata:
       m_Items: []
   - m_Id: 6
@@ -50,11 +50,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Lumampas na ang U-turn Slot!
+    m_Localized: Nalampasan mo na ang U-turn Slot.
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Tandaan na dahan-dahan ang paglapit sa U-turn slot.
+    m_Localized: Tandaan na dahan-dahan lapitan ang U-turn slot.
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -62,39 +62,40 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Hala! Pula pa ang traffic light! Tumigil at maghintay sa likod ng
-      stop line (puti).
+    m_Localized: Hala! Pula pa ang traffic light! Tumigil at maghintay muna sa likod
+      ng stop line (puti).
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Maganda ang pag-U-turn mo sa kaliwa, ngunit dapat manatili ka sa
+    m_Localized: Maganda yung pag-U-turn mo sa kaliwa, pero dapat nanatili ka sa
       inner lane.
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: Sa tuwing kakanan, manatili ka sa kanang lane bago lumiko.
+    m_Localized: Bago kumanan, manatili lang sa kanang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: Maganda ang pag-U-turn mo, ngunit dapat manatili sa inner lane.
+    m_Localized: Maganda yung pag-U-turn mo sa kaliwa, pero dapat nanatili ka sa
+      inner lane.
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Sa tuwing kakaliwa, manatili rin sa kaliwang lane bago lumiko.
+    m_Localized: Bago kumaliwa, manatili lang sa kaliwang lane.
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: Maganda ang pagliko mo sa kanan, ngunit dapat manatili ka sa inner
+    m_Localized: Maganda yung pagliko mo sa kanan, pero dapat nanatili ka sa inner
       lane.
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Maganda ang pag-U-turn mo, ngunit dapat manatili sa inner lane.
+    m_Localized: Maganda yung pag-U-turn mo, pero dapat nanatili ka sa inner lane.
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Maganda ang pag-U-turn mo sa kanan, ngunit dapat manatili ka sa
-      inner lane.
+    m_Localized: Maganda yung pag-U-turn mo sa kanan, pero dapat nanatili ka sa inner
+      lane.
     m_Metadata:
       m_Items: []
   references:

@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: good_KamuningDescription
     m_Metadata:
       m_Items: []
+  - m_Id: 41
+    m_Key: good_KamuningObjective
+    m_Metadata:
+      m_Items: []
   - m_Id: 5
     m_Key: bad1_KamuningTitle
     m_Metadata:
@@ -65,6 +69,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 12
     m_Key: maharlikaDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Key: maharlikaObjective
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -107,6 +115,10 @@ MonoBehaviour:
     m_Key: end_MaharlikaDescription
     m_Metadata:
       m_Items: []
+  - m_Id: 43
+    m_Key: end_MaharlikaObjective
+    m_Metadata:
+      m_Items: []
   - m_Id: 23
     m_Key: bad5_MaharlikaTitle
     m_Metadata:
@@ -123,6 +135,10 @@ MonoBehaviour:
     m_Key: backToStartDescription
     m_Metadata:
       m_Items: []
+  - m_Id: 44
+    m_Key: backToStartObjective
+    m_Metadata:
+      m_Items: []
   - m_Id: 27
     m_Key: bad_backToStartTitle
     m_Metadata:
@@ -137,6 +153,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 30
     m_Key: k3rdDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Key: k3rdObjective
     m_Metadata:
       m_Items: []
   - m_Id: 31

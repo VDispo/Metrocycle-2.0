@@ -28,129 +28,129 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: Bilisan ang Takbo
+    m_Localized: Dumiretso
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: Lumiko pa-Kanan
+    m_Localized: Lumiko sa Kanan (right)
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Para mag-signal ng liko, igilid pa-kanan ang blinker sa ibabang
-      kaliwa ng screen. Subukan mong itabingi ang screen para lumiko.
+    m_Localized: Para mag-signal ng liko, galawin ang blinker controls sa lower left
+      ng screen mo. Para naman lumiko, itabingi ang phone sa kanan.
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: Lumiko pa-Kanan
+    m_Localized: Mag-signal ng right turn gamit ang blinker, at lumiko
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Gamitin ang Blinker pang-Signal!
+    m_Localized: Gamitin mo ang Blinker pang-signal ng liko!
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Dapat naka-bukas na ang kanang blinker mo dito. Para gawin ito,
-      igilid pa-kanan ang blinker sa babang kaliwa ng screen.
+    m_Localized: Dapat naka-bukas na ang kanang blinker mo dito. Hanapin sa lower
+      left ng screen ang blinker controls.
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: Kaliwang Likuan
+    m_Localized: Lumiko sa Kaliwa (left)
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: Hilain naman pa-kaliwa ang blinker. Itabingi ang phone pa-kaliwa
+    m_Localized: Hilain naman pa-kaliwa ang blinker. Itabingi ang phone sa kaliwa
       upang lumiko.
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Lumiko pa-Kaliwa
+    m_Localized: Mag-signal ng left turn gamit ang blinker, at lumiko
     m_Metadata:
       m_Items: []
   - m_Id: 11
-    m_Localized: Gamitin ang Blinker pang-Signal!
+    m_Localized: Nakalimutan mong gamitin ang Blinker pang-signal ng liko!
     m_Metadata:
       m_Items: []
   - m_Id: 12
     m_Localized: Dapat naka-bukas na ang kaliwang blinker mo dito. Para gawin ito,
-      hilain pa-kaliwa ang blinker sa babang kaliwa ng screen.
+      hanapin sa lower left ng screen ang blinker controls.
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: Sumilip sa Kaliwa (Left Head Check)
+    m_Localized: Left Head Check
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Upang masilip ang blindspots mo sa kaliwa, matagal na pindutin (i-hold)
-      ang left head check button (pindutan na may ulong nakaharap sa kaliwa).
+    m_Localized: Para makita ang blindspots mo sa kaliwa, pindutin ang left head
+      check button na makikita sa kaliwa ng screen.
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: Sumilip sa Kaliwa (Left Head Check)
+    m_Localized: Sumilip sa kaliwang blind spot hanggang sa sunod na checkpoint
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Hala! Hindi ka Sumisilip sa Kaliwa!
+    m_Localized: Hala! Hindi ka sumisilip sa kaliwa!
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Matagal na pindutin (i-hold) ang left head check button upang tumagal
-      ang pagsilip sa kaliwa. Subukan mong paabutin ito hanggang sa sunod na checkpoint.
+    m_Localized: Matagal na i-hold ang left head check button para humaba ang pagsilip.
+      Paabutin mo ito hanggang sa sunod na checkpoint.
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Pagbalik ng Tingin sa Harap
+    m_Localized: Tumingin sa Harap
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: Bitawan ang head check button upang tumingin muli sa harap.
+    m_Localized: Bitawan ang head check button para tumingin muli sa harap.
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: Tumigin sa Harap
+    m_Localized: Bitawan ang head check button para tumingin sa harap.
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: Hala! Tumingin rin sa harap, sa daan.
+    m_Localized: Hala! Tumingin ka rin naman sa harap.
     m_Metadata:
       m_Items: []
   - m_Id: 22
     m_Localized: Delikado ang masyadong matagal na pagsilip sa likod. Bitawan na
-      ang head check button.
+      muna ang head check button.
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: Sumilip sa Kanan (Right Head Check)
+    m_Localized: Right Head Check
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: Hanapin naman ang right head check button (pindutan na may ulong
-      nakaharap sa kanan).
+    m_Localized: Hanapin at subukan naman ang right head check button, sa kaliwang
+      bahagi rin ng screen.
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: Sumilip sa Kanan (Right Head Check)
+    m_Localized: Sumilip sa kanang blind spot, hanggang sa sunod na checkpoint
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: Hala! Hindi ka Sumisilip sa Kanan!
+    m_Localized: Hala! Hindi ka sumisilip sa kanan!
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: Matagal na pindutin (i-hold) ang right head check button upang tumagal
-      ang pagsilip sa kanan. Subukan mong paabutin ito hanggang sa sunod na checkpoint.
+    m_Localized: Matagal na pindutin ang right head check button. Paabutin ito hanggang
+      sa sunod na checkpoint.
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: Paghinto (Pagbrake)
+    m_Localized: Paggamit ng Brakes sa Paghinto
     m_Metadata:
       m_Items: []
   - m_Id: 29
-    m_Localized: Malapit na tayo matapos! Upang huminto, pindutin ang likod (rear)
-      o harap (front) na brake sa itaas na bahagi ng screen.
+    m_Localized: Malapit na tayo matapos! Para huminto, pindutin ang likod ("rear")
+      o harap ("front") na brake, na makikita sa baba ng iyong side mirrors sa screen.
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: Huminto sa berdeng lapag.
+    m_Localized: Gamitin ang brakes para huminto sa checkpoint
     m_Metadata:
       m_Items: []
   - m_Id: 31

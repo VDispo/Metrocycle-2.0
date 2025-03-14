@@ -35,6 +35,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1404317732907778074
+  - m_Id: 29
+    m_Key: collider3
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454724
   - m_Id: 4
     m_Key: isVehicle
     m_Metadata:
@@ -75,6 +80,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1404317732907778082
+  - m_Id: 30
+    m_Key: blinkerErrorTitle
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454725
+  - m_Id: 31
+    m_Key: wrongBlinkerDescription
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454726
+  - m_Id: 32
+    m_Key: noBlinkerDescription
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454727
   - m_Id: 12
     m_Key: tooLongToTurnTitle
     m_Metadata:
@@ -288,3 +308,19 @@ MonoBehaviour:
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: illegal lane change
+    - rid: 6707803005191454724
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: collision
+    - rid: 6707803005191454725
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: blinker
+    - rid: 6707803005191454726
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: blinker (0 is blinker name)
+    - rid: 6707803005191454727
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: blinker (0 is blinker name)

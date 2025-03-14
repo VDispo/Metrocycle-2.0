@@ -10,6 +10,7 @@ public class IntersectionChecker : MonoBehaviour
     public GameObject[] laneDetects;
     [Header("IMPORTANT: Add Green light objects in same order (and number) as lane detects.")]
     public GameObject[] greenLights = null;
+    public string PopupTitle { get; set; }
     public string WrongWayText { get; set; }
     public string RedLightText { get; set; }
     public string LeftLaneLeftTurnText { get; set; }
@@ -223,7 +224,7 @@ public class IntersectionChecker : MonoBehaviour
         switch (type) {
         case PopupType.ERROR:
             GameManager.Instance.PopupSystem.popError(
-                "You used the intersection incorrectly", popupText
+                PopupTitle, popupText
             );
             break;
         default:
