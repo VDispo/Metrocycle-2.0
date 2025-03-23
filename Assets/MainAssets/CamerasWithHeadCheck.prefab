@@ -559,7 +559,7 @@ MonoBehaviour:
   right: {fileID: 1155043554112211233}
   left: {fileID: 8138568303991613292}
   overhead: {fileID: 5554914067527691108}
-  headCheckSpeed: 0.5
+  headCheckSpeed: 0.25
   maxHeadCheckDelay: 5
   leftCheckTime: 0
   rightCheckTime: 0
