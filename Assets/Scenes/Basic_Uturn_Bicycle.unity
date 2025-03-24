@@ -20021,6 +20021,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &423867879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27027,6 +27029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!1001 &609579204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39584,6 +39588,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &838750472
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -46345,6 +46351,74 @@ MonoBehaviour:
   otherSoDataStartRight: {fileID: 0}
   otherSoDataEndLeft: {fileID: 0}
   otherSoDataEndRight: {fileID: 0}
+--- !u!1001 &1106841490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059238026970656525, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LocalizationCache
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a09211d85253ae4f8542605f8a4a2bc, type: 3}
 --- !u!114 &1108306029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47157,6 +47231,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1121348448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48435,6 +48511,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1182756704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53467,6 +53545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!1001 &1417381520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54441,6 +54521,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1434028022
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55582,6 +55664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1478587387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65041,6 +65125,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1772302683
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75025,6 +75111,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1914613573
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77721,6 +77809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1928082040
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -92808,3 +92898,4 @@ SceneRoots:
   - {fileID: 1520827889}
   - {fileID: 303485980}
   - {fileID: 270993673}
+  - {fileID: 1106841490}

@@ -6856,6 +6856,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &423867879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9291,6 +9293,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!114 &603328827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10112,6 +10116,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &641743193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22841,6 +22847,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &866309663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27023,6 +27031,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1121348448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27991,6 +28001,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1182756704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30454,6 +30466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
+  progress_order: 0
+  progress_total: 0
 --- !u!114 &1416701742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36044,6 +36058,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1728133395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37344,6 +37360,74 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1001 &1850531670
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456972403071720253, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059238026970656525, guid: 6a09211d85253ae4f8542605f8a4a2bc,
+        type: 3}
+      propertyPath: m_Name
+      value: LocalizationCache
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a09211d85253ae4f8542605f8a4a2bc, type: 3}
 --- !u!1001 &1855537621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38008,37 +38092,37 @@ PrefabInstance:
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -74.42553
+      value: -74.415794
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.812092
+      value: 20.833647
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 110.87076
+      value: 110.87714
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9375306
+      value: -0.99556696
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.34766352
+      value: 0.09316641
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.01271978
+      value: 0.012846415
       objectReference: {fileID: 0}
     - target: {fileID: 7731016212078278816, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0021638705
+      value: -0.0012019828
       objectReference: {fileID: 0}
     - target: {fileID: 7954857072185532402, guid: fc75ae5013580e2009221941bd32dc1e,
         type: 3}
@@ -38257,6 +38341,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &1912685026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41353,6 +41439,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
+  progress_order: 0
+  progress_total: 0
 --- !u!64 &2021479495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44353,3 +44441,4 @@ SceneRoots:
   - {fileID: 1958783165}
   - {fileID: 623999846}
   - {fileID: 1648884833}
+  - {fileID: 1850531670}
