@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public Slider progressBar;
 
     public bool isTestMode = false;
+    public List<string> userErrors;
 
     private void Awake()
     {
@@ -215,8 +216,9 @@ public class GameManager : MonoBehaviour
             string errorTitle = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "headCheckTitle");
             string errorText = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "headCheckAfterBlinker");
             Instance.setErrorReason(Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER);
+            Instance.addUserError();
 
-            Instance.PopupSystem.popError(
+            Instance.PopupSystem.popPrompt(
                 errorTitle, string.Format(errorText, Instance.blinkerName())
             );
 
@@ -239,8 +241,9 @@ public class GameManager : MonoBehaviour
                 // last headcheck reasonably "recent", but not recent enough to be valid
                 Instance.setErrorReason(Metrocycle.ErrorReason.EXPIRED_HEADCHECK);
             }
+            Instance.addUserError();
 
-            Instance.PopupSystem.popError(
+            Instance.PopupSystem.popPrompt(
                 errorTitle, errorText
             );
 
@@ -395,6 +398,11 @@ public class GameManager : MonoBehaviour
     public void updateProgressBar(int current_value, int max_value) 
     {
         progressBar.value = (float)current_value / max_value;
+    }
+
+    public void addUserError()
+    {
+        userErrors.Add(lastErrorReason.ToString());
     }
 
     void Update() {

@@ -170,47 +170,54 @@ public class IntersectionChecker : MonoBehaviour
                 popupText = WrongWayText;
 
                 GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_WRONGWAY);
+                GameManager.Instance.addUserError();
             }
             else if (entryIdx == 0){
                 Debug.Log("From Left to " + idx);
                 if (bad_LeftLaneRightTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = LeftLaneRightTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_FROM_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
                 else if (bad_LeftLaneLeftTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = LeftLaneLeftTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_TO_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
                 else if (bad_LeftLaneUTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = LeftLaneUTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_TO_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
             }
             else {
                 Debug.Log("From Right to " + idx);
                 if (bad_RightLaneRightTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = RightLaneRightTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_RIGHTTURN_TO_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
                 else if (bad_RightLaneLeftTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = RightLaneLeftTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFTTURN_FROM_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
                 else if (bad_RightLaneUTurnIdx.Contains(idx)) {
-                    type = PopupType.ERROR;
+                    type = PopupType.PROMPT;
                     popupText = RightLaneUTurnText;
 
                     GameManager.Instance.setErrorReason(Metrocycle.ErrorReason.INTERSECTION_LEFT_UTURN_FROM_OUTERLANE);
+                    GameManager.Instance.addUserError();
                 }
             }
 
@@ -222,13 +229,19 @@ public class IntersectionChecker : MonoBehaviour
         Debug.Log(popupText);
 
         switch (type) {
-        case PopupType.ERROR:
-            GameManager.Instance.PopupSystem.popError(
-                PopupTitle, popupText
-            );
-            break;
-        default:
-            break;
+            case PopupType.ERROR:
+                GameManager.Instance.PopupSystem.popError(
+                    PopupTitle, popupText
+                );
+                break;
+            case PopupType.PROMPT:
+                Debug.Log("PROMPT");
+                GameManager.Instance.PopupSystem.popPrompt(
+                    PopupTitle, popupText
+                );
+                break;
+            default:
+                break;
         }
     }
 }

@@ -22,6 +22,8 @@ public class CheckpointDetection : MonoBehaviour
     public UnityEvent loadStateCallback = null;
     [HideInInspector]
     public UnityEvent triggerSignal;
+    public int progress_order = 0;
+    public int progress_total = 0;
 
     void Awake() {
         triggerSignal = new UnityEvent();
@@ -46,5 +48,9 @@ public class CheckpointDetection : MonoBehaviour
         callback?.Invoke();
 
         triggerSignal.Invoke();
+
+        if (progress_order > 0 && progress_total > 0) {
+            GameManager.Instance.updateProgressBar(progress_order, progress_total);
+        }
     }
 }

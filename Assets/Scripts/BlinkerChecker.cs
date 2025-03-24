@@ -11,6 +11,9 @@ public class BlinkerCheck : MonoBehaviour
     public string PopupTitle { get; set; }
     public string PopupText { get; set; }
 
+    public int progress_order = 0;
+    public int progress_total = 0;
+
     void Start() {
         blinkerScript = GameManager.Instance.getBlinkers().GetComponent<blinkers>();
     }
@@ -29,5 +32,9 @@ public class BlinkerCheck : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        if (progress_order > 0 && progress_total > 0) {
+            GameManager.Instance.updateProgressBar(progress_order, progress_total);
+        }
     }
 }
