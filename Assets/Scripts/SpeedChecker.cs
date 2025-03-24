@@ -13,6 +13,8 @@ public class SpeedChecker : MonoBehaviour
     // amount of allowable extra in speed
     // e.g. limit = 20 and leeway = 3 => warn at speed 23
     public float speedLeeway = 3f;
+    public int progress_order = 0;
+    public int progress_total = 0;
 
     void Awake() {
         speed = 0f;
@@ -38,6 +40,10 @@ public class SpeedChecker : MonoBehaviour
 
             // HACK: Kill velocity so that driver won't be flagged for overspeeding again immediately on resume
             GameManager.Instance.stopBike();
+        }
+
+        if (progress_order > 0 && progress_total > 0) {
+            GameManager.Instance.updateProgressBar(progress_order, progress_total);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 /* To use, attach this script to the "Bike" prefab instance
  */
@@ -33,6 +34,8 @@ public class GameManager : MonoBehaviour
     // TODO: Maybe centralize all error messages in one location, just decide based on lastErrorReason?
     //       This will make it easier to see ALL checks and make translation of error messages easier
     private Metrocycle.ErrorReason lastErrorReason = Metrocycle.ErrorReason.NOERROR;
+
+    public Slider progressBar;
 
     public bool isTestMode = false;
 
@@ -387,6 +390,11 @@ public class GameManager : MonoBehaviour
     public void resetErrorReason()
     {
         lastErrorReason = Metrocycle.ErrorReason.NOERROR;
+    }
+
+    public void updateProgressBar(int current_value, int max_value) 
+    {
+        progressBar.value = (float)current_value / max_value;
     }
 
     void Update() {

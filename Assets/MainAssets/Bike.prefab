@@ -3392,6 +3392,7 @@ MonoBehaviour:
   resetSignal:
     m_PersistentCalls:
       m_Calls: []
+  progressBar: {fileID: 2813034180541060119}
   isTestMode: 0
 --- !u!114 &3421073126216474872
 MonoBehaviour:
