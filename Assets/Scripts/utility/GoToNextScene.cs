@@ -9,5 +9,4 @@ public class nextScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-    
 }

@@ -16,35 +16,39 @@ public class SpecialConditionsHandler : MonoBehaviour
         //specialConditionsInvolved.Add(nightConditionHandler, false);
         //specialConditionsInvolved.Add(fogConditionHandler, false);
 
-        foreach (var entry in specialConditionsInvolved)
+        SpecialConditionsInitializer starter = FindFirstObjectByType<SpecialConditionsInitializer>();
+        ConditionHandler[] keys = new ConditionHandler[specialConditionsInvolved.Count]; 
+        specialConditionsInvolved.Keys.CopyTo(keys, 0); // unsure if all will be copied
+        foreach (ConditionHandler cond in keys)
         {
-            entry.Key.enabled = entry.Value;
+            foreach (string condName in starter.specialConditionsInvolved.Keys)
+            {
+                if (cond.ConditionName == condName)
+                    specialConditionsInvolved[cond] = starter.specialConditionsInvolved[condName];
+            }
         }
 
-        specialConditionsInvolved[rainConditionHandler] = true; // debug 
-        InitializeConditions(); // debug
-
-        //// This is how it will be set in the Select Mode scene:
-        // specialConditionsInvolved(or .values) = <dictionary or ordered array input from select mode>
+        InitializeConditions();
+        Destroy(starter.gameObject);
     }
 
-    public List<string> GetConditionNames()
-    {
-        List<string> conditionNamesOrdered = new(specialConditionsInvolved.Count);
+    //public List<string> GetConditionNames()
+    //{
+    //    List<string> conditionNamesOrdered = new(specialConditionsInvolved.Count);
 
-        foreach(ConditionHandler handler in specialConditionsInvolved.Keys)
-        {
-            conditionNamesOrdered.Add(handler.ConditionName);
-        }
+    //    foreach(ConditionHandler handler in specialConditionsInvolved.Keys)
+    //    {
+    //        conditionNamesOrdered.Add(handler.ConditionName);
+    //    }
 
-        return conditionNamesOrdered;
-    }
+    //    return conditionNamesOrdered;
+    //}
 
     public void InitializeConditions()
     {
         foreach (var entry in specialConditionsInvolved)
         {
-            entry.Key.enabled = entry.Value;
+            entry.Key.gameObject.SetActive(entry.Value);
         }
     }
 }
