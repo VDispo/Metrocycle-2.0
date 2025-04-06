@@ -11198,6 +11198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5417dee6d1a1146a33ee61d92daf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMotorcycle: 0
+  activeVehicle: {fileID: 0}
+  dataRendererURP:
+  - {fileID: 11400000, guid: c40be3174f62c4acf8c1216858c64956, type: 2}
+  - {fileID: 11400000, guid: e634585d5c4544dd297acaee93dc2beb, type: 2}
+  - {fileID: 11400000, guid: 707360a9c581a4bd7aa53bfeb1429f71, type: 2}
 --- !u!1 &1631608182429244037
 GameObject:
   m_ObjectHideFlags: 0

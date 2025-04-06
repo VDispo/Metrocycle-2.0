@@ -32,6 +32,7 @@ public class SpecialConditionsHandler : MonoBehaviour
         isMotorcycle = GameManager.Instance.getBikeType() == Metrocycle.BikeType.Motorcycle;
         rainConditionHandler.isMotorcycle = isMotorcycle;
         rainConditionHandler.activeVehicle = isMotorcycle ? motorcycle.transform : bicycle.transform;
+        fogConditionHandler.activeVehicle = isMotorcycle ? motorcycle.transform : bicycle.transform;
 
         // Initialize dictionary containing active states of each condition
         specialConditionsInvolved.Add(nightConditionHandler, false);

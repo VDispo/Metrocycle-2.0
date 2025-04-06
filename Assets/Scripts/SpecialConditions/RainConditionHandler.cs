@@ -18,7 +18,7 @@ public class RainConditionHandler : ConditionHandler
     private void Start()
     {
         startOffsetZ = rainParticlesTransform.localPosition.z;
-        StartCoroutine(nameof(UpdateRainPosition));
+        StartCoroutine(nameof(UpdateParticlePosition));
     }
 
     private void Update()
@@ -26,14 +26,14 @@ public class RainConditionHandler : ConditionHandler
         Skid();
     }
 
-    private IEnumerator UpdateRainPosition()
+    private IEnumerator UpdateParticlePosition()
     {
         rainParticlesTransform.localPosition = new Vector3(
             activeVehicle.localPosition.x,
             rainParticlesTransform.localPosition.y,
             activeVehicle.localPosition.z + startOffsetZ);
         yield return new WaitForSecondsRealtime(particlesPositionUpdateInterval);
-        StartCoroutine(nameof(UpdateRainPosition));
+        StartCoroutine(nameof(UpdateParticlePosition));
     }
 
     // this might need to be implemented inside ArcadeBikeController.cs and BicycleVehicle.cs
