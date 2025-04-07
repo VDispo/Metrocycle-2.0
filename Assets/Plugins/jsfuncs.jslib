@@ -6,7 +6,8 @@ mergeInto(LibraryManager.library, {
   SaveStats: function (scenename,
         speed,
         elapsedTime,
-        errors
+        errors,
+        errorsClassification
     ) {
 
     scenename = UTF8ToString(scenename);
@@ -14,6 +15,7 @@ mergeInto(LibraryManager.library, {
         "AvgSpeed": speed,
         "ElapsedTime": elapsedTime,
         "Errors": errors,
+        "ErrorsClassification": errorsClassification,
         "DateTime": new Date(),
     };
 
