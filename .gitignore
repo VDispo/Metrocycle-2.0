@@ -16,6 +16,9 @@ mono_crash*.blob
 /[Bb]uilds/
 /[Oo]bj/
 
+## SOMEHOW, this file keeps changing through development, unknowingly... so here it is, gitignored
+/Assets/ThirdPartyAssets/Ash Assets/Arcade Bike Physics/Materials/Friction.physicMaterial
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/

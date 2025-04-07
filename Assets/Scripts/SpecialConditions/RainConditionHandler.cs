@@ -1,26 +1,24 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RainConditionHandler : ConditionHandler
 {
     public override string ConditionName { get => "Rain"; }
 
+    //[Header("Vehicle")]
+    [HideInInspector] public bool isMotorcycle = false;
+    [HideInInspector] public Transform activeVehicle;
+
+    [Header("Rain Particles")]
     [SerializeField] private Transform rainParticlesTransform;
-    [SerializeField] private GameObject motorcycle;
-    [SerializeField] private GameObject bicycle;
-    [SerializeField] private float particlesPositionUpdateInterval; // (in seconds) interval of updating position to follow player vehicle
-    private Transform vehicleTransform;
-
-
-    // Z of particle's center is offset forward since the player sees more things in the forward direction (its better to put more particles there than at the back)
-    private float startOffsetZ = 0; 
+    [SerializeField][Tooltip("interval [in seconds] of updating rain particle position to follow player vehicle")] private float particlesPositionUpdateInterval = 1; 
+    private float startOffsetZ = 0; // Z of particle's center is offset forward since the player sees more things in the forward direction (its better to put more particles there than at the back)
 
     private void Start()
     {
         startOffsetZ = rainParticlesTransform.localPosition.z;
-        vehicleTransform = motorcycle.activeInHierarchy ? motorcycle.transform : bicycle.transform;
-
-        StartCoroutine(nameof(UpdateRainPosition));
+        StartCoroutine(nameof(UpdateParticlePosition));
     }
 
     private void Update()
@@ -28,14 +26,14 @@ public class RainConditionHandler : ConditionHandler
         Skid();
     }
 
-    private IEnumerator UpdateRainPosition()
+    private IEnumerator UpdateParticlePosition()
     {
         rainParticlesTransform.localPosition = new Vector3(
-            vehicleTransform.localPosition.x,
+            activeVehicle.localPosition.x,
             rainParticlesTransform.localPosition.y,
-            vehicleTransform.localPosition.z + startOffsetZ);
+            activeVehicle.localPosition.z + startOffsetZ);
         yield return new WaitForSecondsRealtime(particlesPositionUpdateInterval);
-        StartCoroutine(nameof(UpdateRainPosition));
+        StartCoroutine(nameof(UpdateParticlePosition));
     }
 
     // this might need to be implemented inside ArcadeBikeController.cs and BicycleVehicle.cs
@@ -57,6 +55,9 @@ public class RainConditionHandler : ConditionHandler
         // AND programmatically remember this was a skid (so next prompts could reference "u bumped to someone cuz u skid'd"
         // AND if bumped, do popup the modified (skid) prompt
         // AND restart to last checkpoint
+
+        // idea ni balong:
+        // less turn angle the faster it is
     }
 
     private void OnDestroy()

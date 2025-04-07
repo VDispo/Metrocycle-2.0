@@ -16,7 +16,22 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: ca36f5fccccf4b443870408f086bac2e
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: c40be3174f62c4acf8c1216858c64956
+    m_Address: Assets/Settings/URP-HighFidelity-Renderer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e634585d5c4544dd297acaee93dc2beb
+    m_Address: Assets/Settings/URP-Balanced-Renderer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 707360a9c581a4bd7aa53bfeb1429f71
+    m_Address: Assets/Settings/URP-Performant-Renderer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 97f9ae32b6876ca48b2fc72434485a1c, type: 2}
   m_SchemaSet:
