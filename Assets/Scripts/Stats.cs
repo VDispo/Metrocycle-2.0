@@ -9,10 +9,11 @@ using System.Runtime.InteropServices;
 public class Stats : MonoBehaviour
 {
      [DllImport("__Internal")]
-     public static extern void SaveStats(string sceneName, float speed, float elapsedTime, int errors);
+     public static extern void SaveStats(string sceneName, float speed, float elapsedTime, int errors, string[] errorsClassification);
 
      [DllImport("__Internal")]
      public static extern string GetStatsForScene(string sceneName);
+
 
      void Awake() {
           string sceneName = SceneManager.GetActiveScene().name;
@@ -61,9 +62,30 @@ public class Stats : MonoBehaviour
           float speed = PlayerPrefs.GetFloat(sceneName+"_Speed");
           float elapsedTime = PlayerPrefs.GetFloat(sceneName+"_elapsedTime");
           int errors = PlayerPrefs.GetInt(sceneName+"_Errors");
+          string[] errorsClassification = PlayerPrefs.GetString(sceneName+"_ErrorsClassification").Split(',');
+
+          Debug.Log("Speed: " + speed);
+          Debug.Log("Elapsed Time: " + elapsedTime);
+          Debug.Log("Errors: " + errors);
+          Debug.Log("Errors Classification: " + string.Join(", ", errorsClassification));
 
           // Hello();
           return (speed, elapsedTime, errors);
+     }
+
+     public static string[] AddUserError(string errorClassification) {
+          string sceneName = SceneManager.GetActiveScene().name;
+          string errorsClassification = PlayerPrefs.GetString(sceneName+"_ErrorsClassification");
+
+          if (errorsClassification == "") {
+               errorsClassification = errorClassification;
+          } else {
+               errorsClassification += "," + errorClassification;
+          }
+
+          PlayerPrefs.SetString(sceneName+"_ErrorsClassification", errorsClassification);
+
+          return errorsClassification.Split(',');
      }
 
      public static string[] formatStats(float speed, float elapsedTime, int errors) {

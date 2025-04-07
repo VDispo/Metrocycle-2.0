@@ -7,11 +7,7 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Friction
-<<<<<<< HEAD
-  dynamicFriction: 0.9590989
-=======
-  dynamicFriction: 0.95911556
->>>>>>> rain-condition
+  dynamicFriction: 0.9606051
   staticFriction: 1
   bounciness: 0
   frictionCombine: 3

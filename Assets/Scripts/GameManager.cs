@@ -36,9 +36,13 @@ public class GameManager : MonoBehaviour
     private Metrocycle.ErrorReason lastErrorReason = Metrocycle.ErrorReason.NOERROR;
 
     public Slider progressBar;
+    public Text scoreText;
+    public Text deductReasonText;
 
     public bool isTestMode = false;
     public List<string> userErrors;
+
+    private int userScore = 100;
 
     private void Awake()
     {
@@ -219,7 +223,7 @@ public class GameManager : MonoBehaviour
             Instance.addUserError();
 
             Instance.PopupSystem.popPrompt(
-                errorTitle, string.Format(errorText, Instance.blinkerName())
+                errorTitle, string.Format(errorText, Instance.blinkerName()), true
             );
 
             return false;
@@ -244,12 +248,13 @@ public class GameManager : MonoBehaviour
             Instance.addUserError();
 
             Instance.PopupSystem.popPrompt(
-                errorTitle, errorText
+                errorTitle, errorText, true
             );
 
             return false;
         }
 
+        updateUserScoreIncrementReason(5, "Head Check Bonus");
         // FALLTRHOUGH: no error found
         return true;
     }
@@ -299,15 +304,20 @@ public class GameManager : MonoBehaviour
             hasError = true;
 
             Instance.setErrorReason(Metrocycle.ErrorReason.SHORT_BLINKER_TIME);
-        }
+        } 
 
         if (hasError) {
-            Instance.PopupSystem.popError(
-                errorTitle, string.Format(errorText, blinkerName)
+            Debug.Log("BLINKER ERROR " + errorText + " " + blinkerName);
+            Instance.PopupSystem.popPrompt(
+                errorTitle, string.Format(errorText, blinkerName), true
             );
+            Instance.addUserError();
+
         } else {
             if (requireHeadCheck) {
                 Instance.verifyHeadCheck(direction, headCheckRefTime);
+            } else {
+                updateUserScoreIncrementReason(5, "Blinker Bonus");
             }
         }
     }
@@ -403,6 +413,81 @@ public class GameManager : MonoBehaviour
     public void addUserError()
     {
         userErrors.Add(lastErrorReason.ToString());
+        updateUserScoreErrorReason();
+    }
+    public void updateUserScoreIncrementReason(int increment, string reason)
+    {
+        updateUserScoreIncrement(increment);
+        setIncrementReasonText($"+{increment} {reason}");
+    }
+
+    public void updateUserScoreErrorReason()
+    {
+        Dictionary<Metrocycle.ErrorReason, int> errorScoreDeduction = new Dictionary<Metrocycle.ErrorReason, int>
+        {
+            { Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER, 15 },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK, 15 },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK, 15 },
+            { Metrocycle.ErrorReason.EXPIRED_HEADCHECK, 5 },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER, 20 },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER, 20 },
+            { Metrocycle.ErrorReason.WRONG_BLINKER, 30 },
+            { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, 5 }
+        };
+
+        Dictionary<Metrocycle.ErrorReason, string> errorDescriptions = new Dictionary<Metrocycle.ErrorReason, string>
+        {
+            { Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER, "No Head Check" },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK, "No Left Head Check" },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK, "No Right Head Check" },
+            { Metrocycle.ErrorReason.EXPIRED_HEADCHECK, "Expired Head Check" },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER, "No Left Blinker" },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER, "No Right Blinker" },
+            { Metrocycle.ErrorReason.WRONG_BLINKER, "Wrong Blinker" },
+            { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, "Short Blinker Time" }
+        };
+
+        if (errorScoreDeduction.TryGetValue(lastErrorReason, out int deduction))
+        {
+            updateUserScoreDeduction(deduction);
+            string errorDescription = errorDescriptions[lastErrorReason];
+            setDeductReasonText($"-{deduction} {errorDescription}");
+        }
+        else
+        {
+            Debug.LogError("Error reason not found in dictionary: " + lastErrorReason);
+        }
+        
+    }
+
+    public void updateUserScoreDeduction(int deduction)
+    {
+        userScore -= deduction;
+        if (userScore < 0) {
+            PopupSystem.popError(
+                LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "userMistakeLimitTitle"),
+                LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "userMistakeLimitDescription")
+            );
+        }
+        scoreText.text = userScore.ToString();
+    }
+
+    public void updateUserScoreIncrement(int increment)
+    {
+        userScore += increment;
+        if (userScore > 100) {
+            userScore = 100;
+        }
+        scoreText.text = userScore.ToString();
+    }
+
+    public void setDeductReasonText(string text)
+    {
+        deductReasonText.GetComponent<DeductionTextBehavior>().SetErrorText(text);
+    }
+    public void setIncrementReasonText(string text)
+    {
+        deductReasonText.GetComponent<DeductionTextBehavior>().SetIncrementText(text);
     }
 
     void Update() {
