@@ -159,13 +159,12 @@ MonoBehaviour:
   fogConditionHandler: {fileID: 8563876507927575554}
   motorcycle: {fileID: 1664345169483333614}
   bicycle: {fileID: 398133132196896254}
-  skyboxMats:
-  - {fileID: 2100000, guid: 9af23ba5fa5364ff598888460e0e2759, type: 2}
-  - {fileID: 2100000, guid: f2b5f3f20933f434e850db1b710542fd, type: 2}
-  - {fileID: 2100000, guid: 2d796ced94d61438fbab81b194038162, type: 2}
   sideMirrorSkyboxes:
   - {fileID: 4413582384981963012}
   - {fileID: 8291715072948718594}
+  defaultLightingPrefab: {fileID: 8149382760077124767, guid: b869ff62a8fa13b469e7da52991da100,
+    type: 3}
+  activateNightLights: 0
 --- !u!1 &363769494580690783
 GameObject:
   m_ObjectHideFlags: 0
@@ -10631,6 +10630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77caf65e08e7f24f8a7a35aa6e3aef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _associatedSpecialConditionSO: {fileID: 11400000, guid: 18e0229e1b3e4994e95652c8d013fa9b,
+    type: 2}
   isMotorcycle: 0
   activeVehicle: {fileID: 0}
   rainParticlesTransform: {fileID: 7787750805471326885}
@@ -11278,6 +11279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5417dee6d1a1146a33ee61d92daf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _associatedSpecialConditionSO: {fileID: 11400000, guid: cb2a5fca9643a8d409baa236b702e33c,
+    type: 2}
   isMotorcycle: 0
   activeVehicle: {fileID: 0}
   dataRendererURP:
@@ -12058,6 +12061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f91999591639d41856ba8560d33540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _specialConditionSO: {fileID: 11400000, guid: 4895e3a7ce3b41340bc3829e598138f0,
+    type: 2}
 --- !u!1 &2980691465108242266
 GameObject:
   m_ObjectHideFlags: 0

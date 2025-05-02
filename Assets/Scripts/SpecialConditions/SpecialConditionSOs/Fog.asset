@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cab1d42977b7042b009b84bf3fb614, type: 3}
+  m_Name: Fog
+  m_EditorClassIdentifier: 
+  skybox: {fileID: 2100000, guid: 2d796ced94d61438fbab81b194038162, type: 2}
+  skyboxPriority: 1
+  lightingPrefab: {fileID: 8149382760077124767, guid: b869ff62a8fa13b469e7da52991da100,
+    type: 3}
+  lightingPriority: 1
+  activateNightLights: 1

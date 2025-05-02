@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour
             Instance.addUserError();
 
             Instance.PopupSystem.popPrompt(
-                errorTitle, string.Format(errorText, Instance.blinkerName()), true
+                errorTitle, string.Format($"{errorText}", Instance.blinkerName()), true
             );
 
             return false;
@@ -307,9 +307,10 @@ public class GameManager : MonoBehaviour
         } 
 
         if (hasError) {
-            Debug.Log("BLINKER ERROR " + errorText + " " + blinkerName);
+            string text = string.Format($"{errorText}", blinkerName);
+            Debug.Log($"BLINKER ERROR {text}");
             Instance.PopupSystem.popPrompt(
-                errorTitle, string.Format(errorText, blinkerName), true
+                errorTitle, text, true
             );
             Instance.addUserError();
 

@@ -5,6 +5,10 @@ using UnityEngine;
 public class RainConditionHandler : ConditionHandler
 {
     public override string ConditionName { get => "Rain"; }
+    public override SpecialConditionSO SpecialConditionSO { get => _associatedSpecialConditionSO; }
+    
+    [Header("Associated Scriptable Object")]
+    [SerializeField] private SpecialConditionSO _associatedSpecialConditionSO;
 
     //[Header("Vehicle")]
     [HideInInspector] public bool isMotorcycle = false;

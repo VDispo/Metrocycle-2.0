@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cab1d42977b7042b009b84bf3fb614, type: 3}
+  m_Name: Rain
+  m_EditorClassIdentifier: 
+  skybox: {fileID: 2100000, guid: f2b5f3f20933f434e850db1b710542fd, type: 2}
+  skyboxPriority: 0
+  lightingPrefab: {fileID: 4435801228344328526, guid: 254a30ffb9a25f34aa589fec08ac3bd8,
+    type: 3}
+  lightingPriority: 0
+  activateNightLights: 1

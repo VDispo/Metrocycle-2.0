@@ -214,6 +214,9 @@ Shader "EasyRoads3D/ER Road"
 			#pragma multi_compile _ _LIGHT_COOKIES
 			#pragma multi_compile _ _CLUSTERED_RENDERING
 
+			// To support Forward+
+			#pragma multi_compile _ _FORWARD_PLUS
+
 			#pragma vertex vert
 			#pragma fragment frag
 

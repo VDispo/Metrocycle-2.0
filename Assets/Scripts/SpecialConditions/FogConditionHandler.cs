@@ -4,6 +4,10 @@ using UnityEngine.Rendering.Universal;
 public class FogConditionHandler : ConditionHandler
 {
     public override string ConditionName { get => "Fog"; }
+    public override SpecialConditionSO SpecialConditionSO { get => _associatedSpecialConditionSO; }
+
+    [Header("Associated Scriptable Object")]
+    [SerializeField] private SpecialConditionSO _associatedSpecialConditionSO;
 
     //[Header("Vehicle")]
     [HideInInspector] public bool isMotorcycle = false;

@@ -1,7 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// A base class from which special conditions derive from.
+/// </summary>
 abstract public class ConditionHandler : MonoBehaviour
 {
-    // Just a base class from which special conditions derive from
     abstract public string ConditionName { get; }
+
+    abstract public SpecialConditionSO SpecialConditionSO { get; }
 }

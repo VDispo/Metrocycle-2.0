@@ -2683,10 +2683,10 @@ RectTransform:
   - {fileID: 1016405592}
   - {fileID: 525253517}
   - {fileID: 921284014}
-  - {fileID: 1571096002}
   - {fileID: 308051461}
   - {fileID: 211271052}
   - {fileID: 44680692}
+  - {fileID: 1571096002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2938,7 +2938,7 @@ GameObject:
   - component: {fileID: 750847589}
   - component: {fileID: 750847588}
   m_Layer: 5
-  m_Name: Page_Title (TODO change to "SELECT SPECIAL CONDITION")
+  m_Name: Page_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,9 +5,13 @@ using UnityEngine;
 public class NightConditionHandler : ConditionHandler
 {
     public override string ConditionName { get => "Night"; }
+    public override SpecialConditionSO SpecialConditionSO { get => _specialConditionSO; }
+    
+    [Header("Associated Scriptable Object")]
+    [SerializeField] private SpecialConditionSO _specialConditionSO;
 
     /// TODO
     /// - replace sun
-    /// - activate light sources (maybe via tag or layer or custimized script)
+    /// - activate nightLight sources (maybe via tag or layer or custimized script)
     /// - maybe add thicc vignette
 }
