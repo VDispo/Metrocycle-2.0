@@ -34,10 +34,6 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1404317527448748037
-  - m_Id: 4
-    m_Key: back
-    m_Metadata:
-      m_Items: []
   - m_Id: 5
     m_Key: selectVehicle
     m_Metadata:
@@ -106,6 +102,86 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1404317527448748044
+  - m_Id: 29073124242051072
+    m_Key: selectSpecialConditions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073250696122368
+    m_Key: "evening\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073253174956032
+    m_Key: rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073257021132800
+    m_Key: fog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073460046417920
+    m_Key: start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29301504212291584
+    m_Key: plays
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29309912873259008
+    m_Key: bestscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310099926634496
+    m_Key: besttime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310211616755712
+    m_Key: leasterrors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310386846388224
+    m_Key: mosterrors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310503750029312
+    m_Key: numberplays
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786234379849728
+    m_Key: language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786291447549952
+    m_Key: english
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786358376058880
+    m_Key: filipino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786447500824576
+    m_Key: volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188432712552448
+    m_Key: paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188949064929280
+    m_Key: continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188982996848640
+    m_Key: restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32189020888190976
+    m_Key: quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32196817138831360
+    m_Key: finish
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
