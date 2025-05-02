@@ -27,19 +27,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2
-    m_Localized: PLAYER STATISTICS
+    m_Localized: STATS
     m_Metadata:
       m_Items: []
   - m_Id: 3
     m_Localized: SETTINGS
     m_Metadata:
       m_Items: []
-  - m_Id: 4
-    m_Localized: BUMALIK
-    m_Metadata:
-      m_Items: []
   - m_Id: 5
-    m_Localized: PUMILI NG SASAKYAN
+    m_Localized: 'PUMILI NG
+
+      SASAKYAN'
     m_Metadata:
       m_Items: []
   - m_Id: 6
@@ -51,7 +49,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: PUMILI NG MODE
+    m_Localized: 'PUMILI NG
+
+      MODE'
     m_Metadata:
       m_Items:
       - rid: 1404317527448748032
@@ -72,7 +72,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: PUMILI NG ADVANCED NA SENARYO
+    m_Localized: 'PUMILI NG
+
+      ADVANCED
+
+      SCENARIO'
     m_Metadata:
       m_Items:
       - rid: 1404317527448748033
@@ -89,16 +93,106 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: STRAIGHT NA DAAN
+    m_Localized: 'DIRETSONG
+
+      DAAN'
     m_Metadata:
       m_Items: []
   - m_Id: 12
-    m_Localized: PUMILI NG BASIC NA SENARYO
+    m_Localized: 'PUMILI NG
+
+      BASIC
+
+      SCENARIO'
     m_Metadata:
       m_Items:
       - rid: 1404317527448748034
   - m_Id: 5262856258117632
     m_Localized: PINDUTIN PARA MAGSIMULA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073124242051072
+    m_Localized: 'PUMILI NG
+
+      SPECIAL
+
+      CONDITIONS'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073250696122368
+    m_Localized: GABI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073253174956032
+    m_Localized: ULAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073257021132800
+    m_Localized: HAMOG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29073460046417920
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29301504212291584
+    m_Localized: MGA LARO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29309912873259008
+    m_Localized: PINAKAMATAAS NA SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310099926634496
+    m_Localized: PINAKAMABILIS NA ORAS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310211616755712
+    m_Localized: PINAKAKAUNTING MALI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310386846388224
+    m_Localized: PINAKAMARAMING MALI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29310503750029312
+    m_Localized: DAMI NG MGA LARO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786234379849728
+    m_Localized: WIKA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786291447549952
+    m_Localized: ENGLISH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786358376058880
+    m_Localized: FILIPINO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31786447500824576
+    m_Localized: VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188432712552448
+    m_Localized: PAUSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188949064929280
+    m_Localized: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32188982996848640
+    m_Localized: RESTART
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32189020888190976
+    m_Localized: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32196817138831360
+    m_Localized: FINISH
     m_Metadata:
       m_Items: []
   references:
