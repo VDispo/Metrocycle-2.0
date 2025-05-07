@@ -23,7 +23,8 @@
         "Unity.SysrootPackage.Editor",
         "Unity.Localization",
         "Unity.Addressables",
-        "Unity.RenderPipelines.Universal.Runtime"
+        "Unity.RenderPipelines.Universal.Runtime",
+        "AYellowpaper.SerializedCollections"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

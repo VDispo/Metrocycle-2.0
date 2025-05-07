@@ -1,0 +1,12 @@
+using UnityEngine;
+
+/// <summary>
+/// Note that the name of the prefab (from <see cref="choicesPrefabs"/>) is the text used as display.
+/// </summary>
+[CreateAssetMenu(fileName = "CustomizationAssetSetSO", menuName = "CustomizationAssetSetSO")]
+public class CustomizationAssetSetSO : ScriptableObject
+{
+    [Header("Data")]
+    [Tooltip("defined in Constants.cs")] public Metrocycle.CustomizationAssetTypes type;
+    [Tooltip("the assets to choose from")] public GameObject[] choicesPrefabs;
+}

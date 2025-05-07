@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// This script sits in the select mode menu screen, particularly when selecting the specific modes (Intersection, EDSA, etc.).<br/>
-/// It saves the player's choices into the <see cref="specialConditionsSelected"/>, which will persist throught the scene switching by saving it to <see cref="SpecialConditionsSelected"/> in DontDestroyOnLoad.
+/// It saves the player's choices into a <see cref="SpecialConditionsSelected"/> instance, which is instantiated here at runtime and persists through the next scene change.
 /// </summary>
 public class SpecialConditionsSelector : MonoBehaviour
 {
@@ -12,11 +12,13 @@ public class SpecialConditionsSelector : MonoBehaviour
 
     private void Start()
     {
-        specialConditionsSelected = SpecialConditionsSelected.Instance;
+        specialConditionsSelected = Instantiate(new GameObject()).AddComponent<SpecialConditionsSelected>();
+        if (!specialConditionsSelected) specialConditionsSelected = SpecialConditionsSelected.Instance;
     }
 
     public void StartSelectedScene()
     {
+        // todo load blowbagets scene first
         nextScene.Instance.LoadScene(NextSceneSelected);
     }
 

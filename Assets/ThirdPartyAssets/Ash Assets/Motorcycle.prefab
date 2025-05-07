@@ -6313,6 +6313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6674008020840532439}
+  - component: {fileID: 4829975269036253041}
   - component: {fileID: 3509943104267958362}
   - component: {fileID: 989309691621460989}
   - component: {fileID: 6614786720247966130}
@@ -6343,6 +6344,25 @@ Transform:
   - {fileID: 2200631141483407650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4829975269036253041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979533320120663939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772b5b963c3e80f46a1a3785ff04f832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bikeType: 0
+  parentOfAssets:
+    _serializedList:
+    - Key: 0
+      Value: {fileID: 0}
+    - Key: 1
+      Value: {fileID: 0}
 --- !u!136 &3509943104267958362
 CapsuleCollider:
   m_ObjectHideFlags: 0
