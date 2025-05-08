@@ -1324,6 +1324,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &76523899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150075249658803960, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &83841093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4219,7 +4225,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2033326195}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -5661,6 +5667,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &378082414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2980691465108242266, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379811330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6653,8 +6665,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 6
+  progress_total: 10
 --- !u!64 &423867879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6727,6 +6739,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423867876}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &428502058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6420471963936407584, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &428502061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428502058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737ad101a2f9db042b5ff4248e333ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkerUI: {fileID: 76523899}
+  headCheckUI: {fileID: 1981277593}
+  leftBrakeUI: {fileID: 1473346599}
+  rightBrakeUI: {fileID: 378082414}
+  leftHeadCheckUI: {fileID: 657779865}
+  rightHeadCheckUI: {fileID: 1581372670}
+  upHeadCheckUI: {fileID: 2033326195}
 --- !u!1001 &433935905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8920,8 +8957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 1
   popupType: 1
-  progress_order: 0
-  progress_total: 0
+  progress_order: 2
+  progress_total: 10
 --- !u!1001 &607706519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9669,8 +9706,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 10
+  progress_total: 10
 --- !u!64 &641743193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9943,6 +9980,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &657779865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 792872639512315440, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &658320249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22277,8 +22320,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 7
+  progress_total: 10
 --- !u!64 &866309663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26332,8 +26375,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 3
+  progress_total: 10
 --- !u!64 &1121348448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27179,8 +27222,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 1
+  progress_total: 10
 --- !u!64 &1182756704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29499,8 +29542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichBlinker: 0
   popupType: 1
-  progress_order: 0
-  progress_total: 0
+  progress_order: 4
+  progress_total: 10
 --- !u!114 &1420200610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30559,6 +30602,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &1473346599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1547585623018577771, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1479161196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32274,6 +32323,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &1581372670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7591642937009645401, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1583182190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34771,8 +34826,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 8
+  progress_total: 10
 --- !u!64 &1728133395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36802,8 +36857,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 5
+  progress_total: 10
 --- !u!64 &1912685026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39316,6 +39371,12 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!1 &1981277593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407749538015172749, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1981400065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39777,8 +39838,8 @@ MonoBehaviour:
   triggerSignal:
     m_PersistentCalls:
       m_Calls: []
-  progress_order: 0
-  progress_total: 0
+  progress_order: 9
+  progress_total: 10
 --- !u!64 &2021479495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39992,6 +40053,12 @@ MonoBehaviour:
   rotationCenter: 0
   side: 0
   otherSide: {fileID: 0}
+--- !u!1 &2033326195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1190308580165978275, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173957044504790641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2035324930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41833,6 +41900,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 150075249658803960, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 398133132196896252, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: throttleSlider
@@ -41858,9 +41930,24 @@ PrefabInstance:
       propertyPath: PopupSystem
       value: 
       objectReference: {fileID: 1142387557}
+    - target: {fileID: 491119583230674834, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: isTutorialMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 491119583230674834, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 428502061}
     - target: {fileID: 1178383782787929272, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547585623018577771, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1664345169483333614, guid: b80445d0d840830df8cd902c0cea3559,
@@ -41928,6 +42015,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2980691465108242266, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3421073126216474872, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: bikeType
@@ -41942,6 +42034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407749538015172749, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6420471963936407584, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -41976,17 +42073,17 @@ PrefabInstance:
     - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8254904905098237742, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8607378005101229383, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -42002,7 +42099,11 @@ PrefabInstance:
     - {fileID: 1696673943467480303, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
     - {fileID: 1106237383354549992, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6420471963936407584, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 428502061}
   m_SourcePrefab: {fileID: 100100000, guid: b80445d0d840830df8cd902c0cea3559, type: 3}
 --- !u!114 &2173957044504790642 stripped
 MonoBehaviour:
@@ -42010,7 +42111,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1581372670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -42022,7 +42123,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 657779865}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -42046,7 +42147,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 378082414}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -42058,7 +42159,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2173957044504790641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1473346599}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}

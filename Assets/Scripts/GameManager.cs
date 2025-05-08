@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     public bool isTestMode = false;
     public List<string> userErrors;
+    public bool isTutorialMode = false;
+    public TutorialProgression tutorialManager = null;
 
     private int userScore = 100;
 
@@ -409,6 +411,9 @@ public class GameManager : MonoBehaviour
     public void updateProgressBar(int current_value, int max_value) 
     {
         progressBar.value = (float)current_value / max_value;
+        if (isTutorialMode) {
+            tutorialManager.tutorialProgress(current_value);
+        }
     }
 
     public void addUserError()
