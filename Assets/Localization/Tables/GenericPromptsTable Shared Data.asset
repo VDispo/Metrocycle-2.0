@@ -36,7 +36,7 @@ MonoBehaviour:
       m_Items:
       - rid: 1404317732907778074
   - m_Id: 29
-    m_Key: collider3
+    m_Key: userMistakeLimitTitle
     m_Metadata:
       m_Items:
       - rid: 6707803005191454724
@@ -81,7 +81,7 @@ MonoBehaviour:
       m_Items:
       - rid: 1404317732907778082
   - m_Id: 30
-    m_Key: blinkerErrorTitle
+    m_Key: userMistakeLimitDescription
     m_Metadata:
       m_Items:
       - rid: 6707803005191454725
@@ -180,6 +180,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1404317732907778099
+  - m_Id: 29
+    m_Key: userMistakeLimitTitle
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454724
+  - m_Id: 30
+    m_Key: userMistakeLimitDescription
+    m_Metadata:
+      m_Items:
+      - rid: 6707803005191454725
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -311,11 +321,11 @@ MonoBehaviour:
     - rid: 6707803005191454724
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: collision
+        m_CommentText: score reached zero
     - rid: 6707803005191454725
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: blinker
+        m_CommentText: score reached zero
     - rid: 6707803005191454726
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:

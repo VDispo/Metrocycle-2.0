@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Motor_BasicUTurnTable_fil
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fil
+  m_SharedData: {fileID: 11400000, guid: 7f6b9639aecb3454f8cb298ce970c2be, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 63267201024
+    m_Localized: 'BASIC SCENARIO:
+
+      U-TURN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: 'Aralin natin ang pag-U-turn.
+
+
+      Mag-U-turn pakaliwa. Manatili
+      sa pinakakaliwang lane at dahan-dahang lapitan ang slot. Gamitin ang blinkers
+      at gawin ang head check bago lumiko.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Mag-U-turn pakaliwa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: MAG-U-TURN PAKANAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Mag-U-turn pakanan sa susunod na junction. Tandaang gamiting ang
+      hand signals at gawin ang head check bago lumiko.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Mag-U-turn pakanan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: 'PAALALA:
+
+      GAMITIN ANG BLINKER'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: I-signal ang kagustuhang lumiko 25 metro pa lang ang layo sa lilikuan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: 'PAALALA:
+
+      BAGALAN BAGO MAG-U-TURN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Tandaan na dahan-dahan lapitan ang U-turn slot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: 'PAALALA:
+
+      MALING DAAN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Pula pa ang traffic light. Tumigil at maghintay muna sa likod ng
+      puting stop line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Maayos ang pag-U-turn mo pakaliwa. Ngunit, dapat manatili ka sa
+      inner leftmost lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Manatili lang sa kanang lane bago kumanan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost
+      lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Manatili lang sa kaliwang lane bago kumaliwa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Maayos ang pagliko mo sa kanan. Ngunit, dapat nanatili ka sa inner
+      rightmost lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost
+      lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Maayos ang pag-U-turn mo pakanan. Ngunit, dapat manatili ka sa inner
+      leftmost lane.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

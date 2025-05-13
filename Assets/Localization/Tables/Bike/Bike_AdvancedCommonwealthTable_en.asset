@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Bike_AdvancedCommonwealthTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 587abad3e8056424bab9bd543ad875f6, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 21583187968
+    m_Localized: 'ADVANCED SCENARIO:
+
+      COMMONWEALTH'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: 'Let''s drive through Commonwealth, the second most accident-prone
+      road in Metro Manila in 2021.
+
+
+      Take the first right turn to Tandang
+      Sora Avenue.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Turn right to Tandang Sora.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: DO A U-TURN BACK TO COMMONWEALTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Make a U-turn before the red mark and turn right back to Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Make a U-turn and turn right back to Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: 'REMINDER:
+
+      DO NOT COUNTERFLOW'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Do not counterflow. Stay in the correct lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: 'REMINDER:
+
+      TURN RIGHT ON TANDANG SORA'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: You missed the right turn to Tandang Sora Avenue.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: 'REMINDER:
+
+      USE THE HAND SIGNAL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Signal your intent to turn 25 meters away from the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: GO THROUGH THE FOOTBRIDGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Go through the footbridge to the other side of Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: CONTINUE ON THE BIKE LANE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Continue on the bike lane until the finish line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Continue until the finish line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: 'REMINDER:
+
+      DO A U-TURN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: You forgot to do a U-turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: 'REMINDER:
+
+      STAY IN THE BIKE LANE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Stay in the bike lane when going back to Commonwealth.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

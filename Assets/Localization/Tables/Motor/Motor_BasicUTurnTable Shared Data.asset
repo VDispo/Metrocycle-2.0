@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Motor_BasicUTurnTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Motor_BasicUTurnTable
+  m_TableCollectionNameGuidString: 7f6b9639aecb3454f8cb298ce970c2be
+  m_Entries:
+  - m_Id: 63267201024
+    m_Key: title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Key: description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Key: objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: good_leftUTurnTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: good_leftUTurnDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Key: good_leftUTurnObjective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Key: bad_blinkerTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Key: bad_blinkerDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Key: bad_uTurnTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Key: bad_uTurnDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Key: wrongWay
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778052
+  - m_Id: 11
+    m_Key: redLight
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778053
+  - m_Id: 12
+    m_Key: leftLaneLeftUTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778054
+  - m_Id: 13
+    m_Key: leftLaneRightTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778055
+  - m_Id: 14
+    m_Key: leftLaneUTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778056
+  - m_Id: 15
+    m_Key: rightLaneLeftTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778057
+  - m_Id: 16
+    m_Key: rightLaneRightTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778058
+  - m_Id: 17
+    m_Key: rightLaneUTurn
+    m_Metadata:
+      m_Items:
+      - rid: 1404317732907778113
+  - m_Id: 18
+    m_Key: rightLaneRightUTurn
+    m_Metadata:
+      m_Items:
+      - rid: 2180363741647077382
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1404317555736969239
+  references:
+    version: 2
+    RefIds:
+    - rid: 1404317555736969239
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1739861942074
+    - rid: 1404317732907778052
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778053
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778054
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt (modified)
+    - rid: 1404317732907778055
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778056
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778057
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778058
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 1404317732907778113
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt
+    - rid: 2180363741647077382
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: GenericPrompt (modified)

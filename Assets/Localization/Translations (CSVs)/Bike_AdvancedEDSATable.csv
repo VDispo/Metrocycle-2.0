@@ -1,0 +1,83 @@
+Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
+title,0,,ADVANCED SCENARIO: EDSA,,ADVANCED SCENARIO: EDSA,
+description,1,,"Magmaneho tayo sa EDWA, ang pinaka-accident-prone na kalsada sa Metro Manila noong 2021.
+
+Baybayin ang EDSA Service Road. Kumanan sa ikatlong likuan papuntang K-3rd Street.",,"Let's drive through Commonwealth, the most accident-prone road in Metro Manila in 2021.
+
+Drive through the EDSA Service Road. Take the third right to K-3rd Street.",
+objective,2,,Kumanan papuntang K-3rd Street.,,Turn right to K-3rd Street.,
+reachKThirdTitle,3,,BUMALIK SA SIMULA,,RETURN TO THE START,
+reachKThirdDescription,4,,Baybayin ang K-3rd Street at KF Street at bumalik sa simula. Kumanan sa pangalawang likuan.,,Go straight through K-3rd Steet and KF Street and go back to the start. Take the second right turn.,
+reachKThirdObjective,5,,Kumanan sa pangalawang likuan.,,Take the second right turn.,
+bad1_k3rdTitle,6,,"PAALALA:
+KUMANAN SA K-3RD STREET",,"REMINDER:
+TURN RIGHT TO K-3RD STREET",
+bad1_k3rdDescription,7,,Nalampasan mo ang likuan papuntang K-3rd Street.,,You missed the turn to K-3rd Street.,
+bad2_k3rdTitle,8,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad2_k3rdDescription,9,,Lumiko ka sa Kamuning Street imbis sa K-3rd Street.,,You took the wrong turn to Kamuning Street instead of K-3rd Street.,
+bad3_k3rdTitle,10,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad3_k3rdDescription,11,,Lumiko ka sa isang dead end imbis sa K-3rd Street.,,You took the wrong turn to a dead end instead of K-3rd Street.,
+bad4_k3rdTitle,12,,"PAALALA:
+MANATILI SA EDSA SERVICE ROAD",,"REMINDER:
+STAY ON THE EDSA SERVICE ROAD",
+bad4_k3rdDescription,13,,Pumasok ka sa elevated Maharlika Highway. Manatili lang sa EDSA Service Road.,,You entered the elevated Maharlika Highway. Stay on the EDSA Service Road,
+reachStartTitle,14,,DUMIRETSO,,GO STRAIGHT AHEAD,
+reachStartDescription,15,,Baybayin ang EDSA Service Road.,,Contunue down the EDSA Service Road.,
+reachStartObjective,16,,Baybayin ang EDSA Service Road.,,Contunue down the EDSA Service Road.,
+bad1_EDSATitle,17,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad1_EDSADescription,18,,Lumiko ka patunong KF Street.,,You took a wrong turn to KF Street.,
+bad2_EDSATitle,19,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad2_EDSADescription,20,,"Lumiko ka sa kaliwa. Para makabalik sa simula, lumiko ka dapat pakanan.",,"You took a left turn. To go back to the start, take a right turn instead.",
+bad3_EDSATitle,21,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad3_EDSADescription,22,,"Lumiko ka sa kaliwa. Para makabalik sa simula, lumiko ka dapat pakanan.",,"You took a left turn. To go back to the start, take a right turn instead.",
+endTitle,23,,MAGPATULOY SA EDSA,,CONTINUE DOWN EDSA,
+endDescription,24,,Dahan-dahan lang ang pagbaba sa mga slopes dahil madaling maaksidente dito. Ipagpatuloy ang pagbaybay ng EDSA.,,Slow down when going down slopes as these are accident-prone. Continue driving down EDSA.,
+endObjective,25,,Magpatuloy sa EDSA.,,Continue down EDSA.,
+bad4_EDSATitle,26,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad4_EDSADescription,27,,Lumiko ka sa Kamuning Street imbis sa K-3rd Street.,,You took the wrong turn to Kamuning Street instead of K-3rd Street.,
+bad5_EDSATitle,28,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad5_EDSADescription,29,,Lumiko ka sa isang dead end imbis sa K-3rd Street.,,You took the wrong turn to a dead end instead of K-3rd Street.,
+bad6_EDSATitle,30,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad6_EDSADescription,31,,"Lumiko ka sa kaliwa. Para makabalik sa simula, lumiko ka dapat pakanan.",,"You took a left turn. To go back to the start, take a right turn instead.",
+missedTargetTitle,32,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+missedTargetDescription,33,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+reachKamuningTitle,34,,BUMALIK SA SIMULA,,RETURN TO THE START,
+reachKamuningDescription,35,,Bumalik sa simula. Kumanan sa susunod na dalawang likuan.,,Go back to the start. Take the next two right turns.,
+reachKamuningObjective,36,,Kumanan sa susunod na dalawang likuan.,,Take the next two right turns.,
+bad1_KamuningTitle,37,,"PAALALA:
+MALING DAAN",,"REMINDER:
+WRONG WAY",
+bad1_KamuningDescription,38,,"Napunta ka sa maling daan. Dahil mula ka sa EDSA Service Road, dumiretso ka na lamang.",,"You went the wrong way. Since you're coming from the EDSA Service Road, just continue driving forward.",
+bad2_KamuningTitle,39,,"PAALALA:
+KUMANAN SA KAMUNING",,"REMINDER:
+TURN RIGHT TO KAMUNING",
+bad2_KamuningDescription,40,,Nalampasan mo ang kanang likuan papuntang Kamuning Road.,,You missed the right turn to Kamuning Road.,
+bad3_KamuningTitle,41,,"PAALALA:
+MANATILI SA EDSA SERVICE ROAD",,"REMINDER:
+STAY ON THE EDSA SERVICE ROAD",
+bad3_KamuningDescription,42,,Pumasok ka sa elevated Maharlika Highway. Manatili lang sa EDSA Service Road.,,You entered the elevated Maharlika Highway. Stay on the EDSA Service Road,
+backStartTitle,43,,LUMIKO SA K-3RD STREET,,TURN TO K-3RD STREET,
+backStartDescription,44,,Magpatuloy sa EDSA Service Road at lumiko sa susunod na kanan papuntang K-3rd Street.,,Continue down EDSA Service Road and take the next right turn to K-3rd Street.,
+backStartObjective,45,,Lumiko pakanan papuntang K-3rd Street.,,Take the next right turn to K-3rd Street.,
+bad_backToStartTitle,46,,"PAALALA:
+MALING LIKO",,"REMINDER:
+WRONG TURN",
+bad_backToStartDescription,47,,"Lumiko ka sa kaliwa. Para makabalik sa simula, lumiko ka dapat pakanan.",,"You took a left turn. To go back to the start, take a right turn instead.",

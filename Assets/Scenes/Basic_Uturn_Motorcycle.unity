@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39434,7 +39434,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 8
+      m_KeyId: 9
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -39474,7 +39474,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 7
+      m_KeyId: 8
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -56588,7 +56588,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 6
+      m_KeyId: 7
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -56628,7 +56628,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 5
+      m_KeyId: 6
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -66441,6 +66441,7 @@ GameObject:
   - component: {fileID: 1772302682}
   - component: {fileID: 1772302687}
   - component: {fileID: 1772302686}
+  - component: {fileID: 1772302688}
   m_Layer: 8
   m_Name: U-turn end
   m_TagString: Untagged
@@ -66478,7 +66479,7 @@ MonoBehaviour:
   pairCollider: {fileID: 0}
   deactivateAfterCollision: 0
   showPopup: 1
-  popupType: 0
+  popupType: 1
   objectiveTextUI: {fileID: 1421822405}
   callback:
     m_PersistentCalls:
@@ -66631,6 +66632,46 @@ MonoBehaviour:
       - m_Target: {fileID: 1772302682}
         m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
         m_MethodName: set_PopupTitle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1772302688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772302680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
+    m_TableEntryReference:
+      m_KeyId: 5
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1772302682}
+        m_TargetAssemblyTypeName: CheckpointDetection, GameAssembly
+        m_MethodName: set_ObjectiveText
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -77085,7 +77126,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 8
+      m_KeyId: 9
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -77125,7 +77166,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 7
+      m_KeyId: 8
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -79869,7 +79910,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 6
+      m_KeyId: 7
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -79909,7 +79950,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:7f6b9639aecb3454f8cb298ce970c2be
     m_TableEntryReference:
-      m_KeyId: 5
+      m_KeyId: 6
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

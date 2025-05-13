@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3618,10 +3618,40 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1694819216128298580, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694819216128298580, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7551f159338c73a4392d52dea058cf9b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713199763948294713, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713199763948294713, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7551f159338c73a4392d52dea058cf9b
+      objectReference: {fileID: 0}
     - target: {fileID: 2698123261490377052, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878335600895685093, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 31347527680
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878335600895685093, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7551f159338c73a4392d52dea058cf9b
       objectReference: {fileID: 0}
     - target: {fileID: 2969384988200066483, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
@@ -3691,6 +3721,12 @@ PrefabInstance:
       propertyPath: scenarioTitle
       value: 'Basic Scenario: Straight Road'
       objectReference: {fileID: 0}
+    - target: {fileID: 4800964353407651046, guid: b80445d0d840830df8cd902c0cea3559,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27579854d823b6a46b51f3dc4981cb88,
+        type: 3}
     - target: {fileID: 6420471963936407584, guid: b80445d0d840830df8cd902c0cea3559,
         type: 3}
       propertyPath: m_Name
@@ -30698,7 +30734,7 @@ MonoBehaviour:
   deactivateAfterCollision: 0
   showPopup: 1
   popupType: 4
-  objectiveTextUI: {fileID: 0}
+  objectiveTextUI: {fileID: 1612597879}
   callback:
     m_PersistentCalls:
       m_Calls: []
@@ -35638,6 +35674,18 @@ MonoBehaviour:
   locked: 0
   child: 0
   sectionIndex: -1
+--- !u!114 &1612597879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3225740604146636599, guid: b80445d0d840830df8cd902c0cea3559,
+    type: 3}
+  m_PrefabInstance: {fileID: 192005943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1619808544
 PrefabInstance:
   m_ObjectHideFlags: 0

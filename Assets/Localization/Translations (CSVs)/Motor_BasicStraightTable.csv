@@ -1,4 +1,10 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
-title,0,,BASIC SCENARIO - Straight Road,,BASIC SCENARIO - Straight Road,
-description,1,,Dumiretso hanggang sa finish line. 'Wag kalimutang sundin ang mga speed limit signs!,,Simply drive straight towards the finish line but don't forget to follow the speed limit!,
-objective,2,,Dumiretso lang at sundin ang mga speed limit signs,,Drive straight while keeping in mind the speed limit,
+title,0,,"BASIC SCENARIO:
+DIRETSONG DAAN",,"BASIC SCENARIO:
+STRAIGHT ROAD",
+description,1,,"Aralin natin ang speed limits sa isang direstong daan.
+
+Dumiretso hanggang sa finish point.",,"Let's learn about speed limits in a straight road.
+
+Go straight towards the finish point.",
+objective,2,,Dumiretso at sundin ang mga speed limit signs.,,Go straight and follow the speed limit signs.,

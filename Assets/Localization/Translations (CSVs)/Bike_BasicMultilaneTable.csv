@@ -1,0 +1,48 @@
+Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
+title,0,,"BASIC SCENARIO:
+MULTILANE ROAD",,"BASIC SCENARIO:
+MULTILANE ROAD",
+description,1,,"Aralin natin ang paglipat ng lanes.
+
+Lumipat sa lane sa iyong kaliwa. Huwag kalimutang i-signal ang pagliko at mag-head check.",,"Let's learn about switching lanes.
+
+Move to the lane to your left. Don't forget to signal and perform a head check.",
+objective,2,,Lumipat sa lane sa iyong kaliwa.,,Move to the lane to your left.,
+changeLane1Title,3,,LUMIPAT SA KALIWA,,MOVE TO THE LEFT,
+changeLane1Description,4,,Lumipat sa lane sa iyong kaliwa ulit.,,Move to the lane to your left again.,
+changeLane1Objective,5,<- late insert,Lumipat sa lane sa iyong kaliwa ulit.,,Move to the lane to your left again.,
+bad_changeLane1Title,6,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+bad_changeLane1Description,7,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+changeLane2Title,8,,BUMALIK SA BIKE LANE,,RETURN TO THE MOTORCYCLE LANE,
+changeLane2Description,9,,Bumalik sa bike lane sa pinakakanan.,,Return to the bike lane at the rightmost.,
+changeLane2Objective,10,<- late insert,Bumalik sa motorcycle lane.,,Return to the motorcycle lane.,
+bad_changeLane2Title,11,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+bad_changeLane2Description,12,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+bikeLaneTitle,13,,LUMIPAT SA KALIWA,,MOVE TO THE LEFT,
+bikeLaneDescription,14,,Lumipat sa lane sa iyong kaliwa ulit.,,Move to the lane to your left again.,
+bikeLaneObjective,15,<- late insert,Lumipat sa lane sa iyong kaliwa ulit.,,Move to the lane to your left again.,
+bad_bikeLaneTitle,16,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+bad_bikeLaneDescription,17,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+leftTitle,18,,LUMIPAT SA PINAKAKALIWA,,MOVE TO THE LEFTMOST,
+leftDescription,19,,Lumipat sa pinakakaliwang lane.,,Move to the leftmost lane.,
+leftObjective,20,<- late insert,Lumipat sa pinakakaliwang lane.,,Move to the leftmost lane.,
+bad_leftTitle,21,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+bad_leftDescription,22,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+leftmostTitle,23,,MAGALING,,GREAT,
+leftmostDescription,24,,Alam mo na kung paano ang tamang paglipat ng lanes.,,You now know how to change lanes properly.,
+bad_leftmostTitle,25,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+bad_leftmostDescription,26,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,
+missedTitle,27,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+missedDescription,28,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,

@@ -71,6 +71,48 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fil
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97cb3e1cec2e9bf45a2a8fe53203b53b
+    m_Address: Bike_TutorialTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c3285aa0b0dbb14d9708bfe5d606112
+    m_Address: Bike_AdvancedCommonwealthTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ef0888aaee5f2c429d0fa51eae708ae
+    m_Address: Bike_AdvancedEDSATable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93e21f9451d874d42b826257731a2b11
+    m_Address: Bike_BasicIntersectionTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d7d2cc59ba737a499e8a994f471e293
+    m_Address: Bike_BasicMultilaneTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6449593b74e8aa34f9f3ac12e88abc5e
+    m_Address: Bike_BasicUTurnTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 525b04f3934c2764181b7867f56db631
+    m_Address: Bike_BasicStraightTable_fil
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fil
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 97f9ae32b6876ca48b2fc72434485a1c, type: 2}
   m_SchemaSet:

@@ -1,17 +1,33 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
-title,0,all caps,ADVANCED SCENARIO: COMMONWEALTH,,ADVANCED SCENARIO: COMMONWEALTH,
-description,1,,"Lumipat sa pinaka-kaliwang lane, tapos mag-U-turn pa-kaliwa. Sundin ang mga regulasyon sa daan.",,Switch to the leftmost lane and make a U-turn to the left. Remember to follow road regulations.,
-objective,2,,Lumipat sa pinaka-kaliwang lane at mag-U-turn pa-kaliwa,,Switch to the leftmost lane and make a U-turn to the left,
-good_uTurnTitle,3,,Ang galing mo mag-U-turn!,,Great U-turn!,
-good_uTurnDescription,4,,"Ngayon, dumiretso ka sa dulo at subukang bumalik sa motorcycle lane (may mga blue na linya).",,"Now, drive until the end of the barriers and try to go back to the motorcycle lane (has blue lines).",
-good_uTurnObjective,15,,Dumiretso sa dulo at bumalik sa motorcycle lane (may mga blue na linya),,Drive to the end and go back to the motorcycle lane (has blue lines),
-wrongWayTitle,5,,Wrong way! Bawal mag-Counterflow,,Wrong Way! Stop Counterflowing.,
-wrongWayDescription,6,,Counterflow ang tawag sa pagmaneho sa maling direksyon sa isang daan.,,You are committing counterflow! Please drive the other way.,
-bad_uTurnTitle,7,,Nalampasan mo ang U-turn Slot,,U-turn Missed.,
-bad_uTurnDescription,8,,Dahan-dahang lapitan ang U-turn slot para maghanda sa pagliko.,,Remember to gradually slow down when approaching a U-turn.,
-bad_blinkerTitle,9,,Gamitin ang Blinkers para mag-signal ng pagliko,,Use the Blinkers to Signal the Turn.,
-bad_blinkerDescription,10,,Kailangang i-signal ang kagustuhang lumiko nang 25 meters palang ang layo sa lilikuan.,,You should signal your intent to turn 25 meters away from the turn.,
-bad_laneSwitchTitle,11,,Masyadong kang matagal sa pagpapalit ng Lane.,,Lane Switching Took too Long.,
-bad_laneSwitchDescription,12,,Dahan-dahan sa pagpalit ng lane (papunta sa motorcycle lane) ngunit 'wag kang masyadong matagal.,,Carefully switch lanes and reach the motorcycle lane on time.,
-missedTitle,13,,Hala!,,Uh oh.,
-missedDescription,14,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane on time.,
+title,0,,"ADVANCED SCENARIO:
+COMMONWEALTH",,"ADVANCED SCENARIO:
+COMMONWEALTH",
+description,1,,"Magmaneho tayo sa Commonwealth, ikalawa sa pinaka-accident-prone na kalsada sa Metro Manila noong 2021.
+
+Lumipat sa pinakakaliwang lane. Tapos, mag-U-turn pakaliwa.",,"Let's drive through Commonwealth, the second most accident-prone road in Metro Manila in 2021.
+
+Switch to the leftmost lane. Then, make a U-turn to the left.",
+objective,2,,Lumipat sa pinakakaliwang lane at mag-U-turn pakaliwa.,,Switch to the leftmost lane and make a U-turn to the left.,
+good_uTurnTitle,3,,BUMALIK SA MOTORCYCLE LANE,,RETURN TO THE MOTORCYCLE LANE,
+good_uTurnDescription,4,,Dumiretso hanggang sa dulo ng barriers at bumalik sa motorcycle lane.,,Drive until the end of the barriers and go back to the motorcycle lane.,
+good_uTurnObjective,15,,Dumiretso sa dulo at bumalik sa motorcycle lane.,,Drive to the end and go back to the motorcycle lane.,
+wrongWayTitle,5,,"PAALALA:
+HUWAG MAG-COUNTERFLOW",,"REMINDER:
+DO NOT COUNTERFLOW",
+wrongWayDescription,6,,Huwag mag-counterflow. Manatili sa tamang linya.,,Do not counterflow. Stay in the correct lane.,
+bad_uTurnTitle,7,,"PAALALA:
+BAGALAN BAGO MAG-U-TURN",,"REMINDER:
+SLOW DOWN BEFORE A U-TURN",
+bad_uTurnDescription,8,,Tandaan na dahan-dahan lapitan ang U-turn slot.,,Remember to slow down when approaching a U-turn slot.,
+bad_blinkerTitle,9,,"PAALALA:
+GAMITIN ANG BLINKER",,"REMINDER:
+USE THE BLINKER",
+bad_blinkerDescription,10,,I-signal ang kagustuhang lumiko 25 metro pa lang ang layo sa lilikuan.,,Signal your intent to turn 25 meters away from the turn.,
+bad_laneSwitchTitle,11,,"PAALALA:
+HUWAG TAGALAN ANG PAGLIPAT NG LANE",,"REMINDER:
+DO NOT TAKE TOO LONG TO SWITCH LANES",
+bad_laneSwitchDescription,12,,Dahan-dahang lumipat ng lane pero huwag magtagal.,,Carefully switch lanes but do not take too long.,
+missedTitle,13,,"PAALALA:
+LUMIPAT SA TAMANG LANE",,"REMINDER:
+MOVE TO THE CORRECT LANE",
+missedDescription,14,,Hindi ka nakalipat sa tamang lane.,,You failed to switch to the proper lane.,

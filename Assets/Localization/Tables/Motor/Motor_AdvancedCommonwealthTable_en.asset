@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Motor_AdvancedCommonwealthTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 239f07f5e987b7247b802095cfa322d1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1
+    m_Localized: 'Let''s drive through Commonwealth, the second most accident-prone
+      road in Metro Manila in 2021.
+
+
+      Switch to the leftmost lane. Then, make
+      a U-turn to the left.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Switch to the leftmost lane and make a U-turn to the left.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: RETURN TO THE MOTORCYCLE LANE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Drive until the end of the barriers and go back to the motorcycle
+      lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: 'REMINDER:
+
+      DO NOT COUNTERFLOW'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Do not counterflow. Stay in the correct lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: 'REMINDER:
+
+      SLOW DOWN BEFORE A U-TURN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Remember to slow down when approaching a U-turn slot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: 'REMINDER:
+
+      USE THE BLINKER'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Signal your intent to turn 25 meters away from the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: 'REMINDER:
+
+      DO NOT TAKE TOO LONG TO SWITCH LANES'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Carefully switch lanes but do not take too long.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: 'REMINDER:
+
+      MOVE TO THE CORRECT LANE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1637351743488
+    m_Localized: 'ADVANCED SCENARIO:
+
+      COMMONWEALTH'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: You failed to switch to the proper lane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Drive to the end and go back to the motorcycle lane.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

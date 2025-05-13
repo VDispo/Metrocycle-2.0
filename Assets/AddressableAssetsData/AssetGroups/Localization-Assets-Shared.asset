@@ -64,6 +64,43 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2edddca8c40c4344cbe89e07ac99b780
+    m_Address: Assets/Localization/Tables/Bike/Bike_TutorialTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 587abad3e8056424bab9bd543ad875f6
+    m_Address: Assets/Localization/Tables/Bike/Bike_AdvancedCommonwealthTable Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17ac9c92483cdfb44843ad779fc3ec1f
+    m_Address: Assets/Localization/Tables/Bike/Bike_AdvancedEDSATable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68b68c221e04b8f4ea22a55a91303348
+    m_Address: Assets/Localization/Tables/Bike/Bike_BasicIntersectionTable Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b3471f5a5b5ed047a1fd2b3aa06b3eb
+    m_Address: Assets/Localization/Tables/Bike/Bike_BasicMultilaneTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e6f247b9ecafc747ba08cd5c945687a
+    m_Address: Assets/Localization/Tables/Bike/Bike_BasicUTurnTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7551f159338c73a4392d52dea058cf9b
+    m_Address: Assets/Localization/Tables/Bike/Bike_BasicStraightTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 97f9ae32b6876ca48b2fc72434485a1c, type: 2}
   m_SchemaSet:

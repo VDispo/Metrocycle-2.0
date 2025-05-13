@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Bike_AdvancedCommonwealthTable_fil
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fil
+  m_SharedData: {fileID: 11400000, guid: 587abad3e8056424bab9bd543ad875f6, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 21583187968
+    m_Localized: 'ADVANCED SCENARIO:
+
+      COMMONWEALTH'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: 'Magmaneho tayo sa Commonwealth, ikalawa sa pinaka-accident-prone
+      na kalsada sa Metro Manila noong 2021.
+
+
+      Lumiko sa unang kanan patungong
+      Tandang Sora Avenue.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Kumanan patungong Tandang Sora.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: MAG-U-TURN PABALIK COMMONWEALTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Mag-U-turn bago sa red mark at kumanan pabalik Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Mag-U-turn at kumanan pabalik Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: 'PAALALA:
+
+      HUWAG MAG-COUNTERFLOW'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Huwag mag-counterflow. Manatili sa tamang linya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: 'PAALALA:
+
+      KUMANAN SA TANDANG SORA'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Nalampasan mo ang kanang likuan papuntang Tandang Sora Avenue.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: 'PAALALA:
+
+      GAMITIN ANG HAND SIGNAL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: I-signal ang kagustuhang lumiko 25 metro pa lang ang layo sa lilikuan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: DUMAAN SA FOOTBRIDGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Dumaan sa footbridge papunta sa kabilang linya ng Commonwealth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: MAGPATULOY SA BIKE LANE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Magpatuloy sa bike lane hanggang sa finish line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Magpatuloy hanggang sa finish line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: 'PAALALA:
+
+      MAG-U-TURN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Nakalimutan mo mag-U-turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: 'PAALALA:
+
+      MANATILI SA BIKE LANE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Manatili sa bike lang habang pabalik sa Commonwealth.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

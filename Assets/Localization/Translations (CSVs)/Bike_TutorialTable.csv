@@ -1,0 +1,49 @@
+Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
+title,0,,TUTORIAL,,TUTORIAL,
+description,1,,"Aralin natin ang controls.
+
+Hilahin pababa ang pedal sa kanan para mag-accelerate patungo sa checkpoint.",,"Let's learn the controls.
+
+Pull down the pedal on the right to accelerate forward to the checkpoint.",
+objective,2,,Dumiretso paharap patungo sa checkpoint.,,Accelerate towards the checkpoint.,
+rightTurnTitle,3,,LUMIKO PAKANAN,,TURN RIGHT,
+rightTurnDescription,4,,"I-toggle ang hand signal sa lower left pakanan. Tapos, i-tilt ang device pakanan.",,"Toggle the hand signal on the lower left to the right. Then, tilt the device to the right.",
+rightTurnObjective,5,,Buksan ang kanang hand signal at kumanan.,,Turn on the right hand signal and turn right.,
+rightBlinkerTitle,6,,"PAALALA:
+GAMITIN ANG KANANG HAND SIGNAL",,"REMINDER:
+USE THE RIGHT HAND SIGNAL",
+rightBlinkerDescription,7,,Nakalimutan mong gamitin ang hand signal. I-toggle ang hand signal pakanan.,,You forgot to use your hand signal. Toggle the hand signal to the right.,
+leftTurnTitle,8,,LUMIKO PAKALIWA,,TURN LEFT,
+leftTurnDescription,9,,"I-toggle ang hand signal sa lower left pakaliwa. Tapos, i-tilt ang device pakaliwa.",,"Toggle the hand signal on the lower left to the left. Then, tilt the device to the left to turn.",
+leftTurnObjective,10,,Buksan ang kaliwang hand signal at kumaliwa.,,Turn on the left hand signal and turn left.,
+leftBlinkerTitle,11,,"PAALALA:
+GAMITIN ANG KALIWANG HAND SIGNAL",,"REMINDER:
+USE THE LEFT HAND SIGNAL",
+leftBlinkerDescription,12,,Nakalimutan mong gamitin ang hand signal. I-toggle ang hand signal pakaliwa.,,You forgot to use your hand signal. Toggle the hand signal to the left.,
+leftHeadCheckTitle,13,,GAWIN ANG LEFT HEAD CHECK,,DO A LEFT HEAD CHECK,
+leftHeadCheckDescription,14,might remove,Pindutin ang button na may ulong nakatingin sa kaliwa para gawin ang left head check.,,Hold the button with the head icon looking to the left to do a left head check.,
+leftHeadCheckObjective,15,,Gawin ang left head check hanggang sa checkpoint.,,Do a left head check until the checkpoint.,
+bad_leftHeadCheckTitle,16,,"PAALALA:
+GAWIN ANG LEFT HEAD CHECK",,"REMINDER:
+DO A LEFT HEAD CHECK",
+bad_leftHeadCheckDescription,17,,Nakalimutan mong gawin ang left head check. Pindutin ang left head check button hanggang sa checkpoint.,,You forgot to do a left head check. Hold the left head check button until the checkpoint.,
+forwardHeadCheckTitle,18,,TUMINGIN SA HARAP,,LOOK FORWARD,
+forwardHeadCheckDescription,19,,Bitawan ang left head check button para tumingin muli sa harap.,,Let go of the left head check button to look ahead.,
+forwardHeadCheckObjective,20,,Tumingin sa harap hanggang sa checkpoint.,,Look forward until the checkpoint.,
+bad_forwardHeadCheckTitle,21,,"PAALALA:
+TUMINGIN SA HARAP",,"REMINDER:
+LOOK FORWARD",
+bad_forwardHeadCheckDescription,22,,Nakalimutan mong tumingin sa harap. Bitawan ang left head check button.,,You forgot to look foward. Let go of the left head check button.,
+rightHeadCheckTitle,23,,GAWIN ANG RIGHT HEAD CHECK,,DO A RIGHT HEAD CHECK,
+rightHeadCheckDescription,24,might remove,"Hanapin at subukan naman ang right head check button, sa kaliwang bahagi rin ng screen.",,Hold the button with the head icon looking to the right to do a right head check.,
+rightHeadCheckObjective,25,,Gawin ang right head check hanggang sa checkpoint.,,Do a right head check until the checkpoint.,
+bad_rightHeadCheckTitle,26,,"PAALALA:
+GAWIN ANG RIGHT HEAD CHECK",,"REMINDER:
+DO A RIGHT HEAD CHECK",
+bad_rightHeadCheckDescription,27,,Matagal na pindutin ang right head check button. Paabutin ito hanggang sa checkpoint.,,You forgot to do a right head check. Hold the right head check button until the checkpoint.,
+brakingTitle,28,,HUMINTO,,BRAKE,
+brakingDescription,29,,Pindutin ang rear o front brake sa itaas upang huminto.,,Press down either the rear or front brake at the top to stop.,
+brakingObjective,30,,Huminto sa checkpoint.,,Brake at the checkpoint.,
+endTitle,31,,MAGALING,,GREAT,
+endDescription,32,,Natapos mo ang tutorial. Congratulations!,,You finished the tutorial. Congratulations!,
+endObjective,33,,,,,

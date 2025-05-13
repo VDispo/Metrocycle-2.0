@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Motor_BasicMultilaneTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Motor_BasicMultilaneTable
+  m_TableCollectionNameGuidString: 5ea5215b098bfe74fbbb9ff1245edd9b
+  m_Entries:
+  - m_Id: 35668680704
+    m_Key: title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Key: description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Key: objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: changeLane1Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: changeLane1Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Key: changeLane1Objective
+    m_Metadata:
+      m_Items:
+      - rid: 2180363703521116176
+  - m_Id: 6
+    m_Key: bad_changeLane1Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Key: bad_changeLane1Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Key: changeLane2Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Key: changeLane2Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Key: changeLane2Objective
+    m_Metadata:
+      m_Items:
+      - rid: 2180363703521116177
+  - m_Id: 11
+    m_Key: bad_changeLane2Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Key: bad_changeLane2Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Key: motorLaneTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Key: motorLaneDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Key: motorLaneObjective
+    m_Metadata:
+      m_Items:
+      - rid: 2180363703521116178
+  - m_Id: 16
+    m_Key: bad_motorLaneTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Key: bad_motorLaneDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Key: rightTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Key: rightDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Key: rightObjective
+    m_Metadata:
+      m_Items:
+      - rid: 2180363703521116179
+  - m_Id: 21
+    m_Key: bad_rightTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Key: bad_rightDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Key: leftmostTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Key: leftmostDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Key: bad_leftmostTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Key: bad_leftmostDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Key: missedTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Key: missedDescription
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1404317555736969238
+  references:
+    version: 2
+    RefIds:
+    - rid: 1404317555736969238
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1739861914310
+    - rid: 2180363703521116176
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: <- late insert
+    - rid: 2180363703521116177
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: <- late insert
+    - rid: 2180363703521116178
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: <- late insert
+    - rid: 2180363703521116179
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: <- late insert

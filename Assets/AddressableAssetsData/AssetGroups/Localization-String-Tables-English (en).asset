@@ -71,6 +71,48 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d57ad2aae864fe49aaa840c04e901dd
+    m_Address: Bike_TutorialTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c92c544cee692894a9015188ca8db8ae
+    m_Address: Bike_AdvancedCommonwealthTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 277e3cff50226274593bd523be5af4dd
+    m_Address: Bike_AdvancedEDSATable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f09dd30d9f052b641869a1f98c8f6243
+    m_Address: Bike_BasicIntersectionTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cab7e76fb8926b468d58c50b534c4c6
+    m_Address: Bike_BasicMultilaneTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e535299f2247cb4284cee5d24e33526
+    m_Address: Bike_BasicUTurnTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c5572b979735c84e8f78facd6afb110
+    m_Address: Bike_BasicStraightTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 97f9ae32b6876ca48b2fc72434485a1c, type: 2}
   m_SchemaSet:

@@ -1,0 +1,38 @@
+Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
+title,0,,"ADVANCED SCENARIO:
+COMMONWEALTH",,"ADVANCED SCENARIO:
+COMMONWEALTH",
+description,1,,"Magmaneho tayo sa Commonwealth, ikalawa sa pinaka-accident-prone na kalsada sa Metro Manila noong 2021.
+
+Lumiko sa unang kanan patungong Tandang Sora Avenue.",,"Let's drive through Commonwealth, the second most accident-prone road in Metro Manila in 2021.
+
+Take the first right turn to Tandang Sora Avenue.",
+objective,2,,Kumanan patungong Tandang Sora.,,Turn right to Tandang Sora.,
+uTurnCommonwealthTitle,3,,MAG-U-TURN PABALIK COMMONWEALTH,,DO A U-TURN BACK TO COMMONWEALTH,
+uTurnCommonwealthDescription,4,,Mag-U-turn bago sa red mark at kumanan pabalik Commonwealth.,,Make a U-turn before the red mark and turn right back to Commonwealth.,
+uTurnCommonwealthObjective,5,,Mag-U-turn at kumanan pabalik Commonwealth.,,Make a U-turn and turn right back to Commonwealth.,
+wrongWayTitle,6,,"PAALALA:
+HUWAG MAG-COUNTERFLOW",,"REMINDER:
+DO NOT COUNTERFLOW",
+wrongWayDescription,7,,Huwag mag-counterflow. Manatili sa tamang linya.,,Do not counterflow. Stay in the correct lane.,
+missedRightTurnTitle,8,,"PAALALA:
+KUMANAN SA TANDANG SORA",,"REMINDER:
+TURN RIGHT ON TANDANG SORA",
+missedRightTurnDescription,9,,Nalampasan mo ang kanang likuan papuntang Tandang Sora Avenue.,,You missed the right turn to Tandang Sora Avenue.,
+bad_blinkerTitle,10,,"PAALALA:
+GAMITIN ANG HAND SIGNAL",,"REMINDER:
+USE THE HAND SIGNAL",
+bad_blinkerDescription,11,,I-signal ang kagustuhang lumiko 25 metro pa lang ang layo sa lilikuan.,,Signal your intent to turn 25 meters away from the turn.,
+uTurnCommonwealthEndTitle,12,,DUMAAN SA FOOTBRIDGE,,GO THROUGH THE FOOTBRIDGE,
+uTurnCommonwealthEndDescription,13,,Dumaan sa footbridge papunta sa kabilang linya ng Commonwealth.,,Go through the footbridge to the other side of Commonwealth.,
+finishLineTitle,14,,MAGPATULOY SA BIKE LANE,,CONTINUE ON THE BIKE LANE,
+finishLineDescription,15,,Magpatuloy sa bike lane hanggang sa finish line.,,Continue on the bike lane until the finish line.,
+finishLineObjective,16,,Magpatuloy hanggang sa finish line.,,Continue until the finish line.,
+missedUTurnTitle,17,,"PAALALA:
+MAG-U-TURN",,"REMINDER:
+DO A U-TURN",
+missedUTurnDescription,18,,Nakalimutan mo mag-U-turn.,,You forgot to do a U-turn.,
+missedCheckpointTitle,19,,"PAALALA:
+MANATILI SA BIKE LANE",,"REMINDER:
+STAY IN THE BIKE LANE",
+missedCheckpointDescription,20,,Manatili sa bike lang habang pabalik sa Commonwealth.,,Stay in the bike lane when going back to Commonwealth.,
