@@ -253,6 +253,8 @@ public class GameManager : MonoBehaviour
                 errorTitle, errorText, true
             );
 
+
+
             return false;
         }
 
@@ -285,11 +287,15 @@ public class GameManager : MonoBehaviour
         bool hasError = false;
         if (!isBlinkerOn) {
             errorTitle = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "blinkerErrorTitle"); 
-            if (blinkerScript.leftStatus != blinkerScript.rightStatus) {
+            Debug.Log($"GETTING BLINKER ERROR {errorTitle}");
+            if (blinkerScript.leftStatus != blinkerScript.rightStatus)
+            {
                 errorText = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "wrongBlinkerDescription");
 
                 Instance.setErrorReason(Metrocycle.ErrorReason.WRONG_BLINKER);
-            } else {
+            }
+            else
+            {
                 errorText = LocalizationCache.Instance.GetLocalizedString("GenericPromptsTable", "noBlinkerDescription");
 
                 Instance.setErrorReason(
@@ -310,6 +316,8 @@ public class GameManager : MonoBehaviour
 
         if (hasError) {
             string text = string.Format($"{errorText}", blinkerName);
+            Debug.Log($"BLINKER TITLE ERROR {errorTitle}");
+
             Debug.Log($"BLINKER ERROR {text}");
             Instance.PopupSystem.popPrompt(
                 errorTitle, text, true
@@ -434,11 +442,11 @@ public class GameManager : MonoBehaviour
             { Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER, 15 },
             { Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK, 15 },
             { Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK, 15 },
-            { Metrocycle.ErrorReason.EXPIRED_HEADCHECK, 5 },
-            { Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER, 20 },
-            { Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER, 20 },
-            { Metrocycle.ErrorReason.WRONG_BLINKER, 30 },
-            { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, 5 }
+            { Metrocycle.ErrorReason.EXPIRED_HEADCHECK, 10 },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER, 30 },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER, 30 },
+            { Metrocycle.ErrorReason.WRONG_BLINKER, 50 },
+            { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, 15 }
         };
 
         Dictionary<Metrocycle.ErrorReason, string> errorDescriptions = new Dictionary<Metrocycle.ErrorReason, string>
@@ -453,11 +461,25 @@ public class GameManager : MonoBehaviour
             { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, "Short Blinker Time" }
         };
 
+        Dictionary<Metrocycle.ErrorReason, string> mistakeTitles = new Dictionary<Metrocycle.ErrorReason, string>
+        {
+            { Metrocycle.ErrorReason.NO_HEADCHECK_AFTER_BLINKER, "No Head Check Performed" },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_HEADCHECK, "No Head Check Performed" },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_HEADCHECK, "No Head Check Performed" },
+            { Metrocycle.ErrorReason.EXPIRED_HEADCHECK, "Head Check Expired" },
+            { Metrocycle.ErrorReason.LEFTTURN_NO_BLINKER, "No Blinker Used" },
+            { Metrocycle.ErrorReason.RIGHTTURN_NO_BLINKER, "No Blinker Used" },
+            { Metrocycle.ErrorReason.WRONG_BLINKER, "Wrong Blinker Direction" },
+            { Metrocycle.ErrorReason.SHORT_BLINKER_TIME, "Blinker Time Too Short" }
+        };
+
         if (errorScoreDeduction.TryGetValue(lastErrorReason, out int deduction))
         {
             updateUserScoreDeduction(deduction);
             string errorDescription = errorDescriptions[lastErrorReason];
             setDeductReasonText($"-{deduction} {errorDescription}");
+            string mistakeTitle = mistakeTitles[lastErrorReason];
+            Instance.PopupSystem.addUserError(mistakeTitle);
         }
         else
         {

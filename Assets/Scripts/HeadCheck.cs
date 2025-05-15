@@ -53,6 +53,20 @@ public class HeadCheck : MonoBehaviour
        });
     }
 
+    public void resetHeadCheck()
+    {
+
+        resetPriorities();
+        normal.Priority = 20;
+        leftCheckTime = -1;
+        rightCheckTime = -1;
+        lastView = normal;
+        leftHeadCheckButton.GetComponent<HeadCheckUI>().OnButtonUp(null);
+        rightHeadCheckButton.GetComponent<HeadCheckUI>().OnButtonUp(null);
+        overHeadCheckButton.GetComponent<HeadCheckUI>().OnButtonUp(null);
+    }
+
+
     void resetPriorities()
     {
         normal.Priority = 10;

@@ -231,13 +231,13 @@ public class IntersectionChecker : MonoBehaviour
         switch (type) {
             case PopupType.ERROR:
                 GameManager.Instance.PopupSystem.popError(
-                    PopupTitle, popupText
+                    PopupTitle, popupText, false
                 );
                 break;
             case PopupType.PROMPT:
                 Debug.Log("PROMPT");
                 GameManager.Instance.PopupSystem.popPrompt(
-                    PopupTitle, popupText
+                    PopupTitle, popupText, false
                 );
                 break;
             default:

@@ -46,6 +46,7 @@ public class LocalizationCache : MonoBehaviour
         if (tableRef != null)
         {
             var entry = tableRef.GetEntry(key);
+            Debug.Log($"Entry: {entry}");
             if (entry != null)
             {
                 result = entry.GetLocalizedString();

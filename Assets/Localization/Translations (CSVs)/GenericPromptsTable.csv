@@ -1,56 +1,56 @@
 Key,Id,Shared Comments,Filipino(fil),Filipino(fil) Comments,English(en),English(en) Comments
-collisionTitle,0,collision,"PAALALA:
-IWASAN MABANGA",,"REMINDER:
-AVOID COLLIDING",
-collisionDescription,1,collision (0 is collider),Bumanga ka sa {0}. Kontrolin ang bilis at direksyon ng pagtakbo.,,You collided with {0}. Control your speed and direction.,
-collider1,2,collision,harang sa gilid ng daan,,an obstacle on the side of the road,
-collider2,3,collision,tabi ng daan,,the side of the road,
-collider3,29,collision,isang sasakyan,,another vehicle,
-isVehicle,4,collision,Panatiliing may pagitan na isang kotse ang haba mula sa ibang sasakyan.,,Maintain a minimum of one car length away from other vehicles.,
-speedLimitErrorTitle,5,speed limit (0 is speed limit),"PAALALA:
-MANATILI SA {0} KPH SPEED LIMIT",,"PAALALA:
-MAINTAIN A {0} KPH SPEED LIMIT",
-speedLimitErrorText,6,speed limit,Bantayan palagi ang iyong speedometer.,,Make sure to keep an eye on your speedometer.,
-blinkerTitle,7,blinker,"PAALALA:
-PATAYIN ANG BLINKER",,"REMINDER:
-TURN OFF THE BLINKER",
-blinkerDescription,8,blinker (0 is blinker name),Patayin ang {0} pagkatapos lumiko.,,Make sure to turn off your {0} after performing a turn.,
-headCheckTitle,9,head check,"PAALALA:
-GAWIN ANG HEAD CHECK",,"REMINDER:
-DO A HEAD CHECK",
-headCheckAfterBlinker,10,head check (0 is blinker name),Mag-head check pa rin kahit nag-signal na gamit ang {0}.,,Perform a head check even after using the {0}.,
-headCheckBeforeTurn,11,head check,Mag-head check bago magpalit ng lane o lumiko.,,Perform a head check right before changing lanes or turning.,
+userMistakeLimitDescription,35,score reached zero,Naubos na ang score mo. Iwasang magkamali sa pagmamaneho.,,Your score allotted reached zero. Avoid committing driving mistakes.,
+userMistakeLimitTitle,34,score reached zero,ZERO SCORE,,ZERO SCORE,
+noBlinkerDescription,33,blinker (0 is blinker name),Hindi mo ginamit ang {0} bago magpalit ng lane o lumiko.,,You did not use the {0} before changing lanes or turning.,
+wrongBlinkerDescription,32,blinker (0 is blinker name),Ginamit mo ang {0} sa kabilang direksyon.,,You used the {0} for the opposite direction.,
+blinkerDescription,31,blinker (0 is blinker name),Patayin ang {0} pagkatapos lumiko.,,Make sure to turn off your {0} after performing a turn.,
 blinkerErrorTitle,30,blinker,"PAALALA:
 GAMITIN ANG TAMANG BLINKER",,"REMINDER:
 USE THE CORRECT BLINKER",
-wrongBlinkerDescription,31,blinker (0 is blinker name),Ginamit mo ang {0} sa kabilang direksyon.,,You used the {0} for the opposite direction.,
-noBlinkerDescription,32,blinker (0 is blinker name),Hindi mo ginamit ang {0} bago magpalit ng lane o lumiko.,,You did not use the {0} before changing lanes or turning.,
-tooLongToTurnTitle,12,turn,"PAALALA:
-LUMIKO SA TAMANG ORAS",,"REMINDER:
-TURN AT THE RIGHT TIME",
-tooLongToTurnDescription,13,turn (0 is turn direction),Hindi mo binigyan ng sapat na oras mapansin ng ibang tao ang iyong {0}. Mag-signal limang segundo bago gawin ang aksyon.,,You did not give ample time for other road users to react to your {0}. Indicate your intent five seconds before the action.,
-intersectionTitle,14,intersection,"PAALALA:
-GAMITIN ANG INTERSECTION NANG TAMA",,"REMINDER:
-USE THE INTERSECTION CORRECTLY",
-intersectionWrongWay,15,intersection,"PAALALA:
-MALING DAAN",,"REMINDER:
-WRONG WAY",
-intersectionRedLight,16,intersection,Pula pa ang traffic light. Tumigil at maghintay muna sa likod ng puting stop line.,,The traffic light is still red. Make sure to stop right before the white stop line.,
-intersectionLeftLaneLeftTurn,17,intersection,"Maayos ang pag-U-turn mo pakaliwa. Ngunit, dapat manatili ka sa inner leftmost lane.",,"You did a decent left U-turn. However, stay on the inner leftmost lane.",
-intersectionLeftLaneRightTurn,18,intersection,Manatili lang sa kanang lane bago kumanan.,,Stay on the right lane before turning right.,
-intersectionLeftLaneUTurn,19,intersection,"Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost lane.",,"You did a decent U-turn. However, stay on the innermost lane.",
-intersectionRightLaneLeftTurn,20,intersection,Manatili lang sa kaliwang lane bago kumaliwa.,,Stay on the left lane before turning left.,
-intersectionRightLaneRightTurn,21,intersection,"Maayos ang pagliko mo sa kanan. Ngunit, dapat nanatili ka sa inner rightmost lane.",,"You did a decent right turn. However, stay on the inner rightmost lane.",
-intersectionRightLaneUTurn,22,intersection,"Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost lane.",,"You did a decent U-turn. However, stay on the innermost lane.",
-badLaneTitle,23,switch to bad lane,"PAALALA:
-MALING LANE",,"REMINDER:
-WRONG LANE",
-badLaneBus,24,switch to bad lane (bus),"Ang bus lane ay para lamang sa public utility buses, ambulansya, at government vehicles na rumerespunda sa emergencies.",,"The bus lane is only for public utility buses, ambulances, and goverment vehicles responding to emergencies.",
-badLaneBike,25,switch to bad lane (motor to bike),Hindi pwede ang mga motorsiklo sa mga bike lane.,,Motorcycles are not allowed on the bike lane!,
-badLaneMotor,26,switch to bad lane (bike to motor),Hindi pwede ang mga bisekleta sa mga linyang para sa mga motored vehicles.,,Bicycles are not allowed in lanes for motored vehicles.,
+collider3,29,collision,isang sasakyan,,another vehicle,
+solidLineDescription,28,illegal lane change,Hindi ka pwedeng magpalit ng lane kapag solid line ang pumapagitan sa lanes. Maaari lamang sa mga lanes na may dotted lines.,,You are not allowed to change lanes when the lines between the lanes are solid lines. You can only do this in lanes with dotted lines.,
 solidLineTitle,27,illegal lane change,"PAALALA:
 GAMITIN ANG INTERSECTION NANG TAMA",,"REMINDER:
 USE THE INTERSECTION CORRECTLY",
-solidLineDescription,28,illegal lane change,Hindi ka pwedeng magpalit ng lane kapag solid line ang pumapagitan sa lanes. Maaari lamang sa mga lanes na may dotted lines.,,You are not allowed to change lanes when the lines between the lanes are solid lines. You can only do this in lanes with dotted lines.,
-userMistakeLimitTitle,29,score reached zero,ZERO SCORE,,ZERO SCORE,
-userMistakeLimitDescription,30,score reached zero,Naubos na ang score mo. Iwasang magkamali sa pagmamaneho.,,Your score allotted reached zero. Avoid committing driving mistakes.,
+badLaneMotor,26,switch to bad lane (bike to motor),Hindi pwede ang mga bisekleta sa mga linyang para sa mga motored vehicles.,,Bicycles are not allowed in lanes for motored vehicles.,
+badLaneBike,25,switch to bad lane (motor to bike),Hindi pwede ang mga motorsiklo sa mga bike lane.,,Motorcycles are not allowed on the bike lane!,
+badLaneBus,24,switch to bad lane (bus),"Ang bus lane ay para lamang sa public utility buses, ambulansya, at government vehicles na rumerespunda sa emergencies.",,"The bus lane is only for public utility buses, ambulances, and goverment vehicles responding to emergencies.",
+badLaneTitle,23,switch to bad lane,"PAALALA:
+MALING LANE",,"REMINDER:
+WRONG LANE",
+intersectionRightLaneUTurn,22,intersection,"Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost lane.",,"You did a decent U-turn. However, stay on the innermost lane.",
+intersectionRightLaneRightTurn,21,intersection,"Maayos ang pagliko mo sa kanan. Ngunit, dapat nanatili ka sa inner rightmost lane.",,"You did a decent right turn. However, stay on the inner rightmost lane.",
+intersectionRightLaneLeftTurn,20,intersection,Manatili lang sa kaliwang lane bago kumaliwa.,,Stay on the left lane before turning left.,
+intersectionLeftLaneUTurn,19,intersection,"Maayos ang pag-U-turn mo. Ngunit, dapat manatili ka sa innermost lane.",,"You did a decent U-turn. However, stay on the innermost lane.",
+intersectionLeftLaneRightTurn,18,intersection,Manatili lang sa kanang lane bago kumanan.,,Stay on the right lane before turning right.,
+intersectionLeftLaneLeftTurn,17,intersection,"Maayos ang pag-U-turn mo pakaliwa. Ngunit, dapat manatili ka sa inner leftmost lane.",,"You did a decent left U-turn. However, stay on the inner leftmost lane.",
+intersectionRedLight,16,intersection,Pula pa ang traffic light. Tumigil at maghintay muna sa likod ng puting stop line.,,The traffic light is still red. Make sure to stop right before the white stop line.,
+intersectionWrongWay,15,intersection,"PAALALA:
+MALING DAAN",,"REMINDER:
+WRONG WAY",
+intersectionTitle,14,intersection,"PAALALA:
+GAMITIN ANG INTERSECTION NANG TAMA",,"REMINDER:
+USE THE INTERSECTION CORRECTLY",
+tooLongToTurnDescription,13,turn (0 is turn direction),Hindi mo binigyan ng sapat na oras mapansin ng ibang tao ang iyong {0}. Mag-signal limang segundo bago gawin ang aksyon.,,You did not give ample time for other road users to react to your {0}. Indicate your intent five seconds before the action.,
+tooLongToTurnTitle,12,turn,"PAALALA:
+LUMIKO SA TAMANG ORAS",,"REMINDER:
+TURN AT THE RIGHT TIME",
+headCheckBeforeTurn,11,head check,Mag-head check bago magpalit ng lane o lumiko.,,Perform a head check right before changing lanes or turning.,
+headCheckAfterBlinker,10,head check (0 is blinker name),Mag-head check pa rin kahit nag-signal na gamit ang {0}.,,Perform a head check even after using the {0}.,
+headCheckTitle,9,head check,"PAALALA:
+GAWIN ANG HEAD CHECK",,"REMINDER:
+DO A HEAD CHECK",
+blinkerTitle,7,blinker,"PAALALA:
+PATAYIN ANG BLINKER",,"REMINDER:
+TURN OFF THE BLINKER",
+speedLimitErrorText,6,speed limit,Bantayan palagi ang iyong speedometer.,,Make sure to keep an eye on your speedometer.,
+speedLimitErrorTitle,5,speed limit (0 is speed limit),"PAALALA:
+MANATILI SA {0} KPH SPEED LIMIT",,"PAALALA:
+MAINTAIN A {0} KPH SPEED LIMIT",
+isVehicle,4,collision,Panatiliing may pagitan na isang kotse ang haba mula sa ibang sasakyan.,,Maintain a minimum of one car length away from other vehicles.,
+collider2,3,collision,tabi ng daan,,the side of the road,
+collider1,2,collision,harang sa gilid ng daan,,an obstacle on the side of the road,
+collisionDescription,1,collision (0 is collider),Bumanga ka sa {0}. Kontrolin ang bilis at direksyon ng pagtakbo.,,You collided with {0}. Control your speed and direction.,
+collisionTitle,0,collision,"PAALALA:
+IWASAN MABANGA",,"REMINDER:
+AVOID COLLIDING",

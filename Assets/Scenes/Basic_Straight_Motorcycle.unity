@@ -40150,6 +40150,11 @@ PrefabInstance:
       propertyPath: throttleUI
       value: 
       objectReference: {fileID: 192005948}
+    - target: {fileID: 5545582269101497515, guid: b34ef6462ffba72b8ba819910427c17c,
+        type: 3}
+      propertyPath: headCheckUI
+      value: 
+      objectReference: {fileID: 1979844639}
     - target: {fileID: 7366137456209663318, guid: b34ef6462ffba72b8ba819910427c17c,
         type: 3}
       propertyPath: m_Name
@@ -50138,6 +50143,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc75ae5013580e2009221941bd32dc1e, type: 3}
+--- !u!1 &1979844639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4231733877894911492, guid: fc75ae5013580e2009221941bd32dc1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1979844638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1982401964
 PrefabInstance:
   m_ObjectHideFlags: 0

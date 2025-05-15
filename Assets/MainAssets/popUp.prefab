@@ -2679,7 +2679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1338187035446357625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3954,6 +3954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpSystem: {fileID: 7366137456209663318}
   throttleUI: {fileID: 0}
+  headCheckUI: {fileID: 0}
 --- !u!114 &998729545236027854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5114,7 +5115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6780590594337205324
 RectTransform:
   m_ObjectHideFlags: 0
