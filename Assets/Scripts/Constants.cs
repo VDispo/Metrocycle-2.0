@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Metrocycle {
     public static class Constants
     {
@@ -50,5 +46,11 @@ namespace Metrocycle {
 
         OVERSPEEDING,
         UNCANCELLED_BLINKER,
+    }
+
+    public enum CustomizationAssetType
+    {
+        Character,
+        Helmet,
     }
 }

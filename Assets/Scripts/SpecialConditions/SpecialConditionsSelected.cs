@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// This script sits in the mode select screen, along with <see cref="SpecialConditionsSelector"/>.<br/>
+/// This script is instantiated as a new <see cref="GameObject"/> by <see cref="SpecialConditionsSelector"/> and sits in the mode select screen with it.<br/>
 /// This saves all the selected special conditions, and will be alive in the loading of a new scene.
 /// </summary>
 public class SpecialConditionsSelected : MonoBehaviour

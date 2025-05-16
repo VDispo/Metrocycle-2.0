@@ -46,3 +46,6 @@ TagManager:
   - name: Camera_Effect
     uniqueID: 2013361019
     locked: 0
+  - name: Pre-Riding_Assessment
+    uniqueID: 4053091385
+    locked: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Metrocycle;
 using TMPro;
@@ -14,7 +12,6 @@ public class ScenarioStart : MonoBehaviour
     public string ScenarioText { get; set; }
     public string ObjectiveText { get; set; }
 
-    // Update is called once per frame
     void Start()
     {
         objectiveTextUI.text = ObjectiveText;
