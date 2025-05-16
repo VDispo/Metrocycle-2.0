@@ -7,6 +7,6 @@ using UnityEngine;
 public class CustomizationAssetSetSO : ScriptableObject
 {
     [Header("Data")]
-    [Tooltip("defined in Constants.cs")] public Metrocycle.CustomizationAssetTypes type;
+    [Tooltip("defined in Constants.cs")] public Metrocycle.CustomizationAssetType type;
     [Tooltip("the assets to choose from")] public GameObject[] choicesPrefabs;
 }

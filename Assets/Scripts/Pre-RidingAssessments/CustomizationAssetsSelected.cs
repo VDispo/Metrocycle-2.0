@@ -17,10 +17,13 @@ public class CustomizationAssetsSelected : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    /// <summary>
+    /// Called by <see cref="CharacterCustomizationHandler"/>
+    /// </summary>
+    public void Initialize()
     {
         assetSetsSelection = new();
-        foreach(CustomizationAssetSetSO so in CharacterCustomizationHandler.Instance.assetSets)
+        foreach (CustomizationAssetSetSO so in CharacterCustomizationHandler.Instance.assetSets)
         {
             assetSetsSelection.Add(so, default); // default selection is 0
         }

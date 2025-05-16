@@ -14,14 +14,14 @@ public class CustomizationAssetsRefs : MonoBehaviour
     public BikeType bikeType;
 
     [SerializedDictionary("Asset Type", "Parent Transform")]
-    public SerializedDictionary<CustomizationAssetTypes, Transform> parentOfAssets;
-    public Dictionary<CustomizationAssetTypes, GameObject> assets; // not serialized
+    public SerializedDictionary<CustomizationAssetType, Transform> parentOfAssets;
+    public Dictionary<CustomizationAssetType, GameObject> assets; // not serialized
 
     private void Awake()
     {
         // initialize dictionary
         assets = new();
-        foreach (CustomizationAssetTypes type in Enum.GetValues(typeof(CustomizationAssetTypes))) {
+        foreach (CustomizationAssetType type in Enum.GetValues(typeof(CustomizationAssetType))) {
             assets.Add(type, default);
         }
     }

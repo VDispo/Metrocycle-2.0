@@ -48,7 +48,7 @@ namespace Metrocycle {
         UNCANCELLED_BLINKER,
     }
 
-    public enum CustomizationAssetTypes
+    public enum CustomizationAssetType
     {
         Character,
         Helmet,
