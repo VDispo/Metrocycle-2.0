@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 public class Stats : MonoBehaviour
 {
@@ -15,21 +16,24 @@ public class Stats : MonoBehaviour
      public static extern string GetStatsForScene(string sceneName);
 
 
-     void Awake() {
-          string sceneName = SceneManager.GetActiveScene().name;
-          if(PlayerPrefs.HasKey(sceneName+"_Errors")){
-          }
-          else{
-               SetErrors(0);
-          }
-    }
+     void Awake()
+     {
+          ResetStats();
+     }
 
-     public static void SetSpeed ()
+     public static void ResetStats()
+     {
+          string sceneName = SceneManager.GetActiveScene().name;
+          PlayerPrefs.SetInt(sceneName + "_Errors", 0);
+          PlayerPrefs.SetString(sceneName + "_ErrorsClassification", "");
+     }
+
+     public static void SetSpeed()
      {
           string sceneName = SceneManager.GetActiveScene().name;
 
           float Speed = Speedometer.GetAvgSpeed();
-          PlayerPrefs.SetFloat(sceneName+"_Speed",Speed);
+          PlayerPrefs.SetFloat(sceneName + "_Speed", Speed);
      }
 
      public static void SetTime ()
@@ -55,7 +59,7 @@ public class Stats : MonoBehaviour
           PlayerPrefs.SetInt(sceneName+"_Errors", errors+1);
      }
 
-     public static (float speed, float elapsedTime, int errors) GetStats()
+     public static (float speed, float elapsedTime, int errors, string[] errorsClassification) GetStats()
      {
           string sceneName = SceneManager.GetActiveScene().name;
 
@@ -70,12 +74,14 @@ public class Stats : MonoBehaviour
           Debug.Log("Errors Classification: " + string.Join(", ", errorsClassification));
 
           // Hello();
-          return (speed, elapsedTime, errors);
+          return (speed, elapsedTime, errors, errorsClassification);
      }
 
      public static string[] AddUserError(string errorClassification) {
           string sceneName = SceneManager.GetActiveScene().name;
           string errorsClassification = PlayerPrefs.GetString(sceneName+"_ErrorsClassification");
+
+          Debug.Log("Current Errors Classification: " + errorsClassification);
 
           if (errorsClassification == "") {
                errorsClassification = errorClassification;
@@ -83,12 +89,14 @@ public class Stats : MonoBehaviour
                errorsClassification += "," + errorClassification;
           }
 
+          Debug.Log("After Errors Classification: " + errorsClassification);
+
           PlayerPrefs.SetString(sceneName+"_ErrorsClassification", errorsClassification);
 
           return errorsClassification.Split(',');
      }
 
-     public static string[] formatStats(float speed, float elapsedTime, int errors) {
+     public static string[] formatStats(float speed, float elapsedTime, int errors, string[] errorsClassification = null) {
           string timeText;
           TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
           if (time.Seconds.ToString().Length == 1){
@@ -98,10 +106,41 @@ public class Stats : MonoBehaviour
                timeText = time.Minutes.ToString() + ":" + time.Seconds.ToString();
           }
 
+          Dictionary<string, int> errorCounts = new Dictionary<string, int>();
+          if (errorsClassification == null) {
+               errorsClassification = new string[0];
+          }
+          foreach (var error in errorsClassification)
+          {
+               if (string.IsNullOrEmpty(error)) continue;
+               if (errorCounts.ContainsKey(error))
+                    errorCounts[error]++;
+               else
+                    errorCounts[error] = 1;
+          }
+
+          string groupedErrors = "";
+          int mistakeNum = 1;
+          foreach (var kvp in 
+               new List<KeyValuePair<string, int>>(errorCounts)
+                    .OrderByDescending(e => e.Value)
+                    .ThenBy(e => e.Key))
+          {
+               groupedErrors += $"{kvp.Key}: committed {kvp.Value} time{(kvp.Value == 1 ? "" : "s")}\n\t";
+               mistakeNum++;
+          }
+
+          if (groupedErrors.Length == 0)
+          {
+               groupedErrors = "None";
+          }
+
+
           return new string[] {
                timeText,
                speed.ToString("F2") + " kph",
-               errors.ToString()
+               errors.ToString(),
+               groupedErrors
           };
      }
 }

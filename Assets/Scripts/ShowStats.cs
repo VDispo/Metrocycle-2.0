@@ -33,7 +33,7 @@ public class ShowStats : MonoBehaviour
             string sceneName_i = sceneName?.ToLower() ?? "";
 
             string stats = "["
-                + new StringBuilder().Insert(0, "{\"AvgSpeed\": 1,\"ElapsedTime\": 2,\"Errors\": errors,}", 20).ToString()
+                + new StringBuilder().Insert(0, "{\"AvgSpeed\": 1,\"ElapsedTime\": 2,\"Errors\": errors, \"ErrorsClassification\": [\"No Blinker\", \"Wrong Blinker\"]}", 20).ToString()
                 + "]";
             #if (!UNITY_EDITOR && UNITY_WEBGL)
             stats = Stats.GetStatsForScene(sceneName);
@@ -42,7 +42,10 @@ public class ShowStats : MonoBehaviour
             string statsText = "\n" + sceneName + "\n";
             JSONNode statNodes = JSON.Parse(stats);
             foreach (JSONNode stat in statNodes) {
-                string curStats = String.Join("\n\t", Stats.formatStats(stat["AvgSpeed"], stat["ElapsedTime"], stat["Errors"]));
+                Debug.Log(stat);
+                Debug.Log(stat["ErrorsClassification"]);
+                string[] errorsClassification = stat["ErrorsClassification"].ToString().Replace("[", "").Replace("]", "").Replace("\"", "").Split(',');
+                string curStats = String.Join("\n\t", Stats.formatStats(stat["AvgSpeed"], stat["ElapsedTime"], stat["Errors"], errorsClassification));
                 statsText += $"\t{curStats}\n\n";
                 Debug.Log($"Stats for {sceneName}: {curStats}");
             }

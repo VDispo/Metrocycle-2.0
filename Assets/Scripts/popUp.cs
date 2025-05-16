@@ -29,6 +29,7 @@ public class popUp : MonoBehaviour
 
     public GameObject popUpSystem;
     public GameObject throttleUI;
+    public GameObject headCheckUI;
 
     private Transform lastActiveSet = null;
     private Transform popUpBox;
@@ -123,6 +124,7 @@ public class popUp : MonoBehaviour
         setBodyText(startSet, bodyMessage);
 
         GameManager.Instance.setDashboardVisibility(false);
+        Stats.ResetStats();
         showPopup(startSet);
     }
 
@@ -164,7 +166,7 @@ public class popUp : MonoBehaviour
         Stats.SetSpeed();
         Stats.SetTime();
 
-        (float speed, float elapsedTime, int errors) = Stats.GetStats();
+        (float speed, float elapsedTime, int errors, string[] errorsClassification) = Stats.GetStats();
         string sceneName = SceneManager.GetActiveScene().name;
         #if (!UNITY_EDITOR && UNITY_WEBGL)
         Stats.SaveStats(sceneName, speed, elapsedTime, errors);
@@ -172,7 +174,7 @@ public class popUp : MonoBehaviour
 
         Transform finishSet = popUpSystem.transform.Find("finishSet");
 
-        setFinishText(finishSet, speed, elapsedTime, errors);
+        setFinishText(finishSet, speed, elapsedTime, errors, errorsClassification);
 
         Stats.SetErrors(0);
 
@@ -203,6 +205,7 @@ public class popUp : MonoBehaviour
         lastActiveSet.gameObject.SetActive(false);
         popUpBox.gameObject.SetActive(false);
         throttleUI.GetComponent<ThrottleUI>().ResetThrottle();
+        headCheckUI.GetComponent<HeadCheck>().resetHeadCheck();
 
         GameManager.Instance.resumeGame();
     }
@@ -240,7 +243,7 @@ public class popUp : MonoBehaviour
 
         bodyText.text = bodyMessage;
     }
-    void setFinishText(Transform set, float speed, float elapsedTime, int errors)
+    void setFinishText(Transform set, float speed, float elapsedTime, int errors, string[] errorsClassification)
     {
         GameObject speedTextObject = set.Find("speed").gameObject;
         TextMeshProUGUI speedText = speedTextObject.GetComponent<TextMeshProUGUI>();
@@ -248,12 +251,17 @@ public class popUp : MonoBehaviour
         TextMeshProUGUI timeText = timeTextObject.GetComponent<TextMeshProUGUI>();
         GameObject errorsTextObject = set.Find("errors").gameObject;
         TextMeshProUGUI errorsText = errorsTextObject.GetComponent<TextMeshProUGUI>();
+        GameObject mistakesTextObjectParent = set.Find("Mistakes").gameObject;
+        GameObject mistakesTextObject = mistakesTextObjectParent.transform.Find("mistakes").gameObject;
+        TextMeshProUGUI mistakesText = mistakesTextObject.GetComponent<TextMeshProUGUI>();
 
-        string[] statTexts = Stats.formatStats(speed, elapsedTime, errors);
+
+        string[] statTexts = Stats.formatStats(speed, elapsedTime, errors, errorsClassification);
         timeText.text = statTexts[0];
 
         speedText.text = statTexts[1];
         errorsText.text = statTexts[2];
+        mistakesText.text = statTexts[3].Replace("\t", "");
     }
 
     void hideAllPopups()
@@ -261,5 +269,10 @@ public class popUp : MonoBehaviour
         for (int i = 0; i < transform.childCount; ++i) {
             transform.GetChild(i).gameObject.SetActive(false);
         }
+    }
+
+    public void addUserError(string errorClassification)
+    {
+        Stats.AddUserError(errorClassification);
     }
 }
