@@ -47,7 +47,7 @@ namespace ArcadeBP
 
         [Header("Android Controls")]
         [SerializeField] private bool isAndroid = false;
-        [SerializeField] private bool hasGyroscope = false;
+        //[SerializeField] private bool hasGyroscope = false;
         [SerializeField] private Slider throttleSlider;
         [SerializeField] private Button leftBrakeButton;
         [SerializeField] private Button rightBrakeButton;
@@ -67,27 +67,19 @@ namespace ArcadeBP
             isAndroid = Application.platform == RuntimePlatform.Android;
             isAndroid = true; // FOR ANDROID BUILD
 
-            if (isAndroid && SystemInfo.supportsGyroscope)
-            {
-                Input.gyro.enabled = true;
-                hasGyroscope = true;
-            }
+            //if (isAndroid && SystemInfo.supportsGyroscope)
+            //{
+            //    Input.gyro.enabled = true;
+            //    //hasGyroscope = true;
+            //}
         }
         private void Update()
         {
             if (isAndroid) 
             {
                 verticalInput = 0f;
-                //turning input
-                if (false) // use gyroscope if available
-                {
-                    Debug.Log("Using Gyroscope");
-                    horizontalInput += -Input.gyro.rotationRate.z * steeringMultiplier * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
-                }
-                else // use accelerometer if no gyroscope
-                {
-                    horizontalInput = Input.acceleration.x * steeringMultiplier; 
-                }
+                //turning input using accelerometer
+                horizontalInput = Input.acceleration.x * steeringMultiplier; 
 
                 verticalInput =  Mathf.Log(accelerationCurve * throttleSlider.value + 1, logBase) / Mathf.Log(accelerationCurve + 1, logBase);
                 // Debug.Log("Throttle: " + verticalInput + " ThrottleSlider: " + throttleSlider.value);

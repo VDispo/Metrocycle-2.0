@@ -76,16 +76,8 @@ public class BicycleVehicle : MonoBehaviour
 		// braking = Input.GetKey(KeyCode.Space);
 
 		vereticallInput = 0f;
-		//turning input
-		if (false) // use gyroscope if available
-		{
-				Debug.Log("Using Gyroscope");
-				horizontalInput += -Input.gyro.rotationRate.z * steeringMultiplier * Time.deltaTime; // gyro.rotationrate outputs a DELTA or change in the rotation, hence we add here (also it is inverted by default hence the negative)
-		}
-		else // use accelerometer if no gyroscope
-		{
-				horizontalInput = Input.acceleration.x * steeringMultiplier; 
-		}
+		//turning input using accelerometer
+		horizontalInput = Input.acceleration.x * steeringMultiplier; 
 
 		vereticallInput =  Mathf.Log(accelerationCurve * throttleSlider.value + 1, logBase) / Mathf.Log(accelerationCurve + 1, logBase);
 		// Debug.Log("Throttle: " + vereticallInput + " ThrottleSlider: " + throttleSlider.value);
