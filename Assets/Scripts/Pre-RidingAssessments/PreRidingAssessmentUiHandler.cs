@@ -1,6 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This is responsible for hiding/showing UI elements & camera priorities for the Pre-Riding_Assessment scene.
+/// </summary>
 public class PreRidingAssessmentUiHandler : MonoBehaviour
 {
     public static PreRidingAssessmentUiHandler Instance;
@@ -11,23 +15,30 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     [SerializeField] private Transform minigameTransform; // the root parent, this is used to toggle the blowbagetsMinigameType; in contrast, BlowbagetHandler's minigameParent is just the parent to spawn to
     [SerializeField] private Button goToBlowbagetsBtn;
     [SerializeField] private Button goToCustomizationBtn;
+    [SerializeField] private Button quitBtn;
     public Button finishSceneBtn;
 
     [Header("Camera Refs")]
     [SerializeField] private Cinemachine.CinemachineVirtualCamera blowbagetsCam;
     [SerializeField] private Cinemachine.CinemachineVirtualCamera customizationCam;
 
+    [Header("Values")]
+    [SerializeField][Tooltip("in sec")][Range(0, 1.2f)] private float delayBeforeOpeningMinigame = 0.4f;
+    [SerializeField] private string startScreenName = "Start Screen";
+
     private void Awake()
     {
         if (Instance) Destroy(Instance.gameObject);
         Instance = this;
+
+        finishSceneBtn.onClick.AddListener(() => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene));
     }
 
     private void Start()
     {
         // Start at blowbagets sub scene
         blowbagetsHandler.gameObject.SetActive(true);
-        //goToCustomizationBtn.gameObject.SetActive(true);
+        quitBtn.gameObject.SetActive(true);
 
         customizationHandler.gameObject.SetActive(false);
         goToBlowbagetsBtn.gameObject.SetActive(false);
@@ -46,7 +57,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
     private void SwitchSubScene(bool goForward)
     {
-        //goToCustomizationBtn.gameObject.SetActive(!goForward); // toggle forward button
+        quitBtn.gameObject.SetActive(!goForward); // toggle forward button
         goToBlowbagetsBtn.gameObject.SetActive(goForward); // toggle back button
 
         blowbagetsHandler.FinishBlowbagetsMinigame(); // ensure main blowbagets camera is solo live (prio 10, all subcameras' 0)
@@ -60,16 +71,26 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         blowbagetsCam.Priority = goForward ? 0 : 10;
     }
 
-    public void ToggleMinigameUI(bool turnOn)
+    /// <summary>
+    /// Function to hide the blowbagets buttons and show the minigame panel, with delay defined in <see cref="delayBeforeOpeningMinigame"/>.
+    /// <br/><br/>
+    /// Call via <c>StartCoroutine(<seealso cref="ShowMinigameUi(bool, bool)"/>)</c>
+    /// </summary>
+    /// <param name="show"></param>
+    public IEnumerator ShowMinigameUi(bool show, bool withDelay = false)
     {
-        // Disable buttons
-        foreach (Button btn in blowbagetsHandler.blowbagetsButtons)
-            btn.gameObject.SetActive(!turnOn);
+        // Hide buttons
+        foreach (MinigameSequenceSetup sequence in blowbagetsHandler.allMinigames.Values)
+            sequence.startButton.gameObject.SetActive(!show);
+        quitBtn.gameObject.SetActive(!show);
 
-        //// Disable next button
-        //goToCustomizationBtn.gameObject.SetActive(!turnOn);
+        // Delay
+        if (withDelay) 
+            yield return new WaitForSecondsRealtime(delayBeforeOpeningMinigame);
 
-        // Enable blowbagetsMinigameType
-        minigameTransform.gameObject.SetActive(turnOn);
+        // Show minigame panel
+        minigameTransform.gameObject.SetActive(show);
     }
+
+    public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
 }

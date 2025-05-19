@@ -62,7 +62,7 @@ public class popUp : MonoBehaviour
                     });
                 } else if (button.name.StartsWith("menu")) {
                     buttonScript.onClick.AddListener(() => {
-                        closePopup(); SceneManager.LoadScene("Start Screen");
+                        closePopup(); CustomSceneManager.SwitchScene("Start Screen");
                     });
                 } else if (button.name.StartsWith("loadSaveState")) {
                     buttonScript.onClick.AddListener(() => {

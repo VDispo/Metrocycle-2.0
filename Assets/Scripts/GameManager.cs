@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
     public void restartGame() {
         setDashboardVisibility(true);
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        CustomSceneManager.ReloadActiveScene();
         mobileControlsCanvas.SetActive(true);
     }
 

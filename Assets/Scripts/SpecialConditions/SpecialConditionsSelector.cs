@@ -8,18 +8,11 @@ using UnityEngine.UI;
 public class SpecialConditionsSelector : MonoBehaviour
 {
     private SpecialConditionsSelected specialConditionsSelected;
-    public string NextSceneSelected { get; set; }
 
     private void Start()
     {
         specialConditionsSelected = Instantiate(new GameObject()).AddComponent<SpecialConditionsSelected>();
         if (!specialConditionsSelected) specialConditionsSelected = SpecialConditionsSelected.Instance;
-    }
-
-    public void StartSelectedScene()
-    {
-        // todo load blowbagets scene first
-        nextScene.Instance.LoadScene(NextSceneSelected);
     }
 
     public void ActivateNightCondition(Button button)

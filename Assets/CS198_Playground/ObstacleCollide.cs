@@ -16,6 +16,6 @@ public class ObstacleCollide : MonoBehaviour
 
     public void restartGame() {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        CustomSceneManager.ReloadActiveScene();
     }
 }

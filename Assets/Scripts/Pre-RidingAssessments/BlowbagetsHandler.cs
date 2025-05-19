@@ -3,28 +3,50 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
-using System.Collections;
+using System;
+
+/// <summary>
+/// Serves as a helper for <see cref="MinigameSequenceSetup"/>. 
+/// If the plan is to use this alone (i.e., not via the Sequence version), manually set the on-click listeners of the start button
+/// or whatever starter trigger is used.
+/// </summary>
+[Serializable]
+public class MinigameSetup
+{
+    public GameObject prefab;
+    public CinemachineVirtualCamera camera;
+}
+
+/// <summary>
+/// Note that the <see cref="Button"/> reference enables <see cref="BlowbagetsHandler"/> 
+/// to programatically set the button's on-click listeners or actions (i.e., starting the minigame). 
+/// </summary>
+[Serializable]
+public class MinigameSequenceSetup
+{
+    public MinigameSetup[] minigames;
+
+    [Tooltip("BlowbagetsHandler script programmatically sets the on-click listeners of these buttons (if set properly)")]
+    public Button startButton;
+}
 
 public class BlowbagetsHandler : MonoBehaviour
 {
     public static BlowbagetsHandler Instance;
 
     [Header("Minigames")]
-    [SerializeField] private GameObject[] minigames;
     [SerializeField] private Transform minigamesParentTransform; // the parent tranform to spawn under
-    [SerializeField][Tooltip("in sec")] private float delayBeforeOpeningMinigame = 1; 
+    [SerializedDictionary("Blowbagets", "Setup")]
+    public SerializedDictionary<Blowbagets, MinigameSequenceSetup> allMinigames;
+    
+    // caching
+    [SerializedDictionary] private SerializedDictionary<Blowbagets, GameObject[]> activeMinigames;
     private GameObject latestMinigame;
+    private uint latestSequenceIdx = 0;
 
-    [Header("Buttons")]
-    [Tooltip("in order; this auto-sets the button listeners as well")] public Button[] blowbagetsButtons;
-    [SerializeField] private Button backToSelectionButton;
-
-    [Header("Cameras")]
+    [Header("Other Refs")]
+    //[Tooltip("in order; this auto-sets the button listeners as well")] public Button[] blowbagetsButtons;
     [SerializeField] private CinemachineVirtualCamera mainCamera;
-
-    // Mapping of each Blowbagets enum to the correct Camera Location
-    [SerializedDictionary("Blowbagets, CameraType")]
-    [SerializeField] private SerializedDictionary<Blowbagets, CinemachineVirtualCamera[]> blowbagetsCameraLocation;
 
     public enum Blowbagets {
         Battery = 0,
@@ -43,9 +65,17 @@ public class BlowbagetsHandler : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < blowbagetsButtons.Length; i++)
+        // initialize activeMinigames
+        activeMinigames = new();
+        foreach (Blowbagets acronym in allMinigames.Keys)
         {
-            Button button = blowbagetsButtons[i];
+            activeMinigames.Add(acronym, new GameObject[allMinigames[acronym].minigames.Length]);
+        }
+
+        // initialize blowbagets buttons
+        for (int i = 0; i < allMinigames.Count; i++)
+        {
+            Button button = allMinigames[(Blowbagets)i].startButton;
             if (button)
             {
                 button.interactable = false;
@@ -62,10 +92,10 @@ public class BlowbagetsHandler : MonoBehaviour
     /// </summary>
     private void EnableNextButton(int nextButtonIdx) 
     {
-        if (nextButtonIdx < blowbagetsButtons.Length)
+        if (nextButtonIdx < allMinigames.Count)
         {
-            blowbagetsButtons[nextButtonIdx].interactable = true; // enable interaction
-            blowbagetsButtons[nextButtonIdx].GetComponentInChildren<TextMeshProUGUI>().enabled = true; // show full text
+            allMinigames[(Blowbagets)nextButtonIdx].startButton.interactable = true; // enable interaction
+            allMinigames[(Blowbagets)nextButtonIdx].startButton.GetComponentInChildren<TextMeshProUGUI>().enabled = true; // show full text
         }
     }
 
@@ -123,43 +153,68 @@ public class BlowbagetsHandler : MonoBehaviour
         }
     }
 
-    private void StartBlowbagetsMinigame(Blowbagets idx)
+    /// <summary>
+    /// Function for starting a minigame, with <paramref name="blowbagetsIdx"/> for the minigame (or minigame sequence) 
+    /// based on the BLOWBAGETS acronym (defined in <see cref="Blowbagets"/> enum), and <paramref name="sequenceIdx"/> 
+    /// for the sequence index of the minigame (if more than one minigame for the acronym).
+    /// </summary>
+    /// <param name="blowbagetsIdx"></param>
+    /// <param name="sequenceIdx"></param>
+    public void StartBlowbagetsMinigame(Blowbagets blowbagetsIdx, uint sequenceIdx = 0)
     {
-        // Switch camera
+        if (sequenceIdx >= allMinigames[blowbagetsIdx].minigames.Length) return;
+
+        // Switch camera to specific minigame camera
         mainCamera.Priority = 0;
-        foreach (CinemachineVirtualCamera[] cams in blowbagetsCameraLocation.Values)
-            foreach (CinemachineVirtualCamera cam in cams)
-                cam.Priority = 0;
-        blowbagetsCameraLocation[idx][0].Priority = 10;
+        foreach (MinigameSequenceSetup sequence in allMinigames.Values)
+            foreach (MinigameSetup setup in sequence.minigames)
+                setup.camera.Priority = 0;
+        allMinigames[blowbagetsIdx].minigames[sequenceIdx].camera.Priority = 10;
 
-        // Start blowbagetsMinigameType
-        latestMinigame = Instantiate(minigames[(int)idx], parent: minigamesParentTransform); // initialize
-        StartCoroutine(nameof(ShowMiniGameWithDelay));
+        // Start minigame
+        latestSequenceIdx = sequenceIdx;
+        GameObject existingMinigame = activeMinigames[blowbagetsIdx][sequenceIdx];
+        if (existingMinigame) // activate if exiting
+        {
+            existingMinigame.SetActive(true);
+            latestMinigame = existingMinigame;
+        }
+        else // create if not existing
+        {
+            latestMinigame = Instantiate(allMinigames[blowbagetsIdx].minigames[sequenceIdx].prefab, parent: minigamesParentTransform);
+            activeMinigames[blowbagetsIdx][sequenceIdx] = latestMinigame;
+        }
+        StartCoroutine(PreRidingAssessmentUiHandler.Instance.ShowMinigameUi(show:true, withDelay:true));
     }
 
-    private IEnumerator ShowMiniGameWithDelay()
+    /// <summary>
+    /// Function for continuing a sequence of minigames.
+    /// </summary>
+    public void StartNextMinigamePart(Blowbagets blowbagetsIdx)
     {
-        yield return new WaitForSecondsRealtime(delayBeforeOpeningMinigame);
-        PreRidingAssessmentUiHandler.Instance.ToggleMinigameUI(true);
+        latestSequenceIdx++;
+        if (latestSequenceIdx < allMinigames[blowbagetsIdx].minigames.Length)
+        {
+            FinishBlowbagetsMinigame();
+            StartBlowbagetsMinigame(blowbagetsIdx, latestSequenceIdx);
+            Debug.Log($"[{GetType().FullName}] next minigame played!");
+        }
     }
 
+    /// <summary>
+    /// Function to end the latest minigame.
+    /// </summary>
     public void FinishBlowbagetsMinigame()
     {
-        // End blowbagetsMinigameType
-        PreRidingAssessmentUiHandler.Instance.ToggleMinigameUI(false);
-        if (latestMinigame) Destroy(latestMinigame); // cleanup
+        // End minigame
+        StartCoroutine(PreRidingAssessmentUiHandler.Instance.ShowMinigameUi(show:false));
+        latestMinigame.SetActive(false);
 
-        // Switch camera
+        // Switch camera to main
         mainCamera.Priority = 10;
-        foreach (CinemachineVirtualCamera[] cams in blowbagetsCameraLocation.Values)
-            foreach (CinemachineVirtualCamera cam in cams)
-                cam.Priority = 0;
-    }
-
-    public void FinishScene()
-    {
-        FinishBlowbagetsMinigame();
-        //nextScene.Instance.LoadScene();
-        // todo switch scene (reinitialize assets)
+        foreach (MinigameSequenceSetup sequence in allMinigames.Values)
+            foreach (MinigameSetup setup in sequence.minigames)
+                setup.camera.Priority = 0;
     }
 }
+

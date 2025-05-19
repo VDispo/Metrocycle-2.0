@@ -53,4 +53,18 @@ namespace Metrocycle {
         Character,
         Helmet,
     }
+
+    /// <summary>
+    /// Negative for BASIC, 0 for tutorial, positive for ADVANCED.
+    /// </summary>
+    public enum SceneScenarioTypes
+    {
+        Multilane = -4, 
+        Uturn = -3,
+        Intersection = -2,
+        Straight = -1,
+        Tutorial = 0,
+        Commonwealth = 1,
+        EDSA = 2,
+    }
 }
