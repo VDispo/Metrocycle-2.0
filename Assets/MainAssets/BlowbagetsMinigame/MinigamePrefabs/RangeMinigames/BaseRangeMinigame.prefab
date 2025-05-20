@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.626427, b: 0.2245282, a: 0.65882355}
+  m_Color: {r: 0.70980394, g: 0.44705883, b: 0.105882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -957,6 +957,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 994f1da6776275646a4bd3874f45a4d4,
         type: 3}
+    - target: {fileID: 2381144763457948855, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8611825522393101874}
+    - target: {fileID: 2381144763457948855, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InstantPass
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381144763457948855, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MinigameBase, GameAssembly
+      objectReference: {fileID: 0}
     - target: {fileID: 3958681801842395504, guid: 445823ca758e10d4a963d88f67db4847,
         type: 3}
       propertyPath: m_Sprite
@@ -1068,6 +1083,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseRangeMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 6116769728849897695, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8611825522393101874}
+    - target: {fileID: 6116769728849897695, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayNextPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116769728849897695, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MinigameBase, GameAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549486498297573737, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8611825522393101874}
+    - target: {fileID: 7549486498297573737, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549486498297573737, guid: 445823ca758e10d4a963d88f67db4847,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MinigameBase, GameAssembly
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1117,6 +1162,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3703210799525787031}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1352793651705487037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2423609718113102634, guid: 445823ca758e10d4a963d88f67db4847,
+    type: 3}
+  m_PrefabInstance: {fileID: 3703210799525787031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1944172069585784928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2999226551179568631, guid: 445823ca758e10d4a963d88f67db4847,
+    type: 3}
+  m_PrefabInstance: {fileID: 3703210799525787031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3542091094029518717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 165643141618840298, guid: 445823ca758e10d4a963d88f67db4847,
+    type: 3}
+  m_PrefabInstance: {fileID: 3703210799525787031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3862065403372186224 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 503456065250975719, guid: 445823ca758e10d4a963d88f67db4847,
@@ -1132,6 +1201,12 @@ MonoBehaviour:
 --- !u!1 &4388764285500246581 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1120401556185169826, guid: 445823ca758e10d4a963d88f67db4847,
+    type: 3}
+  m_PrefabInstance: {fileID: 3703210799525787031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6710460048350336271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7945516626495971480, guid: 445823ca758e10d4a963d88f67db4847,
     type: 3}
   m_PrefabInstance: {fileID: 3703210799525787031}
   m_PrefabAsset: {fileID: 0}
@@ -1154,9 +1229,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blowbagets: 2
+  nextPartBtn: {fileID: 1944172069585784928}
+  mechanicBtn: {fileID: 6710460048350336271}
+  finishBtn: {fileID: 3542091094029518717}
   mainImage: {fileID: 3862065403372186224}
   imageBorder: {fileID: 402054594332556519}
-  nextPartDelay: 1
   defaultText: {fileID: 8486975911804541398}
   passText: {fileID: 4388764285500246581}
   failText: {fileID: 1125960341535243647}
@@ -1164,15 +1241,18 @@ MonoBehaviour:
   failColor: {r: 1, g: 0.60784316, b: 0.60784316, a: 1}
   passSprite: {fileID: 0}
   failSprite: {fileID: 0}
+  fadeToBlackPanel: {fileID: 1352793651705487037}
+  fadeDuration: 0.8
+  totalBlackDuration: 0.4
+  activeMinigameImage: {fileID: 0}
   startMinigameButton: {fileID: 3299330149939861839}
   increaseButton: {fileID: 3240136716630832228}
   decreaseButton: {fileID: 4302184544148589888}
   rangeSlider: {fileID: 921124226052839563}
   visualMinVal: 0.325
   visualMaxVal: 0.75
-  rangeMinVal: 0.45
-  rangeMaxVal: 0.65
-  randomRange: 0.15
+  minRandomValue: 0.05
+  maxRandomValue: 0.15
 --- !u!224 &8070334609878791471 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6673178011765981368, guid: 445823ca758e10d4a963d88f67db4847,

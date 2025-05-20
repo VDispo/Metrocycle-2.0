@@ -24,8 +24,5 @@ public class MinigameButton : MinigameBase
             Debug.Log($"[{GetType().FullName}] rolled a {rand}, nothing wrong!");
             Pass();
         }
-
-        if (state == MinigameState.Passed)
-            StartCoroutine(nameof(PlayNextPartWithDelay));
     }
 }

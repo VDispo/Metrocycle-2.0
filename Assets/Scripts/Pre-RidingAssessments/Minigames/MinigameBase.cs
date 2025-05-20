@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public abstract class MinigameBase : MonoBehaviour
@@ -7,13 +8,15 @@ public abstract class MinigameBase : MonoBehaviour
     public abstract MinigameType Type { get; }
     protected MinigameState state = MinigameState.NotPlayed;
 
-    [Header("Typing")]
+    [Header("General")]
     public BlowbagetsHandler.Blowbagets blowbagets;
+    [SerializeField] protected GameObject nextPartBtn;
+    [SerializeField] protected GameObject mechanicBtn;
+    [SerializeField] protected GameObject finishBtn;
 
     [Header("Pass & Fail")]
     [SerializeField] protected Image mainImage;
     [SerializeField] protected Image imageBorder;
-    [SerializeField][Tooltip("in sec")][Range(0, 2f)] protected float nextPartDelay = 0.5f;
 
     [Space(10)]
     [SerializeField] protected GameObject defaultText;
@@ -29,6 +32,13 @@ public abstract class MinigameBase : MonoBehaviour
     [SerializeField][Tooltip("Optional")] protected Sprite passSprite;
     [SerializeField][Tooltip("Optional")] protected Sprite failSprite;
     protected Sprite defaultSprite; // auto-set
+
+    [Header("FadeToBlack")]
+    [SerializeField] protected Image fadeToBlackPanel;
+    [SerializeField][Range(0,2)][Tooltip("in sec")] protected float fadeToBlackDuration = 0.8f;
+    [SerializeField][Range(0,2)][Tooltip("in sec")] protected float totalBlacknessDuration = 0.2f;
+    [SerializeField][Range(0,2)][Tooltip("in sec")] protected float fadeFromBlackDuration = 0.8f;
+    private float currFadeDuration = 0f;
 
     /// <summary>
     /// <paramref name="Button"/> minigame 
@@ -60,12 +70,6 @@ public abstract class MinigameBase : MonoBehaviour
         Start2();
     }
 
-    protected IEnumerator PlayNextPartWithDelay()
-    {
-        yield return new WaitForSecondsRealtime(nextPartDelay);
-        BlowbagetsHandler.Instance.StartNextMinigamePart(blowbagets);
-    }
-
     protected void Pass()
     {
         state = MinigameState.Passed;
@@ -88,9 +92,14 @@ public abstract class MinigameBase : MonoBehaviour
         passText.SetActive(false);
         failText.SetActive(false);
 
+        bool isFinalPart = BlowbagetsHandler.Instance.IsFinalPart(blowbagets);
         switch (state)
         {
             case MinigameState.NotPlayed:
+                nextPartBtn.SetActive(false);
+                finishBtn.SetActive(false);
+                mechanicBtn.SetActive(false);
+                
                 defaultText.SetActive(true);
                 imageBorder.color = defaultColor;
                 mainImage.sprite = defaultSprite;
@@ -98,6 +107,10 @@ public abstract class MinigameBase : MonoBehaviour
                 break;
 
             case MinigameState.Passed:
+                nextPartBtn.SetActive(!isFinalPart);
+                finishBtn.SetActive(isFinalPart);
+                mechanicBtn.SetActive(false);
+
                 passText.SetActive(true);
                 imageBorder.color = passColor;
                 if (passSprite)
@@ -108,6 +121,10 @@ public abstract class MinigameBase : MonoBehaviour
                 break;
 
             case MinigameState.Failed:
+                nextPartBtn.SetActive(false);
+                finishBtn.SetActive(false);
+                mechanicBtn.SetActive(true);
+
                 failText.SetActive(true);
                 imageBorder.color = failColor;
                 if (failSprite)
@@ -118,8 +135,60 @@ public abstract class MinigameBase : MonoBehaviour
                 break; 
 
             default:
+                nextPartBtn.SetActive(false);
+                mechanicBtn.SetActive(true);
+                finishBtn.SetActive(true);
                 Debug.LogError($"[{GetType().FullName}] invalid minigame state \'{state}\'");
                 return;
         }
     }
+
+    /// <summary>
+    /// "Take to mechanic" mechanic. Has a fade to black.
+    /// </summary>
+    public void InstantPass() => StartCoroutine(nameof(InstantPassCoroutine)); 
+    private IEnumerator InstantPassCoroutine()
+    {
+        mechanicBtn.SetActive(false);
+        fadeToBlackPanel.gameObject.SetActive(true);
+
+        // Fade to Black animation
+        Color black = Color.black;
+        black.a = 0;
+
+        void UpdateAlpha(float newAlpha)
+        {
+            black.a = newAlpha;
+            fadeToBlackPanel.color = black;
+        }
+
+        // Fade to black (alpha to 1)
+        while (currFadeDuration < fadeToBlackDuration)
+        {
+            UpdateAlpha(currFadeDuration / fadeToBlackDuration);
+            currFadeDuration += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        UpdateAlpha(1);
+        Pass();
+
+        // Stay black
+        yield return new WaitForSecondsRealtime(totalBlacknessDuration);
+
+        // Fade from black (alpha to 0)
+        black.a = 1;
+        currFadeDuration = fadeFromBlackDuration;
+        while (currFadeDuration >= 0)
+        {
+            UpdateAlpha(currFadeDuration / fadeFromBlackDuration);
+            currFadeDuration -= Time.unscaledDeltaTime;
+            yield return null;
+        }
+        UpdateAlpha(0);
+        currFadeDuration = 0;
+    }
+
+    public void PlayNextPart() => BlowbagetsHandler.Instance.StartNextMinigamePart(blowbagets);
+
+    public void EndMinigame() => BlowbagetsHandler.Instance.FinishBlowbagetsMinigame();
 }

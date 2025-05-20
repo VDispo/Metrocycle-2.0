@@ -12,11 +12,15 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     [Header("Canvas Refs")]
     [SerializeField] private BlowbagetsHandler blowbagetsHandler;
     [SerializeField] private CharacterCustomizationHandler customizationHandler;
-    [SerializeField] private Transform minigameTransform; // the root parent, this is used to toggle the blowbagetsMinigameType; in contrast, BlowbagetHandler's minigameParent is just the parent to spawn to
-    [SerializeField] private Button goToBlowbagetsBtn;
-    [SerializeField] private Button goToCustomizationBtn;
-    [SerializeField] private Button quitBtn;
+    [SerializeField] private Transform minigameTransform; // the root parent, this is used to show the whole minigame; in contrast, BlowbagetHandler's minigameParent is just the parent to spawn to
     public Button finishSceneBtn;
+
+    [Space(10)] // in CharacterCustomization
+    [SerializeField] private Button goToBlowbagetsBtn; 
+    [SerializeField] private Button quitBtn; 
+
+    [Space(10)] // in Blowbagets
+    [SerializeField] private Button goToCustomizationBtn; 
 
     [Header("Camera Refs")]
     [SerializeField] private Cinemachine.CinemachineVirtualCamera blowbagetsCam;

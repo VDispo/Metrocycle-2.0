@@ -202,6 +202,13 @@ public class BlowbagetsHandler : MonoBehaviour
     }
 
     /// <summary>
+    /// Useful for determining when to show the FinishMinigame button and NextPart button, 
+    /// which are both done via <see cref="PreRidingAssessmentUiHandler.ShowMinigameEndgameButtons"/>
+    /// </summary>
+    public bool IsFinalPart(Blowbagets blowbagetsIdx) => 
+        latestSequenceIdx == (allMinigames[blowbagetsIdx].minigames.Length - 1);
+
+    /// <summary>
     /// Function to end the latest minigame.
     /// </summary>
     public void FinishBlowbagetsMinigame()

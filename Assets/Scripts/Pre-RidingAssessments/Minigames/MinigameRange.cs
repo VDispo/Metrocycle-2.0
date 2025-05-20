@@ -5,6 +5,7 @@ public class MinigameRange : MinigameBase
 {
     public override MinigameType Type => MinigameType.Range;
 
+    private Sprite defaultMinigameImage;
     [Header("Range Minigame")]
     [SerializeField] private Sprite activeMinigameImage;
 
@@ -23,6 +24,7 @@ public class MinigameRange : MinigameBase
 
     protected override void Start2()
     {
+        defaultMinigameImage = mainImage.sprite;
         rangeSlider.value = 0;
     }
 
@@ -31,6 +33,7 @@ public class MinigameRange : MinigameBase
         startMinigameButton.gameObject.SetActive(false);
         rangeSlider.gameObject.SetActive(true);
         ShowControlButtons(true);
+        ShowActiveSprite(true);
 
         rangeSlider.value = Random.Range(0f, 1f);
         CheckRangeValidity();
@@ -66,5 +69,21 @@ public class MinigameRange : MinigameBase
     {
         increaseButton.gameObject.SetActive(show);
         decreaseButton.gameObject.SetActive(show);
+    }
+
+    private void ShowActiveSprite(bool show)
+    {
+        if (!activeMinigameImage) return;
+
+        if (show)
+        {
+            mainImage.sprite = activeMinigameImage;
+            imageBorder.sprite = activeMinigameImage;
+        }
+        else
+        {
+            mainImage.sprite = defaultMinigameImage;
+            imageBorder.sprite = defaultMinigameImage;
+        }
     }
 }
