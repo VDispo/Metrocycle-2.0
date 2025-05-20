@@ -185,6 +185,7 @@ public abstract class MinigameBase : MonoBehaviour
             yield return null;
         }
         UpdateAlpha(0);
+        fadeToBlackPanel.gameObject.SetActive(false);
         currFadeDuration = 0;
     }
 
