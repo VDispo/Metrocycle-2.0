@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
@@ -22,7 +21,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     [SerializeField] private GameObject defaultText; // customization
     [SerializeField] private GameObject passText; // customization
     [SerializeField] private GameObject failText; // customization
-    [SerializeField] private GameObject exitTextPanelBtn;
+    [SerializeField] private Button exitTextPanelBtn;
     [SerializeField] private GameObject finishSceneBtn;
 
     [Space(10)] // in CharacterCustomization
@@ -53,6 +52,8 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         goToBlowbagetsBtn.SetActive(false);
         checkGearBtn.gameObject.SetActive(false);
 
+        // TODO clean
+        ShowBlowbagetsButtons(false);
         ShowBlowbagetsDefaultText();
     }
 
@@ -91,11 +92,10 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     /// Call via <c>StartCoroutine(<seealso cref="ShowMinigameUi(bool, bool)"/>)</c>
     /// </summary>
     /// <param name="show"></param>
-    public IEnumerator ShowMinigameUi(bool show, bool withDelay = false)
+    public System.Collections.IEnumerator ShowMinigameUi(bool show, bool withDelay = false)
     {
         // Hide buttons
-        foreach (MinigameSequenceSetup sequence in blowbagetsHandler.allMinigames.Values)
-            sequence.startButton.gameObject.SetActive(!show);
+        ShowBlowbagetsButtons(!show);
         quitBtn.SetActive(!show);
 
         // Delay
@@ -106,7 +106,20 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         minigameTransform.gameObject.SetActive(show);
     }
 
+    public void ShowBlowbagetsButtons(bool show)
+    {
+        foreach (MinigameSequenceSetup sequence in blowbagetsHandler.allMinigames.Values)
+            sequence.startButton.gameObject.SetActive(show);
+    }
 
+    // TODO mega clean DHJSSHJD
+    public void ShowCustomizationSelectionButtons(bool show)
+    {
+        foreach (CustomizationAssetSetSelector selector in customizationHandler.selectors)
+            if (selector) selector.gameObject.SetActive(show);
+    }
+
+    // TODO clean
     public void ShowBlowbagetsDefaultText()
     {
         failText.SetActive(false);
@@ -115,10 +128,20 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         defaultText.SetActive(false);
         
         defaultText_Blowbagets.SetActive(true);
-        exitTextPanelBtn.SetActive(true);
+        exitTextPanelBtn.gameObject.SetActive(true);
         textPanel.SetActive(true);
+
+        exitTextPanelBtn.onClick.AddListener(ExitBlowbagetsDefaultText);
     }
 
+    // TODO clean
+    private void ExitBlowbagetsDefaultText()
+    {
+        ShowBlowbagetsButtons(true);
+        exitTextPanelBtn.onClick.RemoveListener(ExitBlowbagetsDefaultText);
+    }
+
+    // TODO clean
     public void ShowCustomizationDefaultText()
     {
         failText.SetActive(false);
@@ -127,10 +150,22 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         defaultText_Blowbagets.SetActive(false);
 
         defaultText.SetActive(true);
-        exitTextPanelBtn.SetActive(true);
+        exitTextPanelBtn.gameObject.SetActive(true);
         textPanel.SetActive(true);
+
+        ShowCustomizationSelectionButtons(false);
     }
 
+    // TODO clean
+    private void ExitCustomizationText()
+    {
+        ShowBlowbagetsButtons(true);
+        exitTextPanelBtn.onClick.RemoveListener(ExitCustomizationText);
+     
+        ShowCustomizationSelectionButtons(true);
+    }
+
+    // TODO clean
     /// <summary>
     /// Assigned to finisbSceneBtn as the blowbagetS minigame (pass-fail mechanic) for Self.
     /// </summary>
@@ -140,8 +175,9 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         defaultText.SetActive(false);
         failText.SetActive(false);
         passText.SetActive(false);
-        exitTextPanelBtn.SetActive(false);
+        exitTextPanelBtn.gameObject.SetActive(false);
         finishSceneBtn.SetActive(false);
+        ShowCustomizationSelectionButtons(false);
 
         textPanel.SetActive(true);
         if (CustomizationAssetsSelected.Instance.AllGearsValid())
@@ -152,7 +188,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         else
         {
             failText.SetActive(true);
-            exitTextPanelBtn.SetActive(true);
+            exitTextPanelBtn.gameObject.SetActive(true);
         }
     }
 

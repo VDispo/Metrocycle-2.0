@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -19,6 +17,8 @@ public class CharacterCustomizationHandler : MonoBehaviour
     public CustomizationAssetSetSO[] assetSets;
     [SerializeField] private GameObject uiPrefab;
 
+    [HideInInspector] public CustomizationAssetSetSelector[] selectors;
+
     private void Awake()
     {
         if (Instance) Destroy(Instance.gameObject);
@@ -27,14 +27,19 @@ public class CharacterCustomizationHandler : MonoBehaviour
 
     private void Start()
     {
+        selectors = new CustomizationAssetSetSelector[assetSets.Length];
+
         CustomizationAssetsSelected.Instance.Initialize();
 
+        int idx = 0;
         foreach (CustomizationAssetSetSO set in assetSets)
         {
             CustomizationAssetSetSelector newUiInstance = Instantiate(uiPrefab, transform).GetComponent<CustomizationAssetSetSelector>();
             CustomizationAssetSetSO cachedSet = set;
 
             newUiInstance.Initialize(cachedSet);
+            selectors[idx++] = newUiInstance;
+            newUiInstance.gameObject.SetActive(false);
         }
     }
 }

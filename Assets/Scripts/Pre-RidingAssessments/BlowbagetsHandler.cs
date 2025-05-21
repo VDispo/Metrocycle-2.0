@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
 using System;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Serves as a helper for <see cref="MinigameSequenceSetup"/>. 
@@ -84,7 +85,15 @@ public class BlowbagetsHandler : MonoBehaviour
                 button.onClick.AddListener(() => SelectBlowbagets(_i));
             }
         }
-        EnableNextButton(0);
+        if (!SceneManager.GetActiveScene().name.Contains("Tutorial")) // TODO clean
+        {
+            EnableNextButton(0);
+        }
+        else
+        {
+            for (int i = 0; i < allMinigames.Count; i++)
+                EnableNextButton(i);
+        }
     }
 
     /// <summary>

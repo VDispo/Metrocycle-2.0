@@ -34,6 +34,7 @@ public class CustomizationAssetsSelected : MonoBehaviour
             SaveAssetSelection(assetSet, 0);
     }
 
+    // TODO clean
     public void SaveAssetSelection(CustomizationAssetSetSO so, int idx)
     {
         if (so && idx >= 0 && idx < so.choicesPrefabsWithPassing.Count)
