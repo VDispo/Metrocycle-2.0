@@ -18,8 +18,10 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     [Space(10)]
     public Button checkGearBtn;
     [SerializeField] private GameObject textPanel;
-    [SerializeField] private GameObject passText;
-    [SerializeField] private GameObject failText;
+    [SerializeField] private GameObject defaultText_Blowbagets;
+    [SerializeField] private GameObject defaultText; // customization
+    [SerializeField] private GameObject passText; // customization
+    [SerializeField] private GameObject failText; // customization
     [SerializeField] private GameObject exitTextPanelBtn;
     [SerializeField] private GameObject finishSceneBtn;
 
@@ -50,6 +52,8 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         customizationHandler.gameObject.SetActive(false);
         goToBlowbagetsBtn.SetActive(false);
         checkGearBtn.gameObject.SetActive(false);
+
+        ShowBlowbagetsDefaultText();
     }
 
     public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
@@ -102,11 +106,38 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         minigameTransform.gameObject.SetActive(show);
     }
 
+
+    public void ShowBlowbagetsDefaultText()
+    {
+        failText.SetActive(false);
+        passText.SetActive(false);
+        finishSceneBtn.SetActive(false);
+        defaultText.SetActive(false);
+        
+        defaultText_Blowbagets.SetActive(true);
+        exitTextPanelBtn.SetActive(true);
+        textPanel.SetActive(true);
+    }
+
+    public void ShowCustomizationDefaultText()
+    {
+        failText.SetActive(false);
+        passText.SetActive(false);
+        finishSceneBtn.SetActive(false);
+        defaultText_Blowbagets.SetActive(false);
+
+        defaultText.SetActive(true);
+        exitTextPanelBtn.SetActive(true);
+        textPanel.SetActive(true);
+    }
+
     /// <summary>
     /// Assigned to finisbSceneBtn as the blowbagetS minigame (pass-fail mechanic) for Self.
     /// </summary>
     public void CheckValidGear()
     {
+        defaultText_Blowbagets.SetActive(false);
+        defaultText.SetActive(false);
         failText.SetActive(false);
         passText.SetActive(false);
         exitTextPanelBtn.SetActive(false);
