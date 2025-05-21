@@ -171,7 +171,30 @@ public class popUp : MonoBehaviour
         #if (!UNITY_EDITOR && UNITY_WEBGL)
         Stats.SaveStats(sceneName, speed, elapsedTime, errors);
         #endif
+        
+        // Get the current scene name and parse vehicle type and scenario
+        string[] sceneParts = sceneName.Split('_');
+        Debug.Log("SCENE PARTS" + sceneParts.Length);
+        string scenarioType = sceneParts.Length > 0 ? sceneParts[0] : "";
+        string vehicleType = sceneParts.Length == 2 ? sceneParts[1] : sceneParts[2];
 
+        if (scenarioType == "Tutorial")
+        {
+            PlayerPrefs.SetInt($"{vehicleType}_TutorialCompleted", 1);
+        }
+        else if (scenarioType == "Basic")
+        {
+            PlayerPrefs.SetInt($"{vehicleType}_Basic_{sceneParts[1]}", 1);
+            int straight = PlayerPrefs.GetInt($"{vehicleType}_Basic_Straight", 0);
+            int uturn = PlayerPrefs.GetInt($"{vehicleType}_Basic_Uturn", 0);
+            int intersection = PlayerPrefs.GetInt($"{vehicleType}_Basic_Intersection", 0);
+            int multilane = PlayerPrefs.GetInt($"{vehicleType}_Basic_Multilane", 0);
+            PlayerPrefs.SetInt($"{vehicleType}_BasicCompleted", straight + uturn + intersection + multilane);
+
+            Debug.Log($"Basic {vehicleType} completed: {PlayerPrefs.GetInt($"{vehicleType}_BasicCompleted", 0)}");
+        }
+
+        Debug.Log($"Scenario Type: {scenarioType}, Vehicle Type: {vehicleType}");
         Transform finishSet = popUpSystem.transform.Find("finishSet");
 
         setFinishText(finishSet, speed, elapsedTime, errors, errorsClassification);
