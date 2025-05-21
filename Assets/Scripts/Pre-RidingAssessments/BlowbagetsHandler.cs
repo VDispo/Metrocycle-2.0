@@ -85,7 +85,9 @@ public class BlowbagetsHandler : MonoBehaviour
                 button.onClick.AddListener(() => SelectBlowbagets(_i));
             }
         }
-        if (!SceneManager.GetActiveScene().name.Contains("Tutorial")) // TODO clean
+
+        // TODO clean
+        if (CustomSceneManager.SelectedScene.Contains("Tutorial")) // if tutorial
         {
             EnableNextButton(0);
         }

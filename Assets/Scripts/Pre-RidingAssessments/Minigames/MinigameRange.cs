@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class MinigameRange : MinigameBase
     [SerializeField] private Button increaseButton;
     [SerializeField] private Button decreaseButton;
     [SerializeField] private Slider rangeSlider;
+    private float targetValue = 0f;
+    private Coroutine latestCoroutine = null;
 
     [Space(10)]
     [Tooltip("manually check with sprite")][SerializeField][Range(0,1)] private float visualMinVal = 0.325f;
@@ -42,12 +45,16 @@ public class MinigameRange : MinigameBase
     public void IncreaseRandom()
     {
         rangeSlider.value += Random.Range(minRandomValue, maxRandomValue);
+        //targetValue += Random.Range(minRandomValue, maxRandomValue);
+        //latestCoroutine ??= StartCoroutine(nameof(UpdateSlider));
         CheckRangeValidity();
     }
 
     public void DecreaseRandom()
     {
         rangeSlider.value -= Random.Range(minRandomValue, maxRandomValue);
+        //targetValue -= Random.Range(minRandomValue, maxRandomValue);
+        //latestCoroutine ??= StartCoroutine(nameof(UpdateSlider));
         CheckRangeValidity();
     }
 
@@ -65,6 +72,17 @@ public class MinigameRange : MinigameBase
         }
         mechanicBtn.SetActive(false);
     }
+
+    //private IEnumerator UpdateSlider()
+    //{
+    //    while (!Mathf.Approximately(rangeSlider.value, targetValue))
+    //    {
+    //        yield return null;
+    //        int dir = rangeSlider.value < targetValue ? 1 : -1;
+    //        rangeSlider.value += Time.deltaTime * dir;
+    //    }
+    //    latestCoroutine = null;
+    //}
 
     private void ShowControlButtons(bool show)
     {
