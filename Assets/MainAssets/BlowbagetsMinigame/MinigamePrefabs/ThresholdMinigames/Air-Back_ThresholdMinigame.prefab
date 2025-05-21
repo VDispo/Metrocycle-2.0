@@ -69,6 +69,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4185234387072472193, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185234387072472193, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 5730709853247787495, guid: 37877d1fc5864cc45a132cf6e22e9864,
         type: 3}
       propertyPath: m_Sprite
@@ -81,6 +91,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
         type: 3}
+    - target: {fileID: 6074515126931429872, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074515126931429872, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457273351080120254, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457273351080120254, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 7006367328607556585, guid: 37877d1fc5864cc45a132cf6e22e9864,
         type: 3}
       propertyPath: m_Sprite

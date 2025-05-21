@@ -34186,8 +34186,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
+    m_LineSpacing: 0.8
+  m_Text: '- ?? Error'
 --- !u!114 &6004121353295555959
 MonoBehaviour:
   m_ObjectHideFlags: 0

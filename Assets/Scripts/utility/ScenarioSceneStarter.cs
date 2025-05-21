@@ -15,15 +15,17 @@ public class ScenarioSceneStarter : MonoBehaviour
     {
         selectedSceneNoIntermediate = sceneName;
         CustomSceneManager.SelectedScene = string.Empty;
+        Debug.Log("Selected scene: " + selectedSceneNoIntermediate);
     }
 
     /// <summary>
     /// For scene switching with intermdiary scene (i.e., blowbagets).
     /// </summary>
-    public void SaveSelectedSceneForIntermediation(string sceneName) 
+    public void SaveSelectedSceneForIntermediation(string sceneName)
     {
         selectedSceneNoIntermediate = string.Empty;
         CustomSceneManager.SelectedScene = sceneName;
+        Debug.Log("Selected scene with intermediate: " + CustomSceneManager.SelectedScene);
     }
 
     /// <summary>

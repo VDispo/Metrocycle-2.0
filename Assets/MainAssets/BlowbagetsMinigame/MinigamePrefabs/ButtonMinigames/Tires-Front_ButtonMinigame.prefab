@@ -114,12 +114,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3522655080768812798, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522655080768812798, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 3862065403372186224, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
         type: 3}
+    - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Name
