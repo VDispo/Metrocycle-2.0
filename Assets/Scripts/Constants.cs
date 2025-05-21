@@ -11,7 +11,7 @@ namespace Metrocycle {
     }
 
     public enum ErrorReason {
-        NOERROR,    // Default value
+        NOERROR,    // Default progress
 
         // Error codes for turn/lane change
         LEFTTURN_NO_BLINKER,

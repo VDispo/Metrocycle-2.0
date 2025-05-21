@@ -165,11 +165,7 @@ public class BlowbagetsHandler : MonoBehaviour
         if (sequenceIdx >= allMinigames[blowbagetsIdx].minigames.Length) return;
 
         // Switch camera to specific minigame camera
-        mainCamera.Priority = 0;
-        foreach (MinigameSequenceSetup sequence in allMinigames.Values)
-            foreach (MinigameSetup setup in sequence.minigames)
-                setup.camera.Priority = 0;
-        allMinigames[blowbagetsIdx].minigames[sequenceIdx].camera.Priority = 10;
+        SwitchCamera(allMinigames[blowbagetsIdx].minigames[sequenceIdx].camera);
 
         // Start minigame
         latestSequenceIdx = sequenceIdx;
@@ -218,10 +214,22 @@ public class BlowbagetsHandler : MonoBehaviour
         latestMinigame.SetActive(false);
 
         // Switch camera to main
-        mainCamera.Priority = 10;
+        SwitchCamera(mainCamera);
+    }
+
+    /// <summary>
+    /// Switch camera to the selected <paramref name="targetCamera"/>. 
+    /// If <c>null</c>, all cameras are set to 0. 
+    /// </summary>
+    /// <param name="targetCamera"/>
+    public void SwitchCamera(CinemachineVirtualCamera targetCamera)
+    {
         foreach (MinigameSequenceSetup sequence in allMinigames.Values)
             foreach (MinigameSetup setup in sequence.minigames)
                 setup.camera.Priority = 0;
+        mainCamera.Priority = 0;
+     
+        if (targetCamera) targetCamera.Priority = 10;
     }
 }
 

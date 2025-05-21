@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 /// <summary>
 /// This is responsible for hiding/showing UI elements & camera priorities for the Pre-Riding_Assessment scene.
@@ -16,15 +17,12 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     public Button finishSceneBtn;
 
     [Space(10)] // in CharacterCustomization
-    [SerializeField] private Button goToBlowbagetsBtn; 
-    [SerializeField] private Button quitBtn; 
-
-    [Space(10)] // in Blowbagets
-    [SerializeField] private Button goToCustomizationBtn; 
+    [SerializeField] private GameObject goToBlowbagetsBtn; 
+    [SerializeField] private GameObject quitBtn; 
 
     [Header("Camera Refs")]
-    [SerializeField] private Cinemachine.CinemachineVirtualCamera blowbagetsCam;
-    [SerializeField] private Cinemachine.CinemachineVirtualCamera customizationCam;
+    [SerializeField] private CinemachineVirtualCamera blowbagetsCam;
+    [SerializeField] private CinemachineVirtualCamera customizationCam;
 
     [Header("Values")]
     [SerializeField][Tooltip("in sec")][Range(0, 1.2f)] private float delayBeforeOpeningMinigame = 0.4f;
@@ -32,25 +30,27 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
     private void Awake()
     {
+        finishSceneBtn.onClick.AddListener(
+            () => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene)
+        );
+
         if (Instance) Destroy(Instance.gameObject);
         Instance = this;
-
-        finishSceneBtn.onClick.AddListener(() => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene));
     }
 
     private void Start()
     {
         // Start at blowbagets sub scene
         blowbagetsHandler.gameObject.SetActive(true);
-        quitBtn.gameObject.SetActive(true);
+        quitBtn.SetActive(true);
 
         customizationHandler.gameObject.SetActive(false);
-        goToBlowbagetsBtn.gameObject.SetActive(false);
+        goToBlowbagetsBtn.SetActive(false);
         finishSceneBtn.gameObject.SetActive(false);
     }
 
     /// <summary>
-    /// Via the forward or Self buttons. During Blowbagets.
+    /// Via the Self button. During Blowbagets.
     /// </summary>
     public void GoToCharacterCustomization() => SwitchSubScene(goForward:true);
 
@@ -59,20 +59,21 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     /// </summary>
     public void GoToBlowbagets() => SwitchSubScene(goForward:false);
 
+    /// <summary>
+    /// Forward: go to Customization subscene.<br/>
+    /// Backward: go to Blowbagets subscene.
+    /// </summary>
     private void SwitchSubScene(bool goForward)
     {
-        quitBtn.gameObject.SetActive(!goForward); // toggle forward button
-        goToBlowbagetsBtn.gameObject.SetActive(goForward); // toggle back button
-
-        blowbagetsHandler.FinishBlowbagetsMinigame(); // ensure main blowbagets camera is solo live (prio 10, all subcameras' 0)
+        // switch camera
+        blowbagetsHandler.SwitchCamera(goForward ? customizationCam : blowbagetsCam); // set all cameras to 0
 
         blowbagetsHandler.gameObject.SetActive(!goForward); // toggle blowbagets
         customizationHandler.gameObject.SetActive(goForward); // toggle customization
         finishSceneBtn.gameObject.SetActive(goForward); // toggle finish scene
 
-        // switch camera
-        customizationCam.Priority = goForward ? 10 : 0;
-        blowbagetsCam.Priority = goForward ? 0 : 10;
+        quitBtn.SetActive(!goForward); // toggle quit button (note that FinishBlowbagetsMinigame turns this on in this function)
+        goToBlowbagetsBtn.SetActive(goForward); // toggle back button
     }
 
     /// <summary>
@@ -86,7 +87,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         // Hide buttons
         foreach (MinigameSequenceSetup sequence in blowbagetsHandler.allMinigames.Values)
             sequence.startButton.gameObject.SetActive(!show);
-        quitBtn.gameObject.SetActive(!show);
+        quitBtn.SetActive(!show);
 
         // Delay
         if (withDelay) 

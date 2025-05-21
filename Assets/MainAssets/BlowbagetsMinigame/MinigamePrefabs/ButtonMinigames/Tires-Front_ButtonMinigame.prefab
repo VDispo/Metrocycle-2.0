@@ -8,6 +8,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 402054594332556519, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+        type: 3}
     - target: {fileID: 742039968421883183, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -108,6 +114,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3862065403372186224, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+        type: 3}
     - target: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Name
@@ -116,12 +128,12 @@ PrefabInstance:
     - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 507
+      value: 603
       objectReference: {fileID: 0}
     - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 34
+      value: -48
       objectReference: {fileID: 0}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
@@ -133,8 +145,41 @@ PrefabInstance:
       propertyPath: hasNextMinigame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: randomizeSpriteUponActivation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805560935623054799}
   m_SourcePrefab: {fileID: 100100000, guid: cec0fde4353dc234da5b355d45621ef8, type: 3}
+--- !u!1 &7685268346315443903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
+    type: 3}
+  m_PrefabInstance: {fileID: 583579428219598772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1805560935623054799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7685268346315443903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0197fb4f281a404e95e3f405b374de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passingSprites:
+  - {fileID: 21300000, guid: c4f6d952f1e2f75478595422c0309597, type: 3}
+  failingSprites:
+  - {fileID: 21300000, guid: 0ecb0a9118d1f11468f420f1ee76d229, type: 3}
+  - {fileID: 21300000, guid: 0f18832272ca4f447b81027b25713f74, type: 3}
+  - {fileID: 21300000, guid: 3afaf199b1b0663428c182826328f7dd, type: 3}

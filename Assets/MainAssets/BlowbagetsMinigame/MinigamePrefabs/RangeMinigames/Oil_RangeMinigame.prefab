@@ -8,6 +8,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8611825522393101874, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: activeMinigameImage
+      value: 
+      objectReference: {fileID: 21300000, guid: e90a6f918dd42eb4ebbddd272db60083,
+        type: 3}
     - target: {fileID: 742039968421883183, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -108,40 +114,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3137791134295667985, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+    - target: {fileID: 921124226052839563, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3137791134295667985, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -52
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3656970267742134632, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3656970267742134632, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401136180549209248, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4310598110301668316, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+    - target: {fileID: 6401136180549209248, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 72
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6401136180549209248, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -190
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6401136180549209248, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 95
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6695451725637539317, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
@@ -151,12 +157,17 @@ PrefabInstance:
     - target: {fileID: 6695451725637539317, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7115340731634333963, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_Name
       value: Oil_RangeMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778052269671250275, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

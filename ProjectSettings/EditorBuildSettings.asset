@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/Test_LaneChange.unity
     guid: e419aa40dd6e7c1d4b4a6aa12d0950a5
   - enabled: 0
-    path: Assets/Scenes/Deprecated/Main Menu (deprecated).unity
+    path: Assets/Scenes/[Deprecated]/Main Menu (deprecated).unity
     guid: 71adf8fd63dfd4d1598911d02c1ce9f9
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: fe08a5749548b1843bfd3cb93d56c5cc,

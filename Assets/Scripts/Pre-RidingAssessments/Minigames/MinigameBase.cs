@@ -43,12 +43,14 @@ public abstract class MinigameBase : MonoBehaviour
     /// <summary>
     /// <paramref name="Button"/> minigame 
     ///     just requires pressing of a button placed on the screen.<br/>
+    /// <paramref name="Threshold"/> minigame 
+    ///     requires reaching a treshold progress (one-way).<br/>
     /// <paramref name="Range"/> minigame 
-    ///     requires keeping a static value in between a high and low threshold (may be different from the visual max-min lines).<br/>
+    ///     requires keeping a static progress in between a high and low threshold (two-way).<br/>
     /// <paramref name="Pump"/> minigame 
-    ///     is the same as <paramref name="Range"/> except the value is constantly erratic (moving).
+    ///     is the same as <paramref name="Range"/> except the progress is constantly erratic (moving).
     /// </summary>
-    public enum MinigameType { Button, Range, Pump }
+    public enum MinigameType { Button, Threshold, Range, Pump }
 
     public enum MinigameState { NotPlayed, Passed, Failed }
 
@@ -84,7 +86,7 @@ public abstract class MinigameBase : MonoBehaviour
 
     /// <summary>
     /// Updates active or set text, border color, and images based on the 
-    /// the <see cref="state"/> global variable.
+    /// the <see cref="state"/> global variable. Can be extended via <see cref="UpdateUiBasedOnState2"/>.
     /// </summary>
     private void UpdateUiBasedOnState()
     {
@@ -99,7 +101,7 @@ public abstract class MinigameBase : MonoBehaviour
                 nextPartBtn.SetActive(false);
                 finishBtn.SetActive(false);
                 mechanicBtn.SetActive(false);
-                
+
                 defaultText.SetActive(true);
                 imageBorder.color = defaultColor;
                 mainImage.sprite = defaultSprite;
@@ -141,7 +143,9 @@ public abstract class MinigameBase : MonoBehaviour
                 Debug.LogError($"[{GetType().FullName}] invalid minigame state \'{state}\'");
                 return;
         }
+        UpdateUiBasedOnState2();
     }
+    protected virtual void UpdateUiBasedOnState2() { }
 
     /// <summary>
     /// "Take to mechanic" mechanic. Has a fade to black.
@@ -192,4 +196,15 @@ public abstract class MinigameBase : MonoBehaviour
     public void PlayNextPart() => BlowbagetsHandler.Instance.StartNextMinigamePart(blowbagets);
 
     public void EndMinigame() => BlowbagetsHandler.Instance.FinishBlowbagetsMinigame();
+
+    /// <summary> 
+    /// Change sprite upon activation of minigame 
+    /// (not necessarily the start of the minigame; instead, trigger-based, like via a button). 
+    /// </summary>
+    protected virtual void ShowActiveSprite(Sprite sprite = null) 
+    {
+        if (!sprite) return;
+        mainImage.sprite = sprite;
+        imageBorder.sprite = sprite;
+    }
 }

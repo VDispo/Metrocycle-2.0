@@ -20,7 +20,7 @@ public class FunctionalTesting : MonoBehaviour
 
         SumFPS = 0;
         numFPSSamples = 0;
-        deltaTime = 0.0001f; // Initial small value to avoid division by zero
+        deltaTime = 0.0001f; // Initial small progress to avoid division by zero
     }
 
     // Update is called once per frame

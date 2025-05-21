@@ -18,7 +18,7 @@ public class BlinkerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(blinkerSlider.value);
+        // Debug.Log(blinkerSlider.progress);
         if (blinkerSlider.value == 0 && !isBlinkerActive)
         {
             isBlinkerActive = true;

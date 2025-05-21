@@ -7,7 +7,7 @@ using UnityEngine;
 /// -- If new, <br/>
 /// ---- add a new entry in the CustomizationAssetType enum in Constants.cs and assign it to the new CustomizationAssetSetSO <br/>
 /// ---- in the Pre-riding_Assessment scene, find the Bike prefab object and modify each of the childrens' CustomizationAssetsRefs script
-///             to include a new dictionary entry (key: the new CustomizationAssetSetSO created, value: the parent transform of the Bi/Motorcycle to instatiate under)<br/>
+///             to include a new dictionary entry (key: the new CustomizationAssetSetSO created, progress: the parent transform of the Bi/Motorcycle to instatiate under)<br/>
 /// ---- in the same scene, find the Canvas > CharacterCustomization object and add the new scriptable object into the AssetSets array
 /// </summary>
 public class CharacterCustomizationHandler : MonoBehaviour

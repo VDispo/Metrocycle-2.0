@@ -8,6 +8,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 402054594332556519, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+        type: 3}
     - target: {fileID: 742039968421883183, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -108,6 +114,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3862065403372186224, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+        type: 3}
     - target: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Name
@@ -115,13 +127,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 72.5211
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 507
+      value: 486
       objectReference: {fileID: 0}
     - target: {fileID: 7171051569891964132, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 34
+      value: 179
       objectReference: {fileID: 0}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
@@ -130,8 +152,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
+      propertyPath: failSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 673aec857743e8b489116e5c6badb3ee,
+        type: 3}
+    - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
       propertyPath: hasNextMinigame
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: randomizeSpriteUponActivation
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

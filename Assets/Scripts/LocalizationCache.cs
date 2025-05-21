@@ -51,7 +51,7 @@ public class LocalizationCache : MonoBehaviour
             if (entry != null)
             {
                 result = entry.GetLocalizedString();
-                cache[key] = result; // Cache the value
+                cache[key] = result; // Cache the progress
                 return result;
             }
         }
