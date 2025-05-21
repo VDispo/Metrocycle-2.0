@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: BlowbagetsTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: BlowbagetsTable
+  m_TableCollectionNameGuidString: 5fc9b4d1353397740930bcce4c188ce2
+  m_Entries:
+  - m_Id: 65019400192
+    m_Key: blowbagetsInitialPrompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Key: batteryDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950020
+  - m_Id: 2
+    m_Key: batteryPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: batteryFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: lightsFrontDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950021
+  - m_Id: 5
+    m_Key: lightsFrontPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Key: lightsFrontFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Key: lightsBackDefault
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Key: lightsBackPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Key: lightsBackFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Key: lightsBlinkersDefault
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Key: lightsBlinkersPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Key: lightsBlinkersFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Key: oilDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950022
+  - m_Id: 14
+    m_Key: oilPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Key: oilFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Key: waterDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950023
+  - m_Id: 17
+    m_Key: waterPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Key: waterFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Key: brakesDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950024
+  - m_Id: 20
+    m_Key: brakesPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Key: brakesFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Key: airFrontDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950025
+  - m_Id: 23
+    m_Key: airFrontPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Key: airFrontFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Key: airBackDefault
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Key: airBackPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Key: airBackFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Key: gasDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950026
+  - m_Id: 29
+    m_Key: gasPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Key: gasFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Key: engineDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950027
+  - m_Id: 32
+    m_Key: enginePass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Key: engineFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Key: tiresFrontDefault
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950028
+  - m_Id: 35
+    m_Key: tiresFrontPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Key: tiresFrontFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Key: tiresBackDefault
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Key: tiresBackPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Key: tiresBackFail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Key: selfInitialPrompt
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950029
+  - m_Id: 41
+    m_Key: selfPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Key: selfFail
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2180363922148950018
+  references:
+    version: 2
+    RefIds:
+    - rid: 2180363922148950018
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1747796563598
+    - rid: 2180363922148950020
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: B
+    - rid: 2180363922148950021
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: L
+    - rid: 2180363922148950022
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: O
+    - rid: 2180363922148950023
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: W
+    - rid: 2180363922148950024
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: B
+    - rid: 2180363922148950025
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: A
+    - rid: 2180363922148950026
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: G
+    - rid: 2180363922148950027
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: E
+    - rid: 2180363922148950028
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: T
+    - rid: 2180363922148950029
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: S

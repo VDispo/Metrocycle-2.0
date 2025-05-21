@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BlowbagetsTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 5fc9b4d1353397740930bcce4c188ce2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 65019400192
+    m_Localized: Before driving, make sure the important parts of your vehicle are
+      working properly. Check B-L-O-W-B-A-G-E-T-S.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: "Try to start your motorcycle to check the battery\u2019s condition."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Nice! Your battery is working and your motorcycle started properly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: "Oh no! Your motorcycle didn\u2019t start. You might need to have
+      the battery checked and get it replaced if it hasn't been replaced in a long
+      time."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Turn on your front lights to see if they're working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Nice! Your front lights seem to be working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Oh no! It seems like your front lights are not working. Make sure
+      to have them fixed first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Hold down any of the brakes to see if the brake lights are working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Nice! Your brake lights seem to be working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Oh no! It seems like your brake lights are not working. Make sure
+      to have them fixed first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Turn on your blinker lights to see if they're working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Nice! Your blinkers are working fine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: "Oh no! Your blinkers aren\u2019t lighting up. Make sure to have
+      them fixed first."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Check the dipstick of your motorcycle's engine to see if your oil
+      level is at the right amount.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Nice! Your engine oil level is just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Oh no! It seems like your engine oil level is either too much or
+      too little. Make sure it's just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Check the coolant level of your motorcycle to make sure it's within
+      the recommended amount.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Nice! Your coolant level is just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Oh no! It seems like your coolant level is either too high or too
+      low. Make sure it's just right to prevent your engine from overheating.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: Check the brake fluid level of your motorcycle to see if there's
+      still enough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Nice! Your brakes are working well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Oh no! Your brakes might not work properly while riding. Make sure
+      the brake fluid is at the right level.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: Check the front tire pressure to see if it's firm enough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Nice! The front tire pressure is just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Oh no! Your front tire is either too hard or too soft. Adjust the
+      pressure accordingly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Check the rear tire pressure to see if it's firm enough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Nice! The rear tire pressure is just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Oh no! Your rear tire is either too hard or too soft. Adjust the
+      pressure accordingly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Check if your motorcycle still has enough gas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: Nice! Your motorcycle has enough gas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: "Oh no! Looks like you\u2019re about to run out of gas. Refuel first."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: Check if your engine runs smoothly and if there are no unusual sounds
+      when started.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Nice! Your engine seems to be running smoothly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: Oh no! Something might be wrong with your engine. Make sure to have
+      them fixed first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: "Check the front tire\u2019s condition if it is worn out or uneven."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: Nice! The front tire still looks good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Oh no! Your front tire looks worn out or deformed. Have it replaced.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: "Check the rear tire\u2019s condition if it is worn out or uneven."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Nice! The rear tire still looks good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Oh no! Your rear tire looks worn out or deformed. Have it replaced.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: Get yourself readied with the proper riding gear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: Nice! Your helmet and gear are all up to standards! You're now ready
+      to drive. Stay safe!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: Oh no! There are one or more of your gear that isn't up to standards.
+      Make sure your helmet is ICC-certified and your footwear is close-footed. Inclusion
+      of riding gear like elbow and knee pads are a plus for extra protection.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
