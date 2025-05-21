@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,7 +23,6 @@ public class CustomizationAssetSetSelector : MonoBehaviour
     [SerializeField] private Button rightSelectButton;
 
     [Header("Selection")]
-    [SerializeField] private CustomizationAssetsRefs refs; 
     [SerializeField] private TextMeshProUGUI selectedText;
     private int selectedIdx = 0;
 
@@ -49,7 +49,7 @@ public class CustomizationAssetSetSelector : MonoBehaviour
         };
 
         /// move next or back (wrapping)
-        selectedIdx = modulo(selectedIdx + (int)dir, customizationAssetSetSO.choicesPrefabs.Length);
+        selectedIdx = modulo(selectedIdx + (int)dir, customizationAssetSetSO.choicesPrefabsWithPassing.Count);
 
         /// switch selection
         UpdateSelection();
@@ -61,7 +61,7 @@ public class CustomizationAssetSetSelector : MonoBehaviour
     // [possible TODO: destroy and instantiate are performance heavy BUT this soln is simple and it only happens in the avatar customization screen so not much problem, could optimize]
     private void UpdateSelection()
     {
-        GameObject newAsset = customizationAssetSetSO.choicesPrefabs[selectedIdx];
+        GameObject newAsset = customizationAssetSetSO.choicesPrefabsWithPassing.Keys.ToArray()[selectedIdx];
         
         // display name
         selectedText.text = newAsset.name;

@@ -14,7 +14,14 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     [SerializeField] private BlowbagetsHandler blowbagetsHandler;
     [SerializeField] private CharacterCustomizationHandler customizationHandler;
     [SerializeField] private Transform minigameTransform; // the root parent, this is used to show the whole minigame; in contrast, BlowbagetHandler's minigameParent is just the parent to spawn to
-    public Button finishSceneBtn;
+
+    [Space(10)]
+    public Button checkGearBtn;
+    [SerializeField] private GameObject textPanel;
+    [SerializeField] private GameObject passText;
+    [SerializeField] private GameObject failText;
+    [SerializeField] private GameObject exitTextPanelBtn;
+    [SerializeField] private GameObject finishSceneBtn;
 
     [Space(10)] // in CharacterCustomization
     [SerializeField] private GameObject goToBlowbagetsBtn; 
@@ -30,10 +37,6 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
     private void Awake()
     {
-        finishSceneBtn.onClick.AddListener(
-            () => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene)
-        );
-
         if (Instance) Destroy(Instance.gameObject);
         Instance = this;
     }
@@ -46,8 +49,10 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
         customizationHandler.gameObject.SetActive(false);
         goToBlowbagetsBtn.SetActive(false);
-        finishSceneBtn.gameObject.SetActive(false);
+        checkGearBtn.gameObject.SetActive(false);
     }
+
+    public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
 
     /// <summary>
     /// Via the Self button. During Blowbagets.
@@ -70,7 +75,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
         blowbagetsHandler.gameObject.SetActive(!goForward); // toggle blowbagets
         customizationHandler.gameObject.SetActive(goForward); // toggle customization
-        finishSceneBtn.gameObject.SetActive(goForward); // toggle finish scene
+        checkGearBtn.gameObject.SetActive(goForward); // toggle finish scene
 
         quitBtn.SetActive(!goForward); // toggle quit button (note that FinishBlowbagetsMinigame turns this on in this function)
         goToBlowbagetsBtn.SetActive(goForward); // toggle back button
@@ -97,5 +102,28 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         minigameTransform.gameObject.SetActive(show);
     }
 
-    public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
+    /// <summary>
+    /// Assigned to finisbSceneBtn as the blowbagetS minigame (pass-fail mechanic) for Self.
+    /// </summary>
+    public void CheckValidGear()
+    {
+        failText.SetActive(false);
+        passText.SetActive(false);
+        exitTextPanelBtn.SetActive(false);
+        finishSceneBtn.SetActive(false);
+
+        textPanel.SetActive(true);
+        if (CustomizationAssetsSelected.Instance.AllGearsValid())
+        {
+            passText.SetActive(true);
+            finishSceneBtn.SetActive(true);
+        }
+        else
+        {
+            failText.SetActive(true);
+            exitTextPanelBtn.SetActive(true);
+        }
+    }
+
+    public void FinishScene() => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene);
 }

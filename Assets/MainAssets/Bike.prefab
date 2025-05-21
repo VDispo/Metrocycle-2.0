@@ -34597,7 +34597,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5506312054295725124, guid: b9f42de6425d7a64492e24f3f8462954, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34722,7 +34723,8 @@ PrefabInstance:
       propertyPath: m_CustomSkybox
       value: 
       objectReference: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4829975269036253041, guid: ca91199b324624e269e7ee016c18b2b3, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1991413711470414228, guid: ca91199b324624e269e7ee016c18b2b3, type: 3}
     - {fileID: 3835592896545936905, guid: ca91199b324624e269e7ee016c18b2b3, type: 3}

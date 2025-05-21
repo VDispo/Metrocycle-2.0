@@ -51,7 +51,8 @@ namespace Metrocycle {
     public enum CustomizationAssetType
     {
         Character,
-        Helmet,
+        Headgear,
+        Footwear,
     }
 
     /// <summary>

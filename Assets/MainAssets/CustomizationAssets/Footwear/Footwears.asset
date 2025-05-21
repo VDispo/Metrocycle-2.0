@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b733e49c7fcba4bb2504a32cf86fa7, type: 3}
+  m_Name: Footwears
+  m_EditorClassIdentifier: 
+  type: 2
+  choicesPrefabsWithPassing:
+    _serializedList:
+    - Key: {fileID: 8799594830387357008, guid: 82fb27cefda59bd42b6cf72945c8add9, type: 3}
+      Value: 0
+    - Key: {fileID: 8799594830387357008, guid: cb0e0f29794d6a7418ff94819169c298, type: 3}
+      Value: 0
+    - Key: {fileID: 8799594830387357008, guid: e7da2de97e25edf48893146e3663f50f, type: 3}
+      Value: 1
+    - Key: {fileID: 8799594830387357008, guid: e62511d06e414cd42bea6ef65248cd47, type: 3}
+      Value: 0

@@ -12,7 +12,7 @@ public class nextScene : MonoBehaviour
     {
         Instance = this;
         if (SelectedScene != string.Empty)
-            PreRidingAssessmentUiHandler.Instance.finishSceneBtn.
+            PreRidingAssessmentUiHandler.Instance.checkGearBtn.
                 onClick.AddListener(() => LoadSelectedScene(SelectedScene));
     }
 

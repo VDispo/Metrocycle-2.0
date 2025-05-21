@@ -131,7 +131,7 @@ MonoBehaviour:
   leftSelectButton: {fileID: 4178043459393484399}
   rightSelectButton: {fileID: 6360415616670014719}
   refs: {fileID: 0}
-  selectedText: {fileID: 0}
+  selectedText: {fileID: 5086901318516811835}
 --- !u!1 &642187354109877124
 GameObject:
   m_ObjectHideFlags: 0

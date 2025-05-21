@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -31,6 +33,7 @@ public class CharacterCustomizationHandler : MonoBehaviour
         {
             CustomizationAssetSetSelector newUiInstance = Instantiate(uiPrefab, transform).GetComponent<CustomizationAssetSetSelector>();
             CustomizationAssetSetSO cachedSet = set;
+
             newUiInstance.Initialize(cachedSet);
         }
     }

@@ -1,3 +1,4 @@
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
 /// <summary>
@@ -8,5 +9,6 @@ public class CustomizationAssetSetSO : ScriptableObject
 {
     [Header("Data")]
     [Tooltip("defined in Constants.cs")] public Metrocycle.CustomizationAssetType type;
-    [Tooltip("the assets to choose from")] public GameObject[] choicesPrefabs;
+    [Tooltip("the assets to choose from")][SerializedDictionary("Prefab", "Valid")] 
+    public SerializedDictionary<GameObject, bool> choicesPrefabsWithPassing;
 }

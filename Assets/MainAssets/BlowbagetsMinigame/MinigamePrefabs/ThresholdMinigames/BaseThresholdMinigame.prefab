@@ -208,6 +208,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9027865610102951955}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1992452488106093630
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +562,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9027865610102951955}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6326306134413073049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -841,6 +865,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &9027865610102951955 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3063263695509785226, guid: 445823ca758e10d4a963d88f67db4847,
+    type: 3}
+  m_PrefabInstance: {fileID: 6326306134413073049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9103157213914644334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2999226551179568631, guid: 445823ca758e10d4a963d88f67db4847,
