@@ -470,7 +470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 367.5, y: 180}
+  m_AnchoredPosition: {x: 367.5, y: 182}
   m_SizeDelta: {x: -1285, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20563745
@@ -2201,6 +2201,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 368161107}
+        m_TargetAssemblyTypeName: GameplayRestriction, GameAssembly
+        m_MethodName: CheckTutorialRequirement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Motorcycle
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &176033037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3901,6 +3913,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 368161107}
+        m_TargetAssemblyTypeName: GameplayRestriction, GameAssembly
+        m_MethodName: CheckTutorialRequirement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bicycle
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &357831026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,6 +4148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368161106}
+  - component: {fileID: 368161107}
   m_Layer: 5
   m_Name: Vehicle Select
   m_TagString: Untagged
@@ -4156,6 +4181,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.00024414}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &368161107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368161105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4904f4c2ad0f28442a19561a9d5a35ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioSceneStarter: {fileID: 709913412}
+  MotorcycleAdvancedSet: {fileID: 1561561002}
+  BicycleAdvancedSet: {fileID: 484654453}
 --- !u!1 &370014905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4810,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.41568628, g: 0.41568628, b: 0.41568628, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -17574,7 +17614,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -17988,7 +18028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 367.50024, y: -180}
+  m_AnchoredPosition: {x: 367.50024, y: -178.00003}
   m_SizeDelta: {x: -1285.0005, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617499121
@@ -20973,7 +21013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 367.5, y: 0}
+  m_AnchoredPosition: {x: 367.5, y: 1.999975}
   m_SizeDelta: {x: -1285, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909436188
