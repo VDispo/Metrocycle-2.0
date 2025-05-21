@@ -33,14 +33,14 @@ public class GameplayRestriction : MonoBehaviour
             if (vehicle == "Motorcycle")
             {
                 MotorcycleAdvancedSet.GetComponent<Button>().interactable = false;
-                TextMeshProUGUI advancedText = MotorcycleAdvancedSet.GetComponentInChildren<TextMeshProUGUI>();
-                advancedText.text = "Complete Basic Scenarios First";
+                // TextMeshProUGUI advancedText = MotorcycleAdvancedSet.GetComponentInChildren<TextMeshProUGUI>();
+                // advancedText.text = "Complete Basic Scenarios First";
             }
             else
             {
                 BicycleAdvancedSet.GetComponent<Button>().interactable = false;
-                TextMeshProUGUI advancedText = BicycleAdvancedSet.GetComponentInChildren<TextMeshProUGUI>();
-                advancedText.text = "Complete Basic Scenarios First";
+                // TextMeshProUGUI advancedText = BicycleAdvancedSet.GetComponentInChildren<TextMeshProUGUI>();
+                // advancedText.text = "Complete Basic Scenarios First";
             }
         }
     }
