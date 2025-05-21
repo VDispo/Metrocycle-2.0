@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BlowbagetsTable_fil
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fil
+  m_SharedData: {fileID: 11400000, guid: 5fc9b4d1353397740930bcce4c188ce2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 65019400192
+    m_Localized: Bago bumiyahe, siguraduhing gumagana ang mahahalagang bahagi ng
+      motor para sa iyong kaligtasan. I-check ang B-L-O-W-B-A-G-E-T-S.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: Subukan mong i-start ang iyong motor para makita ang kondisyon ng
+      battery nito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Ayos! Okay pa ang battery mo at nag-start ang iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Hala! Hindi nag-on ang motor mo. Mukhang kailangan mo nang ipatingin
+      ang battery ng iyong motor at ipapalit na ito kung matagal na itong hindi napapalitan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Buksan mo ang front lights ng iyong motor para makita kung ito ay
+      gumaganam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Ayos! Mukhang gumagana ang front lights ng iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: 'Hala! Mukhang hindi gumagana ang front lights ng iyong motor. Siguraduhing
+      mapaayos muna ito. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Paandarin ang kahit aling brake para makita kung gumagana ang brake
+      lights mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Ayos! Mukhang gumagana ang brake lights ng iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: 'Hala! Mukhang hindi gumagana ang brake lights ng iyong motor. Siguraduhing
+      mapaayos muna ito. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Buksan mo ang iyong blinker lights para i-check kung ito ay gumagana.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Ayos! Gumagana nang maayos ang blinkers mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Hala! Hindi umiilaw ang blinkers mo. Siguraduhing mapaayos muna
+      ito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: I-check mo ang dip stick ng makina ng iyong motor para makita kung
+      angkop pa ang dami ng langis nito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Ayos! Sakto ang level ng langis sa makina ng iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Hala! Mukhang nasobrahan o nagkulang ang langis sa loob ng makina
+      ng motor mo. Siguraduhin mo munang tama ang level ng langis.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: I-check mo ang coolant level sa iyong motor para makita kung angkop
+      ang dami nito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Ayos! Sakto ang coolant level sa motor mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Hala! Mukhang nasobrahan o nagkulang ang coolant level ng motor
+      mo. Siguraduhin mong nasa tamang level ang coolant para hindi mag-overheat
+      ang makina mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: I-check mo ang brake fluid levels sa iyong motor para makita kung
+      angkop pa ang dami niyo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Ayos! Mukhang gumagana nang maayos ang brakes mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Hala! Baka magloko ang brakes mo habang bumabyahe ka. Siguraduhing
+      tama ang level ng brake fluid ng motor mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: I-check mo ang front tire pressure kung tama lang ang tigas nito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Ayos! Tama lang ang front tire pressure mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Hala! Masyadong matigas o malambot ang front tire mo. I-adjust mo
+      ang tire pressure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: I-check mo ang rear tire pressure kung tama lang ang tigas nito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Ayos! Tama lang ang rear tire pressure mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Hala! Masyadong matigas o malambot ang rear tire mo. I-adjust mo
+      ang tire pressure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: I-check mo kung may sapat na gas pa ang iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: Ayos! Sapat pa ang gas ng iyong motor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Hala! Mukhang mauubusan na ng gas ang motor mo. Magpa-gas ka muna.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: I-check mo kung umaandar nang maayos ang iyong makina at walang
+      itong kakaibang tunog.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Ayos! Mukhang gumagana nang maayos ang makina mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: 'Hala! Mukhang may mali sa makina mo. Siguraduhing mapaayos muna
+      ito. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: I-check mo ang kondisyon ng front tires mo kung pudpod na o mayroon
+      nang hindi pantay na parte.
+    m_Metadata:
+      m_Items:
+      - rid: 2180363922148950019
+  - m_Id: 35
+    m_Localized: Ayos! Maganda pa ang itsura ng front tire mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Hala! Mukhang deformed o pudpod na ang front tire mo. Ipapalit mo
+      na ito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: I-check mo ang kondisyon ng rear tires mo kung pudpod na o mayroon
+      nang hindi pantay na parte.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Ayos! Maganda pa ang itsura ng rear tire mo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Hala! Mukhang deformed o pudpod na ang rear tire mo. Ipapalit mo
+      na ito.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: Maghanda ng sarili gamit ang angkop na kasuotan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: Ayos! Mukhang akma ang gamit mong helmet at kasuotan. Pwede ka nang
+      magmaneho. Ingat!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: Hala! Isa o higit pa sa iyong kasuotan ay hindi angkop! Siguraduhin
+      na ang iyong helmet ay ICC-certified at ang iyong suot sa paa ay close-footed.
+      Mas maganda rin kung gagamit ka ng riding gears gaya ng pads sa siko at tuhod
+      para sa extrang proteksyon.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2180363922148950019
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: ' '

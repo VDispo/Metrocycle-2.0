@@ -190,6 +190,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8a16eb70d330b0846b690d5f34b91a62,
         type: 3}
+    - target: {fileID: 3522655080768812798, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522655080768812798, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 3656970267742134632, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -199,6 +209,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
       objectReference: {fileID: 0}
     - target: {fileID: 6188062633359487910, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
@@ -329,6 +349,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
       objectReference: {fileID: 0}
     - target: {fileID: 7115340731634333963, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}

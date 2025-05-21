@@ -108,6 +108,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3522655080768812798, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522655080768812798, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388764285500246581, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381869278500437502, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381869278500437502, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381869278500437502, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381869278500437502, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826067197085580175, guid: cec0fde4353dc234da5b355d45621ef8,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 7115340731634333963, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: m_Name

@@ -28,6 +28,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuelMeter
       objectReference: {fileID: 0}
+    - target: {fileID: 4185234387072472193, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185234387072472193, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074515126931429872, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074515126931429872, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457273351080120254, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457273351080120254, guid: 37877d1fc5864cc45a132cf6e22e9864,
+        type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:5fc9b4d1353397740930bcce4c188ce2
+      objectReference: {fileID: 0}
     - target: {fileID: 7990439175363133985, guid: 37877d1fc5864cc45a132cf6e22e9864,
         type: 3}
       propertyPath: m_Pivot.x
