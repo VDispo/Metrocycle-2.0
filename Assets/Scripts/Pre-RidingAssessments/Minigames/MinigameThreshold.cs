@@ -35,7 +35,6 @@ public class MinigameThreshold : MinigameBase
 
     public void StartThresholdMinigame()
     {
-        if (startMinigameButton) startMinigameButton.gameObject.SetActive(false);
         progressBackground.SetActive(true);
         progressIndicator.gameObject.SetActive(true);
         ShowControlButtons(true);

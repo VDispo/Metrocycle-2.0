@@ -12,7 +12,13 @@ PrefabInstance:
         type: 3}
       propertyPath: activeMinigameImage
       value: 
-      objectReference: {fileID: 21300000, guid: e90a6f918dd42eb4ebbddd272db60083,
+      objectReference: {fileID: 21300000, guid: 4bd12da6039459e4eaad3bcf881f7f1f,
+        type: 3}
+    - target: {fileID: 402054594332556519, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 694678cdd5f636b4490b25645544a23a,
         type: 3}
     - target: {fileID: 742039968421883183, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
@@ -119,6 +125,12 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1814973199945658870, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bd12da6039459e4eaad3bcf881f7f1f,
+        type: 3}
     - target: {fileID: 3522655080768812798, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -139,6 +151,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3862065403372186224, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 694678cdd5f636b4490b25645544a23a,
+        type: 3}
     - target: {fileID: 4409913083304419504, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -194,6 +212,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oil_RangeMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 7778052269671250275, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 605782d8def12444e93b390760efa8c6,
+        type: 3}
     - target: {fileID: 7778052269671250275, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_FillAmount

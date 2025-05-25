@@ -12,7 +12,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+      objectReference: {fileID: 21300000, guid: 61b7b9450903fb6429339efad2f44c12,
         type: 3}
     - target: {fileID: 742039968421883183, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
@@ -128,7 +128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+      objectReference: {fileID: 21300000, guid: 61b7b9450903fb6429339efad2f44c12,
         type: 3}
     - target: {fileID: 4409913083304419504, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
@@ -184,13 +184,13 @@ PrefabInstance:
         type: 3}
       propertyPath: failSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 673aec857743e8b489116e5c6badb3ee,
+      objectReference: {fileID: 21300000, guid: ead982144779b3c40935e43924e0bfaf,
         type: 3}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
       propertyPath: passSprite
       value: 
-      objectReference: {fileID: 21300000, guid: bd280babd483fab46baab1386a9f7935,
+      objectReference: {fileID: 21300000, guid: 61b7b9450903fb6429339efad2f44c12,
         type: 3}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}

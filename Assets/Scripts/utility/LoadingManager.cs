@@ -2,11 +2,10 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
-/// Responsible for the loading screen. Only use via <see cref="CustomSceneManager"/>.
+/// Responsible for the loading screen. Only use via <see cref="CustomSceneManager"/>. Also sets the target framerate of the app to 60.
 /// </summary>
 public class LoadingManager : MonoBehaviour
 {
@@ -28,6 +27,8 @@ public class LoadingManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             EndLoading();
+
+            Application.targetFrameRate = 60;
         }
         else Destroy(gameObject); // dont allow recreation / reset of this script, for consistency
     }
@@ -52,9 +53,10 @@ public class LoadingManager : MonoBehaviour
 
     public void EndLoading()
     {
+        loadingScreen.SetActive(false);
         loadingBar.value = 0;
         loadingText.text = "0%";
-        loadingScreen.SetActive(false);
+        AudioSourceManager.PlayBgmBasedOnScene();
         StopAllCoroutines();
     }
 

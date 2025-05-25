@@ -27,7 +27,13 @@ PrefabInstance:
         type: 3}
       propertyPath: activeMinigameImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8a16eb70d330b0846b690d5f34b91a62,
+      objectReference: {fileID: 21300000, guid: f62cbc3a203da4e4b8300954b40d24d9,
+        type: 3}
+    - target: {fileID: 402054594332556519, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 694678cdd5f636b4490b25645544a23a,
         type: 3}
     - target: {fileID: 742039968421883183, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
@@ -188,7 +194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8a16eb70d330b0846b690d5f34b91a62,
+      objectReference: {fileID: 21300000, guid: f62cbc3a203da4e4b8300954b40d24d9,
         type: 3}
     - target: {fileID: 3522655080768812798, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
@@ -210,6 +216,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3862065403372186224, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 694678cdd5f636b4490b25645544a23a,
+        type: 3}
     - target: {fileID: 4409913083304419504, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -379,7 +391,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a443b768c5ecdb948b365dea2bb0ce2b,
+      objectReference: {fileID: 21300000, guid: ce14ac2b6f45b5f4f8b19f29bb8a4433,
         type: 3}
     - target: {fileID: 7778052269671250275, guid: 5dd053cb45fe2b4488ed1e718dd95a9a,
         type: 3}

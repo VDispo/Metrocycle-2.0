@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class GameplayRestriction : MonoBehaviour
 {
@@ -18,13 +15,14 @@ public class GameplayRestriction : MonoBehaviour
             if (vehicle == "Motorcycle")
             {
                 // Start the tutorial scene for motorcycles
-                scenarioSceneStarter.StartSceneDirectWithIntermediation("Tutorial_Motorcycle");
+                scenarioSceneStarter.SaveSelectedScene("Tutorial_Motorcycle");
             }
             else
             {
                 // Start the tutorial scene for other vehicles
-                scenarioSceneStarter.StartSceneDirect("Tutorial_Bicycle");
+                scenarioSceneStarter.SaveSelectedScene("Tutorial_Bicycle");
             }
+            scenarioSceneStarter.StartSelectedScene();
         }
 
         if (PlayerPrefs.GetInt($"{vehicle}_BasicCompleted", 0) < 4)

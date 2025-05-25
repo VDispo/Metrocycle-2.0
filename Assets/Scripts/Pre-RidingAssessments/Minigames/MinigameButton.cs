@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class MinigameButton : MinigameBase
@@ -22,8 +21,6 @@ public class MinigameButton : MinigameBase
 
     public void PressButton()
     {
-        button.gameObject.SetActive(false);
-
         bool passing = Random.Range(0, 100) < (chanceToPass * 100);
         if (passing) Pass();
         else Fail();

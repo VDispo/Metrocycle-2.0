@@ -1,34 +1,59 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using Metrocycle;
+using UnityEngine.Rendering;
 
 /// <summary>
 /// This is responsible for hiding/showing UI elements & camera priorities for the Pre-Riding_Assessment scene.
+/// This script also ties in and determines the targeted vehicle type based on the initially-set <see cref="CustomSceneManager.SelectedScene"/> (name). <br/>
+/// For debug purposes (i.e., playing straight in this scene without setting <see cref="CustomSceneManager.SelectedScene"/>, use <see cref="debug_targetVehicleType"/>.
 /// </summary>
 public class PreRidingAssessmentUiHandler : MonoBehaviour
 {
     public static PreRidingAssessmentUiHandler Instance;
 
-    [Header("Canvas Refs")]
+    [Header("For Initial Setup")]
+    [SerializeField] private GameObject motorcycle;
+    [SerializeField] private GameObject bicycle;
+    public static BikeType vehicleType;
+#if UNITY_EDITOR
+    [Tooltip("Debug and only takes effect if CustomSceneManager.SelectedScene is empty")]
+    [SerializeField] private BikeType debug_targetVehicleType = BikeType.Motorcycle;
+#endif
+    
+    [Header("General Refs")]
     [SerializeField] private BlowbagetsHandler blowbagetsHandler;
     [SerializeField] private CharacterCustomizationHandler customizationHandler;
-    [SerializeField] private Transform minigameTransform; // the root parent, this is used to show the whole minigame; in contrast, BlowbagetHandler's minigameParent is just the parent to spawn to
+    [Tooltip("the whole minigame root parent; BlowbagetHandler's minigameParent is the parent to spawn under")]
+    [SerializeField] private Transform minigameTransform;
+    [SerializeField] private GameObject blowbagetsButtonsParent;
+    [SerializeField] private GameObject customizationSelectorsParent;
+    [SerializeField] private Button checkGearBtn;
 
-    [Space(10)]
-    public Button checkGearBtn;
+    [Header("Blowbagets Text Panel")]
+    [SerializeField] private GameObject blowbagets_initialPrompt_bike; 
+    [SerializeField] private GameObject blowbagets_initialPrompt_motor; 
+
+    [Header("Customization Text Panel")]
     [SerializeField] private GameObject textPanel;
-    [SerializeField] private GameObject defaultText_Blowbagets;
-    [SerializeField] private GameObject defaultText; // customization
-    [SerializeField] private GameObject passText; // customization
-    [SerializeField] private GameObject failText; // customization
+    [SerializeField] private GameObject defaultText_bike;
+    [SerializeField] private GameObject passText_bike;
+    [SerializeField] private GameObject failText_bike;
+    [SerializeField] private GameObject defaultText_motor;
+    [SerializeField] private GameObject passText_motor;
+    [SerializeField] private GameObject failText_motor;
+    private GameObject defaultText; 
+    private GameObject passText;
+    private GameObject failText; 
     [SerializeField] private Button exitTextPanelBtn;
     [SerializeField] private GameObject finishSceneBtn;
 
-    [Space(10)] // in CharacterCustomization
+    [Header("Back Buttons")]
     [SerializeField] private GameObject goToBlowbagetsBtn; 
     [SerializeField] private GameObject quitBtn; 
 
-    [Header("Camera Refs")]
+    [Header("Cameras")]
     [SerializeField] private CinemachineVirtualCamera blowbagetsCam;
     [SerializeField] private CinemachineVirtualCamera customizationCam;
 
@@ -40,29 +65,67 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     {
         if (Instance) Destroy(Instance.gameObject);
         Instance = this;
+
+#if UNITY_EDITOR
+        if (CustomSceneManager.SelectedScene == string.Empty)
+        {
+            string debugSceneName = debug_targetVehicleType == BikeType.Motorcycle ? "Motorcycle" : "Bicycle";
+            CustomSceneManager.SelectedScene = debugSceneName;
+            Debug.Log($"[{GetType().FullName}] entered scene {UnityEngine.SceneManagement.SceneManager.GetActiveScene().name} " +
+                $"without setting CustomSceneManager.SelectedScene, defaulting to debug: {debugSceneName} " +
+                $"({nameof(debug_targetVehicleType)} is {debug_targetVehicleType})");
+        }
+#endif
+
+        // determine bike type
+        if (CustomSceneManager.SelectedScene.Contains("Motorcycle"))
+        {
+            vehicleType = BikeType.Motorcycle;
+            motorcycle.SetActive(true);
+            bicycle.SetActive(false);
+
+            // activate initial prompt based on bike type
+            blowbagets_initialPrompt_motor.SetActive(true);
+            blowbagets_initialPrompt_bike.SetActive(false);
+            defaultText = defaultText_motor;
+            passText = passText_motor;
+            failText = failText_motor;
+        }
+        else
+        {
+            vehicleType = BikeType.Bicycle;
+            motorcycle.SetActive(false);
+            bicycle.SetActive(true);
+
+            // activate initial prompt based on bike type
+            blowbagets_initialPrompt_motor.SetActive(false);
+            blowbagets_initialPrompt_bike.SetActive(true);
+            defaultText = defaultText_bike;
+            passText = passText_bike;
+            failText = failText_bike;
+        }
     }
 
-    private void Start()
+    public void ShowCustomizationDefaultText()
     {
-        // Start at blowbagets sub scene
-        blowbagetsHandler.gameObject.SetActive(true);
-        quitBtn.SetActive(true);
-
-        customizationHandler.gameObject.SetActive(false);
-        goToBlowbagetsBtn.SetActive(false);
+        failText.SetActive(false);
+        passText.SetActive(false);
         checkGearBtn.gameObject.SetActive(false);
+        customizationSelectorsParent.SetActive(false);
 
-        // TODO clean
-        ShowBlowbagetsButtons(false);
-        ShowBlowbagetsDefaultText();
+        defaultText.SetActive(true);
+        exitTextPanelBtn.gameObject.SetActive(true);
+        textPanel.SetActive(true);
     }
-
-    public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
 
     /// <summary>
     /// Via the Self button. During Blowbagets.
     /// </summary>
-    public void GoToCharacterCustomization() => SwitchSubScene(goForward:true);
+    public void GoToCharacterCustomization()
+    {
+        SwitchSubScene(goForward: true);
+        ShowCustomizationDefaultText();
+    }
 
     /// <summary>
     /// Via the back button. During CharacterCustomization.
@@ -80,7 +143,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
 
         blowbagetsHandler.gameObject.SetActive(!goForward); // toggle blowbagets
         customizationHandler.gameObject.SetActive(goForward); // toggle customization
-        checkGearBtn.gameObject.SetActive(goForward); // toggle finish scene
+        if (!goForward) checkGearBtn.gameObject.SetActive(false); // disable checkgear if going back
 
         quitBtn.SetActive(!goForward); // toggle quit button (note that FinishBlowbagetsMinigame turns this on in this function)
         goToBlowbagetsBtn.SetActive(goForward); // toggle back button
@@ -95,7 +158,7 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
     public System.Collections.IEnumerator ShowMinigameUi(bool show, bool withDelay = false)
     {
         // Hide buttons
-        ShowBlowbagetsButtons(!show);
+        blowbagetsButtonsParent.SetActive(!show);
         quitBtn.SetActive(!show);
 
         // Delay
@@ -106,91 +169,27 @@ public class PreRidingAssessmentUiHandler : MonoBehaviour
         minigameTransform.gameObject.SetActive(show);
     }
 
-    public void ShowBlowbagetsButtons(bool show)
+    public void ValidGearUi()
     {
-        foreach (MinigameSequenceSetup sequence in blowbagetsHandler.allMinigames.Values)
-            sequence.startButton.gameObject.SetActive(show);
-    }
+        if (vehicleType == BikeType.Bicycle)
 
-    // TODO mega clean DHJSSHJD
-    public void ShowCustomizationSelectionButtons(bool show)
-    {
-        foreach (CustomizationAssetSetSelector selector in customizationHandler.selectors)
-            if (selector) selector.gameObject.SetActive(show);
-    }
-
-    // TODO clean
-    public void ShowBlowbagetsDefaultText()
-    {
-        failText.SetActive(false);
-        passText.SetActive(false);
-        finishSceneBtn.SetActive(false);
         defaultText.SetActive(false);
-        
-        defaultText_Blowbagets.SetActive(true);
-        exitTextPanelBtn.gameObject.SetActive(true);
-        textPanel.SetActive(true);
-
-        exitTextPanelBtn.onClick.AddListener(ExitBlowbagetsDefaultText);
-    }
-
-    // TODO clean
-    private void ExitBlowbagetsDefaultText()
-    {
-        ShowBlowbagetsButtons(true);
-        exitTextPanelBtn.onClick.RemoveListener(ExitBlowbagetsDefaultText);
-    }
-
-    // TODO clean
-    public void ShowCustomizationDefaultText()
-    {
-        failText.SetActive(false);
-        passText.SetActive(false);
-        finishSceneBtn.SetActive(false);
-        defaultText_Blowbagets.SetActive(false);
-
-        defaultText.SetActive(true);
-        exitTextPanelBtn.gameObject.SetActive(true);
-        textPanel.SetActive(true);
-
-        ShowCustomizationSelectionButtons(false);
-    }
-
-    // TODO clean
-    private void ExitCustomizationText()
-    {
-        ShowBlowbagetsButtons(true);
-        exitTextPanelBtn.onClick.RemoveListener(ExitCustomizationText);
-     
-        ShowCustomizationSelectionButtons(true);
-    }
-
-    // TODO clean
-    /// <summary>
-    /// Assigned to finisbSceneBtn as the blowbagetS minigame (pass-fail mechanic) for Self.
-    /// </summary>
-    public void CheckValidGear()
-    {
-        defaultText_Blowbagets.SetActive(false);
-        defaultText.SetActive(false);
-        failText.SetActive(false);
-        passText.SetActive(false);
-        exitTextPanelBtn.gameObject.SetActive(false);
-        finishSceneBtn.SetActive(false);
-        ShowCustomizationSelectionButtons(false);
-
-        textPanel.SetActive(true);
-        if (CustomizationAssetsSelected.Instance.AllGearsValid())
+        if (customizationHandler.AllGearsValid())
         {
             passText.SetActive(true);
+            failText.SetActive(false);
+            exitTextPanelBtn.gameObject.SetActive(true);
             finishSceneBtn.SetActive(true);
         }
         else
         {
+            passText.SetActive(false);
             failText.SetActive(true);
             exitTextPanelBtn.gameObject.SetActive(true);
         }
     }
+
+    public void BackToStartScreen() => CustomSceneManager.SwitchScene(startScreenName);
 
     public void FinishScene() => CustomSceneManager.SwitchScene(CustomSceneManager.SelectedScene);
 }

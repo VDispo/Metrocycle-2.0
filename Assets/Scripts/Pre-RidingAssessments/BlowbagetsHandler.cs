@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
 using System;
-using UnityEngine.SceneManagement;
+using Metrocycle;
 
 /// <summary>
 /// Serves as a helper for <see cref="MinigameSequenceSetup"/>. 
@@ -38,7 +38,14 @@ public class BlowbagetsHandler : MonoBehaviour
     [Header("Minigames")]
     [SerializeField] private Transform minigamesParentTransform; // the parent tranform to spawn under
     [SerializedDictionary("Blowbagets", "Setup")]
-    public SerializedDictionary<Blowbagets, MinigameSequenceSetup> allMinigames;
+    [SerializeField] private SerializedDictionary<Blowbagets, MinigameSequenceSetup> allMinigames;
+
+    [Tooltip("Empty the start button to leave it uninteractible")]
+    [SerializedDictionary("Blowbagets", "Setup")]
+    [SerializeField] private SerializedDictionary<Blowbagets, MinigameSequenceSetup> onlyBicycleMinigames;
+
+    // chooses which to use: allMinigames or onlyBicycleMinigames
+    private SerializedDictionary<Blowbagets, MinigameSequenceSetup> relevantMinigames;
     
     // caching
     [SerializedDictionary] private SerializedDictionary<Blowbagets, GameObject[]> activeMinigames;
@@ -46,7 +53,6 @@ public class BlowbagetsHandler : MonoBehaviour
     private uint latestSequenceIdx = 0;
 
     [Header("Other Refs")]
-    //[Tooltip("in order; this auto-sets the button listeners as well")] public Button[] blowbagetsButtons;
     [SerializeField] private CinemachineVirtualCamera mainCamera;
 
     public enum Blowbagets {
@@ -66,17 +72,21 @@ public class BlowbagetsHandler : MonoBehaviour
 
     private void Start()
     {
+        // choose relevant array
+        relevantMinigames = PreRidingAssessmentUiHandler.vehicleType == BikeType.Motorcycle ? allMinigames : onlyBicycleMinigames;
+        Debug.Log($"[{GetType().FullName}] active vehicle type: {PreRidingAssessmentUiHandler.vehicleType}");
+
         // initialize activeMinigames
         activeMinigames = new();
-        foreach (Blowbagets acronym in allMinigames.Keys)
+        foreach (Blowbagets acronym in relevantMinigames.Keys)
         {
-            activeMinigames.Add(acronym, new GameObject[allMinigames[acronym].minigames.Length]);
+            activeMinigames.Add(acronym, new GameObject[relevantMinigames[acronym].minigames.Length]);
         }
 
         // initialize blowbagets buttons
-        for (int i = 0; i < allMinigames.Count; i++)
+        for (int i = 0; i < relevantMinigames.Count; i++)
         {
-            Button button = allMinigames[(Blowbagets)i].startButton;
+            Button button = relevantMinigames[(Blowbagets)i].startButton;
             if (button)
             {
                 button.interactable = false;
@@ -86,82 +96,43 @@ public class BlowbagetsHandler : MonoBehaviour
             }
         }
 
-        // TODO clean
         if (CustomSceneManager.SelectedScene.Contains("Tutorial")) // if tutorial
         {
             EnableNextButton(0);
         }
         else
         {
-            for (int i = 0; i < allMinigames.Count; i++)
+            for (int i = 0; i < relevantMinigames.Count; i++)
                 EnableNextButton(i);
         }
     }
 
     /// <summary>
     /// Assumes that buttons have 2 texts (as children gameobjects), with the first one being the full text.
+    /// In bike, enables the next button if the current is unavailable.
     /// </summary>
     private void EnableNextButton(int nextButtonIdx) 
     {
-        if (nextButtonIdx < allMinigames.Count)
+        if (nextButtonIdx >= Enum.GetValues(typeof(Blowbagets)).Length) return;
+
+        if (!relevantMinigames[(Blowbagets)nextButtonIdx].startButton)
         {
-            allMinigames[(Blowbagets)nextButtonIdx].startButton.interactable = true; // enable interaction
-            allMinigames[(Blowbagets)nextButtonIdx].startButton.GetComponentInChildren<TextMeshProUGUI>().enabled = true; // show full text
+            Debug.Log($"[{GetType().FullName}] the relevant minigames for {PreRidingAssessmentUiHandler.vehicleType} does not contain a minigame entry for {(Blowbagets)nextButtonIdx} (enabling next button instead)");
+            EnableNextButton(++nextButtonIdx);
+            return;
+        }
+
+        if (nextButtonIdx < relevantMinigames.Count)
+        {
+            relevantMinigames[(Blowbagets)nextButtonIdx].startButton.interactable = true; // enable interaction
+            relevantMinigames[(Blowbagets)nextButtonIdx].startButton.GetComponentInChildren<TextMeshProUGUI>().enabled = true; // show full text
         }
     }
 
     public void SelectBlowbagets(int blowbagetsButtonIdx)
     {
         EnableNextButton(blowbagetsButtonIdx + 1); // enable next button
-        
-        // do logic for each
-        Blowbagets idx = (Blowbagets)blowbagetsButtonIdx;
-        switch (idx) 
-        {
-            case Blowbagets.Battery:
-                Debug.Log($"[{GetType().FullName}] battery!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Lights:
-                Debug.Log($"[{GetType().FullName}] lights!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Oil:
-                Debug.Log($"[{GetType().FullName}] oil!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Water:
-                Debug.Log($"[{GetType().FullName}] water!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Brakes:
-                Debug.Log($"[{GetType().FullName}] brakes!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Air:
-                Debug.Log($"[{GetType().FullName}] air!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Gas:
-                Debug.Log($"[{GetType().FullName}] gas!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Engine:
-                Debug.Log($"[{GetType().FullName}] engine!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Tires:
-                Debug.Log($"[{GetType().FullName}] tires!");
-                StartBlowbagetsMinigame(idx);
-                break;
-            case Blowbagets.Self:
-                Debug.Log($"[{GetType().FullName}] self!");
-                PreRidingAssessmentUiHandler.Instance.GoToCharacterCustomization();
-                return;
-            default:
-                Debug.LogWarning($"[{GetType().FullName}] argument for BlowbagetsButtonClick is invalid");
-                break;
-        }
+        StartBlowbagetsMinigame((Blowbagets)blowbagetsButtonIdx);
     }
 
     /// <summary>
@@ -173,10 +144,10 @@ public class BlowbagetsHandler : MonoBehaviour
     /// <param name="sequenceIdx"></param>
     public void StartBlowbagetsMinigame(Blowbagets blowbagetsIdx, uint sequenceIdx = 0)
     {
-        if (sequenceIdx >= allMinigames[blowbagetsIdx].minigames.Length) return;
+        if (sequenceIdx >= relevantMinigames[blowbagetsIdx].minigames.Length) return;
 
         // Switch camera to specific minigame camera
-        SwitchCamera(allMinigames[blowbagetsIdx].minigames[sequenceIdx].camera);
+        SwitchCamera(relevantMinigames[blowbagetsIdx].minigames[sequenceIdx].camera);
 
         // Start minigame
         latestSequenceIdx = sequenceIdx;
@@ -188,7 +159,7 @@ public class BlowbagetsHandler : MonoBehaviour
         }
         else // create if not existing
         {
-            latestMinigame = Instantiate(allMinigames[blowbagetsIdx].minigames[sequenceIdx].prefab, parent: minigamesParentTransform);
+            latestMinigame = Instantiate(relevantMinigames[blowbagetsIdx].minigames[sequenceIdx].prefab, parent: minigamesParentTransform);
             activeMinigames[blowbagetsIdx][sequenceIdx] = latestMinigame;
         }
         StartCoroutine(PreRidingAssessmentUiHandler.Instance.ShowMinigameUi(show:true, withDelay:true));
@@ -200,20 +171,21 @@ public class BlowbagetsHandler : MonoBehaviour
     public void StartNextMinigamePart(Blowbagets blowbagetsIdx)
     {
         latestSequenceIdx++;
-        if (latestSequenceIdx < allMinigames[blowbagetsIdx].minigames.Length)
+        if (latestSequenceIdx < relevantMinigames[blowbagetsIdx].minigames.Length)
         {
             FinishBlowbagetsMinigame();
             StartBlowbagetsMinigame(blowbagetsIdx, latestSequenceIdx);
-            Debug.Log($"[{GetType().FullName}] next minigame played!");
+            Debug.Log($"[{GetType().FullName}] next {blowbagetsIdx} minigame started!");
         }
+        else Debug.Log($"[{GetType().FullName}] {blowbagetsIdx} minigames finished, total of {latestSequenceIdx} minigames played!");
     }
 
     /// <summary>
     /// Useful for determining when to show the FinishMinigame button and NextPart button, 
     /// which are both done via <see cref="PreRidingAssessmentUiHandler.ShowMinigameEndgameButtons"/>
     /// </summary>
-    public bool IsFinalPart(Blowbagets blowbagetsIdx) => 
-        latestSequenceIdx == (allMinigames[blowbagetsIdx].minigames.Length - 1);
+    public bool IsFinalPart(Blowbagets blowbagetsIdx)
+        => latestSequenceIdx == (relevantMinigames[blowbagetsIdx].minigames.Length - 1);
 
     /// <summary>
     /// Function to end the latest minigame.
@@ -235,7 +207,7 @@ public class BlowbagetsHandler : MonoBehaviour
     /// <param name="targetCamera"/>
     public void SwitchCamera(CinemachineVirtualCamera targetCamera)
     {
-        foreach (MinigameSequenceSetup sequence in allMinigames.Values)
+        foreach (MinigameSequenceSetup sequence in relevantMinigames.Values)
             foreach (MinigameSetup setup in sequence.minigames)
                 setup.camera.Priority = 0;
         mainCamera.Priority = 0;

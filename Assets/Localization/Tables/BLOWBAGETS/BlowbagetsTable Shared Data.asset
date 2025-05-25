@@ -197,6 +197,23 @@ MonoBehaviour:
     m_Key: selfFail
     m_Metadata:
       m_Items: []
+  - m_Id: 43
+    m_Key: bike_blowbagetsInitialPrompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65
+    m_Key: bike_selfInitialPrompt
+    m_Metadata:
+      m_Items:
+      - rid: 3237135421484826626
+  - m_Id: 66
+    m_Key: bike_selfPass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67
+    m_Key: bike_selfFail
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -212,7 +229,7 @@ MonoBehaviour:
     - rid: 2180363922148950020
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: B
+        m_CommentText: B (motor only)
     - rid: 2180363922148950021
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
@@ -220,11 +237,11 @@ MonoBehaviour:
     - rid: 2180363922148950022
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: O
+        m_CommentText: O (motor only)
     - rid: 2180363922148950023
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: W
+        m_CommentText: W (motor only)
     - rid: 2180363922148950024
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
@@ -236,11 +253,11 @@ MonoBehaviour:
     - rid: 2180363922148950026
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: G
+        m_CommentText: G (motor only)
     - rid: 2180363922148950027
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: E
+        m_CommentText: E (motor only)
     - rid: 2180363922148950028
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
@@ -249,3 +266,7 @@ MonoBehaviour:
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: S
+    - rid: 3237135421484826626
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: S (bike)
