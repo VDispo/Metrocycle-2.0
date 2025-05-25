@@ -6,7 +6,21 @@ using UnityEngine;
 public class ScenarioSceneStarter : MonoBehaviour
 {
     /// <summary>
-    /// For scene switching later on.
+    /// No intermediate (blowbagets) scene. Mainly used to go from Title to Start Screen.
+    /// </summary>
+    public void StartSceneNoIntermediate(string sceneName) => CustomSceneManager.SwitchScene(sceneName);
+
+    /// <summary>
+    /// For direct scene switching. Saves argument to <see cref="CustomSceneManager.SelectedScene"/>.
+    /// </summary>
+    public void StartScene(string sceneName)
+    {
+        SaveSelectedScene(sceneName);
+        StartSelectedScene();
+    }
+
+    /// <summary>
+    /// For scene switching later on. Saves argument to <see cref="CustomSceneManager.SelectedScene"/>.
     /// </summary>
     public void SaveSelectedScene(string sceneName)
     {

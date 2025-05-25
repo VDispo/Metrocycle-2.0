@@ -15,14 +15,13 @@ public class GameplayRestriction : MonoBehaviour
             if (vehicle == "Motorcycle")
             {
                 // Start the tutorial scene for motorcycles
-                scenarioSceneStarter.SaveSelectedScene("Tutorial_Motorcycle");
+                scenarioSceneStarter.StartScene("Tutorial_Motorcycle");
             }
             else
             {
                 // Start the tutorial scene for other vehicles
-                scenarioSceneStarter.SaveSelectedScene("Tutorial_Bicycle");
+                scenarioSceneStarter.StartScene("Tutorial_Bicycle");
             }
-            scenarioSceneStarter.StartSelectedScene();
         }
 
         if (PlayerPrefs.GetInt($"{vehicle}_BasicCompleted", 0) < 4)
