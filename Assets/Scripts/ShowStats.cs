@@ -35,9 +35,9 @@ public class ShowStats : MonoBehaviour
             string stats = "["
                 + new StringBuilder().Insert(0, "{\"AvgSpeed\": 1,\"ElapsedTime\": 2,\"Errors\": errors, \"ErrorsClassification\": [\"No Blinker\", \"Wrong Blinker\"]}", 20).ToString()
                 + "]";
-            #if (!UNITY_EDITOR && UNITY_WEBGL)
+#if (!UNITY_EDITOR && UNITY_ANDROID)
             stats = Stats.GetStatsForScene(sceneName);
-            #endif
+#endif
 
             string statsText = "\n" + sceneName + "\n";
             JSONNode statNodes = JSON.Parse(stats);

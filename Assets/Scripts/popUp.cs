@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -168,10 +165,10 @@ public class popUp : MonoBehaviour
 
         (float speed, float elapsedTime, int errors, string[] errorsClassification) = Stats.GetStats();
         string sceneName = SceneManager.GetActiveScene().name;
-        #if (!UNITY_EDITOR && UNITY_WEBGL)
-        Stats.SaveStats(sceneName, speed, elapsedTime, errors);
-        #endif
-        
+#if (!UNITY_EDITOR && UNITY_ANDROID)
+        Stats.SaveStats(sceneName, speed, elapsedTime, errors, errorsClassification);
+#endif
+
         // Get the current scene name and parse vehicle type and scenario
         string[] sceneParts = sceneName.Split('_');
         Debug.Log("SCENE PARTS" + sceneParts.Length);
