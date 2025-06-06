@@ -3,7 +3,7 @@ mergeInto(LibraryManager.library, {
   Hello: function () {
     window.alert("Hello, world!");
   },
-  SaveStats: function (scenename,
+  SaveStats_JS: function (scenename,
         speed,
         elapsedTime,
         errors,
@@ -25,7 +25,7 @@ mergeInto(LibraryManager.library, {
     localStorage.setItem(scenename, JSON.stringify(curStats));
   },
 
-  GetStatsForScene: function (scenename) {
+  GetStatsForScene_JS: function (scenename) {
     scenename = UTF8ToString(scenename);
     let curStats = JSON.parse(localStorage.getItem(scenename)) || [];
 

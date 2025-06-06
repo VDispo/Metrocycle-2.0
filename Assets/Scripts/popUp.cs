@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -162,13 +165,17 @@ public class popUp : MonoBehaviour
     {
         Stats.SetSpeed();
         Stats.SetTime();
+        int score = GameManager.Instance.getUserScore();
+
+        Debug.Log($"User score: {score}");
 
         (float speed, float elapsedTime, int errors, string[] errorsClassification) = Stats.GetStats();
         string sceneName = SceneManager.GetActiveScene().name;
-#if (!UNITY_EDITOR && UNITY_ANDROID)
-        Stats.SaveStats(sceneName, speed, elapsedTime, errors, errorsClassification);
-#endif
-
+        #if !UNITY_EDITOR && UNITY_WEBGL
+            Stats.SaveStats_JS(sceneName, speed, elapsedTime, errors, errorsClassification, score);
+        #else
+            Stats.SaveStats(sceneName, speed, elapsedTime, errors, errorsClassification, score);
+        #endif
         // Get the current scene name and parse vehicle type and scenario
         string[] sceneParts = sceneName.Split('_');
         Debug.Log("SCENE PARTS" + sceneParts.Length);
@@ -194,7 +201,12 @@ public class popUp : MonoBehaviour
         Debug.Log($"Scenario Type: {scenarioType}, Vehicle Type: {vehicleType}");
         Transform finishSet = popUpSystem.transform.Find("finishSet");
 
-        setFinishText(finishSet, speed, elapsedTime, errors, errorsClassification);
+        setFinishText(finishSet, speed, elapsedTime, errors, errorsClassification, score);
+
+        if (scenarioType != "Tutorial")
+        {
+            Stats.UpdateLeaderboard(score, elapsedTime, errorsClassification.Length, vehicleType);
+        }
 
         Stats.SetErrors(0);
 
@@ -263,14 +275,14 @@ public class popUp : MonoBehaviour
 
         bodyText.text = bodyMessage;
     }
-    void setFinishText(Transform set, float speed, float elapsedTime, int errors, string[] errorsClassification)
+    void setFinishText(Transform set, float speed, float elapsedTime, int errors, string[] errorsClassification, int score = 0)
     {
         GameObject speedTextObject = set.Find("speed").gameObject;
         TextMeshProUGUI speedText = speedTextObject.GetComponent<TextMeshProUGUI>();
         GameObject timeTextObject = set.Find("time").gameObject;
         TextMeshProUGUI timeText = timeTextObject.GetComponent<TextMeshProUGUI>();
-        GameObject errorsTextObject = set.Find("errors").gameObject;
-        TextMeshProUGUI errorsText = errorsTextObject.GetComponent<TextMeshProUGUI>();
+        GameObject scoresTextObject = set.Find("score").gameObject;
+        TextMeshProUGUI scoresText = scoresTextObject.GetComponent<TextMeshProUGUI>();
         GameObject mistakesTextObjectParent = set.Find("Mistakes").gameObject;
         GameObject mistakesTextObject = mistakesTextObjectParent.transform.Find("mistakes").gameObject;
         TextMeshProUGUI mistakesText = mistakesTextObject.GetComponent<TextMeshProUGUI>();
@@ -280,7 +292,7 @@ public class popUp : MonoBehaviour
         timeText.text = statTexts[0];
 
         speedText.text = statTexts[1];
-        errorsText.text = statTexts[2];
+        scoresText.text = score.ToString();
         mistakesText.text = statTexts[3].Replace("\t", "");
     }
 

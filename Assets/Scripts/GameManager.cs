@@ -517,6 +517,11 @@ public class GameManager : MonoBehaviour
         deductReasonText.GetComponent<DeductionTextBehavior>().SetIncrementText(text);
     }
 
+    public int getUserScore()
+    {
+        return userScore;
+    }
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PopupSystem.popPause();
