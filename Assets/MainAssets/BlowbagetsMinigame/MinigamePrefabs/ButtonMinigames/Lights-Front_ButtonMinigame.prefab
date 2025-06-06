@@ -162,7 +162,7 @@ PrefabInstance:
         type: 3}
       propertyPath: passSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 09a4a69434d2b1a4681aaf875f0e96c8,
+      objectReference: {fileID: 21300000, guid: a1a537835095046409eb0fdfb71db8c4,
         type: 3}
     - target: {fileID: 8043372550311485581, guid: cec0fde4353dc234da5b355d45621ef8,
         type: 3}
