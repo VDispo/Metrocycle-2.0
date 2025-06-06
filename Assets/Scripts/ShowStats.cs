@@ -53,13 +53,18 @@ public class ShowStats : MonoBehaviour
             JSONNode statNodes = JSON.Parse(stats);
             foreach (JSONNode stat in statNodes["entries"])
             {
+
                 string[] errorsClassification = stat["ErrorsClassification"].ToString().Replace("[", "").Replace("]", "").Replace("\"", "").Split(',');
                 int score = stat["Score"].AsInt;
-
 
                 string curStats = String.Join("\n\t", Stats.GetStatsText(stat["AvgSpeed"], stat["ElapsedTime"], stat["Errors"], errorsClassification, score).Split('\n'));
                 statsText += $"\t{curStats}\n\n";
                 Debug.Log($"Stats for {sceneName}: {curStats}");
+            }
+            
+            if (statNodes["entries"].Count == 0)
+            {
+                statsText += "\tNo stats available for this scene\n";
             }
 
             if (sceneName_i.EndsWith("motorcycle"))
